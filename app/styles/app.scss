@@ -1,1 +1,88 @@
-@import 'ember-vo-webuniversum';
+/* ==================================
+   #APPUNIVERSUM POC
+   ================================== */
+
+/**
+ * A design universe for Flanders GOV applications
+ */
+
+/**
+ * CONTENTS
+ * ---
+ * SETTINGS: Project settings and variables
+ * TOOLS: Mixins
+ * GENERIC: Reset, global box-sizing and font-styles
+ * ELEMENTS: Plain html tag styling
+ * OBJECTS: OOCSS unstyled objects (namespace: '.vl-o-...')
+ * COMPONENTS: Components (namespace: '.vl-c-...')
+ * WIDGET: Contained widget styles (namespace: '.vl-w-...)
+ * UTILITIES: Single function helper classes (namespace: '.vl-u-...')
+ */
+
+
+// VARIABLES
+@import "appuniversum/s-colors";
+@import "appuniversum/s-global";
+@import "appuniversum/s-utilities";
+
+
+// MIXINS
+@import "appuniversum/t-font-size";
+@import "appuniversum/t-hidden";
+@import "appuniversum/t-sass-mq";
+
+
+// GENERIC
+@import "appuniversum/g-reset";
+@import "appuniversum/g-box-sizing";
+@import "appuniversum/g-font";
+
+
+// ELEMENTS
+@import "appuniversum/e-page";
+@import "appuniversum/e-images";
+@import "appuniversum/e-tables";
+
+
+// OBJECTS
+@import "appuniversum/o-box";
+@import "appuniversum/o-grid";
+@import "appuniversum/o-layout";
+@import "appuniversum/o-region";
+
+
+// COMPONENTS
+@import "appuniversum/c-links";
+
+
+// DOCUMENTATION
+@import "documentation/d-component";
+@import "documentation/d-editor";
+@import "documentation/d-theme";
+
+
+// WIDGET SPECIFIC STYLES
+@import "widget/w-container";
+@import "widget/w-section";
+@import "widget/w-title";
+@import "widget/w-link";
+@import "widget/w-icon";
+@import "widget/w-image";
+@import "widget/w-list";
+@import "widget/w-modal";
+
+
+// UTILITIES
+@import "appuniversum/u-headings";
+@import "appuniversum/u-font-weights";
+@import "appuniversum/u-font-family";
+@import "appuniversum/u-widths";
+@import "appuniversum/u-spacings";
+@import "appuniversum/u-responsive-spacings";
+@import "appuniversum/u-print";
+@import "appuniversum/u-hide";
+
+
+// QUICK FIXES AND HACKS
+@import "shame";
+

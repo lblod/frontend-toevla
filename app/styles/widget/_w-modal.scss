@@ -1,0 +1,26 @@
+/* ==================================
+   #WIDGET MODAL
+   ================================== */
+
+.vl-w-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba($vl-neutral-darkest,.2);
+}
+
+  .vl-w-modal__inner {
+    box-shadow: 0 0 12px rgba($vl-neutral-darkest,.3);
+    background-color: $vl-white;
+  }
+
+  .vl-w-modal__header {
+    display: flex;
+    justify-content: space-between;
+    padding: $vl-unit-small;
+  }

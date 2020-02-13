@@ -1,0 +1,81 @@
+/* ==================================
+   #WIDGET LISTS
+   ================================== */
+
+.vl-w-list {
+  @include vl-font-size($vl-h6);
+  padding: $vl-unit-small $vl-unit $vl-unit ;
+}
+
+.vl-w-list--checks {
+  @include vl-font-size($vl-base,1.3);
+  padding: 0;
+}
+
+.vl-w-list--details {
+  @include vl-font-size($vl-base);
+  margin-top: $vl-unit-tiny;
+  padding: 0;
+}
+
+.vl-w-list--images {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: $vl-unit-tiny;
+  padding: 0;
+}
+
+.vl-w-list--nav {
+  background-color: $vl-white;
+
+  @include mq(medium) {
+    width: calc(400px);
+    border-right: 1px solid $vl-neutral-lighter;
+
+    .vl-w-container--small & {
+      width: 100%;
+      border-right: 0;
+    }
+  }
+}
+
+  .vl-w-list__item {
+    color: $vl-neutral-dark;
+
+    & + & {
+      margin-top: $vl-unit-small;
+      padding-top: $vl-unit-small;
+      border-top: 1px solid $vl-neutral-lighter
+    }
+
+    .vl-w-list--details > & + & {
+      margin-top: 0;
+      border-top: 0;
+    }
+
+    .vl-w-list--checks > & + & {
+      margin-top: $vl-unit-tiny;
+    }
+
+    .vl-w-list--images > & + & {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0;
+      margin-left: $vl-unit-small;
+    }
+
+    .vl-w-list--checks > & {
+      padding: $vl-unit-tiny $vl-unit-tiny $vl-unit-tiny + .1rem;
+      border-radius: $vl-radius;
+      background-color: $vl-neutral-lightest;
+      border: 1px solid $vl-neutral-lightest;
+    }
+
+    &.is-checked {
+      border: 1px solid $vl-neutral-lighter;
+      background-color: $vl-white;
+    }
+  }
+
+
+

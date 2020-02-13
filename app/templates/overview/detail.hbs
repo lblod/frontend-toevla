@@ -1,165 +1,109 @@
-<div class="u-border--light--left u-padding--rl">
-  <div class="grid">
-    <div class="col--7-12">
 
-      <LinkTo @route="overview" class="link link--dark smaller u-spacer--tiny">
-        &leftarrow; Terug naar overzicht
-      </LinkTo>
-      <h3 class="h5 u-spacer">Details Toilet</h3>
-      <ul class="u-spacer">
-        <li class="grid grid--collapse">
-          <div class="col--1-12">
-            <p class="small">
-              <i aria-hidden="true">&bigstar;</i><span class="u-visually-hidden">Pluspunt:</span>
-            </p>
-          </div>
-          <div class="col--10-12">
-            <h4 class="h6 u-spacer--tiny">Aangepaste circulatie</h4>
-
-            <ul class="u-spacer">
-              <li class="u-spacer--tiny">
-                <p class="u-spacer--tiny">Bereikbaar met rolstoel smalste punt 85cm</p>
-                <div class="grid grid--collapse u-spacer--tb--small">
-                  <div class="col--1-12">
-                    <i class="u-spacer--top--large vi vi-arrow vi-u-180deg vi-u-badge vi-u-badge--small u-border--light--round" aria-hidden="true"></i>
-                  </div>
-                  <div class="col--3-12">
-                    <LinkTo @route="overview.detail.picture" class="u-display--block u-background--gray-lightest u-border--light--round" style="height: 12rem;">
-                    </LinkTo>
-                  </div>
-                  <div class="col--3-12">
-                    <LinkTo @route="overview.detail.picture" class="u-display--block u-background--gray-lightest u-border--light--round" style="height: 12rem;">
-                    </LinkTo>
-                  </div>
-                  <div class="col--3-12">
-                    <LinkTo @route="overview.detail.picture" class="u-display--block u-background--gray-lightest u-border--light--round" style="height: 12rem;">
-                    </LinkTo>
-                  </div>
-                  <div class="col--1-12">
-                    <i class="u-spacer--top--large vi vi-arrow vi-u-badge vi-u-badge--small vi-u-badge--action u-border--light--round" aria-hidden="true"></i>
-                  </div>
-                </div>
+<div class="vl-w-section__details">
+  <div class="vl-w-section__detail-header">
+    <LinkTo @route="overview" class="vl-w-link vl-w-link--neutral">
+      Venster sluiten
+    </LinkTo>
+  </div>
+  <div class="vl-w-section__body">
+    <h3 class="vl-w-title vl-w-title--section">Details bereikbaarheid</h3>
+    <ul class="vl-w-list vl-w-list--checks vl-u-margin-bottom-small">
+      <li class="vl-w-list__item is-checked">
+        <h4 class="vl-w-title vl-w-title--detail">Aangepaste circulatie</h4>
+        <ul class="vl-w-list vl-w-list--details">
+          <li class="vl-w-list__item">
+            <p>Bereikbaar met rolstoel smalste punt 85cm</p>
+            <ul class="vl-w-list vl-w-list--images">
+              <li class="vl-w-list__item">
+                <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
+                </LinkTo>
+                {{outlet}}
               </li>
-              <li class="u-spacer--tiny">
-                <p class="u-spacer--tiny">Brede deur voor rolstoel maximum 85cm</p>
-                <div class="grid grid--collapse u-spacer--tb--small">
-                  <div class="col--1-12">
-                    <i class="u-spacer--top--large vi vi-arrow vi-u-180deg vi-u-badge vi-u-badge--small u-border--light--round" aria-hidden="true"></i>
-                  </div>
-                  <div class="col--3-12">
-                    <LinkTo @route="overview.detail.picture" class="u-display--block u-background--gray-lightest u-border--light--round" style="height: 12rem;">
-                    </LinkTo>
-                  </div>
-                  <div class="col--3-12">
-                    <LinkTo @route="overview.detail.picture" class="u-display--block u-background--gray-lightest u-border--light--round" style="height: 12rem;">
-                    </LinkTo>
-                  </div>
-                  <div class="col--3-12">
-                    <LinkTo @route="overview.detail.picture" class="u-display--block u-background--gray-lightest u-border--light--round" style="height: 12rem;">
-                    </LinkTo>
-                  </div>
-                  <div class="col--1-12">
-                    <i class="u-spacer--top--large vi vi-arrow vi-u-badge vi-u-badge--small vi-u-badge--action u-border--light--round" aria-hidden="true"></i>
-                  </div>
-                </div>
+              <li class="vl-w-list__item">
+                <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
+                </LinkTo>
+              </li>
+              <li class="vl-w-list__item">
+                <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
+                </LinkTo>
               </li>
             </ul>
-          </div>
-        </li>
-        <li class="grid grid--collapse">
-          <div class="col--1-12">
-            <p class="small">
-              <i aria-hidden="true">&bigstar;</i><span class="u-visually-hidden">Pluspunt:</span>
-            </p>
-          </div>
-          <div class="col--10-12">
-            <h4 class="h6 u-spacer--tiny">Deurbreedte minimum 85cm</h4>
-
-            <ul class="u-spacer">
-              <li class="u-spacer--tiny">
-                <p class="u-spacer--tiny">Bereikbaar met rolstoel smalste punt 85cm</p>
-                <div class="grid grid--collapse u-spacer--tb--small">
-                  <div class="col--1-12">
-                    <i class="u-spacer--top--large vi vi-arrow vi-u-180deg vi-u-badge vi-u-badge--small u-border--light--round" aria-hidden="true"></i>
-                  </div>
-                  <div class="col--3-12">
-                    <LinkTo @route="overview.detail.picture" class="u-display--block u-background--gray-lightest u-border--light--round" style="height: 12rem;">
-                    </LinkTo>
-                  </div>
-                  <div class="col--3-12">
-                    <LinkTo @route="overview.detail.picture" class="u-display--block u-background--gray-lightest u-border--light--round" style="height: 12rem;">
-                    </LinkTo>
-                  </div>
-                  <div class="col--3-12">
-                    <LinkTo @route="overview.detail.picture" class="u-display--block u-background--gray-lightest u-border--light--round" style="height: 12rem;">
-                    </LinkTo>
-                  </div>
-                  <div class="col--1-12">
-                    <i class="u-spacer--top--large vi vi-arrow vi-u-badge vi-u-badge--small vi-u-badge--action u-border--light--round" aria-hidden="true"></i>
-                  </div>
-                </div>
+          </li>
+          <li class="vl-w-list__item">
+            <p class="u-spacer--tiny">Brede deur voor rolstoel maximum 85cm</p>
+            <ul class="vl-w-list vl-w-list--images">
+              <li class="vl-w-list__item">
+                <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
+                </LinkTo>
               </li>
-              <li class="u-spacer--tiny">
-                <p class="u-spacer--tiny">Brede deur voor rolstoel maximum 85cm</p>
-                <div class="grid grid--collapse u-spacer--tb--small">
-                  <div class="col--1-12">
-                    <i class="u-spacer--top--large vi vi-arrow vi-u-180deg vi-u-badge vi-u-badge--small u-border--light--round" aria-hidden="true"></i>
-                  </div>
-                  <div class="col--3-12">
-                    <LinkTo @route="overview.detail.picture" class="u-display--block u-background--gray-lightest u-border--light--round" style="height: 12rem;">
-                    </LinkTo>
-                  </div>
-                  <div class="col--3-12">
-                    <LinkTo @route="overview.detail.picture" class="u-display--block u-background--gray-lightest u-border--light--round" style="height: 12rem;">
-                    </LinkTo>
-                  </div>
-                  <div class="col--3-12">
-                    <LinkTo @route="overview.detail.picture" class="u-display--block u-background--gray-lightest u-border--light--round" style="height: 12rem;">
-                    </LinkTo>
-                  </div>
-                  <div class="col--1-12">
-                    <i class="u-spacer--top--large vi vi-arrow vi-u-badge vi-u-badge--small vi-u-badge--action u-border--light--round" aria-hidden="true"></i>
-                  </div>
-                </div>
+              <li class="vl-w-list__item">
+                <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
+                </LinkTo>
+              </li>
+              <li class="vl-w-list__item">
+                <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
+                </LinkTo>
               </li>
             </ul>
-          </div>
-        </li>
-        <li class="grid grid--collapse">
-          <div class="col--1-12">
-            <p class="small">
-              <i aria-hidden="true" class="fa fa-minus"></i><span class="u-visually-hidden">Minpunt:</span>
-            </p>
-          </div>
-          <div class="col--10-12">
-            <h4 class="h6 u-spacer--small">Geen beugels</h4>
-            <div class="grid grid--collapse u-spacer--tb--small">
-              <div class="col--1-12">
-                <i class="u-spacer--top--large vi vi-arrow vi-u-180deg vi-u-badge vi-u-badge--small u-border--light--round" aria-hidden="true"></i>
-              </div>
-              <div class="col--3-12">
-                <LinkTo @route="overview.detail.picture" class="u-display--block u-background--gray-lightest u-border--light--round" style="height: 12rem;">
+          </li>
+        </ul>
+      </li>
+      <li class="vl-w-list__item is-checked">
+        <h4 class="vl-w-title vl-w-title--detail">Deurbreedte minimum 85cm</h4>
+        <ul class="vl-w-list vl-w-list--details">
+          <li class="vl-w-list__item">
+            <p >Bereikbaar met rolstoel smalste punt 85cm</p>
+            <ul class="vl-w-list vl-w-list--images">
+              <li class="vl-w-list__item">
+                <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
                 </LinkTo>
-              </div>
-              <div class="col--3-12">
-                <LinkTo @route="overview.detail.picture" class="u-display--block u-background--gray-lightest u-border--light--round" style="height: 12rem;">
+              </li>
+              <li class="vl-w-list__item">
+                <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
                 </LinkTo>
-              </div>
-              <div class="col--3-12">
-                <LinkTo @route="overview.detail.picture" class="u-display--block u-background--gray-lightest u-border--light--round" style="height: 12rem;">
+              </li>
+              <li class="vl-w-list__item">
+                <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
                 </LinkTo>
-              </div>
-              <div class="col--1-12">
-                <i class="u-spacer--top--large vi vi-arrow vi-u-badge vi-u-badge--small vi-u-badge--action u-border--light--round" aria-hidden="true"></i>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
-
-    </div>
-    <div class="col--6-12">
-      {{outlet}}
-    </div>
+              </li>
+            </ul>
+          </li>
+          <li class="vl-w-list__item">
+            <p>Brede deur voor rolstoel maximum 85cm</p>
+            <ul class="vl-w-list vl-w-list--images">
+              <li class="vl-w-list__item">
+                <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
+                </LinkTo>
+              </li>
+              <li class="vl-w-list__item">
+                <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
+                </LinkTo>
+              </li>
+              <li class="vl-w-list__item">
+                <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
+                </LinkTo>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="vl-w-list__item">
+        <h4 class="vl-w-title vl-w-title--detail">Geen beugels</h4>
+        <ul class="vl-w-list vl-w-list--images">
+          <li class="vl-w-list__item">
+            <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
+            </LinkTo>
+          </li>
+          <li class="vl-w-list__item">
+            <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
+            </LinkTo>
+          </li>
+          <li class="vl-w-list__item">
+            <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
+            </LinkTo>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </div>
 </div>

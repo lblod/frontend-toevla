@@ -1,14 +1,35 @@
-<div class="container">
-  <div class="container-flex--scroll">
-    <div class="u-padding--round u-border--bottom">
-      <h1 class="h1 u-spacer--none">Toegankelijkheid Widget</h1>
-      <p>you are on this route {{currentRouteName}}</p>
-    </div>
-
-    <div class="u-padding--round">
-      <div class="grid grid--collapse">
-        {{outlet}}
-      </div>
+<header class="vl-o-region-large vl-d-theme-neutral-lightest">
+  <div class="vl-o-layout">
+    {{#unless this.isIndex}}
+    <p><a href="/" class="vl-c-link vl-c-link--neutral">&leftarrow; Terug naar overzicht</a></p>
+    {{/unless}}
+    <div class="vl-d-editor">
+      <h1 class="">Toegankelijkheid Widget</h1>
+      <hr>
+      <p>You are on this route: {{this.currentRouteName}}</p>
     </div>
   </div>
-</div>
+</header>
+
+<main class="vl-o-region vl-d-theme-neutral-lightest">
+  {{#if this.isIndex}}
+  <div class="vl-o-layout vl-d-editor">
+    <h2 class="vl-u-h5">Overzicht</h2>
+    <ul>
+      <li><a href="/overview/">Widget (generic)</a></li>
+    </ul>
+  </div>
+  {{else}}
+  <div class="vl-o-layout vl-d-editor">
+    <h2>Desktop</h2>
+    <div class="vl-d-component">
+      {{outlet}}
+    </div>
+    <hr>
+    <h2>Mobile</h2>
+    <div class="vl-d-component vl-d-component--small vl-w-container--small">
+      {{outlet}}
+    </div>
+  </div>
+  {{/if}}
+</main>

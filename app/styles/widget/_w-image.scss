@@ -1,0 +1,30 @@
+/* ==================================
+   #WIDGET IMAGES
+   ================================== */
+
+.vl-w-image {
+  display: block;
+  height: $vl-unit-huge;
+  width: $vl-unit-huge;
+  background-color: $vl-neutral-lighter;
+
+}
+
+.vl-w-image--link {
+  border: 1px solid $vl-neutral-lighter;
+  transition: border $vl-transition;
+
+  &:hover,
+  &:focus {
+    border-color: $vl-neutral-light;
+  }
+
+  &:focus {
+    outline: $vl-outline;
+  }
+}
+
+.vl-w-image--large {
+  height: $vl-unit-large * 9;
+  width: $vl-unit-large * 16;
+}

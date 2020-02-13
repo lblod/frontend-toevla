@@ -1,0 +1,21 @@
+/* ==================================
+   #WIDGET TITLES
+   ================================== */
+
+.vl-w-title {
+  @include vl-font-size($vl-h4);
+  font-family: inherit;
+  font-weight: $vl-bold;
+  color: $vl-neutral-darker;
+}
+
+.vl-w-title--section {
+  @include vl-font-size($vl-h5);
+  font-weight: $vl-regular;
+  margin-bottom: $vl-unit-small;
+}
+
+.vl-w-title--detail {
+  @include vl-font-size($vl-h6);
+  font-weight: $vl-regular;
+}

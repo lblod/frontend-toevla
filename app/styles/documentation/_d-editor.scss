@@ -1,0 +1,313 @@
+/* ==================================
+   #EDITOR
+   ================================== */
+
+.vl-d-editor {
+  > * {
+    margin-bottom: 0;
+  }
+
+  > * + * {
+    margin-top: $vl-unit-small;
+  }
+
+  > h1 + *,
+  > h2 + *,
+  > h3 + *,
+  > h4 + *,
+  > h5 + *,
+  > h6 + * {
+    margin-top: $vl-unit-tiny;
+  }
+
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6 {
+    font-family: $vl-font-secondary;
+  }
+
+  > h1 {
+    @include vl-font-size($vl-h3);
+  }
+
+  > h2 {
+    @include vl-font-size($vl-h4);
+    font-weight: $vl-medium;
+  }
+
+  > h3 {
+    @include vl-font-size($vl-h5);
+    font-weight: $vl-medium;
+  }
+
+  > ul h3 {
+    @include vl-font-size($vl-h6);
+    font-weight: $vl-medium;
+  }
+
+  > h4,
+  > h5,
+  > h6 {
+    @include vl-font-size($vl-h6);
+  }
+
+  > p,
+  > ul,
+  > ol {
+    @include vl-font-size($vl-base,1.5);
+  }
+
+  hr {
+    margin: 0;
+    margin-top: $vl-unit;
+    margin-bottom: $vl-unit;
+    border: 0;
+    border-bottom: 3px solid $vl-neutral-lighter;
+  }
+
+  > * + blockquote {
+    margin-top: $vl-unit-large;
+  }
+
+  > blockquote + * {
+    margin-top: $vl-unit-large;
+  }
+
+  > blockquote {
+    padding-top: $vl-unit;
+    padding-bottom: $vl-unit;
+    border-top: 2px solid $vl-neutral-lighter;
+    border-bottom: 2px solid $vl-neutral-lighter;
+  }
+
+  > blockquote p {
+    @include vl-font-size($vl-h5,1.5);
+    margin-bottom: 0;
+  }
+
+  > blockquote p:first-child {
+    &:before {
+      content: "“"
+    }
+
+    &:after {
+      content: "”"
+    }
+  }
+
+  > blockquote p + p {
+    @include vl-font-size($vl-base,1.5);
+    margin-top: $vl-unit-small;
+    font-weight: $vl-medium;
+  }
+
+  > ul,
+  > ol {
+    list-style: none;
+    margin-left: $vl-unit-small;
+  }
+
+  > ol {
+    margin-left: $vl-unit + $vl-unit-tiny/2;
+  }
+
+  > ul ul {
+    margin-left: $vl-unit;
+  }
+
+  > ol ol {
+    margin-left: $vl-unit + $vl-unit-small;
+  }
+
+  > ul li,
+  > ol li {
+    position: relative;
+  }
+
+  > ul li:before {
+    content: '•';
+    position: absolute;
+    top: .3ex;
+    left: -$vl-unit-small;
+    font-size: .8em;
+    color: $vl-neutral;
+  }
+
+  > ul li + li,
+  > ol li + li {
+    margin-top: $vl-unit-tiny;
+  }
+
+  > ol {
+    counter-reset: numbered-list;
+  }
+
+  > ol li:before {
+    content: counter(numbered-list);
+    counter-increment: numbered-list;
+    position: absolute;
+    top: .3ex;
+    left: -$vl-unit - $vl-unit-tiny/2;
+    font-size: .8em;
+    color: $vl-neutral;
+    background-color: $vl-neutral-lightest;
+    display: block;
+    padding: 0 $vl-unit-tiny;
+    border-radius: $vl-radius;
+  }
+
+  code {
+    font-family: $vl-font-tertiary;
+    font-weight: $vl-light;
+    padding-top: $vl-unit-tiny;
+    padding-bottom: $vl-unit-tiny/2;
+    padding-left: $vl-unit-tiny/2;
+    padding-right: $vl-unit-tiny/2;
+    background-color: $vl-neutral-lightest;
+    border-radius: $vl-radius;
+    border: 1px solid $vl-neutral-lighter;
+
+    &::-moz-selection {
+      background-color: $vl-neutral-lighter;
+      color: $vl-neutral-dark;
+    }
+
+    &::selection {
+      background-color: $vl-neutral-lighter;
+      color: $vl-neutral-dark;
+    }
+  }
+
+  > pre {
+    background-color: $vl-neutral-dark;
+    color: $vl-white;
+    padding: $vl-unit-small;
+    border-radius: $vl-radius;
+    margin-bottom: $vl-unit;
+  }
+
+  > * + pre {
+    margin-top: $vl-unit;
+  }
+
+  strong {
+    font-weight: $vl-medium;
+  }
+
+  > a:not(.vl-c-button),
+  > ul a:not(.vl-c-button),
+  > ol a:not(.vl-c-button),
+  > p a:not(.vl-c-button) {
+    transition: color $vl-transition, text-decoration $vl-transition;
+    font-weight: $vl-regular;
+    text-decoration-color: $vl-action-underline;
+
+    &,
+    &:visited {
+      color: $vl-action-color;
+    }
+
+    &:hover,
+    &:focus {
+      color: $vl-action-hover-color;
+      text-decoration-color: $vl-action-underline-hover;
+    }
+
+    &:focus {
+      outline: $vl-outline;
+      outline-offset: $vl-unit-tiny/2;
+    }
+
+    .is-active > & {
+      color: $vl-action-active-color;
+      text-decoration: none;
+    }
+  }
+
+  @include mq(small) {
+    > * + * {
+      margin-top: $vl-unit;
+    }
+
+    > h1 + *,
+    > h2 + *,
+    > h3 + *,
+    > h4 + *,
+    > h5 + *,
+    > h6 + * {
+      margin-top: $vl-unit-tiny;
+    }
+
+    > h1 {
+      @include vl-font-size($vl-h2);
+    }
+
+    > h2 {
+      @include vl-font-size($vl-h4);
+    }
+
+    > h3 {
+      @include vl-font-size($vl-h5);
+    }
+
+    > h4,
+    > h5,
+    > h6 {
+      @include vl-font-size($vl-h6);
+    }
+
+    > p,
+    > ul,
+    > ol {
+      @include vl-font-size($vl-base,1.5);
+    }
+
+    > blockquote p {
+      @include vl-font-size($vl-h5,1.5);
+    }
+
+    > ul {
+      margin-left: $vl-unit - $vl-unit-tiny;
+    }
+
+    > ol {
+      margin-left: $vl-unit + $vl-unit-tiny
+    }
+
+    > ul li:before {
+      left: -$vl-unit + $vl-unit-tiny;
+    }
+
+    > ol li:before {
+      left: -$vl-unit - $vl-unit-tiny;
+    }
+  }
+
+  @include mq(medium) {
+    > h1 + *,
+    > h2 + *,
+    > h3 + *,
+    > h4 + *,
+    > h5 + *,
+    > h6 + * {
+      margin-top: $vl-unit-small;
+    }
+
+    > h1 {
+      @include vl-font-size($vl-h1);
+    }
+
+    > p,
+    > ul,
+    > ol {
+      @include vl-font-size($vl-h6);
+    }
+
+    > blockquote p {
+      @include vl-font-size($vl-h4);
+    }
+  }
+}

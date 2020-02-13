@@ -1,19 +1,15 @@
-<div class="u-position--relative">
-  <LinkTo @route="overview.detail" class="modal-overlay" style="width: 3000px; height: 3000px; margin-left: -1000px; margin-top: -1500px;">
-    <div class="modal-dialog u-background--gray-lightest u-border--light--round" tabindex="-1" role="document" aria-hidden="true" style="height: 95%">
-      <i class="u-spacer--top--large vi vi-arrow vi-u-180deg vi-u-badge vi-u-badge--small u-border--light--round" aria-hidden="true" style="position: absolute; top: 50%;"></i>
-      <i class="u-spacer--top--large vi vi-arrow vi-u-badge vi-u-badge--action vi-u-badge--small u-border--light--round" aria-hidden="true" style="position: absolute; top: 50%; right: 5%;"></i>
-      <div class="grid">
-        <div class="col--10-12">
-        </div>
-        <div class="col--2-12 u-align-right">
-          <div class="anti-jitter">
-            <LinkTo @route="overview.detail" class="link--icon--close">
-              <span class="u-visually-hidden">Venster sluiten</span>
-            </LinkTo>
-          </div>
-        </div>
-      </div>
+<div class="vl-w-modal">
+  <div class="vl-w-modal__inner">
+    <div class="vl-w-modal__header">
+      <h3>Bereikbaar met rolstoel smalste punt 85cm</h3>
+      <p class="vl-u-base">
+        <LinkTo @route="overview.detail" class="vl-w-link vl-w-link--neutral">
+          Venster sluiten
+        </LinkTo>
+      </p>
     </div>
-  </LinkTo>
+    <div class="vl-w-modal__body">
+      <div class="vl-w-image vl-w-image--large"></div>
+    </div>
+  </div>
 </div>

@@ -1,0 +1,17 @@
+/* ==========================================================================
+   #COMPONENT HOLDER
+   ========================================================================== */
+
+.vl-d-component {
+  border: 1px solid $vl-neutral-lighter;
+  background-color: $vl-white;
+  border-radius: $vl-radius;
+}
+
+.vl-d-component--small {
+  max-width: $vl-layout-width-tiny;
+}
+
+  .vl-d-component__contrast {
+    box-shadow: 0 0 $vl-unit-small rgba($vl-neutral-darkest,.1);
+  }

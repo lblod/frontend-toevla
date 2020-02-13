@@ -1,145 +1,154 @@
-<div class="col--3-12">
-  <ul class="u-padding--right--small">
-    <li>
-      <h2 class="h5 u-spacer--tiny"><LinkTo @route="overview.detail" class="side-navigation__toggle">Bereikbaarheid</LinkTo></h2>
-      <ul class="u-spacer">
-        <li class="grid">
-          <div class="col--1-12">
-            <p class="small">
-              <i aria-hidden="true">&bigstar;</i><span class="u-visually-hidden">Pluspunt:</span>
-            </p>
+<section class="vl-w-container">
+  <header class="vl-w-container__title">
+    <h1 class="vl-w-title">
+      Toegankelijkheid
+    </h1>
+  </header>
+  <div class="vl-w-container__main">
+    <ul class="vl-w-list vl-w-list--nav">
+      <li class="vl-w-list__item">
+        <article class="vl-w-section">
+          <div class="vl-w-section__summary">
+            <h2 class="vl-w-title vl-w-title--section">
+              <LinkTo @route="overview.detail" class="vl-w-link vl-w-link--title">
+                Bereikbaarheid
+                <span class="vl-w-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44">
+                    <polygon points="12.918 34.728 25.422 22.224 12.918 9.721 16.777 5.862 33.14 22.224 16.777 38.587"/>
+                  </svg>
+                </span>
+              </LinkTo>
+            </h2>
+            <ul class="vl-w-list vl-w-list--checks">
+              <li class="vl-w-list__item is-checked">
+                Bereikbaar met openbaar vervoer
+              </li>
+              <li class="vl-w-list__item is-checked">
+                2 rolstoelvriendelijke parkeerplaatsen
+              </li>
+            </ul>
+            <p class="vl-w-section__footer">
+              <LinkTo @route="overview.detail" class="vl-w-link vl-w-link--neutral">
+              Meer info over bereikbaarheid</LinkTo></p>
           </div>
-          <div class="col--10-12">
-            <p>Bereikbaar met openbaar vervoer</p>
+          {{outlet}}
+        </article>
+      </li>
+      <li class="vl-w-list__item">
+        <article class="vl-w-section">
+          <div class="vl-w-section__summary">
+            <h2 class="vl-w-title vl-w-title--section">
+              {{!-- <a href="#!" class="vl-w-link vl-w-link--title"> --}}
+                Inkom
+                {{!-- <span class="vl-w-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44">
+                    <polygon points="12.918 34.728 25.422 22.224 12.918 9.721 16.777 5.862 33.14 22.224 16.777 38.587"/>
+                  </svg>
+                </span> --}}
+              {{!-- </a> --}}
+            </h2>
+            <ul class="vl-w-list vl-w-list--checks">
+              <li class="vl-w-list__item">
+                Geen voorzieningen gevonden.
+              </li>
+            </ul>
+            {{!-- <p class="vl-w-section__footer">
+              <a href="#!" class="vl-w-link vl-w-link--neutral">
+              Meer info over de inkom</a></p> --}}
           </div>
-        </li>
-        <li class="grid">
-          <div class="col--1-12">
-            <p class="small">
-              <i aria-hidden="true">&bigstar;</i><span class="u-visually-hidden">Pluspunt:</span>
-            </p>
+        </article>
+      </li>
+      <li class="vl-w-list__item">
+        <article class="vl-w-section">
+          <div class="vl-w-section__summary">
+            <h2 class="vl-w-title vl-w-title--section">
+              <a href="#!" class="vl-w-link vl-w-link--title">
+                Circulatie
+                <span class="vl-w-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44">
+                    <polygon points="12.918 34.728 25.422 22.224 12.918 9.721 16.777 5.862 33.14 22.224 16.777 38.587"/>
+                  </svg>
+                </span>
+              </a>
+            </h2>
+            <ul class="vl-w-list vl-w-list--checks">
+              <li class="vl-w-list__item is-checked">
+                Lift in het gebouw
+              </li>
+              <li class="vl-w-list__item is-checked">
+                Ruim toegankelijk voor rolstoelgebruikers
+              </li>
+              <li class="vl-w-list__item">
+                Hulp-/geleidehonden niet overal toegelaten
+              </li>
+            </ul>
+            <p class="vl-w-section__footer">
+              <a href="#!" class="vl-w-link vl-w-link--neutral">
+              Meer info over de circulatie</a></p>
           </div>
-          <div class="col--10-12">
-            <p>2 rolstoelvriendelijke parkeerplaatsen</p>
+        </article>
+      </li>
+      <li class="vl-w-list__item">
+        <article class="vl-w-section">
+          <div class="vl-w-section__summary">
+            <h2 class="vl-w-title vl-w-title--section">
+              <a href="#!" class="vl-w-link vl-w-link--title">
+                Toilet
+                <span class="vl-w-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44">
+                    <polygon points="12.918 34.728 25.422 22.224 12.918 9.721 16.777 5.862 33.14 22.224 16.777 38.587"/>
+                  </svg>
+                </span>
+              </a>
+            </h2>
+            <ul class="vl-w-list vl-w-list--checks">
+              <li class="vl-w-list__item is-checked">
+                Aangepaste circulatie
+              </li>
+              <li class="vl-w-list__item is-checked">
+                Deurbreedte minimum 85cm
+              </li>
+              <li class="vl-w-list__item is-checked">
+                Beweegruimte minimum 140cm
+              </li>
+              <li class="vl-w-list__item">
+                Geen beugels
+              </li>
+            </ul>
+            <p class="vl-w-section__footer">
+              <a href="#!" class="vl-w-link vl-w-link--neutral">
+              Meer info over het toilet</a></p>
           </div>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <h2 class="h5 u-spacer--tiny"><LinkTo @route="overview.detail" class="side-navigation__toggle">Inkom</LinkTo></h2>
-      <ul class="u-spacer">
-        <li class="grid">
-          <div class="col--12-12">
-            <p class="text-fade">Geen voorzieningen gevonden.</p>
+        </article>
+      </li>
+      <li class="vl-w-list__item">
+        <article class="vl-w-section">
+          <div class="vl-w-section__summary">
+            <h2 class="vl-w-title vl-w-title--section">
+              <a href="#!" class="vl-w-link vl-w-link--title">
+                Activiteiten
+                <span class="vl-w-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44">
+                    <polygon points="12.918 34.728 25.422 22.224 12.918 9.721 16.777 5.862 33.14 22.224 16.777 38.587"/>
+                  </svg>
+                </span>
+              </a>
+            </h2>
+            <ul class="vl-w-list vl-w-list--checks">
+              <li class="vl-w-list__item is-checked">
+                Prijsreductie
+              </li>
+              <li class="vl-w-list__item">
+                Geen aangepaste rolstoelroute
+              </li>
+            </ul>
+            <p class="vl-w-section__footer">
+              <a href="#!" class="vl-w-link vl-w-link--neutral">
+              Meer info over de activiteiten</a></p>
           </div>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <h2 class="h5 u-spacer--tiny"><LinkTo @route="overview.detail" class="side-navigation__toggle">Circulatie</LinkTo></h2>
-      <ul class="u-spacer">
-        <li class="grid">
-          <div class="col--1-12">
-            <p class="small">
-              <i aria-hidden="true">&bigstar;</i><span class="u-visually-hidden">Pluspunt:</span>
-            </p>
-          </div>
-          <div class="col--10-12">
-            <p>Lift in het gebouw</p>
-          </div>
-        </li>
-        <li class="grid">
-          <div class="col--1-12">
-            <p class="small">
-              <i aria-hidden="true">&bigstar;</i><span class="u-visually-hidden">Pluspunt:</span>
-            </p>
-          </div>
-          <div class="col--10-12">
-            <p>Ruim toegankelijk voor rolstoelgebruikers</p>
-          </div>
-        </li>
-        <li class="grid">
-          <div class="col--1-12">
-            <i aria-hidden="true" class="fa fa-minus"></i><span class="u-visually-hidden">Minpunt:</span>
-          </div>
-          <div class="col--10-12">
-            Hulp-/geleidehonden niet overal toegelaten
-          </div>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <h2 class="h5 u-spacer--tiny"><LinkTo @route="overview.detail" class="side-navigation__toggle">Toilet</LinkTo></h2>
-      <ul class="u-spacer">
-        <li class="grid">
-          <div class="col--1-12">
-            <p class="small">
-              <i aria-hidden="true">&bigstar;</i><span class="u-visually-hidden">Pluspunt:</span>
-            </p>
-          </div>
-          <div class="col--10-12">
-            <p>Aangepaste circulatie</p>
-          </div>
-        </li>
-        <li class="grid">
-          <div class="col--1-12">
-            <p class="small">
-              <i aria-hidden="true">&bigstar;</i><span class="u-visually-hidden">Pluspunt:</span>
-            </p>
-          </div>
-          <div class="col--10-12">
-            <p>Deurbreedte minimum 85cm</p>
-          </div>
-        </li>
-        <li class="grid">
-          <div class="col--1-12">
-            <p class="small">
-              <i aria-hidden="true">&bigstar;</i><span class="u-visually-hidden">Pluspunt:</span>
-            </p>
-          </div>
-          <div class="col--10-12">
-            <p>Beweegruimte minimum 140cm</p>
-          </div>
-        </li>
-        <li class="grid">
-          <div class="col--1-12">
-            <p class="small">
-              <i aria-hidden="true" class="fa fa-minus"></i><span class="u-visually-hidden">Minpunt:</span>
-            </p>
-          </div>
-          <div class="col--10-12">
-            <p>Geen beugels</p>
-          </div>
-        </li>
-      </ul>
-    </li>
-    <li>
-      <h2 class="h5 u-spacer--tiny"><LinkTo @route="overview.detail" class="side-navigation__toggle">Activiteiten</LinkTo></h2>
-      <ul class="u-spacer">
-        <li class="grid">
-          <div class="col--1-12">
-            <p class="small">
-              <i aria-hidden="true">&bigstar;</i><span class="u-visually-hidden">Pluspunt:</span>
-            </p>
-          </div>
-          <div class="col--10-12">
-            <p>Prijsreductie</p>
-          </div>
-        </li>
-        <li class="grid">
-          <div class="col--1-12">
-            <p class="small">
-              <i aria-hidden="true" class="fa fa-minus"></i><span class="u-visually-hidden">Minpunt:</span>
-            </p>
-          </div>
-          <div class="col--10-12">
-            <p>Geen aangepaste rolstoelroute</p>
-          </div>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div>
-<div class="col--9-12 pull--1-12">
-  {{outlet}}
-</div>
+        </article>
+      </li>
+    </ul>
+  </div>
+</section>
+
