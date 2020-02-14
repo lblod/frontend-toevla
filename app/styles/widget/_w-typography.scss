@@ -1,0 +1,45 @@
+/* ==================================
+   #WIDGET TITLES
+   ================================== */
+
+.vl-w-title {
+  @include vl-font-size($vl-h5);
+  font-family: inherit;
+  font-weight: $vl-bold;
+  color: $vl-neutral-darker;
+  margin-bottom: $vl-unit-small + $vl-unit-tiny;
+}
+
+.vl-w-title--section {
+  @include vl-font-size($vl-h6);
+  margin-bottom: 0;
+
+  @include mq(medium) {
+    margin-bottom: $vl-unit-small;
+  }
+}
+
+.vl-w-title--detail {
+  @include vl-font-size($vl-h6);
+  font-weight: $vl-regular;
+  margin-bottom: $vl-unit-tiny;
+  color: $vl-neutral;
+
+  .is-checked & {
+    color: $vl-neutral-darker;
+  }
+}
+
+.vl-w-small {
+  @include vl-font-size($vl-base);
+  color: $vl-neutral-dark;
+}
+
+.vl-w-tiny {
+  @include vl-font-size(1.2rem);
+  color: $vl-neutral-dark;
+}
+
+.vl-w-label {
+  font-weight: $vl-regular;
+}

@@ -4,39 +4,26 @@
 
 .vl-w-list {
   @include vl-font-size($vl-h6);
-  padding: $vl-unit-small $vl-unit $vl-unit ;
 }
 
 .vl-w-list--checks {
   @include vl-font-size($vl-base,1.3);
-  padding: 0;
+}
+
+.vl-w-list--checks-large {
+  @include vl-font-size($vl-base,1.3);
 }
 
 .vl-w-list--details {
   @include vl-font-size($vl-base);
   margin-top: $vl-unit-tiny;
-  padding: 0;
 }
 
 .vl-w-list--images {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
-  margin-top: $vl-unit-tiny;
-  padding: 0;
-}
-
-.vl-w-list--nav {
-  background-color: $vl-white;
-
-  @include mq(medium) {
-    width: calc(400px);
-    border-right: 1px solid $vl-neutral-lighter;
-
-    .vl-w-container--small & {
-      width: 100%;
-      border-right: 0;
-    }
-  }
+  margin: -$vl-unit-tiny;
 }
 
   .vl-w-list__item {
@@ -45,7 +32,7 @@
     & + & {
       margin-top: $vl-unit-small;
       padding-top: $vl-unit-small;
-      border-top: 1px solid $vl-neutral-lighter
+      border-top: 1px dotted $vl-neutral-light;
     }
 
     .vl-w-list--details > & + & {
@@ -53,27 +40,35 @@
       border-top: 0;
     }
 
-    .vl-w-list--checks > & + & {
-      margin-top: $vl-unit-tiny;
+    .vl-w-list--images & {
+      margin: $vl-unit-tiny;
     }
 
     .vl-w-list--images > & + & {
-      margin-top: 0;
       padding-top: 0;
       border-top: 0;
-      margin-left: $vl-unit-small;
     }
 
     .vl-w-list--checks > & {
-      padding: $vl-unit-tiny $vl-unit-tiny $vl-unit-tiny + .1rem;
-      border-radius: $vl-radius;
-      background-color: $vl-neutral-lightest;
-      border: 1px solid $vl-neutral-lightest;
+      margin-top: $vl-unit-tiny;
+      padding-top: $vl-unit-tiny;
+      color: $vl-neutral;
+      font-style: italic;
+    }
+
+    .vl-w-list--checks-large > & {
+      color: $vl-neutral;
+      font-style: italic;
+    }
+
+    .vl-w-list--checks-large > & + & {
+      margin-top: $vl-unit-small;
+      padding-top: $vl-unit-small;
     }
 
     &.is-checked {
-      border: 1px solid $vl-neutral-lighter;
-      background-color: $vl-white;
+      color: $vl-neutral-darker;
+      font-style: normal;
     }
   }
 

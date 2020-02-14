@@ -1,109 +1,104 @@
-
-<div class="vl-w-section__details">
-  <div class="vl-w-section__detail-header">
-    <LinkTo @route="overview" class="vl-w-link vl-w-link--neutral">
-      Venster sluiten
-    </LinkTo>
-  </div>
-  <div class="vl-w-section__body">
-    <h3 class="vl-w-title vl-w-title--section">Details bereikbaarheid</h3>
-    <ul class="vl-w-list vl-w-list--checks vl-u-margin-bottom-small">
-      <li class="vl-w-list__item is-checked">
-        <h4 class="vl-w-title vl-w-title--detail">Aangepaste circulatie</h4>
-        <ul class="vl-w-list vl-w-list--details">
-          <li class="vl-w-list__item">
-            <p>Bereikbaar met rolstoel smalste punt 85cm</p>
-            <ul class="vl-w-list vl-w-list--images">
+<div class="vl-w-modal">
+  <div class="vl-w-modal__inner">
+    <div class="vl-w-modal__header">
+      <h3 class="vl-w-title vl-u-margin-bottom-none">Details bereikbaarheid</h3>
+      <p class="vl-w-small">
+        <LinkTo @route="overview" class="vl-w-link vl-w-link--neutral">
+          Venster sluiten
+        </LinkTo>
+      </p>
+    </div>
+    <div class="vl-w-modal__body">
+      <div class="vl-o-box">
+        <ul class="vl-w-list vl-w-list--checks-large vl-u-margin-bottom-small">
+          <li class="vl-w-list__item is-checked">
+            <h4 class="vl-w-title vl-w-title--detail">Aangepaste circulatie</h4>
+            <ul class="vl-w-list vl-w-list--details">
               <li class="vl-w-list__item">
-                <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
-                </LinkTo>
-                {{outlet}}
+                <p class="vl-u-margin-bottom-tiny">Bereikbaar met rolstoel smalste punt 85cm</p>
+                <ul class="vl-w-list vl-w-list--images">
+                  <li class="vl-w-list__item">
+                    <a href="#!" class="vl-w-image vl-w-image--link">
+                    </a>
+                  </li>
+                  <li class="vl-w-list__item">
+                    <a href="#!" class="vl-w-image vl-w-image--link">
+                    </a>
+                  </li>
+                  <li class="vl-w-list__item">
+                    <a href="#!" class="vl-w-image vl-w-image--link">
+                    </a>
+                  </li>
+                </ul>
               </li>
               <li class="vl-w-list__item">
-                <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
-                </LinkTo>
+                <p class="vl-u-margin-bottom-tiny">Brede deur voor rolstoel maximum 85cm</p>
+                <ul class="vl-w-list vl-w-list--images">
+                  <li class="vl-w-list__item">
+                    <a href="#!" class="vl-w-image vl-w-image--link">
+                    </a>
+                  </li>
+                  <li class="vl-w-list__item">
+                    <a href="#!" class="vl-w-image vl-w-image--link">
+                    </a>
+                  </li>
+                  <li class="vl-w-list__item">
+                    <a href="#!" class="vl-w-image vl-w-image--link">
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="vl-w-list__item is-checked">
+            <h4 class="vl-w-title vl-w-title--detail">Deurbreedte minimum 85cm</h4>
+            <ul class="vl-w-list vl-w-list--details">
+              <li class="vl-w-list__item">
+                <p class="vl-u-margin-bottom-tiny">Bereikbaar met rolstoel smalste punt 85cm</p>
+                <ul class="vl-w-list vl-w-list--images">
+                  <li class="vl-w-list__item">
+                    <a href="#!" class="vl-w-image vl-w-image--link">
+                    </a>
+                  </li>
+                  <li class="vl-w-list__item">
+                    <a href="#!" class="vl-w-image vl-w-image--link">
+                    </a>
+                  </li>
+                  <li class="vl-w-list__item">
+                    <a href="#!" class="vl-w-image vl-w-image--link">
+                    </a>
+                  </li>
+                </ul>
               </li>
               <li class="vl-w-list__item">
-                <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
-                </LinkTo>
+                <p class="vl-u-margin-bottom-tiny">Brede deur voor rolstoel maximum 85cm</p>
+                <ul class="vl-w-list vl-w-list--images">
+                  <li class="vl-w-list__item">
+                    <a href="#!" class="vl-w-image vl-w-image--link">
+                    </a>
+                  </li>
+                  <li class="vl-w-list__item">
+                    <a href="#!" class="vl-w-image vl-w-image--link">
+                    </a>
+                  </li>
+                  <li class="vl-w-list__item">
+                    <a href="#!" class="vl-w-image vl-w-image--link">
+                    </a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </li>
           <li class="vl-w-list__item">
-            <p class="u-spacer--tiny">Brede deur voor rolstoel maximum 85cm</p>
-            <ul class="vl-w-list vl-w-list--images">
-              <li class="vl-w-list__item">
-                <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
-                </LinkTo>
-              </li>
-              <li class="vl-w-list__item">
-                <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
-                </LinkTo>
-              </li>
-              <li class="vl-w-list__item">
-                <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
-                </LinkTo>
-              </li>
-            </ul>
+            <h4 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Niet voldaan:</span> Beugels</h4>
+            <p>​Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae nunc scelerisque, porttitor leo quis, venenatis nisl.</p>
           </li>
         </ul>
-      </li>
-      <li class="vl-w-list__item is-checked">
-        <h4 class="vl-w-title vl-w-title--detail">Deurbreedte minimum 85cm</h4>
-        <ul class="vl-w-list vl-w-list--details">
-          <li class="vl-w-list__item">
-            <p >Bereikbaar met rolstoel smalste punt 85cm</p>
-            <ul class="vl-w-list vl-w-list--images">
-              <li class="vl-w-list__item">
-                <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
-                </LinkTo>
-              </li>
-              <li class="vl-w-list__item">
-                <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
-                </LinkTo>
-              </li>
-              <li class="vl-w-list__item">
-                <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
-                </LinkTo>
-              </li>
-            </ul>
-          </li>
-          <li class="vl-w-list__item">
-            <p>Brede deur voor rolstoel maximum 85cm</p>
-            <ul class="vl-w-list vl-w-list--images">
-              <li class="vl-w-list__item">
-                <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
-                </LinkTo>
-              </li>
-              <li class="vl-w-list__item">
-                <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
-                </LinkTo>
-              </li>
-              <li class="vl-w-list__item">
-                <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
-                </LinkTo>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li class="vl-w-list__item">
-        <h4 class="vl-w-title vl-w-title--detail">Geen beugels</h4>
-        <ul class="vl-w-list vl-w-list--images">
-          <li class="vl-w-list__item">
-            <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
-            </LinkTo>
-          </li>
-          <li class="vl-w-list__item">
-            <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
-            </LinkTo>
-          </li>
-          <li class="vl-w-list__item">
-            <LinkTo @route="overview.detail.picture" class="vl-w-image vl-w-image--link">
-            </LinkTo>
-          </li>
-        </ul>
-      </li>
-    </ul>
+        <div class="vl-w-cta">
+          <p class="vl-w-small">Verkeerde info? <a href="mailto:toevla@example.com" class="vl-w-link">Contacteer Toevla</a></p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+

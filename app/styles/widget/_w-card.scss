@@ -1,0 +1,62 @@
+/* ==================================
+   #WIDGET CARD
+   ================================== */
+
+.vl-w-card {
+  position: relative;
+  padding: $vl-unit-small;
+  border-radius: $vl-radius;
+  transition: box-shadow $vl-transition;
+  height: 100%;
+  background-color: $vl-neutral-lightest;
+  overflow: hidden;
+}
+
+.vl-w-card--link {
+  background-color: $vl-white;
+  box-shadow: 0 0 0 2px transparent, 0 0 2px rgba($vl-neutral-dark,.25);
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    box-shadow: 0 0 0 2px rgba($vl-neutral-dark,.1), 0 0 3px rgba($vl-neutral-dark,.1);
+  }
+
+  &:focus,
+  &:focus-within {
+    outline: $vl-outline;
+  }
+}
+
+  .vl-w-card__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: color $vl-transition, text-decoration $vl-transition;
+    font-weight: $vl-regular;
+    text-decoration-color: $vl-action-underline;
+
+    &,
+    &:visited {
+      color: $vl-action-color;
+    }
+
+    &:hover,
+    &:focus {
+      color: $vl-action-hover-color;
+      text-decoration-color: $vl-action-underline-hover;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }

@@ -4,16 +4,4 @@
 
 .vl-w-container {
   position: relative;
-  overflow: hidden;
 }
-
-  .vl-w-container__title {
-    padding: $vl-unit-small $vl-unit;
-    border-bottom: 1px solid $vl-neutral-lighter;
-  }
-
-  .vl-w-container__main {
-    position: relative;
-    overflow: hidden;
-    background-color: tint($vl-neutral-lightest,50);
-  }

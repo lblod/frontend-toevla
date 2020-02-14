@@ -3,9 +3,11 @@
    ========================================================================== */
 
 .vl-d-component {
+  position: relative;
   border: 1px solid $vl-neutral-lighter;
   background-color: $vl-white;
   border-radius: $vl-radius;
+  padding: $vl-unit;
 }
 
 .vl-d-component--small {
