@@ -8,7 +8,7 @@ export default class Router extends EmberRouter {
 
 Router.map(function() {
   this.route('overview', function() {
-    this.route('detail', function() {
-    });
   });
+  this.route('widget-desktop');
+  this.route('widget-mobile');
 });

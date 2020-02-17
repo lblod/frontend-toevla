@@ -4,10 +4,29 @@
 
 .vl-w-image {
   display: block;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
   height: $vl-unit-huge;
-  width: $vl-unit-huge;
   background-color: $vl-neutral-lighter;
+  cursor: zoom-in;
 
+  img {
+    display: block;
+    max-width: $vl-unit-huge*1.5;
+    top: 0;
+  }
+
+  &.is-expanded {
+    height: auto;
+    cursor: zoom-out;
+
+    img {
+      max-width: 100%;
+    }
+    // width: $vl-unit-huge*4;
+    // max-width: 100%;
+  }
 }
 
 .vl-w-image--link {

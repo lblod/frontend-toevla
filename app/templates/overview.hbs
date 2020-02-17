@@ -6,46 +6,25 @@
     <li class="vl-w-grid__item">
       <article class="vl-w-card vl-w-card--link">
         <h2 class="vl-w-title vl-w-title--section">
-          <LinkTo @route="overview.detail" class="vl-w-card__link">
-            Bereikbaarheid
-          </LinkTo>
-        </h2>
-        <ul class="vl-w-list vl-w-list--checks">
-          <li class="vl-w-list__item is-checked">
-            Bereikbaar met openbaar vervoer
-          </li>
-          <li class="vl-w-list__item is-checked">
-            2 rolstoelvriendelijke parkeerplaatsen
-          </li>
-        </ul>
-      </article>
-    </li>
-    <li class="vl-w-grid__item">
-      <article class="vl-w-card">
-        <h2 class="vl-w-title vl-w-title--section">
-          Inkom
-        </h2>
-        <p class="vl-w-small">
-          Geen voorzieningen gevonden.
-        </p>
-      </article>
-    </li>
-    <li class="vl-w-grid__item">
-      <article class="vl-w-card vl-w-card--link">
-        <h2 class="vl-w-title vl-w-title--section">
-          <a href="#!" class="vl-w-card__link">
-            Circulatie
+          <a href="#openbaar-vervoer" class="vl-w-link vl-w-card__link" data-modal-open>
+            Openbaar vervoer
           </a>
         </h2>
         <ul class="vl-w-list vl-w-list--checks">
           <li class="vl-w-list__item is-checked">
-            Lift in het gebouw
+            Station Gent-St-Pieters op 1,5 km
           </li>
           <li class="vl-w-list__item is-checked">
-            Ruim toegankelijk voor rolstoelgebruikers
+            Tram 1, Halte Veergrep op 500 m
+          </li>
+          <li class="vl-w-list__item is-checked">
+            Bus, Halte op 170 m
           </li>
           <li class="vl-w-list__item">
-            <span class="vl-w-label">Niet voldaan:</span> Hulp-/geleidehonden overal toegelaten
+            <span class="vl-w-label">Geen info:</span> toegankelijke haltes
+          </li>
+          <li class="vl-w-list__item">
+            <span class="vl-w-label">Geen info:</span> obstakels publiek domein
           </li>
         </ul>
       </article>
@@ -53,22 +32,20 @@
     <li class="vl-w-grid__item">
       <article class="vl-w-card vl-w-card--link">
         <h2 class="vl-w-title vl-w-title--section">
-          <a href="#!" class="vl-w-card__link">
-            Toilet
+          <a href="#parkeerplaats" class="vl-w-link vl-w-card__link" data-modal-open>
+            Voorbehouden parkeerplaats
           </a>
         </h2>
+        <p class="vl-w-info">Er is minstens één voorbehouden parkeerplaats met rolstoelvriendelijke ondergrond bij het uitstappen.</p>
         <ul class="vl-w-list vl-w-list--checks">
           <li class="vl-w-list__item is-checked">
-            Aangepaste circulatie
+            2 voorbehouden plaatsen
           </li>
           <li class="vl-w-list__item is-checked">
-            Deurbreedte minimum 85cm
+            Naast elkaar parkeren: breedte 400 cm
           </li>
           <li class="vl-w-list__item is-checked">
-            Beweegruimte minimum 140cm
-          </li>
-          <li class="vl-w-list__item">
-            <span class="vl-w-label">Niet voldaan:</span> Beugels
+            Max voertuig-hoogte 210 cm
           </li>
         </ul>
       </article>
@@ -76,22 +53,609 @@
     <li class="vl-w-grid__item">
       <article class="vl-w-card vl-w-card--link">
         <h2 class="vl-w-title vl-w-title--section">
-          <a href="#!" class="vl-w-card__link">
-            Activiteiten
+          <a href="#fietstenstalling" class="vl-w-link vl-w-card__link" data-modal-open>
+            Fietsenstalling
+          </a>
+        </h2>
+        <ul class="vl-w-list vl-w-list--checks">
+          <li class="vl-w-list__item">
+            <span class="vl-w-label">Niet voldaan:</span> overdekte fietsenstalling
+          </li>
+        </ul>
+      </article>
+    </li>
+    <li class="vl-w-grid__item">
+      <article class="vl-w-card vl-w-card--link">
+        <h2 class="vl-w-title vl-w-title--section">
+          <a href="#inkom" class="vl-w-link vl-w-card__link" data-modal-open>
+            Rolstoelvriendelijke inkom
+          </a>
+        </h2>
+        <p class="vl-w-info">De inkombreedte is minstens 85cm met max 1 trede van 10cm.</p>
+        <ul class="vl-w-list vl-w-list--checks">
+          <li class="vl-w-list__item is-checked">
+            Via alternatieve toegang
+          </li>
+          <li class="vl-w-list__item is-checked">
+            Geen drempel
+          </li>
+          <li class="vl-w-list__item is-checked">
+            Dubbele glazen deur, Deurbreedte > 90 cm
+          </li>
+          <li class="vl-w-list__item is-checked">
+            Bemande balie
+          </li>
+          <li class="vl-w-list__item is-checked">
+            Elektronische betaalmogelijkheid
+          </li>
+          <li class="vl-w-list__item">
+            <span class="vl-w-label">Niet voldaan:</span> verlaagde balie
+          </li>
+        </ul>
+      </article>
+    </li>
+    <li class="vl-w-grid__item">
+      <article class="vl-w-card vl-w-card--link">
+        <h2 class="vl-w-title vl-w-title--section">
+          <a href="#beleving" class="vl-w-link vl-w-card__link" data-modal-open>
+            Museum-beleving
+          </a>
+        </h2>
+        <p class="vl-w-info">Je kan het merendeel van de bedoelde activiteiten uitvoeren, met jouw beperking.</p>
+        <ul class="vl-w-list vl-w-list--checks">
+          <li class="vl-w-list__item is-checked">
+            Rolstoelvriendelijke lift, plateauliften zelf te bedienen, hellingen
+          </li>
+          <li class="vl-w-list__item is-checked">
+            Prijsreductie voor personen met handicap
+          </li>
+          <li class="vl-w-list__item is-checked">
+            Begeleider gratis
+          </li>
+          <li class="vl-w-list__item is-checked">
+            European Disability Card
+          </li>
+          <li class="vl-w-list__item is-checked">
+            Interactief
+          </li>
+          <li class="vl-w-list__item is-checked">
+            Rust- Zit-mogelijkheden
+          </li>
+          <li class="vl-w-list__item is-checked">
+            Voel-elementen
+          </li>
+          <li class="vl-w-list__item is-checked">
+            Braille
+          </li>
+          <li class="vl-w-list__item is-checked">
+            Doe-elementen
+          </li>
+          <li class="vl-w-list__item is-checked">
+            Publieke WIFI
+          </li>
+          <li class="vl-w-list__item">
+            <span class="vl-w-label">Niet voldaan:</span> rolstoel ter beschikking
+          </li>
+          <li class="vl-w-list__item">
+            <span class="vl-w-label">Niet voldaan:</span> audioguide
+          </li>
+          <li class="vl-w-list__item">
+            <span class="vl-w-label">Niet voldaan:</span> vitrinekasten onderrijdbaar
+          </li>
+        </ul>
+      </article>
+    </li>
+    <li class="vl-w-grid__item">
+      <article class="vl-w-card vl-w-card--link">
+        <h2 class="vl-w-title vl-w-title--section">
+          <a href="#toilet" class="vl-w-link vl-w-card__link" data-modal-open>
+            Rolstoelvriendelijk toilet
           </a>
         </h2>
         <ul class="vl-w-list vl-w-list--checks">
           <li class="vl-w-list__item is-checked">
-            Prijsreductie
+            Helling
+          </li>
+          <li class="vl-w-list__item is-checked">
+            Deurbreedte 88 cm
+          </li>
+          <li class="vl-w-list__item is-checked">
+            Ruimte naast toiletpot 90 cm
+          </li>
+          <li class="vl-w-list__item is-checked">
+            Draairuimte in het toilet 150 cm
+          </li>
+          <li class="vl-w-list__item is-checked">
+            2 beugels
+          </li>
+          <li class="vl-w-list__item is-checked">
+            Verzorgingstafel kinderen
           </li>
           <li class="vl-w-list__item">
-            <span class="vl-w-label">Niet voldaan:</span> Aangepaste rolstoelroute
+            <span class="vl-w-label">Niet voldaan:</span> Voldoende draairuimte aan de deur
+          </li>
+          <li class="vl-w-list__item">
+            <span class="vl-w-label">Niet voldaan:</span> Ruimte voor toiletpot 80 cm
+          </li>
+          <li class="vl-w-list__item">
+            <span class="vl-w-label">Niet voldaan:</span> Onderrijdbare wastafel
+          </li>
+        </ul>
+      </article>
+    </li>
+    <li class="vl-w-grid__item">
+      <article class="vl-w-card vl-w-card--link">
+        <h2 class="vl-w-title vl-w-title--section">
+          <a href="#etenendrinken" class="vl-w-link vl-w-card__link" data-modal-open>
+            Eten en Drinken
+          </a>
+        </h2>
+        <ul class="vl-w-list vl-w-list--checks">
+          <li class="vl-w-list__item is-checked">
+            Bereikbaar
+          </li>
+          <li class="vl-w-list__item is-checked">
+            Onderrijdbare tafel(s)
+          </li>
+          <li class="vl-w-list__item is-checked">
+            Toegankelijke Menukaart
+          </li>
+          <li class="vl-w-list__item is-checked">
+            Extra's voor kinderen
+          </li>
+          <li class="vl-w-list__item is-checked">
+            Elektronische betaalmogelijkheid
+          </li>
+          <li class="vl-w-list__item">
+            <span class="vl-w-label">Niet voldaan:</span> Aangepaste maaltijden
+          </li>
+        </ul>
+      </article>
+    </li>
+    <li class="vl-w-grid__item">
+      <article class="vl-w-card vl-w-card--link">
+        <h2 class="vl-w-title vl-w-title--section">
+          <a href="#shop" class="vl-w-link vl-w-card__link" data-modal-open>
+            Shop
+          </a>
+        </h2>
+        <ul class="vl-w-list vl-w-list--checks">
+          <li class="vl-w-list__item is-checked">
+            Bereikbaar
+          </li>
+          <li class="vl-w-list__item is-checked">
+            Elektronische betaalmogelijkheid
+          </li>
+        </ul>
+      </article>
+    </li>
+    <li class="vl-w-grid__item">
+      <article class="vl-w-card vl-w-card--link">
+        <h2 class="vl-w-title vl-w-title--section">
+          <a href="#bibiliotheek" class="vl-w-link vl-w-card__link" data-modal-open>
+            Bibliotheek - Leesruimte
+          </a>
+        </h2>
+        <ul class="vl-w-list vl-w-list--checks">
+          <li class="vl-w-list__item is-checked">
+            Bereikbaar
           </li>
         </ul>
       </article>
     </li>
   </ul>
-  <p class="vl-w-tiny">Informatie van Toevla. <a href="#!" class="vl-w-link vl-w-link--neutral">Meer info</a></p>
+  <p class="vl-w-tiny">Informatie van Toevla. <a href="https://toevla.vlaanderen.be/publiek/nl/register/detail/3147" class="vl-w-link vl-w-link--neutral">Meer info</a></p>
 </section>
 
-{{outlet}}
+<div id="openbaar-vervoer" data-modal data-modal-manual-close>
+  <div class="vl-w-modal__header">
+    <h1 class="vl-w-title vl-u-margin-bottom-none">Openbaar vervoer</h1>
+    <button type="button" class="vl-w-link vl-w-link--neutral vl-w-link--button" data-modal-close-btn>
+      Venster sluiten
+    </button>
+  </div>
+  <div class="vl-w-modal__body">
+    <div class="vl-o-box">
+      <ul class="vl-w-list vl-w-list--checks-large vl-u-margin-bottom-small">
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">Station Gent-St-Pieters op 1,5 km</h2>
+          <p><a href="#!" class="vl-w-link">Routeplanner</a></p>
+        </li>
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">Tram 1, Halte Veergrep op 500 m</h2>
+          <p><a href="#!" class="vl-w-link">Routeplanner</a></p>
+        </li>
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">Bus, Halte op 170 m</h2>
+          <p><a href="#!" class="vl-w-link">Routeplanner</a></p>
+        </li>
+        <li class="vl-w-list__item">
+          <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Geen info:</span> toegankelijke haltes</h2>
+        </li>
+        <li class="vl-w-list__item">
+          <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Geen info:</span> obstakels publiek domein</h2>
+          <p>Bolle kasseien </p>
+        </li>
+      </ul>
+      <div class="vl-w-cta">
+        <p class="vl-w-small">Verkeerde info of aanvulling? <a href="https://toevla.vlaanderen.be/publiek/nl/Startpagina/Reactie" class="vl-w-link">Contacteer Toevla</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="parkeerplaats" data-modal data-modal-manual-close>
+  <div class="vl-w-modal__header">
+    <h1 class="vl-w-title vl-u-margin-bottom-none">Voorbehouden parkeerplaats</h1>
+    <button type="button" class="vl-w-link vl-w-link--neutral vl-w-link--button" data-modal-close-btn>
+      Venster sluiten
+    </button>
+  </div>
+  <div class="vl-w-modal__body">
+    <div class="vl-o-box">
+      <ul class="vl-w-list vl-w-list--checks-large vl-u-margin-bottom-small">
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">2 voorbehouden plaatsen</h2>
+          <p class="vl-u-margin-bottom">Er zijn 2 aangepaste parkeerplaatsen dicht bij de alternatieve inkom ; onder het Sint-Pietersplein is een ruime ondergrondse parkeergelegenheid met aangepaste parkeerplaatsen.</p>
+          <ul class="vl-w-list vl-w-list--images">
+            <li class="vl-w-list__item">
+              <button type="button" class="vl-w-image vl-w-image--link vl-js-image-toggle">
+                <img src="/assets/img/Kina_P_1.jpg" alt="">
+              </button>
+            </li>
+            <li class="vl-w-list__item">
+              <button type="button" class="vl-w-image vl-w-image--link vl-js-image-toggle">
+                <img src="/assets/img/Kina_P_2.jpg" alt="">
+              </button>
+            </li>
+          </ul>
+        </li>
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">Naast elkaar parkeren: breedte 400 cm</h2>
+          <p>publiek parkeerterrein, bolle kasseien ;  Breedte 250 cm, maar 1 Parkeerplaats met voetpad ernaast = 400 cm breed</p>
+        </li>
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">Naast elkaar parkeren: breedte 400 cm</h2>
+          <p>publiek parkeerterrein, bolle kasseien ;  Breedte 250 cm, maar 1 Parkeerplaats met voetpad ernaast = 400 cm breed</p>
+        </li>
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">Max voertuig-hoogte 210 cm </h2>
+          <p>Publiek, ondergronds (St-Pietersplein)</p>
+        </li>
+      </ul>
+      <div class="vl-w-cta">
+        <p class="vl-w-small">Verkeerde info of aanvulling? <a href="https://toevla.vlaanderen.be/publiek/nl/Startpagina/Reactie" class="vl-w-link">Contacteer Toevla</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="fietstenstalling" data-modal data-modal-manual-close>
+  <div class="vl-w-modal__header">
+    <h1 class="vl-w-title vl-u-margin-bottom-none">Fietsenstalling</h1>
+    <button type="button" class="vl-w-link vl-w-link--neutral vl-w-link--button" data-modal-close-btn>
+      Venster sluiten
+    </button>
+  </div>
+  <div class="vl-w-modal__body">
+    <div class="vl-o-box">
+      <ul class="vl-w-list vl-w-list--checks-large vl-u-margin-bottom-small">
+        <li class="vl-w-list__item">
+          <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Niet voldaan:</span> overdekte fietsenstalling</h2>
+        </li>
+      </ul>
+      <div class="vl-w-cta">
+        <p class="vl-w-small">Verkeerde info of aanvulling? <a href="https://toevla.vlaanderen.be/publiek/nl/Startpagina/Reactie" class="vl-w-link">Contacteer Toevla</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="inkom" data-modal data-modal-manual-close>
+  <div class="vl-w-modal__header">
+    <h1 class="vl-w-title vl-u-margin-bottom-none">Rolstoelvriendelijke inkom</h1>
+    <button type="button" class="vl-w-link vl-w-link--neutral vl-w-link--button" data-modal-close-btn>
+      Venster sluiten
+    </button>
+  </div>
+  <div class="vl-w-modal__body">
+    <div class="vl-o-box">
+      <ul class="vl-w-list vl-w-list--checks-large vl-u-margin-bottom-small">
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">Via alternatieve toegang</h2>
+          <p class="vl-u-margin-bottom-small">Op de hoek met de Kantienberg. Bel met parlofoon. Er komt steeds iemand om deze deur te openen en U te begeleiden naar de balie in de inkomhal.</p>
+          <ul class="vl-w-list vl-w-list--images">
+            <li class="vl-w-list__item">
+              <button type="button" class="vl-w-image vl-w-image--link vl-js-image-toggle">
+                <img src="/assets/img/Kina_I_1.jpg" alt="">
+              </button>
+            </li>
+            <li class="vl-w-list__item">
+              <button type="button" class="vl-w-image vl-w-image--link vl-js-image-toggle">
+                <img src="/assets/img/Kina_I_2.jpg" alt="">
+              </button>
+            </li>
+          </ul>
+        </li>
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">Geen drempel</h2>
+        </li>
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">Dubbele glazen deur, Deurbreedte > 90cm	</h2>
+        </li>
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">Bemande balie</h2>
+          <p>Permanent iemand aanwezig</p>
+        </li>
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">Elektronische betaalmogelijkheid</h2>
+        </li>
+        <li class="vl-w-list__item">
+          <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Niet aanwezig:</span> Verlaagde balie
+          </h2>
+        </li>
+      </ul>
+      <div class="vl-w-cta">
+        <p class="vl-w-small">Verkeerde info of aanvulling? <a href="https://toevla.vlaanderen.be/publiek/nl/Startpagina/Reactie" class="vl-w-link">Contacteer Toevla</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="beleving" data-modal data-modal-manual-close>
+  <div class="vl-w-modal__header">
+    <h1 class="vl-w-title vl-u-margin-bottom-none">Details toilet</h1>
+    <button type="button" class="vl-w-link vl-w-link--neutral vl-w-link--button" data-modal-close-btn>
+      Venster sluiten
+    </button>
+  </div>
+  <div class="vl-w-modal__body">
+    <div class="vl-o-box">
+      <ul class="vl-w-list vl-w-list--checks-large vl-u-margin-bottom-small">
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">Rolstoelvriendelijke lift, plateauliften zelf te bedienen, hellingen</h2>
+          <p class="vl-u-margin-bottom-small">Alle verdiepingen en zalen bereikbaar.</p>
+          <ul class="vl-w-list vl-w-list--images">
+            <li class="vl-w-list__item">
+              <button type="button" class="vl-w-image vl-w-image--link vl-js-image-toggle">
+                <img src="/assets/img/Kina_C_1.jpg" alt="">
+              </button>
+            </li>
+            <li class="vl-w-list__item">
+              <button type="button" class="vl-w-image vl-w-image--link vl-js-image-toggle">
+                <img src="/assets/img/Kina_C_2.jpg" alt="">
+              </button>
+            </li>
+            <li class="vl-w-list__item">
+              <button type="button" class="vl-w-image vl-w-image--link vl-js-image-toggle">
+                <img src="/assets/img/Kina_C_3.jpg" alt="">
+              </button>
+            </li>
+          </ul>
+        </li>
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">Prijsreductie voor personen met handicap</h2>
+        </li>
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">Begeleider gratis</h2>
+        </li>
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">European Disability Card</h2>
+        </li>
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">Interactief</h2>
+        </li>
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">Rust- Zit-mogelijkheden</h2>
+          <ul class="vl-w-list vl-w-list--images">
+            <li class="vl-w-list__item">
+              <button type="button" class="vl-w-image vl-w-image--link vl-js-image-toggle">
+                <img src="/assets/img/Kina_Z.jpg" alt="">
+              </button>
+            </li>
+          </ul>
+        </li>
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">Voel-elementen</h2>
+        </li>
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">Braille</h2>
+          <ul class="vl-w-list vl-w-list--images">
+            <li class="vl-w-list__item">
+              <button type="button" class="vl-w-image vl-w-image--link vl-js-image-toggle">
+                <img src="/assets/img/Kina_B.jpg" alt="">
+              </button>
+            </li>
+          </ul>
+        </li>
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">Doe-elementen</h2>
+          <ul class="vl-w-list vl-w-list--images">
+            <li class="vl-w-list__item">
+              <button type="button" class="vl-w-image vl-w-image--link vl-js-image-toggle">
+                <img src="/assets/img/Kina_D.jpg" alt="">
+              </button>
+            </li>
+          </ul>
+        </li>
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">Publieke WIFI</h2>
+        </li>
+        <li class="vl-w-list__item">
+          <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Niet voldaan:</span> rolstoel ter beschikking</h2>
+        </li>
+        <li class="vl-w-list__item">
+          <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Niet voldaan:</span> audioguide</h2>
+        </li>
+        <li class="vl-w-list__item">
+          <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Niet voldaan:</span> vitrinekasten onderrijdbaar</h2>
+        </li>
+      </ul>
+      <div class="vl-w-cta">
+        <p class="vl-w-small">Verkeerde info of aanvulling? <a href="https://toevla.vlaanderen.be/publiek/nl/Startpagina/Reactie" class="vl-w-link">Contacteer Toevla</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="toilet" data-modal data-modal-manual-close>
+  <div class="vl-w-modal__header">
+    <h1 class="vl-w-title vl-u-margin-bottom-none">Rolstoelvriendelijk toilet</h1>
+    <button type="button" class="vl-w-link vl-w-link--neutral vl-w-link--button" data-modal-close-btn>
+      Venster sluiten
+    </button>
+  </div>
+  <div class="vl-w-modal__body">
+    <div class="vl-o-box">
+      <ul class="vl-w-list vl-w-list--checks-large vl-u-margin-bottom-small">
+        <ul class="vl-w-list vl-w-list--checks">
+          <li class="vl-w-list__item is-checked">
+            <h2 class="vl-w-title vl-w-title--detail">Helling</h2>
+            <p class="vl-u-margin-bottom-small">Hoogteverschil van 15 cm via korte steile helling.</p>
+            <ul class="vl-w-list vl-w-list--images">
+              <li class="vl-w-list__item">
+                <button type="button" class="vl-w-image vl-w-image--link vl-js-image-toggle">
+                  <img src="/assets/img/Kina_T_1.jpg" alt="">
+                </button>
+              </li>
+            </ul>
+          </li>
+          <li class="vl-w-list__item is-checked">
+            <h2 class="vl-w-title vl-w-title--detail">Deurbreedte 88 cm</h2>
+            <p class="vl-u-margin-bottom-small">Klikdeur, zonder trek- of duwkracht.</p>
+          </li>
+          <li class="vl-w-list__item is-checked">
+            <h2 class="vl-w-title vl-w-title--detail">Ruimte naast toiletpot 90 cm</h2>
+          </li>
+          <li class="vl-w-list__item is-checked">
+            <h2 class="vl-w-title vl-w-title--detail">Draairuimte in het toilet 150 cm</h2>
+            <ul class="vl-w-list vl-w-list--images">
+              <li class="vl-w-list__item">
+                <button type="button" class="vl-w-image vl-w-image--link vl-js-image-toggle">
+                  <img src="/assets/img/Kina_T_2.jpg" alt="">
+                </button>
+              </li>
+            </ul>
+          </li>
+          <li class="vl-w-list__item is-checked">
+            <h2 class="vl-w-title vl-w-title--detail">2 beugels</h2>
+            <ul class="vl-w-list vl-w-list--images">
+              <li class="vl-w-list__item">
+                <button type="button" class="vl-w-image vl-w-image--link vl-js-image-toggle">
+                  <img src="/assets/img/Kina_T_3.jpg" alt="">
+                </button>
+              </li>
+            </ul>
+          </li>
+          <li class="vl-w-list__item is-checked">
+            <h2 class="vl-w-title vl-w-title--detail">Verzorgingstafel kinderen</h2>
+          </li>
+          <li class="vl-w-list__item">
+            <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Niet voldaan:</span> Voldoende draairuimte aan de deur</h2>
+          </li>
+          <li class="vl-w-list__item">
+            <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Niet voldaan:</span> Ruimte voor toiletpot 80 cm</h2>
+          </li>
+          <li class="vl-w-list__item">
+            <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Niet voldaan:</span> Onderrijdbare wastafel</h2>
+          </li>
+        </ul>
+      </ul>
+      <div class="vl-w-cta">
+        <p class="vl-w-small">Verkeerde info of aanvulling? <a href="https://toevla.vlaanderen.be/publiek/nl/Startpagina/Reactie" class="vl-w-link">Contacteer Toevla</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="etenendrinken" data-modal data-modal-manual-close>
+  <div class="vl-w-modal__header">
+    <h1 class="vl-w-title vl-u-margin-bottom-none">Details activiteiten</h1>
+    <button type="button" class="vl-w-link vl-w-link--neutral vl-w-link--button" data-modal-close-btn>
+      Venster sluiten
+    </button>
+  </div>
+  <div class="vl-w-modal__body">
+    <div class="vl-o-box">
+      <ul class="vl-w-list vl-w-list--checks-large vl-u-margin-bottom-small">
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">Bereikbaar</h2>
+          <p>Voorbij de balie.</p>
+        </li>
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">Onderrijdbare tafel(s)</h2>
+        </li>
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">Toegankelijke Menukaart</h2>
+          <p class="vl-u-margin-bottom-small">Enkele (onderrijdbare) tafels.</p>
+          <ul class="vl-w-list vl-w-list--images">
+            <li class="vl-w-list__item">
+              <button type="button" class="vl-w-image vl-w-image--link vl-js-image-toggle">
+                <img src="/assets/img/Kina_Sh.jpg" alt="">
+              </button>
+            </li>
+          </ul>
+        </li>
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">Extra's voor kinderen</h2>
+        </li>
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">Elektronische betaalmogelijkheid</h2>
+        </li>
+        <li class="vl-w-list__item">
+          <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Niet voldaan:</span> Aangepaste maaltijden</h2>
+        </li>
+      </ul>
+      <div class="vl-w-cta">
+        <p class="vl-w-small">Verkeerde info of aanvulling? <a href="https://toevla.vlaanderen.be/publiek/nl/Startpagina/Reactie" class="vl-w-link">Contacteer Toevla</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="shop" data-modal data-modal-manual-close>
+  <div class="vl-w-modal__header">
+    <h1 class="vl-w-title vl-u-margin-bottom-none">Details activiteiten</h1>
+    <button type="button" class="vl-w-link vl-w-link--neutral vl-w-link--button" data-modal-close-btn>
+      Venster sluiten
+    </button>
+  </div>
+  <div class="vl-w-modal__body">
+    <div class="vl-o-box">
+      <ul class="vl-w-list vl-w-list--checks-large vl-u-margin-bottom-small">
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">Bereikbaar</h2>
+          <p>Voorbij de balie.</p>
+        </li>
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">Elektronische betaalmogelijkheid</h2>
+        </li>
+      </ul>
+      <div class="vl-w-cta">
+        <p class="vl-w-small">Verkeerde info of aanvulling? <a href="https://toevla.vlaanderen.be/publiek/nl/Startpagina/Reactie" class="vl-w-link">Contacteer Toevla</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="bibiliotheek" data-modal data-modal-manual-close>
+  <div class="vl-w-modal__header">
+    <h1 class="vl-w-title vl-u-margin-bottom-none">Details activiteiten</h1>
+    <button type="button" class="vl-w-link vl-w-link--neutral vl-w-link--button" data-modal-close-btn>
+      Venster sluiten
+    </button>
+  </div>
+  <div class="vl-w-modal__body">
+    <div class="vl-o-box">
+      <ul class="vl-w-list vl-w-list--checks-large vl-u-margin-bottom-small">
+        <li class="vl-w-list__item is-checked">
+          <h2 class="vl-w-title vl-w-title--detail">Bereikbaar</h2>
+          <p>Voorbij de balie.</p>
+        </li>
+      </ul>
+      <div class="vl-w-cta">
+        <p class="vl-w-small">Verkeerde info of aanvulling? <a href="https://toevla.vlaanderen.be/publiek/nl/Startpagina/Reactie" class="vl-w-link">Contacteer Toevla</a></p>
+      </div>
+    </div>
+  </div>
+</div>

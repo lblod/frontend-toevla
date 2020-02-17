@@ -16,20 +16,17 @@
   <div class="vl-o-layout vl-d-editor">
     <h2 class="vl-u-h5">Overzicht</h2>
     <ul>
-      <li><a href="/overview/">Widget (generic)</a></li>
+      <li>
+        <LinkTo @route="widget-desktop">Widget (desktop)</LinkTo>
+      </li>
+      <li>
+        <LinkTo @route="widget-mobile">Widget (mobile)</LinkTo>
+      </li>
     </ul>
   </div>
   {{else}}
   <div class="vl-o-layout vl-d-editor">
-    <h2>Desktop</h2>
-    <div class="vl-d-component">
-      {{outlet}}
-    </div>
-    <hr>
-    <h2>Mobile</h2>
-    <div class="vl-d-component vl-d-component--small vl-w-container--small">
-      {{outlet}}
-    </div>
+    {{outlet}}
   </div>
   {{/if}}
 </main>

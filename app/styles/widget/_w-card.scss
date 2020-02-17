@@ -35,6 +35,7 @@
     transition: color $vl-transition, text-decoration $vl-transition;
     font-weight: $vl-regular;
     text-decoration-color: $vl-action-underline;
+    cursor: pointer;
 
     &,
     &:visited {

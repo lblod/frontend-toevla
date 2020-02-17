@@ -9,3 +9,35 @@
   border-top: 1px solid $vl-neutral-lighter;
 }
 
+.vl-w-button-link {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  font-family: $vl-font;
+  font-size: inherit;
+  transition: color $vl-transition, text-decoration $vl-transition;
+  font-weight: $vl-regular;
+  text-decoration-color: $vl-action-underline;
+  text-decoration: underline;
+
+  &,
+  &:visited {
+    color: $vl-action-color;
+  }
+
+  &:hover,
+  &:focus {
+    color: $vl-action-hover-color;
+    text-decoration-color: $vl-action-underline-hover;
+  }
+
+  &:focus {
+    outline: $vl-outline;
+    outline-offset: $vl-unit-tiny/2;
+  }
+
+  .is-active > & {
+    color: $vl-action-active-color;
+    text-decoration: none;
+  }
+}

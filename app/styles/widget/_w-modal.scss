@@ -2,31 +2,56 @@
    #WIDGET MODAL
    ================================== */
 
-.vl-w-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  background-color: rgba($vl-neutral-darkest,.2);
-  z-index: 1;
+/**
+  * Trigger styling
+  */
+[data-modal-open][hidden] {
+  display: none;
 }
 
-  .vl-w-modal__inner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: calc(100% - #{$vl-unit});
-    transform: translate(-50%,-50%);
-    height: calc(100% - #{$vl-unit-large});
+/**
+  * When a modal dialog is open, don't allow scrolling of content
+  * beneath (on desktop). Also useful in negating instances of
+  * double scroll bars.
+  * (browser window + dialog if long enough content)
+  */
+body.vl-w-modal-open {
+  overflow: hidden;
+}
 
-    @include mq(medium) {
-      width: 760px;
-    }
+/**
+  * Modal Dialog base styling
+  */
+.vl-w-js [data-modal],
+.vl-w-modal {
+  -webkit-overflow-scrolling: touch;
+  background: $vl-white;
+  box-shadow: 0 0 1800px 400px rgba($vl-neutral-darkest,.4);
+  margin: auto;
+  height: calc(100% - #{$vl-unit});
+  max-width: 760px;
+  opacity: 1;
+  overflow: auto;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  right: $vl-unit-small;
+  top: $vl-unit-small;
+  left: $vl-unit-small;
+  bottom: $vl-unit-small;
+  transform: translateY(0%);
+  visibility: visible;
+  width: 100%;
+  z-index: 10; /* this should be more than enough... */
+
+  @media screen and ( min-height: 440px ) and ( min-width: 500px ) {
+    bottom: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity $vl-transition, transform $vl-transition;
   }
+}
 
   .vl-w-modal__header {
     display: flex;
@@ -34,12 +59,38 @@
     align-items: center;
     padding: $vl-unit-small $vl-unit;
     border-bottom: 1px solid $vl-neutral-lighter;
-    background-color: $vl-neutral-lightest;
+
+    @include mq(medium) {
+      padding: $vl-unit $vl-unit;
+    }
   }
 
   .vl-w-modal__body {
+    flex-grow: 1;
     position: relative;
     height: calc(100% - #{$vl-unit-large + $vl-unit-small});
     background-color: $vl-white;
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
   }
+
+
+/**
+  * To allow for CSS animations, hidden modal dialogs are
+  * not set to display: none, but rather the following rule
+  * set, in combination with the dialog's default
+  * position: fixed, will keep dialogs hidden from
+  * all users until opened.
+  *
+  * This also solves an issue with iOS VO + Safari not allowing
+  * modal dialogs to be focused, if the dialog is initially
+  * set to "display: none".
+  */
+.vl-w-js [data-modal][hidden],
+.vl-w-modal[hidden] {
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(15vh);
+  visibility: hidden;
+}

@@ -6,6 +6,7 @@
   transition: color $vl-transition, text-decoration $vl-transition;
   font-weight: $vl-regular;
   text-decoration-color: $vl-action-underline;
+  text-decoration: underline;
 
   &,
   &:visited {
@@ -57,4 +58,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.vl-w-link--button {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
 }

@@ -19,7 +19,6 @@
  html {
   font-family: $vl-font;
   font-size: 62.5%; /* [4] */
-  overflow-y: scroll; /* [2] */
   min-height: 100%; /* [3] */
   background-color: $vl-page-bg;
   text-rendering: optimizeLegibility;
@@ -32,6 +31,7 @@
 body {
   font-size: $vl-global-font-size; /* [4] */
   line-height: $vl-global-line-height; /* [1] */
+  overflow-y: scroll; /* [2] */
 }
 
 ::-moz-selection {

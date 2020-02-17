@@ -43,3 +43,9 @@
 .vl-w-label {
   font-weight: $vl-regular;
 }
+
+.vl-w-info {
+  font-weight: $vl-regular;
+  padding-top: $vl-unit-tiny/2;
+  color: $vl-neutral-darker;
+}
