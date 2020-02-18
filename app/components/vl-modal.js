@@ -37,9 +37,8 @@ export default class modal extends Component {
     // Toggle modal view state
     this.modalState = !this.modalState;
 
-    // Add body class when modal is active
-    document.getElementsByTagName('body')[0].classList.toggle("vl-w-modal-open");
-
+    // Toggle body class
+    // document.getElementsByTagName('body')[0].classList.toggle("vl-w-modal-open");
   }
 
   @action closeModal() {
@@ -47,6 +46,6 @@ export default class modal extends Component {
     this.modalState = false;
 
     // Remove body class when modal is disabled
-    document.getElementsByTagName('body')[0].classList.remove("vl-w-modal-open");
+    // document.getElementsByTagName('body')[0].classList.remove("vl-w-modal-open");
   }
 }

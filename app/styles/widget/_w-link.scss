@@ -28,6 +28,18 @@
     color: $vl-action-active-color;
     text-decoration: none;
   }
+
+  .vl-w-theme-kina &,
+  .vl-w-theme-kina &:hover{
+    color: $vl-neutral-darkest;
+    text-decoration-color: $vl-neutral-darker;
+  }
+
+  .vl-w-theme-kina &:hover,
+  .vl-w-theme-kina &:focus{
+    color: $vl-neutral-darker;
+    text-decoration-color: $vl-neutral-dark;
+  }
 }
 
 .vl-w-link--neutral {

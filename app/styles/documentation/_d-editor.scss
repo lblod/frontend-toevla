@@ -311,3 +311,171 @@
     }
   }
 }
+
+
+// Demo styles for kina
+.vl-d-editor--kina {
+  font-family: "Lato", sans-serif;
+
+  > * {
+    margin-bottom: 0;
+  }
+
+  > * + * {
+    margin-top: $vl-unit-small;
+  }
+
+  > h1 + *,
+  > h2 + *,
+  > h3 + *,
+  > h4 + *,
+  > h5 + *,
+  > h6 + * {
+    margin-top: $vl-unit-tiny;
+  }
+
+  > h2 + * {
+    margin-top: $vl-unit-small;
+  }
+
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6 {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+  }
+
+  > h1 {
+    @include vl-font-size(2.5rem);
+  }
+
+  > h2 {
+    @include vl-font-size(1.5rem);
+    font-weight: 900;
+  }
+
+  > h3 {
+    @include vl-font-size(1.5rem);
+    font-weight: 700;
+  }
+
+  > ul h3 {
+    @include vl-font-size(1.5rem);
+    font-weight: 700;
+  }
+
+  > h4,
+  > h5,
+  > h6 {
+    @include vl-font-size(1.5rem);
+  }
+
+  > p {
+    @include vl-font-size(1.5rem,1.5);
+  }
+
+  hr {
+    margin: 0;
+    margin-top: $vl-unit;
+    margin-bottom: $vl-unit;
+    border: 0;
+    border-bottom: 3px solid $vl-neutral-lighter;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  > a:not(.vl-c-button),
+  > ul a:not(.vl-c-button),
+  > ol a:not(.vl-c-button),
+  > p a:not(.vl-c-button) {
+    transition: color $vl-transition, text-decoration $vl-transition;
+    font-weight: $vl-regular;
+    text-decoration-color: $vl-neutral-darker;
+
+    &,
+    &:visited {
+      color: $vl-neutral-darkest;
+    }
+
+    &:hover,
+    &:focus {
+      color: $vl-neutral-darker;
+      text-decoration-color: $vl-neutral-dark;
+    }
+
+    &:focus {
+      outline: $vl-outline;
+      outline-offset: $vl-unit-tiny/2;
+    }
+  }
+
+  @include mq(small) {
+    > * + * {
+      margin-top: $vl-unit;
+    }
+
+    > h1 + *,
+    > h2 + *,
+    > h3 + *,
+    > h4 + *,
+    > h5 + *,
+    > h6 + * {
+      margin-top: $vl-unit-tiny;
+    }
+
+    > h2 + * {
+      margin-top: $vl-unit-small;
+    }
+
+    > h1 {
+      @include vl-font-size(2.5rem);
+    }
+
+    > h2 {
+      @include vl-font-size(2.5rem);
+    }
+
+    > h3 {
+      @include vl-font-size(1.5rem);
+    }
+
+    > h4,
+    > h5,
+    > h6 {
+      @include vl-font-size(1.5rem);
+    }
+
+    > p {
+      @include vl-font-size(1.5rem);
+    }
+  }
+
+  @include mq(medium) {
+    > h1 + *,
+    > h2 + *,
+    > h3 + *,
+    > h4 + *,
+    > h5 + *,
+    > h6 + * {
+      margin-top: 0;
+    }
+
+    > h2 + * {
+      margin-top: $vl-unit-small;
+    }
+
+    > h1,
+    > h2 {
+      @include vl-font-size(2.5rem);
+    }
+
+    > p {
+      @include vl-font-size(1.5rem,1.3);
+    }
+  }
+}

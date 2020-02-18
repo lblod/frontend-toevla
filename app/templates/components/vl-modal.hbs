@@ -7,9 +7,9 @@
 {{!-- {{#if this.modalState}} --}}
 {{#ember-wormhole to=destinationElementId}}
   <div class="vl-w-modal-background {{if this.modalState "is-visible"}}" role="presentation"></div>
-  <div {{on-click-outside (action "closeModal") capture=true}}  id="{{@id}}" class="vl-w-modal {{if this.modalState "is-open" "is-hidden"}}">
+  <div {{on-click-outside (action "closeModal") capture=true}}  id="{{@id}}" class="vl-w-modal {{if this.modalState "is-open" "is-hidden"}} {{@theme}}">
     <div class="vl-w-modal__header">
-      <h1 class="vl-w-title vl-u-margin-bottom-none">{{@title}}</h1>
+      <h1 class="vl-w-title vl-w-title--modal vl-u-margin-bottom-none">{{@title}}</h1>
       <button type="button" {{on "click" this.toggleModal}} class="vl-w-link vl-w-link--neutral vl-w-link--button">
         Venster sluiten
       </button>

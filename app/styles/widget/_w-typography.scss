@@ -8,6 +8,20 @@
   font-weight: $vl-bold;
   color: $vl-neutral-darker;
   margin-bottom: $vl-unit-small + $vl-unit-tiny;
+
+  .vl-w-theme-kina & {
+    @include vl-font-size(1.5rem);
+    color: $vl-neutral-darkest;
+    font-weight: 700;
+    margin-bottom: $vl-unit-small;
+  }
+}
+
+.vl-w-title--modal {
+  .vl-w-theme-kina & {
+    @include vl-font-size(2.5rem);
+    font-weight: 900;
+  }
 }
 
 .vl-w-title--section {
@@ -16,6 +30,10 @@
 
   @include mq(medium) {
     margin-bottom: $vl-unit-small;
+  }
+
+  .vl-w-theme-kina & {
+    @include vl-font-size(1.5rem);
   }
 }
 
@@ -28,11 +46,27 @@
   .is-checked & {
     color: $vl-neutral-darker;
   }
+
+  .vl-w-theme-kina & {
+    @include vl-font-size(1.5rem);
+    color: $vl-neutral;
+    margin-bottom: $vl-unit-tiny/2;
+    font-weight: 400;
+  }
+
+  .vl-w-theme-kina .is-checked & {
+    color: $vl-neutral-darker;
+    font-weight: 700;
+  }
 }
 
 .vl-w-small {
   @include vl-font-size($vl-base);
   color: $vl-neutral-dark;
+
+  .vl-w-theme-kina & {
+    @include vl-font-size(1.5rem);
+  }
 }
 
 .vl-w-tiny {
@@ -48,4 +82,11 @@
   font-weight: $vl-regular;
   padding-top: $vl-unit-tiny/2;
   color: $vl-neutral-darker;
+}
+
+.vl-w-cta {
+  padding: $vl-unit $vl-unit $vl-unit-tiny;
+  text-align: center;
+  border-radius: $vl-radius;
+  border-top: 1px solid $vl-neutral-lighter;
 }
