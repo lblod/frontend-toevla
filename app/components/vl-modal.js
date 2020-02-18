@@ -5,7 +5,7 @@ import { tracked } from "@glimmer/tracking";
 export default class modal extends Component {
   // Variables
   destinationElementId =  null
-  attributeBindings = ['aria-label', 'tabindex', 'hidden']
+  // attributeBindings = ['aria-label', 'tabindex', 'hidden']
 
   constructor(options) {
     super(options);
@@ -39,6 +39,7 @@ export default class modal extends Component {
 
     // Add body class when modal is active
     document.getElementsByTagName('body')[0].classList.toggle("vl-w-modal-open");
+
   }
 
   @action closeModal() {
