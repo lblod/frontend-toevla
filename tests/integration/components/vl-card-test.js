@@ -3,22 +3,22 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
-module('Integration | Component | vl-image-toggle', function(hooks) {
+module('Integration | Component | vl-card', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`<VlImageToggle />`);
+    await render(hbs`<VlCard />`);
 
     assert.equal(this.element.textContent.trim(), '');
 
     // Template block usage:
     await render(hbs`
-      <VlImageToggle>
+      <VlCard>
         template block text
-      </VlImageToggle>
+      </VlCard>
     `);
 
     assert.equal(this.element.textContent.trim(), 'template block text');

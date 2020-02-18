@@ -5,9 +5,9 @@
 /**
   * Trigger styling
   */
-[data-modal-open][hidden] {
-  display: none;
-}
+// [data-modal-open][hidden] {
+//   display: none;
+// }
 
 /**
   * When a modal dialog is open, don't allow scrolling of content
@@ -19,6 +19,22 @@ body.vl-w-modal-open {
   overflow: hidden;
 }
 
+// Add a modal background
+.vl-w-modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($vl-neutral-darkest,.4);
+  z-index: 9;
+  display: none;
+
+  &.is-visible {
+    display: block;
+  }
+}
+
 /**
   * Modal Dialog base styling
   */
@@ -26,7 +42,6 @@ body.vl-w-modal-open {
 .vl-w-modal {
   -webkit-overflow-scrolling: touch;
   background: $vl-white;
-  box-shadow: 0 0 1800px 400px rgba($vl-neutral-darkest,.4);
   margin: auto;
   height: calc(100% - #{$vl-unit});
   max-width: 760px;
@@ -87,7 +102,8 @@ body.vl-w-modal-open {
   * set to "display: none".
   */
 .vl-w-js [data-modal][hidden],
-.vl-w-modal[hidden] {
+.vl-w-modal[hidden],
+.vl-w-modal.is-hidden {
   display: block;
   opacity: 0;
   pointer-events: none;

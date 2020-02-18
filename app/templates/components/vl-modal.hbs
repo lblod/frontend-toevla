@@ -1,0 +1,27 @@
+<h2 class="vl-w-title vl-w-title--section">
+  <button type="button" {{on "click" this.toggleModal}} class="vl-w-link vl-w-link--button vl-w-card__link">
+    {{@title}}
+  </button>
+</h2>
+
+{{!-- {{#if this.modalState}} --}}
+{{#ember-wormhole to=destinationElementId}}
+  <div class="vl-w-modal-background {{if this.modalState "is-visible"}}" role="presentation"></div>
+  <div {{on-click-outside (action "closeModal") capture=true}}  id="{{@id}}" class="vl-w-modal {{if this.modalState "is-open" "is-hidden"}}">
+    <div class="vl-w-modal__header">
+      <h1 class="vl-w-title vl-u-margin-bottom-none">{{@title}}</h1>
+      <button type="button" {{on "click" this.toggleModal}} class="vl-w-link vl-w-link--neutral vl-w-link--button">
+        Venster sluiten
+      </button>
+    </div>
+    <div class="vl-w-modal__body">
+      <div class="vl-o-box">
+        {{yield}}
+        <div class="vl-w-cta">
+          <p class="vl-w-small">Verkeerde info of aanvulling? <a href="https://toevla.vlaanderen.be/publiek/nl/Startpagina/Reactie" class="vl-w-link">Contacteer Toevla</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/ember-wormhole}}
+{{!-- {{/if }} --}}

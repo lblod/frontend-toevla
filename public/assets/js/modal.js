@@ -725,7 +725,7 @@
    * additional initialize functions here.
    */
   ARIAmodal.init = function () {
-    // ARIAmodal.organizeDOM();
+    ARIAmodal.organizeDOM();
     ARIAmodal.setupTrigger();
     ARIAmodal.setupModal();
     ARIAmodal.autoLoad();

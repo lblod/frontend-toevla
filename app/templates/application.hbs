@@ -1,3 +1,5 @@
+<div id="ember-vo-appuniversum-wormhole"></div>
+
 <header class="vl-o-region-large vl-d-theme-neutral-lightest">
   <div class="vl-o-layout">
     {{#unless this.isIndex}}
@@ -23,10 +25,12 @@
         <LinkTo @route="widget-mobile">Widget (mobile)</LinkTo>
       </li>
     </ul>
+
   </div>
   {{else}}
   <div class="vl-o-layout vl-d-editor">
     {{outlet}}
+
   </div>
   {{/if}}
 </main>
