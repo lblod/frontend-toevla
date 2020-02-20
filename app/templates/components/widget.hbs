@@ -1,11 +1,20 @@
 <section class="vl-w-container">
   <h1 class="vl-w-title">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" class="vl-w-icon">
+      <path d="M19.2396916,0 C8.61373915,0 0,8.61373915 0,19.2396916 C0,29.865644 8.61373915,38.4793832 19.2396916,38.4793832 C29.865644,38.4793832 38.4793832,29.865644 38.4793832,19.2396916 C38.4793832,8.61373915 29.8652582,0 19.2396916,0 Z M18.9479882,3.82108309 C20.3262482,3.82108309 21.4421295,4.93657851 21.4421295,6.30596394 C21.4421295,7.68422394 20.3262482,8.79971936 18.9479882,8.79971936 C17.5793745,8.79971936 16.463879,7.68383809 16.4631073,6.30596394 C16.4631073,4.93657851 17.5786028,3.82108309 18.9479882,3.82108309 Z M29.7298245,11.8564315 L22.3276577,12.7917345 L22.3307445,20.2016183 L25.9168443,32.1726476 C26.1062971,32.9285298 25.6517646,33.6847979 24.9039852,33.8715498 C24.1565917,34.0583017 23.3922207,33.6465986 23.2039254,32.8907164 L19.5302374,21.9935106 L18.3989221,21.9935106 L15.0192527,33.1168251 C14.7364238,33.842611 13.9280659,34.1763721 13.2030517,33.8935433 C12.4849829,33.6134154 12.0466561,32.7961829 12.3298707,32.070397 L15.4340426,20.3227755 L15.4340426,12.7917345 L8.61451085,11.8637627 C7.91457702,11.8074284 7.43920851,11.1912243 7.49631447,10.4912904 C7.54763266,9.78595468 8.18428691,9.26235479 8.88383489,9.31868904 L17.1692148,10.0321277 L20.8027743,10.0321277 L29.6256447,9.3047984 C30.3267361,9.27663128 30.9209467,9.82183883 30.9444836,10.5283321 C30.9726507,11.2298094 30.4313017,11.8274927 29.7298245,11.8564315 Z" transform="translate(2.75 2.5)"/>
+    </svg>
     {{@title}}
   </h1>
   <ul class="vl-w-grid vl-u-margin-bottom-small">
     <li class="vl-w-grid__item">
       <Vl-card>
         <Vl-modal @title="Openbaar vervoer" @id="openbaar-vervoer">
+          <p class="vl-w-info-large">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" class="vl-w-icon">
+              <path d="M20.1666667,31.1666667 L23.8333333,31.1666667 L23.8333333,20.1666667 L20.1666667,20.1666667 L20.1666667,31.1666667 Z M22,3.66666667 C11.8708333,3.66666667 3.66666667,11.8708333 3.66666667,22 C3.66666667,32.1291667 11.8708333,40.3333333 22,40.3333333 C32.1291667,40.3333333 40.3333333,32.1291667 40.3333333,22 C40.3333333,11.8708333 32.1291667,3.66666667 22,3.66666667 Z M22,36.6666667 C13.915,36.6666667 7.33333333,30.085 7.33333333,22 C7.33333333,13.915 13.915,7.33333333 22,7.33333333 C30.085,7.33333333 36.6666667,13.915 36.6666667,22 C36.6666667,30.085 30.085,36.6666667 22,36.6666667 Z M20.1666667,16.5 L23.8333333,16.5 L23.8333333,12.8333333 L20.1666667,12.8333333 L20.1666667,16.5 Z"/>
+            </svg>
+            Bereikbaar met tram of bus.
+          </p>
           <ul class="vl-w-list vl-w-list--checks-large vl-u-margin-bottom-small">
             <li class="vl-w-list__item is-checked">
               <h2 class="vl-w-title vl-w-title--detail">Station Gent-St-Pieters op 1,5 km</h2>
@@ -20,11 +29,11 @@
               <p><a href="#!" class="vl-w-link">Routeplanner</a></p>
             </li>
             <li class="vl-w-list__item">
-              <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Geen info:</span> toegankelijke haltes</h2>
+              <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Niet aanwezig:</span> obstakels publiek domein</h2>
+              <p>Bolle kasseien</p>
             </li>
             <li class="vl-w-list__item">
-              <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Geen info:</span> obstakels publiek domein</h2>
-              <p>Bolle kasseien </p>
+              <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Geen info:</span> toegankelijke haltes</h2>
             </li>
           </ul>
         </Vl-modal>
@@ -39,10 +48,11 @@
             Bus, Halte op 170 m
           </li>
           <li class="vl-w-list__item">
-            <span class="vl-w-label">Geen info:</span> toegankelijke haltes
+            <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Niet aanwezig:</span> obstakels publiek domein</h2>
+            <p>Bolle kasseien</p>
           </li>
           <li class="vl-w-list__item">
-            <span class="vl-w-label">Geen info:</span> obstakels publiek domein
+            <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Geen info:</span> toegankelijke haltes</h2>
           </li>
         </ul>
       </Vl-card>
@@ -50,10 +60,16 @@
     <li class="vl-w-grid__item">
       <Vl-card>
         <Vl-modal @title="Voorbehouden parkeerplaats" @id="parkeerplaats">
+          <p class="vl-w-info-large">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" class="vl-w-icon">
+              <path d="M20.1666667,31.1666667 L23.8333333,31.1666667 L23.8333333,20.1666667 L20.1666667,20.1666667 L20.1666667,31.1666667 Z M22,3.66666667 C11.8708333,3.66666667 3.66666667,11.8708333 3.66666667,22 C3.66666667,32.1291667 11.8708333,40.3333333 22,40.3333333 C32.1291667,40.3333333 40.3333333,32.1291667 40.3333333,22 C40.3333333,11.8708333 32.1291667,3.66666667 22,3.66666667 Z M22,36.6666667 C13.915,36.6666667 7.33333333,30.085 7.33333333,22 C7.33333333,13.915 13.915,7.33333333 22,7.33333333 C30.085,7.33333333 36.6666667,13.915 36.6666667,22 C36.6666667,30.085 30.085,36.6666667 22,36.6666667 Z M20.1666667,16.5 L23.8333333,16.5 L23.8333333,12.8333333 L20.1666667,12.8333333 L20.1666667,16.5 Z"/>
+            </svg>
+            Er is minstens één voorbehouden parkeerplaats met rolstoelvriendelijke ondergrond bij het uitstappen.
+          </p>
           <ul class="vl-w-list vl-w-list--checks-large vl-u-margin-bottom-small">
             <li class="vl-w-list__item is-checked">
               <h2 class="vl-w-title vl-w-title--detail">2 voorbehouden plaatsen</h2>
-              <p class="vl-u-margin-bottom">Er zijn 2 aangepaste parkeerplaatsen dicht bij de alternatieve inkom ; onder het Sint-Pietersplein is een ruime ondergrondse parkeergelegenheid met aangepaste parkeerplaatsen.</p>
+              <p class="vl-u-margin-bottom-small">Er zijn 2 aangepaste parkeerplaatsen dicht bij de alternatieve inkom ; onder het Sint-Pietersplein is een ruime ondergrondse parkeergelegenheid met aangepaste parkeerplaatsen.</p>
               <ul class="vl-w-list vl-w-list--images">
                 <li class="vl-w-list__item">
                   <Vl-image>
@@ -69,11 +85,11 @@
             </li>
             <li class="vl-w-list__item is-checked">
               <h2 class="vl-w-title vl-w-title--detail">Naast elkaar parkeren: breedte 400 cm</h2>
-              <p>publiek parkeerterrein, bolle kasseien ;  Breedte 250 cm, maar 1 Parkeerplaats met voetpad ernaast = 400 cm breed</p>
+              <p>Publiek parkeerterrein, bolle kasseien ;  Breedte 250 cm, maar 1 Parkeerplaats met voetpad ernaast = 400 cm breed</p>
             </li>
             <li class="vl-w-list__item is-checked">
               <h2 class="vl-w-title vl-w-title--detail">Naast elkaar parkeren: breedte 400 cm</h2>
-              <p>publiek parkeerterrein, bolle kasseien ;  Breedte 250 cm, maar 1 Parkeerplaats met voetpad ernaast = 400 cm breed</p>
+              <p>Publiek parkeerterrein, bolle kasseien ;  Breedte 250 cm, maar 1 Parkeerplaats met voetpad ernaast = 400 cm breed</p>
             </li>
             <li class="vl-w-list__item is-checked">
               <h2 class="vl-w-title vl-w-title--detail">Max voertuig-hoogte 210 cm </h2>
@@ -81,7 +97,6 @@
             </li>
           </ul>
         </Vl-modal>
-        <p class="vl-w-info">Er is minstens één voorbehouden parkeerplaats met rolstoelvriendelijke ondergrond bij het uitstappen.</p>
         <ul class="vl-w-list vl-w-list--checks">
           <li class="vl-w-list__item is-checked">
             2 voorbehouden plaatsen
@@ -98,15 +113,21 @@
     <li class="vl-w-grid__item">
       <Vl-card>
         <Vl-modal @title="Fietsenstalling" @id="fietstenstalling">
+          <p class="vl-w-info-large">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" class="vl-w-icon">
+              <path d="M20.1666667,31.1666667 L23.8333333,31.1666667 L23.8333333,20.1666667 L20.1666667,20.1666667 L20.1666667,31.1666667 Z M22,3.66666667 C11.8708333,3.66666667 3.66666667,11.8708333 3.66666667,22 C3.66666667,32.1291667 11.8708333,40.3333333 22,40.3333333 C32.1291667,40.3333333 40.3333333,32.1291667 40.3333333,22 C40.3333333,11.8708333 32.1291667,3.66666667 22,3.66666667 Z M22,36.6666667 C13.915,36.6666667 7.33333333,30.085 7.33333333,22 C7.33333333,13.915 13.915,7.33333333 22,7.33333333 C30.085,7.33333333 36.6666667,13.915 36.6666667,22 C36.6666667,30.085 30.085,36.6666667 22,36.6666667 Z M20.1666667,16.5 L23.8333333,16.5 L23.8333333,12.8333333 L20.1666667,12.8333333 L20.1666667,16.5 Z"/>
+            </svg>
+            Er is geen overdekte fietsenstalling.
+          </p>
           <ul class="vl-w-list vl-w-list--checks-large vl-u-margin-bottom-small">
             <li class="vl-w-list__item">
-              <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Niet voldaan:</span> overdekte fietsenstalling</h2>
+              <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Niet aanwezig:</span> overdekte fietsenstalling</h2>
             </li>
           </ul>
         </Vl-modal>
         <ul class="vl-w-list vl-w-list--checks">
           <li class="vl-w-list__item">
-            <span class="vl-w-label">Niet voldaan:</span> overdekte fietsenstalling
+            <span class="vl-w-label">Niet aanwezig:</span> overdekte fietsenstalling
           </li>
         </ul>
       </Vl-card>
@@ -114,6 +135,12 @@
     <li class="vl-w-grid__item">
       <Vl-card>
         <Vl-modal @title="Rolstoelvriendelijke inkom" @id="inkom">
+          <p class="vl-w-info-large">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" class="vl-w-icon">
+              <path d="M20.1666667,31.1666667 L23.8333333,31.1666667 L23.8333333,20.1666667 L20.1666667,20.1666667 L20.1666667,31.1666667 Z M22,3.66666667 C11.8708333,3.66666667 3.66666667,11.8708333 3.66666667,22 C3.66666667,32.1291667 11.8708333,40.3333333 22,40.3333333 C32.1291667,40.3333333 40.3333333,32.1291667 40.3333333,22 C40.3333333,11.8708333 32.1291667,3.66666667 22,3.66666667 Z M22,36.6666667 C13.915,36.6666667 7.33333333,30.085 7.33333333,22 C7.33333333,13.915 13.915,7.33333333 22,7.33333333 C30.085,7.33333333 36.6666667,13.915 36.6666667,22 C36.6666667,30.085 30.085,36.6666667 22,36.6666667 Z M20.1666667,16.5 L23.8333333,16.5 L23.8333333,12.8333333 L20.1666667,12.8333333 L20.1666667,16.5 Z"/>
+            </svg>
+            De inkom is rolstoelvriendelijk. De inkombreedte is minstens 85cm met max 1 trede van 10cm.
+          </p>
           <ul class="vl-w-list vl-w-list--checks-large vl-u-margin-bottom-small">
             <li class="vl-w-list__item is-checked">
               <h2 class="vl-w-title vl-w-title--detail">Via alternatieve toegang</h2>
@@ -150,7 +177,6 @@
             </li>
           </ul>
         </Vl-modal>
-        <p class="vl-w-info">De inkombreedte is minstens 85cm met max 1 trede van 10cm.</p>
         <ul class="vl-w-list vl-w-list--checks">
           <li class="vl-w-list__item is-checked">
             Via alternatieve toegang
@@ -168,24 +194,39 @@
             Elektronische betaalmogelijkheid
           </li>
           <li class="vl-w-list__item">
-            <span class="vl-w-label">Niet voldaan:</span> verlaagde balie
+            <span class="vl-w-label">Niet aanwezig:</span> verlaagde balie
           </li>
         </ul>
       </Vl-card>
     </li>
     <li class="vl-w-grid__item">
       <Vl-card>
-        <Vl-modal @title="Museum-beleving" @id="beleving">
+        <Vl-modal @title="Museum: circulatie" @id="circulatie">
+          <p class="vl-w-info-large">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" class="vl-w-icon">
+              <path d="M20.1666667,31.1666667 L23.8333333,31.1666667 L23.8333333,20.1666667 L20.1666667,20.1666667 L20.1666667,31.1666667 Z M22,3.66666667 C11.8708333,3.66666667 3.66666667,11.8708333 3.66666667,22 C3.66666667,32.1291667 11.8708333,40.3333333 22,40.3333333 C32.1291667,40.3333333 40.3333333,32.1291667 40.3333333,22 C40.3333333,11.8708333 32.1291667,3.66666667 22,3.66666667 Z M22,36.6666667 C13.915,36.6666667 7.33333333,30.085 7.33333333,22 C7.33333333,13.915 13.915,7.33333333 22,7.33333333 C30.085,7.33333333 36.6666667,13.915 36.6666667,22 C36.6666667,30.085 30.085,36.6666667 22,36.6666667 Z M20.1666667,16.5 L23.8333333,16.5 L23.8333333,12.8333333 L20.1666667,12.8333333 L20.1666667,16.5 Z"/>
+            </svg>
+            Je kan je verplaatsen in het museum, met jouw beperking.
+          </p>
           <ul class="vl-w-list vl-w-list--checks-large vl-u-margin-bottom-small">
             <li class="vl-w-list__item is-checked">
-              <h2 class="vl-w-title vl-w-title--detail">Rolstoelvriendelijke lift, plateauliften zelf te bedienen, hellingen</h2>
-              <p class="vl-u-margin-bottom-small">Alle verdiepingen en zalen bereikbaar.</p>
+              <h2 class="vl-w-title vl-w-title--detail">Rolstoelvriendelijke circulatie </h2>
+              <p>Alle verdiepingen en zalen bereikbaar.</p>
+            </li>
+            <li class="vl-w-list__item is-checked">
+              <h2 class="vl-w-title vl-w-title--detail">Rolstoelvriendelijke lift (148 x 112 cm) </h2>
               <ul class="vl-w-list vl-w-list--images">
                 <li class="vl-w-list__item">
                   <Vl-image>
                     <img src="/assets/img/kinaC1.jpg" alt="">
                   </Vl-image>
                 </li>
+              </ul>
+            </li>
+            <li class="vl-w-list__item is-checked">
+              <h2 class="vl-w-title vl-w-title--detail">Hellingen </h2>
+              <p class="vl-u-margin-bottom-small">Steil, hulp nodig </p>
+              <ul class="vl-w-list vl-w-list--images">
                 <li class="vl-w-list__item">
                   <Vl-image>
                     <img src="/assets/img/kinaC2.jpg" alt="">
@@ -198,20 +239,66 @@
                 </li>
               </ul>
             </li>
+          </ul>
+        </Vl-modal>
+        <ul class="vl-w-list vl-w-list--checks">
+          <li class="vl-w-list__item is-checked">
+            Rolstoelvriendelijke circulatie
+          </li>
+          <li class="vl-w-list__item is-checked">
+            Rolstoelvriendelijke lift (148 x 112 cm)
+          </li>
+          <li class="vl-w-list__item is-checked">
+            Hellingen
+          </li>
+        </ul>
+      </Vl-card>
+    </li>
+    <li class="vl-w-grid__item">
+      <Vl-card>
+        <Vl-modal @title="Museum: beleving" @id="beleving">
+          <p class="vl-w-info-large">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" class="vl-w-icon">
+              <path d="M20.1666667,31.1666667 L23.8333333,31.1666667 L23.8333333,20.1666667 L20.1666667,20.1666667 L20.1666667,31.1666667 Z M22,3.66666667 C11.8708333,3.66666667 3.66666667,11.8708333 3.66666667,22 C3.66666667,32.1291667 11.8708333,40.3333333 22,40.3333333 C32.1291667,40.3333333 40.3333333,32.1291667 40.3333333,22 C40.3333333,11.8708333 32.1291667,3.66666667 22,3.66666667 Z M22,36.6666667 C13.915,36.6666667 7.33333333,30.085 7.33333333,22 C7.33333333,13.915 13.915,7.33333333 22,7.33333333 C30.085,7.33333333 36.6666667,13.915 36.6666667,22 C36.6666667,30.085 30.085,36.6666667 22,36.6666667 Z M20.1666667,16.5 L23.8333333,16.5 L23.8333333,12.8333333 L20.1666667,12.8333333 L20.1666667,16.5 Z"/>
+            </svg>
+            Je kan het merendeel van de bedoelde activiteiten uitvoeren, met jouw beperking.
+          </p>
+          <ul class="vl-w-list vl-w-list--checks-large vl-u-margin-bottom-small">
             <li class="vl-w-list__item is-checked">
               <h2 class="vl-w-title vl-w-title--detail">Prijsreductie voor personen met handicap</h2>
+              <p>
+                <a href="#!" class="vl-w-link">Tarieven</a>
+              </p>
             </li>
             <li class="vl-w-list__item is-checked">
               <h2 class="vl-w-title vl-w-title--detail">Begeleider gratis</h2>
             </li>
             <li class="vl-w-list__item is-checked">
-              <h2 class="vl-w-title vl-w-title--detail">European Disability Card</h2>
+              <h2 class="vl-w-title vl-w-title--detail">EDC - European Disability Card</h2>
+            </li>
+            <li class="vl-w-list__item is-checked">
+              <h2 class="vl-w-title vl-w-title--detail">Museumpas</h2>
+            </li>
+            <li class="vl-w-list__item is-checked">
+              <h2 class="vl-w-title vl-w-title--detail">Uitpas (punten scannen)</h2>
+            </li>
+            <li class="vl-w-list__item is-checked">
+              <h2 class="vl-w-title vl-w-title--detail">City Pas Gent</h2>
+            </li>
+            <li class="vl-w-list__item is-checked">
+              <h2 class="vl-w-title vl-w-title--detail">Opleiding omgaan met personen met een beperking gevolgd</h2>
+            </li>
+            <li class="vl-w-list__item is-checked">
+              <h2 class="vl-w-title vl-w-title--detail">Duidelijke signalisatie</h2>
+            </li>
+            <li class="vl-w-list__item is-checked">
+              <h2 class="vl-w-title vl-w-title--detail">Hulpelementen i.f.v. brandveiligheid</h2>
             </li>
             <li class="vl-w-list__item is-checked">
               <h2 class="vl-w-title vl-w-title--detail">Interactief</h2>
             </li>
             <li class="vl-w-list__item is-checked">
-              <h2 class="vl-w-title vl-w-title--detail">Rust- Zit-mogelijkheden</h2>
+              <h2 class="vl-w-title vl-w-title--detail">Rust- zit-mogelijkheden</h2>
               <ul class="vl-w-list vl-w-list--images">
                 <li class="vl-w-list__item">
                   <Vl-image>
@@ -247,21 +334,17 @@
               <h2 class="vl-w-title vl-w-title--detail">Publieke WIFI</h2>
             </li>
             <li class="vl-w-list__item">
-              <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Niet voldaan:</span> rolstoel ter beschikking</h2>
+              <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Niet aanwezig:</span> rolstoel ter beschikking</h2>
             </li>
             <li class="vl-w-list__item">
-              <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Niet voldaan:</span> audioguide</h2>
+              <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Niet aanwezig:</span> audioguide</h2>
             </li>
             <li class="vl-w-list__item">
-              <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Niet voldaan:</span> vitrinekasten onderrijdbaar</h2>
+              <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Niet aanwezig:</span> (overal) onderrijdbare vitrinekasten</h2>
             </li>
           </ul>
         </Vl-modal>
-        <p class="vl-w-info">Je kan het merendeel van de bedoelde activiteiten uitvoeren, met jouw beperking.</p>
         <ul class="vl-w-list vl-w-list--checks">
-          <li class="vl-w-list__item is-checked">
-            Rolstoelvriendelijke lift, plateauliften zelf te bedienen, hellingen
-          </li>
           <li class="vl-w-list__item is-checked">
             Prijsreductie voor personen met handicap
           </li>
@@ -269,13 +352,31 @@
             Begeleider gratis
           </li>
           <li class="vl-w-list__item is-checked">
-            European Disability Card
+            EDC - European Disability Card
+          </li>
+          <li class="vl-w-list__item is-checked">
+            Museumpas
+          </li>
+          <li class="vl-w-list__item is-checked">
+            Uitpas (punten scannen)
+          </li>
+          <li class="vl-w-list__item is-checked">
+            City Pas Gent
+          </li>
+          <li class="vl-w-list__item is-checked">
+            Opleiding omgaan met personen met een beperking gevolgd
+          </li>
+          <li class="vl-w-list__item is-checked">
+            Duidelijke signalisatie
+          </li>
+          <li class="vl-w-list__item is-checked">
+           Hulpelementen i.f.v. brandveiligheid
           </li>
           <li class="vl-w-list__item is-checked">
             Interactief
           </li>
           <li class="vl-w-list__item is-checked">
-            Rust- Zit-mogelijkheden
+            Rust- zit-mogelijkheden
           </li>
           <li class="vl-w-list__item is-checked">
             Voel-elementen
@@ -290,13 +391,38 @@
             Publieke WIFI
           </li>
           <li class="vl-w-list__item">
-            <span class="vl-w-label">Niet voldaan:</span> rolstoel ter beschikking
+            <span class="vl-w-label">Niet aanwezig:</span> rolstoel ter beschikking
           </li>
           <li class="vl-w-list__item">
-            <span class="vl-w-label">Niet voldaan:</span> audioguide
+            <span class="vl-w-label">Niet aanwezig:</span> audioguide
           </li>
           <li class="vl-w-list__item">
-            <span class="vl-w-label">Niet voldaan:</span> vitrinekasten onderrijdbaar
+            <span class="vl-w-label">Niet aanwezig:</span> (overal) onderrijdbare vitrinekasten
+          </li>
+        </ul>
+      </Vl-card>
+    </li>
+    <li class="vl-w-grid__item">
+      <Vl-card>
+        <Vl-modal @title="Tijdelijke tentoonstellingen" @id="tijdelijk">
+          <p class="vl-w-info-large">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" class="vl-w-icon">
+              <path d="M20.1666667,31.1666667 L23.8333333,31.1666667 L23.8333333,20.1666667 L20.1666667,20.1666667 L20.1666667,31.1666667 Z M22,3.66666667 C11.8708333,3.66666667 3.66666667,11.8708333 3.66666667,22 C3.66666667,32.1291667 11.8708333,40.3333333 22,40.3333333 C32.1291667,40.3333333 40.3333333,32.1291667 40.3333333,22 C40.3333333,11.8708333 32.1291667,3.66666667 22,3.66666667 Z M22,36.6666667 C13.915,36.6666667 7.33333333,30.085 7.33333333,22 C7.33333333,13.915 13.915,7.33333333 22,7.33333333 C30.085,7.33333333 36.6666667,13.915 36.6666667,22 C36.6666667,30.085 30.085,36.6666667 22,36.6666667 Z M20.1666667,16.5 L23.8333333,16.5 L23.8333333,12.8333333 L20.1666667,12.8333333 L20.1666667,16.5 Z"/>
+            </svg>
+            Dag Jan | Het kleine rijk van Jan Van Eyck', van 26/3/2020 tot 31/12/2020 is volledig toegankelijk.
+          </p>
+          <ul class="vl-w-list vl-w-list--checks-large vl-u-margin-bottom-small">
+            <li class="vl-w-list__item is-checked">
+              <h2 class="vl-w-title vl-w-title--detail">Inbrepen in toegangsprijs Museum </h2>
+            </li>
+          </ul>
+        </Vl-modal>
+        <p class="vl-w-info">
+          Dag Jan | Het kleine rijk van Jan Van Eyck', van 26/3/2020 tot 31/12/2020.
+        </p>
+        <ul class="vl-w-list vl-w-list--checks">
+          <li class="vl-w-list__item is-checked">
+            Inbrepen in toegangsprijs Museum
           </li>
         </ul>
       </Vl-card>
@@ -304,6 +430,12 @@
     <li class="vl-w-grid__item">
       <Vl-card>
         <Vl-modal @title="Rolstoelvriendelijk toilet" @id="toilet">
+          <p class="vl-w-info-large">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" class="vl-w-icon">
+              <path d="M20.1666667,31.1666667 L23.8333333,31.1666667 L23.8333333,20.1666667 L20.1666667,20.1666667 L20.1666667,31.1666667 Z M22,3.66666667 C11.8708333,3.66666667 3.66666667,11.8708333 3.66666667,22 C3.66666667,32.1291667 11.8708333,40.3333333 22,40.3333333 C32.1291667,40.3333333 40.3333333,32.1291667 40.3333333,22 C40.3333333,11.8708333 32.1291667,3.66666667 22,3.66666667 Z M22,36.6666667 C13.915,36.6666667 7.33333333,30.085 7.33333333,22 C7.33333333,13.915 13.915,7.33333333 22,7.33333333 C30.085,7.33333333 36.6666667,13.915 36.6666667,22 C36.6666667,30.085 30.085,36.6666667 22,36.6666667 Z M20.1666667,16.5 L23.8333333,16.5 L23.8333333,12.8333333 L20.1666667,12.8333333 L20.1666667,16.5 Z"/>
+            </svg>
+            Het toilet is rolstoelvriendelijk.
+          </p>
           <ul class="vl-w-list vl-w-list--checks-large vl-u-margin-bottom-small">
             <li class="vl-w-list__item is-checked">
               <h2 class="vl-w-title vl-w-title--detail">Helling</h2>
@@ -347,13 +479,13 @@
               <h2 class="vl-w-title vl-w-title--detail">Verzorgingstafel kinderen</h2>
             </li>
             <li class="vl-w-list__item">
-              <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Niet voldaan:</span> Voldoende draairuimte aan de deur</h2>
+              <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Niet aanwezig:</span> Voldoende draairuimte aan de deur</h2>
             </li>
             <li class="vl-w-list__item">
-              <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Niet voldaan:</span> Ruimte voor toiletpot 80 cm</h2>
+              <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Niet aanwezig:</span> Ruimte voor toiletpot 80 cm</h2>
             </li>
             <li class="vl-w-list__item">
-              <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Niet voldaan:</span> Onderrijdbare wastafel</h2>
+              <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Niet aanwezig:</span> Onderrijdbare wastafel</h2>
             </li>
           </ul>
         </Vl-modal>
@@ -377,13 +509,13 @@
             Verzorgingstafel kinderen
           </li>
           <li class="vl-w-list__item">
-            <span class="vl-w-label">Niet voldaan:</span> Voldoende draairuimte aan de deur
+            <span class="vl-w-label">Niet aanwezig:</span> Voldoende draairuimte aan de deur
           </li>
           <li class="vl-w-list__item">
-            <span class="vl-w-label">Niet voldaan:</span> Ruimte voor toiletpot 80 cm
+            <span class="vl-w-label">Niet aanwezig:</span> Ruimte voor toiletpot 80 cm
           </li>
           <li class="vl-w-list__item">
-            <span class="vl-w-label">Niet voldaan:</span> Onderrijdbare wastafel
+            <span class="vl-w-label">Niet aanwezig:</span> Onderrijdbare wastafel
           </li>
         </ul>
       </Vl-card>
@@ -391,6 +523,12 @@
     <li class="vl-w-grid__item">
       <Vl-card>
         <Vl-modal @title="Eten en Drinken" @id="etenendrinken">
+          <p class="vl-w-info-large">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" class="vl-w-icon">
+              <path d="M20.1666667,31.1666667 L23.8333333,31.1666667 L23.8333333,20.1666667 L20.1666667,20.1666667 L20.1666667,31.1666667 Z M22,3.66666667 C11.8708333,3.66666667 3.66666667,11.8708333 3.66666667,22 C3.66666667,32.1291667 11.8708333,40.3333333 22,40.3333333 C32.1291667,40.3333333 40.3333333,32.1291667 40.3333333,22 C40.3333333,11.8708333 32.1291667,3.66666667 22,3.66666667 Z M22,36.6666667 C13.915,36.6666667 7.33333333,30.085 7.33333333,22 C7.33333333,13.915 13.915,7.33333333 22,7.33333333 C30.085,7.33333333 36.6666667,13.915 36.6666667,22 C36.6666667,30.085 30.085,36.6666667 22,36.6666667 Z M20.1666667,16.5 L23.8333333,16.5 L23.8333333,12.8333333 L20.1666667,12.8333333 L20.1666667,16.5 Z"/>
+            </svg>
+            Het restaurant is bereikbaar. Er zijn geen aangepaste maaltijden.
+          </p>
           <ul class="vl-w-list vl-w-list--checks-large vl-u-margin-bottom-small">
             <li class="vl-w-list__item is-checked">
               <h2 class="vl-w-title vl-w-title--detail">Bereikbaar</h2>
@@ -417,7 +555,7 @@
               <h2 class="vl-w-title vl-w-title--detail">Elektronische betaalmogelijkheid</h2>
             </li>
             <li class="vl-w-list__item">
-              <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Niet voldaan:</span> Aangepaste maaltijden</h2>
+              <h2 class="vl-w-title vl-w-title--detail"><span class="vl-w-label">Niet aanwezig:</span> Aangepaste maaltijden</h2>
             </li>
           </ul>
         </Vl-modal>
@@ -438,7 +576,7 @@
             Elektronische betaalmogelijkheid
           </li>
           <li class="vl-w-list__item">
-            <span class="vl-w-label">Niet voldaan:</span> Aangepaste maaltijden
+            <span class="vl-w-label">Niet aanwezig:</span> Aangepaste maaltijden
           </li>
         </ul>
       </Vl-card>
@@ -446,6 +584,12 @@
     <li class="vl-w-grid__item">
       <Vl-card>
         <Vl-modal @title="Shop" @id="shop">
+          <p class="vl-w-info-large">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" class="vl-w-icon">
+              <path d="M20.1666667,31.1666667 L23.8333333,31.1666667 L23.8333333,20.1666667 L20.1666667,20.1666667 L20.1666667,31.1666667 Z M22,3.66666667 C11.8708333,3.66666667 3.66666667,11.8708333 3.66666667,22 C3.66666667,32.1291667 11.8708333,40.3333333 22,40.3333333 C32.1291667,40.3333333 40.3333333,32.1291667 40.3333333,22 C40.3333333,11.8708333 32.1291667,3.66666667 22,3.66666667 Z M22,36.6666667 C13.915,36.6666667 7.33333333,30.085 7.33333333,22 C7.33333333,13.915 13.915,7.33333333 22,7.33333333 C30.085,7.33333333 36.6666667,13.915 36.6666667,22 C36.6666667,30.085 30.085,36.6666667 22,36.6666667 Z M20.1666667,16.5 L23.8333333,16.5 L23.8333333,12.8333333 L20.1666667,12.8333333 L20.1666667,16.5 Z"/>
+            </svg>
+            De shop is bereikbaar.
+          </p>
           <ul class="vl-w-list vl-w-list--checks-large vl-u-margin-bottom-small">
             <li class="vl-w-list__item is-checked">
               <h2 class="vl-w-title vl-w-title--detail">Bereikbaar</h2>
@@ -468,7 +612,30 @@
     </li>
     <li class="vl-w-grid__item">
       <Vl-card>
+        <Vl-modal @title="Workshop-ruimte" @id="workshop">
+          <p class="vl-w-info-large">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" class="vl-w-icon">
+              <path d="M20.1666667,31.1666667 L23.8333333,31.1666667 L23.8333333,20.1666667 L20.1666667,20.1666667 L20.1666667,31.1666667 Z M22,3.66666667 C11.8708333,3.66666667 3.66666667,11.8708333 3.66666667,22 C3.66666667,32.1291667 11.8708333,40.3333333 22,40.3333333 C32.1291667,40.3333333 40.3333333,32.1291667 40.3333333,22 C40.3333333,11.8708333 32.1291667,3.66666667 22,3.66666667 Z M22,36.6666667 C13.915,36.6666667 7.33333333,30.085 7.33333333,22 C7.33333333,13.915 13.915,7.33333333 22,7.33333333 C30.085,7.33333333 36.6666667,13.915 36.6666667,22 C36.6666667,30.085 30.085,36.6666667 22,36.6666667 Z M20.1666667,16.5 L23.8333333,16.5 L23.8333333,12.8333333 L20.1666667,12.8333333 L20.1666667,16.5 Z"/>
+            </svg>
+            Hier is momenteel geen info over gekend.
+          </p>
+        </Vl-modal>
+        <ul class="vl-w-list vl-w-list--checks">
+          <li class="vl-w-list__item">
+            Geen info
+          </li>
+        </ul>
+      </Vl-card>
+    </li>
+    <li class="vl-w-grid__item">
+      <Vl-card>
         <Vl-modal @title="Bibliotheek - Leesruimte" @id="bibiliotheek">
+          <p class="vl-w-info-large">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" class="vl-w-icon">
+              <path d="M20.1666667,31.1666667 L23.8333333,31.1666667 L23.8333333,20.1666667 L20.1666667,20.1666667 L20.1666667,31.1666667 Z M22,3.66666667 C11.8708333,3.66666667 3.66666667,11.8708333 3.66666667,22 C3.66666667,32.1291667 11.8708333,40.3333333 22,40.3333333 C32.1291667,40.3333333 40.3333333,32.1291667 40.3333333,22 C40.3333333,11.8708333 32.1291667,3.66666667 22,3.66666667 Z M22,36.6666667 C13.915,36.6666667 7.33333333,30.085 7.33333333,22 C7.33333333,13.915 13.915,7.33333333 22,7.33333333 C30.085,7.33333333 36.6666667,13.915 36.6666667,22 C36.6666667,30.085 30.085,36.6666667 22,36.6666667 Z M20.1666667,16.5 L23.8333333,16.5 L23.8333333,12.8333333 L20.1666667,12.8333333 L20.1666667,16.5 Z"/>
+            </svg>
+            De bibliotheek en de leesruimte zijn bereikbaar.
+          </p>
           <ul class="vl-w-list vl-w-list--checks-large vl-u-margin-bottom-small">
             <li class="vl-w-list__item is-checked">
               <h2 class="vl-w-title vl-w-title--detail">Bereikbaar</h2>

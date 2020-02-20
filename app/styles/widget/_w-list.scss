@@ -29,6 +29,10 @@
   .vl-w-list__item {
     color: $vl-neutral-dark;
 
+    > * + * {
+      margin-top: $vl-unit-tiny/2;
+    }
+
     & + & {
       margin-top: $vl-unit-small;
       padding-top: $vl-unit-small;
@@ -49,9 +53,12 @@
       border-top: 0;
     }
 
-    .vl-w-list--checks > & {
+    .vl-w-list--checks > & + & {
       margin-top: $vl-unit-tiny;
       padding-top: $vl-unit-tiny;
+    }
+
+    .vl-w-list--checks > & {
       color: $vl-neutral;
       font-style: italic;
     }

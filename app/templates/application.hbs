@@ -1,6 +1,6 @@
 <div id="ember-vo-appuniversum-wormhole"></div>
 
-<header class="vl-o-region-large vl-d-theme-neutral-lightest">
+<header class="vl-o-region-large vl-d-theme-neutral-lightest vl-u-padding-bottom-none">
   <div class="vl-o-layout">
     {{#unless this.isIndex}}
     <p><a href="/" class="vl-c-link vl-c-link--neutral">&leftarrow; Terug naar overzicht</a></p>
@@ -8,7 +8,6 @@
     <div class="vl-d-editor">
       <h1 class="">Toegankelijkheid Widget</h1>
       <hr>
-      <p>You are on this route: {{this.currentRouteName}}</p>
     </div>
   </div>
 </header>
@@ -16,30 +15,30 @@
 <main class="vl-o-region vl-d-theme-neutral-lightest">
   {{#if this.isIndex}}
   <div class="vl-o-layout vl-d-editor">
-    <h2 class="vl-u-h5">Widget (data voorbeeld)</h2>
+    <h2 class="vl-u-h5">Widget (alle info)</h2>
     <ul>
       <li>
-        <LinkTo @route="widget-desktop">Widget (desktop)</LinkTo>
+        <LinkTo @route="widget-desktop">Desktop</LinkTo>
       </li>
       <li>
-        <LinkTo @route="widget-mobile">Widget (mobile)</LinkTo>
+        <LinkTo @route="widget-mobile">Mobiel</LinkTo>
       </li>
     </ul>
 
-    <h2 class="vl-u-h5">Widget (nieuw data voorstel)</h2>
+    <h2 class="vl-u-h5">Widget (compacte versie)</h2>
     <ul>
       <li>
-        <LinkTo @route="widget-desktop-alt">Widget alternatief (desktop)</LinkTo>
+        <LinkTo @route="widget-desktop-alt">Desktop</LinkTo>
       </li>
       <li>
-        <LinkTo @route="widget-mobile-alt">Widget alternatief (mobile)</LinkTo>
+        <LinkTo @route="widget-mobile-alt">Mobiel</LinkTo>
       </li>
     </ul>
 
     <h2 class="vl-u-h5">Widget (Wereld van Kina demo)</h2>
     <ul>
       <li>
-        <LinkTo @route="widget-kina">Widget (compact)</LinkTo>
+        <LinkTo @route="widget-kina">Wereld van Kina demo (compact)</LinkTo>
       </li>
     </ul>
 

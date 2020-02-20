@@ -6,20 +6,28 @@
   position: relative;
   padding: $vl-unit-small;
   border-radius: $vl-radius;
-  transition: box-shadow $vl-transition;
+  transition: outline $vl-transition;
   height: 100%;
   background-color: $vl-neutral-lightest;
   overflow: hidden;
+
+  > * + * {
+    margin-top: $vl-unit-small;
+  }
+
+  .vl-w-theme-kina & > * + * {
+    margin-top: $vl-unit-tiny;
+  }
 }
 
 .vl-w-card--link {
   background-color: $vl-white;
-  box-shadow: 0 0 0 2px transparent, 0 0 2px rgba($vl-neutral-dark,.25);
+  border: 1px solid $vl-neutral-lighter;
 
   &:hover,
   &:focus,
   &:focus-within {
-    box-shadow: 0 0 0 2px rgba($vl-neutral-dark,.1), 0 0 3px rgba($vl-neutral-dark,.1);
+    border-color: $vl-neutral-light;
   }
 
   &:focus,

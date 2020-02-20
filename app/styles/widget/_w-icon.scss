@@ -4,11 +4,17 @@
 
 .vl-w-icon {
   display: inline-block;
-  width: .75em;
-  height: .75em;
+  width: 1em;
+  height: 1em;
   position: relative;
-  bottom: .6ex;
+  vertical-align: baseline;
   stroke-width: 0;
+  bottom: -.1ex;
   stroke: currentColor;
   fill: currentColor;
+  margin-right: $vl-unit-tiny;
+
+  .vl-w-theme-kina & {
+    bottom: 0;
+  }
 }

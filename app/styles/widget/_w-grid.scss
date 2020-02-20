@@ -21,7 +21,7 @@ $vl-grid-modifier: calc(70rem - 100%) !default;
 }
 
   .vl-w-grid__item {
-    min-width: calc(33% - (#{$vl-grid-gutter} * 2));
+    min-width: calc(33.333% - (#{$vl-grid-gutter} * 2));
     max-width: 100%;
     flex-basis: calc(#{$vl-grid-modifier} * 999);
     margin: $vl-grid-gutter;
