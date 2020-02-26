@@ -38,7 +38,6 @@ body.vl-w-modal-open {
 /**
   * Modal Dialog base styling
   */
-.vl-w-js [data-modal],
 .vl-w-modal {
   -webkit-overflow-scrolling: touch;
   background: $vl-white;
@@ -103,8 +102,6 @@ body.vl-w-modal-open {
   * modal dialogs to be focused, if the dialog is initially
   * set to "display: none".
   */
-.vl-w-js [data-modal][hidden],
-.vl-w-modal[hidden],
 .vl-w-modal.is-hidden {
   display: block;
   opacity: 0;

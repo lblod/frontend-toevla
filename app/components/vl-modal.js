@@ -1,51 +1,43 @@
-import Component from "@ember/component";
+import Component from "@glimmer/component";
 import { action } from "@ember/object";
 import { tracked } from "@glimmer/tracking";
 
 export default class modal extends Component {
   // Variables
   destinationElementId =  null
-  // attributeBindings = ['aria-label', 'tabindex', 'hidden']
 
-  constructor(options) {
-    super(options);
-
-    // A11Y enhancements draft
-    this.enhance();
+  constructor() {
+    super(...arguments);
 
     // Set wormhole destination
-    if (!this.get('destinationElementId')) {
-      this.set('destinationElementId', 'ember-vo-appuniversum-wormhole');
+    if (!this.destinationElementId) {
+      this.destinationElementId = 'ember-vo-appuniversum-wormhole';
     }
   }
 
-  // A11Y enhancements draft
-  async enhance() {
-    // Select all modals
-    // var modal = document.querySelectorAll('.vl-w-modal');
-
-    // Hide modals on load
-    // modal.forEach(function(el){
-    //   el.setAttribute('hidden', true);
-    // });
-  }
-
   // Track modal state
-  @tracked modalState = false;
+  @tracked modalOpen = false;
 
-  @action toggleModal() {
+  // Open modal
+  @action
+  openModal() {
     // Toggle modal view state
-    this.modalState = !this.modalState;
+    this.modalOpen = !this.modalOpen;
 
-    // Toggle body class
-    // document.getElementsByTagName('body')[0].classList.toggle("vl-w-modal-open");
+    // Add body class
+    document.getElementsByTagName('body')[0].classList.add("vl-w-modal-open");
   }
 
-  @action closeModal() {
-    // Toggle modal view state
-    this.modalState = false;
+  // Close modal
+  @action
+  closeModal() {
+    // Only run this action when a modal is open
+    if (this.modalOpen) {
+      // Close the modal
+      this.modalOpen = false;
 
-    // Remove body class when modal is disabled
-    // document.getElementsByTagName('body')[0].classList.remove("vl-w-modal-open");
+      // Remove body class when modal is disabled
+      document.getElementsByTagName('body')[0].classList.remove("vl-w-modal-open");
+    }
   }
 }
