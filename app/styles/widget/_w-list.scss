@@ -2,82 +2,79 @@
    #WIDGET LISTS
    ================================== */
 
-.vl-w-list {
-  @include vl-font-size($vl-h6);
+.au-w-list {
+  @include au-font-size($au-h6);
 }
 
-.vl-w-list--checks {
-  @include vl-font-size($vl-base,1.3);
+.au-w-list--checks {
+  @include au-font-size($au-base,1.3);
 }
 
-.vl-w-list--checks-large {
-  @include vl-font-size($vl-base,1.3);
+.au-w-list--checks-large {
+  @include au-font-size($au-base,1.3);
 }
 
-.vl-w-list--details {
-  @include vl-font-size($vl-base);
-  margin-top: $vl-unit-tiny;
+.au-w-list--details {
+  @include au-font-size($au-base);
+  margin-top: $au-unit-tiny;
 }
 
-.vl-w-list--images {
+.au-w-list--images {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin: -$vl-unit-tiny;
+  margin: -$au-unit-tiny;
 }
 
-  .vl-w-list__item {
-    color: $vl-neutral-dark;
+  .au-w-list__item {
+    color: $au-neutral-dark;
 
     > * + * {
-      margin-top: $vl-unit-tiny/2;
+      margin-top: $au-unit-tiny/2;
     }
 
     & + & {
-      margin-top: $vl-unit-small;
-      padding-top: $vl-unit-small;
-      border-top: 1px dotted $vl-neutral-light;
+      margin-top: $au-unit-small;
+      padding-top: $au-unit-small;
+      border-top: 1px dotted $au-neutral-light;
     }
 
-    .vl-w-list--details > & + & {
+    .au-w-list--details > & + & {
       margin-top: 0;
       border-top: 0;
     }
 
-    .vl-w-list--images & {
-      margin: $vl-unit-tiny;
+    .au-w-list--images & {
+      margin: $au-unit-tiny;
     }
 
-    .vl-w-list--images > & + & {
+    .au-w-list--images > & + & {
       padding-top: 0;
       border-top: 0;
     }
 
-    .vl-w-list--checks > & + & {
-      margin-top: $vl-unit-tiny;
-      padding-top: $vl-unit-tiny;
+    .au-w-list--checks > & + & {
+      margin-top: $au-unit-tiny;
+      padding-top: $au-unit-tiny;
     }
 
-    .vl-w-list--checks > & {
-      color: $vl-neutral;
+    .au-w-list--checks > & {
+      color: $au-neutral;
       font-style: italic;
     }
 
-    .vl-w-list--checks-large > & {
-      color: $vl-neutral;
+    .au-w-list--checks-large > & {
+      color: $au-neutral;
       font-style: italic;
     }
 
-    .vl-w-list--checks-large > & + & {
-      margin-top: $vl-unit-small;
-      padding-top: $vl-unit-small;
+    .au-w-list--checks-large > & + & {
+      margin-top: $au-unit-small;
+      padding-top: $au-unit-small;
     }
 
     &.is-checked {
-      color: $vl-neutral-darker;
+      color: $au-neutral-darker;
       font-style: normal;
     }
   }
-
-
-

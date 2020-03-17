@@ -2,18 +2,18 @@
    #COMPONENT HOLDER
    ========================================================================== */
 
-.vl-d-component {
+.au-d-component {
   position: relative;
-  border: 1px solid $vl-neutral-lighter;
-  background-color: $vl-white;
-  border-radius: $vl-radius;
-  padding: $vl-unit;
+  border: 1px solid $au-neutral-lighter;
+  background-color: $au-white;
+  border-radius: $au-radius;
+  padding: $au-unit;
 }
 
-.vl-d-component--small {
-  max-width: $vl-layout-width-tiny;
+.au-d-component--small {
+  // max-width: $au-layout-width-tiny;
 }
 
-  .vl-d-component__contrast {
-    box-shadow: 0 0 $vl-unit-small rgba($vl-neutral-darkest,.1);
+  .au-d-component__contrast {
+    box-shadow: 0 0 $au-unit-small rgba($au-neutral-darkest,.1);
   }

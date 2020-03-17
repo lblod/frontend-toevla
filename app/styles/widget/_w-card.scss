@@ -2,58 +2,58 @@
    #WIDGET CARD
    ================================== */
 
-.vl-w-card {
+.au-w-card {
   position: relative;
-  padding: $vl-unit-small;
-  border-radius: $vl-radius;
-  transition: outline $vl-transition;
+  padding: $au-unit-small;
+  border-radius: $au-radius;
+  transition: outline $au-transition;
   height: 100%;
-  background-color: $vl-neutral-lightest;
+  background-color: $au-neutral-lightest;
   overflow: hidden;
 
   > * + * {
-    margin-top: $vl-unit-small;
+    margin-top: $au-unit-small;
   }
 
-  .vl-w-theme-kina & > * + * {
-    margin-top: $vl-unit-tiny;
+  .au-w-theme-kina & > * + * {
+    margin-top: $au-unit-tiny;
   }
 }
 
-.vl-w-card--link {
-  background-color: $vl-white;
-  border: 1px solid $vl-neutral-lighter;
+.au-w-card--link {
+  background-color: $au-white;
+  border: 1px solid $au-neutral-lighter;
 
   &:hover,
   &:focus,
   &:focus-within {
-    border-color: $vl-neutral-light;
+    border-color: $au-neutral-light;
   }
 
   &:focus,
   &:focus-within {
-    outline: $vl-outline;
+    outline: $au-outline;
   }
 }
 
-  .vl-w-card__link {
+  .au-w-card__link {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    transition: color $vl-transition, text-decoration $vl-transition;
-    font-weight: $vl-regular;
-    text-decoration-color: $vl-action-underline;
+    transition: color $au-transition, text-decoration $au-transition;
+    font-weight: $au-regular;
+    text-decoration-color: $au-primary-lighter;
     cursor: pointer;
 
     &,
     &:visited {
-      color: $vl-action-color;
+      color: $au-primary;
     }
 
     &:hover,
     &:focus {
-      color: $vl-action-hover-color;
-      text-decoration-color: $vl-action-underline-hover;
+      color: $au-primary-light;
+      text-decoration-color: $au-primary-lighter;
     }
 
     &:focus {

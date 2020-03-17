@@ -14,7 +14,7 @@
   ARIAmodal.VERSION = '3.4.0';
   ARIAmodal.LICENSE = 'https://github.com/scottaohara/accessible_modal_window/blob/master/LICENSE';
 
-  var activeClass = 'vl-w-modal-open';
+  var activeClass = 'au-w-modal-open';
   var body = doc.body;
   var main = doc.getElementsByTagName('main')[0] || body;
 
@@ -161,7 +161,7 @@
     for ( i = 0; i < modal.length; i++ ) {
       var self = modal[i];
       var modalType   = self.getAttribute('data-modal');
-      var getClass    = self.getAttribute('data-modal-class') || 'vl-w-modal';
+      var getClass    = self.getAttribute('data-modal-class') || 'au-w-modal';
       var heading     = self.querySelector('h1, h2, h3, h4, h5, h6');
       var modalLabel  = self.getAttribute('data-modal-label');
       var hideHeading = self.hasAttribute('data-modal-hide-heading');
@@ -291,7 +291,7 @@
        * dialog's heading should be visually hidden.
        */
       if ( hideHeading ) {
-        self.querySelector('#' + heading.id).classList.add('vl-w-u-hidden-visually');
+        self.querySelector('#' + heading.id).classList.add('au-w-u-hidden-visually');
       }
 
       /**
@@ -343,7 +343,7 @@
         if ( !modalClose && modalType !== 'alert' ) {
           closeBtn.innerHTML = closeIcon;
           closeBtn.setAttribute('aria-label', 'Close');
-          closeBtn.classList.add('vl-w-is-icon-btn');
+          closeBtn.classList.add('au-w-is-icon-btn');
         }
         else {
           closeBtn.innerHTML = modalClose;

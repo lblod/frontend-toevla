@@ -2,20 +2,20 @@
    #WIDGET IMAGES
    ================================== */
 
-.vl-w-image {
+.au-w-image {
   display: block;
   position: relative;
   overflow: hidden;
   padding: 0;
-  height: $vl-unit-huge;
-  background-color: $vl-neutral-lighter;
+  height: $au-unit-huge;
+  background-color: $au-neutral-lighter;
   cursor: zoom-in;
 
   img {
     display: block;
-    max-width: $vl-unit-huge*1.5;
+    max-width: $au-unit-huge*1.5;
     top: 0;
-    transition: opacity $vl-transition;
+    transition: opacity $au-transition;
   }
 
   &.is-expanded {
@@ -28,13 +28,13 @@
   }
 }
 
-.vl-w-image--link {
-  border: 1px solid $vl-neutral-lighter;
-  transition: border $vl-transition;
+.au-w-image--link {
+  border: 1px solid $au-neutral-lighter;
+  transition: border $au-transition;
 
   &:hover,
   &:focus {
-    border-color: $vl-neutral-light;
+    border-color: $au-neutral-light;
 
     img {
       opacity: .8;
@@ -42,11 +42,11 @@
   }
 
   &:focus {
-    outline: $vl-outline;
+    outline: $au-outline;
   }
 }
 
-.vl-w-image--large {
-  height: $vl-unit-large * 9;
-  width: $vl-unit-large * 16;
+.au-w-image--large {
+  height: $au-unit-large * 9;
+  width: $au-unit-large * 16;
 }

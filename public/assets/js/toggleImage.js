@@ -1,5 +1,5 @@
 
-var image = document.querySelectorAll('.vl-js-image-toggle');
+var image = document.querySelectorAll('.au-js-image-toggle');
 
 image.forEach(function(el){
   function toggleImage() {

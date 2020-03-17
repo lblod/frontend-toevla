@@ -1,24 +1,24 @@
-<h2 class="vl-w-title vl-w-title--section">
-  <button type="button" {{on "click" this.openModal}} class="vl-w-link vl-w-link--button vl-w-card__link" aria-open>
+<h2 class="au-w-title au-w-title--section">
+  <button type="button" {{on "click" this.openModal}} class="au-w-link au-w-link--button au-w-card__link" aria-open>
     {{@title}}
   </button>
 </h2>
 
 {{#if this.modalOpen}}
 <EmberWormhole @to={{this.destinationElementId}}>
-<div class="vl-w-modal-background {{if this.modalOpen "is-visible"}}" role="presentation"></div>
-<div id="{{@id}}" class="vl-w-modal {{if this.modalOpen "" "is-hidden"}} {{@theme}}" role="dialog" aria-describedby="vl-w-modal-title-{{@id}}" tabindex="-1" {{focus-trap isActive=this.modalOpen focusTrapOptions=(hash onDeactivate=(fn this.closeModal) clickOutsideDeactivates=true)}}>
-  <div class="vl-w-modal__header">
-    <h1 id="vl-w-modal-title-{{@id}}" class="vl-w-title vl-w-title--modal vl-u-margin-bottom-none" tabindex="-1">{{@title}}</h1>
-    <button type="button" {{on "click" this.closeModal}} class="vl-w-link vl-w-link--neutral vl-w-link--button">
+<div class="au-w-modal-background {{if this.modalOpen "is-visible"}}" role="presentation"></div>
+<div id="{{@id}}" class="au-w-modal {{if this.modalOpen "" "is-hidden"}} {{@theme}}" role="dialog" aria-describedby="au-w-modal-title-{{@id}}" tabindex="-1" {{focus-trap isActive=this.modalOpen focusTrapOptions=(hash onDeactivate=(fn this.closeModal) clickOutsideDeactivates=true)}}>
+  <div class="au-w-modal__header">
+    <h1 id="au-w-modal-title-{{@id}}" class="au-w-title au-w-title--modal au-u-margin-bottom-none" tabindex="-1">{{@title}}</h1>
+    <button type="button" {{on "click" this.closeModal}} class="au-w-link au-w-link--neutral au-w-link--button">
       Venster sluiten
     </button>
   </div>
-  <div class="vl-w-modal__body" >
-    <div class="vl-o-box">
+  <div class="au-w-modal__body" >
+    <div class="au-o-box">
       {{yield}}
-      <div class="vl-w-cta">
-        <p class="vl-w-small">Verkeerde info of aanvulling? <a href="https://toevla.vlaanderen.be/publiek/nl/Startpagina/Reactie" class="vl-w-link">Contacteer Toevla</a></p>
+      <div class="au-w-cta">
+        <p class="au-w-small">Verkeerde info of aanvulling? <a href="https://toevla.vlaanderen.be/publiek/nl/Startpagina/Reactie" class="au-w-link">Contacteer Toevla</a></p>
       </div>
     </div>
   </div>

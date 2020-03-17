@@ -2,110 +2,110 @@
    #WIDGET TITLES
    ================================== */
 
-.vl-w-title {
-  @include vl-font-size($vl-h5);
+.au-w-title {
+  @include au-font-size($au-h5);
   display: inline-flex;
   align-items: center;
   font-family: inherit;
-  font-weight: $vl-bold;
-  color: $vl-neutral-darker;
-  margin-bottom: $vl-unit-small + $vl-unit-tiny;
+  font-weight: $au-bold;
+  color: $au-neutral-darker;
+  margin-bottom: $au-unit-small + $au-unit-tiny;
 
-  .vl-w-theme-kina & {
-    @include vl-font-size(1.5rem);
-    color: $vl-neutral-darkest;
+  .au-w-theme-kina & {
+    @include au-font-size(1.5rem);
+    color: $au-neutral-darkest;
     font-weight: 700;
-    margin-bottom: $vl-unit-small;
+    margin-bottom: $au-unit-small;
   }
 }
 
-.vl-w-title--modal {
-  .vl-w-theme-kina & {
-    @include vl-font-size(2.5rem);
+.au-w-title--modal {
+  .au-w-theme-kina & {
+    @include au-font-size(2.5rem);
     font-weight: 900;
   }
 }
 
-.vl-w-title--section {
-  @include vl-font-size($vl-h6);
+.au-w-title--section {
+  @include au-font-size($au-h6);
   margin-bottom: 0;
 
-  .vl-w-theme-kina & {
-    @include vl-font-size(1.5rem);
+  .au-w-theme-kina & {
+    @include au-font-size(1.5rem);
     margin-bottom: 0;
   }
 }
 
-.vl-w-title--detail {
-  @include vl-font-size(1.5rem,1.3);
-  font-weight: $vl-regular;
+.au-w-title--detail {
+  @include au-font-size(1.5rem,1.3);
+  font-weight: $au-regular;
   margin-bottom: 0;
-  color: $vl-neutral;
+  color: $au-neutral;
 
   .is-checked & {
-    color: $vl-neutral-darker;
+    color: $au-neutral-darker;
   }
 
-  .vl-w-theme-kina & {
-    @include vl-font-size(1.5rem);
-    color: $vl-neutral;
+  .au-w-theme-kina & {
+    @include au-font-size(1.5rem);
+    color: $au-neutral;
     font-weight: 400;
     margin-bottom: 0;
   }
 
-  .vl-w-theme-kina .is-checked & {
-    color: $vl-neutral-darker;
+  .au-w-theme-kina .is-checked & {
+    color: $au-neutral-darker;
     font-weight: 700;
   }
 }
 
-.vl-w-small {
-  @include vl-font-size($vl-base);
-  color: $vl-neutral-dark;
+.au-w-small {
+  @include au-font-size($au-base);
+  color: $au-neutral-dark;
 
-  .vl-w-theme-kina & {
-    @include vl-font-size(1.5rem);
+  .au-w-theme-kina & {
+    @include au-font-size(1.5rem);
   }
 }
 
-.vl-w-tiny {
-  @include vl-font-size($vl-base);
-  color: $vl-neutral;
+.au-w-tiny {
+  @include au-font-size($au-base);
+  color: $au-neutral;
 }
 
-.vl-w-label {
-  font-weight: $vl-regular;
+.au-w-label {
+  font-weight: $au-regular;
 }
 
-.vl-w-info {
-  font-weight: $vl-light;
-  color: $vl-neutral-darker;
+.au-w-info {
+  font-weight: $au-light;
+  color: $au-neutral-darker;
 
-  .vl-w-theme-kina & {
-    @include vl-font-size(1.5rem,1.3);
+  .au-w-theme-kina & {
+    @include au-font-size(1.5rem,1.3);
   }
 }
 
-.vl-w-info-large {
+.au-w-info-large {
   display: inline-flex;
   align-items: center;
   width: 100%;
-  background-color: $vl-neutral-lightest;
-  padding: $vl-unit-small;
-  margin-bottom: $vl-unit;
-  @include vl-font-size($vl-base,1.3);
-  font-weight: $vl-light;
-  color: $vl-neutral-darker;
-  border: 1px solid $vl-neutral-lighter;
+  background-color: $au-neutral-lightest;
+  padding: $au-unit-small;
+  margin-bottom: $au-unit;
+  @include au-font-size($au-base,1.3);
+  font-weight: $au-light;
+  color: $au-neutral-darker;
+  border: 1px solid $au-neutral-lighter;
 
-  .vl-w-theme-kina & {
-    @include vl-font-size(1.5rem,1.3);
+  .au-w-theme-kina & {
+    @include au-font-size(1.5rem,1.3);
   }
 }
 
-.vl-w-cta {
-  padding: $vl-unit $vl-unit $vl-unit-tiny;
+.au-w-cta {
+  padding: $au-unit $au-unit $au-unit-tiny;
   text-align: center;
-  border-radius: $vl-radius;
-  border-top: 1px solid $vl-neutral-lighter;
+  border-radius: $au-radius;
+  border-top: 1px solid $au-neutral-lighter;
 }

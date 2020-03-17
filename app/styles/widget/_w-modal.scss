@@ -15,18 +15,18 @@
   * double scroll bars.
   * (browser window + dialog if long enough content)
   */
-body.vl-w-modal-open {
+body.au-w-modal-open {
   overflow: hidden;
 }
 
 // Add a modal background
-.vl-w-modal-background {
+.au-w-modal-background {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba($vl-neutral-darkest,.4);
+  background-color: rgba($au-neutral-darkest,.4);
   z-index: 9;
   display: none;
 
@@ -38,11 +38,11 @@ body.vl-w-modal-open {
 /**
   * Modal Dialog base styling
   */
-.vl-w-modal {
+.au-w-modal {
   -webkit-overflow-scrolling: touch;
-  background: $vl-white;
+  background: $au-white;
   margin: auto;
-  height: calc(100% - #{$vl-unit});
+  height: calc(100% - #{$au-unit});
   max-width: 760px;
   opacity: 1;
   overflow: auto;
@@ -50,42 +50,42 @@ body.vl-w-modal-open {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  right: $vl-unit-small;
-  top: $vl-unit-small;
-  left: $vl-unit-small;
-  bottom: $vl-unit-small;
+  right: $au-unit-small;
+  top: $au-unit-small;
+  left: $au-unit-small;
+  bottom: $au-unit-small;
   transform: translateY(0%);
   visibility: visible;
-  border-radius: $vl-radius;
+  border-radius: $au-radius;
   width: 100%;
   z-index: 10; /* this should be more than enough... */
-  box-shadow: 0 1px 3px rgba($vl-neutral-darkest, .1), 0 4px 20px rgba($vl-neutral-darkest, .035), 0 1px 1px rgba($vl-neutral-darkest, .025);
+  box-shadow: 0 1px 3px rgba($au-neutral-darkest, .1), 0 4px 20px rgba($au-neutral-darkest, .035), 0 1px 1px rgba($au-neutral-darkest, .025);
 
   @media screen and ( min-height: 440px ) and ( min-width: 500px ) {
     bottom: auto;
     top: 50%;
     transform: translateY(-50%);
-    transition: opacity $vl-transition, transform $vl-transition;
+    transition: opacity $au-transition, transform $au-transition;
   }
 }
 
-  .vl-w-modal__header {
+  .au-w-modal__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: $vl-unit-small $vl-unit;
-    border-bottom: 1px solid $vl-neutral-lighter;
+    padding: $au-unit-small $au-unit;
+    border-bottom: 1px solid $au-neutral-lighter;
 
     @include mq(medium) {
-      padding: $vl-unit $vl-unit;
+      padding: $au-unit $au-unit;
     }
   }
 
-  .vl-w-modal__body {
+  .au-w-modal__body {
     flex-grow: 1;
     position: relative;
-    height: calc(100% - #{$vl-unit-large + $vl-unit-small});
-    background-color: $vl-white;
+    height: calc(100% - #{$au-unit-large + $au-unit-small});
+    background-color: $au-white;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
   }
@@ -102,7 +102,7 @@ body.vl-w-modal-open {
   * modal dialogs to be focused, if the dialog is initially
   * set to "display: none".
   */
-.vl-w-modal.is-hidden {
+.au-w-modal.is-hidden {
   display: block;
   opacity: 0;
   pointer-events: none;

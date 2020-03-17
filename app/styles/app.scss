@@ -1,5 +1,5 @@
 /* ==================================
-   #APPUNIVERSUM POC
+   #APPUNIVERSUM
    ================================== */
 
 /**
@@ -13,22 +13,22 @@
  * TOOLS: Mixins
  * GENERIC: Reset, global box-sizing and font-styles
  * ELEMENTS: Plain html tag styling
- * OBJECTS: OOCSS unstyled objects (namespace: '.vl-o-...')
- * COMPONENTS: Components (namespace: '.vl-c-...')
- * WIDGET: Contained widget styles (namespace: '.vl-w-...)
- * UTILITIES: Single function helper classes (namespace: '.vl-u-...')
+ * OBJECTS: OOCSS unstyled objects (namespace: '.au-o-...')
+ * COMPONENTS: Components (namespace: '.au-c-...')
+ * UTILITIES: Single function helper classes (namespace: '.au-u-...')
  */
 
 
 // VARIABLES
-@import "appuniversum/s-colors";
+@import "appuniversum/s-colors.scss";
 @import "appuniversum/s-global";
 @import "appuniversum/s-utilities";
 
+// PROJECT VARIABLES
+@import "project/s-global";
 
 // MIXINS
 @import "appuniversum/t-font-size";
-@import "appuniversum/t-hidden";
 @import "appuniversum/t-sass-mq";
 
 
@@ -40,8 +40,6 @@
 
 // ELEMENTS
 @import "appuniversum/e-page";
-@import "appuniversum/e-images";
-@import "appuniversum/e-tables";
 
 
 // OBJECTS
@@ -51,14 +49,12 @@
 @import "appuniversum/o-region";
 
 
-// COMPONENTS
-@import "appuniversum/c-links";
-
-
 // DOCUMENTATION
 @import "documentation/d-component";
 @import "documentation/d-editor";
 @import "documentation/d-theme";
+@import "documentation/d-links";
+@import "documentation/d-icons";
 
 
 // WIDGET SPECIFIC STYLES
@@ -87,4 +83,3 @@
 
 // QUICK FIXES AND HACKS
 @import "shame";
-

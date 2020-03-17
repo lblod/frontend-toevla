@@ -2,13 +2,13 @@
    #EDITOR
    ================================== */
 
-.vl-d-editor {
+.au-d-editor {
   > * {
     margin-bottom: 0;
   }
 
   > * + * {
-    margin-top: $vl-unit-small;
+    margin-top: $au-unit-small;
   }
 
   > h1 + *,
@@ -17,7 +17,7 @@
   > h4 + *,
   > h5 + *,
   > h6 + * {
-    margin-top: $vl-unit-tiny;
+    margin-top: $au-unit-tiny;
   }
 
   > h1,
@@ -26,65 +26,65 @@
   > h4,
   > h5,
   > h6 {
-    font-family: $vl-font-secondary;
+    font-family: $au-font-secondary;
   }
 
   > h1 {
-    @include vl-font-size($vl-h3);
+    @include au-font-size($au-h3);
   }
 
   > h2 {
-    @include vl-font-size($vl-h4);
-    font-weight: $vl-medium;
+    @include au-font-size($au-h4);
+    font-weight: $au-medium;
   }
 
   > h3 {
-    @include vl-font-size($vl-h5);
-    font-weight: $vl-medium;
+    @include au-font-size($au-h5);
+    font-weight: $au-medium;
   }
 
   > ul h3 {
-    @include vl-font-size($vl-h6);
-    font-weight: $vl-medium;
+    @include au-font-size($au-h6);
+    font-weight: $au-medium;
   }
 
   > h4,
   > h5,
   > h6 {
-    @include vl-font-size($vl-h6);
+    @include au-font-size($au-h6);
   }
 
   > p,
   > ul,
   > ol {
-    @include vl-font-size($vl-base,1.5);
+    @include au-font-size($au-base,1.5);
   }
 
   hr {
     margin: 0;
-    margin-top: $vl-unit;
-    margin-bottom: $vl-unit;
+    margin-top: $au-unit;
+    margin-bottom: $au-unit;
     border: 0;
-    border-bottom: 3px solid $vl-neutral-lighter;
+    border-bottom: 3px solid $au-neutral-lighter;
   }
 
   > * + blockquote {
-    margin-top: $vl-unit-large;
+    margin-top: $au-unit-large;
   }
 
   > blockquote + * {
-    margin-top: $vl-unit-large;
+    margin-top: $au-unit-large;
   }
 
   > blockquote {
-    padding-top: $vl-unit;
-    padding-bottom: $vl-unit;
-    border-top: 2px solid $vl-neutral-lighter;
-    border-bottom: 2px solid $vl-neutral-lighter;
+    padding-top: $au-unit;
+    padding-bottom: $au-unit;
+    border-top: 2px solid $au-neutral-lighter;
+    border-bottom: 2px solid $au-neutral-lighter;
   }
 
   > blockquote p {
-    @include vl-font-size($vl-h5,1.5);
+    @include au-font-size($au-h5,1.5);
     margin-bottom: 0;
   }
 
@@ -99,27 +99,27 @@
   }
 
   > blockquote p + p {
-    @include vl-font-size($vl-base,1.5);
-    margin-top: $vl-unit-small;
-    font-weight: $vl-medium;
+    @include au-font-size($au-base,1.5);
+    margin-top: $au-unit-small;
+    font-weight: $au-medium;
   }
 
   > ul,
   > ol {
     list-style: none;
-    margin-left: $vl-unit-small;
+    margin-left: $au-unit-small;
   }
 
   > ol {
-    margin-left: $vl-unit + $vl-unit-tiny/2;
+    margin-left: $au-unit + $au-unit-tiny/2;
   }
 
   > ul ul {
-    margin-left: $vl-unit;
+    margin-left: $au-unit;
   }
 
   > ol ol {
-    margin-left: $vl-unit + $vl-unit-small;
+    margin-left: $au-unit + $au-unit-small;
   }
 
   > ul li,
@@ -131,14 +131,14 @@
     content: '•';
     position: absolute;
     top: .3ex;
-    left: -$vl-unit-small;
+    left: -$au-unit-small;
     font-size: .8em;
-    color: $vl-neutral;
+    color: $au-neutral;
   }
 
   > ul li + li,
   > ol li + li {
-    margin-top: $vl-unit-tiny;
+    margin-top: $au-unit-tiny;
   }
 
   > ol {
@@ -150,86 +150,86 @@
     counter-increment: numbered-list;
     position: absolute;
     top: .3ex;
-    left: -$vl-unit - $vl-unit-tiny/2;
+    left: -$au-unit - $au-unit-tiny/2;
     font-size: .8em;
-    color: $vl-neutral;
-    background-color: $vl-neutral-lightest;
+    color: $au-neutral;
+    background-color: $au-neutral-lightest;
     display: block;
-    padding: 0 $vl-unit-tiny;
-    border-radius: $vl-radius;
+    padding: 0 $au-unit-tiny;
+    border-radius: $au-radius;
   }
 
   code {
-    font-family: $vl-font-tertiary;
-    font-weight: $vl-light;
-    padding-top: $vl-unit-tiny;
-    padding-bottom: $vl-unit-tiny/2;
-    padding-left: $vl-unit-tiny/2;
-    padding-right: $vl-unit-tiny/2;
-    background-color: $vl-neutral-lightest;
-    border-radius: $vl-radius;
-    border: 1px solid $vl-neutral-lighter;
+    font-family: $au-font-tertiary;
+    font-weight: $au-light;
+    padding-top: $au-unit-tiny;
+    padding-bottom: $au-unit-tiny/2;
+    padding-left: $au-unit-tiny/2;
+    padding-right: $au-unit-tiny/2;
+    background-color: $au-neutral-lightest;
+    border-radius: $au-radius;
+    border: 1px solid $au-neutral-lighter;
 
     &::-moz-selection {
-      background-color: $vl-neutral-lighter;
-      color: $vl-neutral-dark;
+      background-color: $au-neutral-lighter;
+      color: $au-neutral-dark;
     }
 
     &::selection {
-      background-color: $vl-neutral-lighter;
-      color: $vl-neutral-dark;
+      background-color: $au-neutral-lighter;
+      color: $au-neutral-dark;
     }
   }
 
   > pre {
-    background-color: $vl-neutral-dark;
-    color: $vl-white;
-    padding: $vl-unit-small;
-    border-radius: $vl-radius;
-    margin-bottom: $vl-unit;
+    background-color: $au-neutral-dark;
+    color: $au-white;
+    padding: $au-unit-small;
+    border-radius: $au-radius;
+    margin-bottom: $au-unit;
   }
 
   > * + pre {
-    margin-top: $vl-unit;
+    margin-top: $au-unit;
   }
 
   strong {
-    font-weight: $vl-medium;
+    font-weight: $au-medium;
   }
 
-  > a:not(.vl-c-button),
-  > ul a:not(.vl-c-button),
-  > ol a:not(.vl-c-button),
-  > p a:not(.vl-c-button) {
-    transition: color $vl-transition, text-decoration $vl-transition;
-    font-weight: $vl-regular;
-    text-decoration-color: $vl-action-underline;
+  > a:not(.au-c-button),
+  > ul a:not(.au-c-button),
+  > ol a:not(.au-c-button),
+  > p a:not(.au-c-button) {
+    transition: color $au-transition, text-decoration $au-transition;
+    font-weight: $au-regular;
+    text-decoration-color: $au-primary-lighter;
 
     &,
     &:visited {
-      color: $vl-action-color;
+      color: $au-primary;
     }
 
     &:hover,
     &:focus {
-      color: $vl-action-hover-color;
-      text-decoration-color: $vl-action-underline-hover;
+      color: $au-primary-light;
+      text-decoration-color: $au-primary-lighter;
     }
 
     &:focus {
-      outline: $vl-outline;
-      outline-offset: $vl-unit-tiny/2;
+      outline: $au-outline;
+      outline-offset: $au-unit-tiny/2;
     }
 
     .is-active > & {
-      color: $vl-action-active-color;
+      color: $au-primary-lighter;
       text-decoration: none;
     }
   }
 
   @include mq(small) {
     > * + * {
-      margin-top: $vl-unit;
+      margin-top: $au-unit;
     }
 
     > h1 + *,
@@ -238,51 +238,51 @@
     > h4 + *,
     > h5 + *,
     > h6 + * {
-      margin-top: $vl-unit-tiny;
+      margin-top: $au-unit-tiny;
     }
 
     > h1 {
-      @include vl-font-size($vl-h2);
+      @include au-font-size($au-h2);
     }
 
     > h2 {
-      @include vl-font-size($vl-h4);
+      @include au-font-size($au-h4);
     }
 
     > h3 {
-      @include vl-font-size($vl-h5);
+      @include au-font-size($au-h5);
     }
 
     > h4,
     > h5,
     > h6 {
-      @include vl-font-size($vl-h6);
+      @include au-font-size($au-h6);
     }
 
     > p,
     > ul,
     > ol {
-      @include vl-font-size($vl-base,1.5);
+      @include au-font-size($au-base,1.5);
     }
 
     > blockquote p {
-      @include vl-font-size($vl-h5,1.5);
+      @include au-font-size($au-h5,1.5);
     }
 
     > ul {
-      margin-left: $vl-unit - $vl-unit-tiny;
+      margin-left: $au-unit - $au-unit-tiny;
     }
 
     > ol {
-      margin-left: $vl-unit + $vl-unit-tiny
+      margin-left: $au-unit + $au-unit-tiny
     }
 
     > ul li:before {
-      left: -$vl-unit + $vl-unit-tiny;
+      left: -$au-unit + $au-unit-tiny;
     }
 
     > ol li:before {
-      left: -$vl-unit - $vl-unit-tiny;
+      left: -$au-unit - $au-unit-tiny;
     }
   }
 
@@ -293,28 +293,28 @@
     > h4 + *,
     > h5 + *,
     > h6 + * {
-      margin-top: $vl-unit-small;
+      margin-top: $au-unit-small;
     }
 
     > h1 {
-      @include vl-font-size($vl-h1);
+      @include au-font-size($au-h1);
     }
 
     > p,
     > ul,
     > ol {
-      @include vl-font-size($vl-h6);
+      @include au-font-size($au-h6);
     }
 
     > blockquote p {
-      @include vl-font-size($vl-h4);
+      @include au-font-size($au-h4);
     }
   }
 }
 
 
 // Demo styles for kina
-.vl-d-editor--kina {
+.au-d-editor--kina {
   font-family: "Lato", sans-serif;
 
   > * {
@@ -322,7 +322,7 @@
   }
 
   > * + * {
-    margin-top: $vl-unit-small;
+    margin-top: $au-unit-small;
   }
 
   > h1 + *,
@@ -331,11 +331,11 @@
   > h4 + *,
   > h5 + *,
   > h6 + * {
-    margin-top: $vl-unit-tiny;
+    margin-top: $au-unit-tiny;
   }
 
   > h2 + * {
-    margin-top: $vl-unit-small;
+    margin-top: $au-unit-small;
   }
 
   > h1,
@@ -349,74 +349,74 @@
   }
 
   > h1 {
-    @include vl-font-size(2.5rem);
+    @include au-font-size(2.5rem);
   }
 
   > h2 {
-    @include vl-font-size(1.5rem);
+    @include au-font-size(1.5rem);
     font-weight: 900;
   }
 
   > h3 {
-    @include vl-font-size(1.5rem);
+    @include au-font-size(1.5rem);
     font-weight: 700;
   }
 
   > ul h3 {
-    @include vl-font-size(1.5rem);
+    @include au-font-size(1.5rem);
     font-weight: 700;
   }
 
   > h4,
   > h5,
   > h6 {
-    @include vl-font-size(1.5rem);
+    @include au-font-size(1.5rem);
   }
 
   > p {
-    @include vl-font-size(1.5rem,1.5);
+    @include au-font-size(1.5rem,1.5);
   }
 
   hr {
     margin: 0;
-    margin-top: $vl-unit;
-    margin-bottom: $vl-unit;
+    margin-top: $au-unit;
+    margin-bottom: $au-unit;
     border: 0;
-    border-bottom: 3px solid $vl-neutral-lighter;
+    border-bottom: 3px solid $au-neutral-lighter;
   }
 
   strong {
     font-weight: 700;
   }
 
-  > a:not(.vl-c-button),
-  > ul a:not(.vl-c-button),
-  > ol a:not(.vl-c-button),
-  > p a:not(.vl-c-button) {
-    transition: color $vl-transition, text-decoration $vl-transition;
-    font-weight: $vl-regular;
-    text-decoration-color: $vl-neutral-darker;
+  > a:not(.au-c-button),
+  > ul a:not(.au-c-button),
+  > ol a:not(.au-c-button),
+  > p a:not(.au-c-button) {
+    transition: color $au-transition, text-decoration $au-transition;
+    font-weight: $au-regular;
+    text-decoration-color: $au-neutral-darker;
 
     &,
     &:visited {
-      color: $vl-neutral-darkest;
+      color: $au-neutral-darkest;
     }
 
     &:hover,
     &:focus {
-      color: $vl-neutral-darker;
-      text-decoration-color: $vl-neutral-dark;
+      color: $au-neutral-darker;
+      text-decoration-color: $au-neutral-dark;
     }
 
     &:focus {
-      outline: $vl-outline;
-      outline-offset: $vl-unit-tiny/2;
+      outline: $au-outline;
+      outline-offset: $au-unit-tiny/2;
     }
   }
 
   @include mq(small) {
     > * + * {
-      margin-top: $vl-unit;
+      margin-top: $au-unit;
     }
 
     > h1 + *,
@@ -425,33 +425,33 @@
     > h4 + *,
     > h5 + *,
     > h6 + * {
-      margin-top: $vl-unit-tiny;
+      margin-top: $au-unit-tiny;
     }
 
     > h2 + * {
-      margin-top: $vl-unit-small;
+      margin-top: $au-unit-small;
     }
 
     > h1 {
-      @include vl-font-size(2.5rem);
+      @include au-font-size(2.5rem);
     }
 
     > h2 {
-      @include vl-font-size(2.5rem);
+      @include au-font-size(2.5rem);
     }
 
     > h3 {
-      @include vl-font-size(1.5rem);
+      @include au-font-size(1.5rem);
     }
 
     > h4,
     > h5,
     > h6 {
-      @include vl-font-size(1.5rem);
+      @include au-font-size(1.5rem);
     }
 
     > p {
-      @include vl-font-size(1.5rem);
+      @include au-font-size(1.5rem);
     }
   }
 
@@ -466,16 +466,16 @@
     }
 
     > h2 + * {
-      margin-top: $vl-unit-small;
+      margin-top: $au-unit-small;
     }
 
     > h1,
     > h2 {
-      @include vl-font-size(2.5rem);
+      @include au-font-size(2.5rem);
     }
 
     > p {
-      @include vl-font-size(1.5rem,1.3);
+      @include au-font-size(1.5rem,1.3);
     }
   }
 }

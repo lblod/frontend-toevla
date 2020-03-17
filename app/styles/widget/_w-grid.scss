@@ -7,22 +7,22 @@
 /* Variables
    ====================================================== */
 
-$vl-grid-gutter: $vl-unit-tiny !default;
-$vl-grid-modifier: calc(70rem - 100%) !default;
+$au-grid-gutter: $au-unit-tiny !default;
+$au-grid-modifier: calc(70rem - 100%) !default;
 
 
 /* Component
   ====================================================== */
 
-.vl-w-grid {
+.au-w-grid {
   display: flex;
   flex-wrap: wrap;
-  margin: calc(#{$vl-grid-gutter} * -1);
+  margin: calc(#{$au-grid-gutter} * -1);
 }
 
-  .vl-w-grid__item {
-    min-width: calc(33.333% - (#{$vl-grid-gutter} * 2));
+  .au-w-grid__item {
+    min-width: calc(33.333% - (#{$au-grid-gutter} * 2));
     max-width: 100%;
-    flex-basis: calc(#{$vl-grid-modifier} * 999);
-    margin: $vl-grid-gutter;
+    flex-basis: calc(#{$au-grid-modifier} * 999);
+    margin: $au-grid-gutter;
   }

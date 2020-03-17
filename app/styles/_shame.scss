@@ -2,12 +2,21 @@
    #SHAME
    ========================================================================== */
 
-.vl-d-icon {
-  width: $vl-unit-huge;
-  height: $vl-unit-huge;
+.au-d-icon {
+  width: $au-unit-huge;
+  height: $au-unit-huge;
 }
 
 // Override font for Kina theme
-.vl-w-theme-kina {
+.au-w-theme-kina {
   font-family: "Lato", sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: $au-neutral-lightest;
 }

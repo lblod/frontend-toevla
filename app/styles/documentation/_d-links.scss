@@ -1,12 +1,14 @@
 /* ==================================
-   #WIDGET LINKS
+   #LINKS
    ================================== */
 
-.au-w-link {
+/* Component
+   ========================================================================== */
+
+.au-d-link {
   transition: color $au-transition, text-decoration $au-transition;
   font-weight: $au-regular;
-  text-decoration-color: $au-primary-lighter;
-  text-decoration: underline;
+  text-decoration-color: $au-primary;
 
   &,
   &:visited {
@@ -28,21 +30,9 @@
     color: $au-primary-light;
     text-decoration: none;
   }
-
-  .au-w-theme-kina &,
-  .au-w-theme-kina &:hover{
-    color: $au-neutral-darkest;
-    text-decoration-color: $au-neutral-darker;
-  }
-
-  .au-w-theme-kina &:hover,
-  .au-w-theme-kina &:focus{
-    color: $au-neutral-darker;
-    text-decoration-color: $au-neutral-dark;
-  }
 }
 
-.au-w-link--neutral {
+.au-d-link--neutral {
   &,
   &:visited {
     color: $au-neutral-dark;
@@ -61,21 +51,28 @@
   }
 
   .is-active > & {
-    color: $au-primary-light;
+    color: $au-neutral;
     text-decoration: none;
   }
 }
 
-.au-w-link--title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.au-d-link--icon {
+  position: relative;
+  padding-left: $au-unit-small;
+
+  .au-d-icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
-.au-w-link--button {
-  appearance: none;
-  border: 0;
-  padding: 0;
-  font-size: inherit;
-  font-family: inherit;
+.au-d-link--bare {
+  &,
+  &:visited,
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
 }
