@@ -25,7 +25,7 @@ export default class modal extends Component {
     this.modalOpen = !this.modalOpen;
 
     // Add body class
-    document.getElementsByTagName('body')[0].classList.add("au-w-modal-open");
+    document.getElementsByTagName('html')[0].classList.add("au-w-modal-open");
   }
 
   // Close modal
@@ -36,8 +36,8 @@ export default class modal extends Component {
       // Close the modal
       this.modalOpen = false;
 
-      // Remove body class when modal is disabled
-      document.getElementsByTagName('body')[0].classList.remove("au-w-modal-open");
+      // Remove html class when modal is disabled
+      document.getElementsByTagName('html')[0].classList.remove("au-w-modal-open");
     }
   }
 }

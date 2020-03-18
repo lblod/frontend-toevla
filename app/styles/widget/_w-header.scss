@@ -20,6 +20,11 @@
   margin-right: $au-unit-small;
   padding-bottom: 0;
   margin-bottom: 0;
+
+  .au-w-theme-kina & {
+    font-family: "Lato", sans-serif;
+    @include au-font-size(1.6rem);
+  }
 }
 
 .au-w-header__info {
@@ -30,6 +35,10 @@
   padding-bottom: 0;
   margin-top: $au-unit-tiny;
   margin-bottom: $au-unit-tiny;
+
+  .au-w-theme-kina & {
+    font-family: "Lato", sans-serif;
+  }
 }
 
 .au-w-header__rating {

@@ -12,7 +12,7 @@
   </div>
   <ul class="au-w-grid au-w-grid--divider au-u-margin-bottom-small">
     <li class="au-w-grid__item">
-      <AuModal @title="Openbaar vervoer" @id="openbaar-vervoer" @check="true">
+      <AuModal @title="Openbaar vervoer" @id="openbaar-vervoer" @check="true" @theme="{{@theme}}">
         <p class="au-w-info">
           Deze locatie is bereikbaar met het openbaar vervoer.
         </p>
@@ -40,7 +40,7 @@
       </AuModal>
     </li>
     <li class="au-w-grid__item">
-      <AuModal @title="Voorbehouden parkeerplaats" @id="parkeerplaats" @check="true">
+      <AuModal @title="Voorbehouden parkeerplaats" @id="parkeerplaats" @check="true" @theme="{{@theme}}">
         <p class="au-w-info">
           Er is minstens één voorbehouden parkeerplaats met rolstoelvriendelijke ondergrond bij het uitstappen.
         </p>
@@ -71,7 +71,7 @@
       </AuModal>
     </li>
     <li class="au-w-grid__item">
-      <AuModal @title="Fietsenstalling" @id="fietstenstalling" @check="true">
+      <AuModal @title="Fietsenstalling" @id="fietstenstalling" @check="true" @theme="{{@theme}}">
         <ul class="au-criterium-list">
           <AuCriteriaItem @criterium="Fietsenstalling" @check="true">
             <p>Op de binnenkoer.</p>
@@ -80,7 +80,7 @@
       </AuModal>
     </li>
     <li class="au-w-grid__item">
-      <AuModal @title="Museum - Bezoekersinfo" @id="bezoekersinfo">
+      <AuModal @title="Museum - Bezoekersinfo" @id="bezoekersinfo" @theme="{{@theme}}">
         <p class="au-w-info">
           Algemene Info & Tegemoetkomingen.
         </p>
@@ -117,7 +117,7 @@
       </AuModal>
     </li>
     <li class="au-w-grid__item">
-      <AuModal @title="Rolstoelvriendelijke Inkom" @id="inkom" @check="true">
+      <AuModal @title="Rolstoelvriendelijke Inkom" @id="inkom" @check="true" @theme="{{@theme}}">
         <p class="au-w-info">
           De inkombreedte is minstens 85 cm met max 1 trede van 10 cm.
         </p>
@@ -154,7 +154,7 @@
       </AuModal>
     </li>
     <li class="au-w-grid__item">
-      <AuModal @title="Rolstoelvriendelijk Toilet" @id="toilet" @check="true">
+      <AuModal @title="Rolstoelvriendelijk Toilet" @id="toilet" @check="true" @theme="{{@theme}}">
         <p class="au-w-info">
           Je kan met de rolstoel binnen nl. max drempel van 5cm, deurbreedte van min 85 cm, draairuimte (diameter) minstens 120 cm.
         </p>
@@ -190,7 +190,7 @@
       </AuModal>
     </li>
     <li class="au-w-grid__item">
-      <AuModal @title="Museum - Rondgang & Infrastructuur" @id="museumRondgang" @check="true">
+      <AuModal @title="Museum - Rondgang & Infrastructuur" @id="museumRondgang" @check="true" @theme="{{@theme}}">
         <p class="au-w-info">
           Je kan het merendeel van de bedoelde activiteiten uitvoeren, met jouw beperking.
         </p>
@@ -213,7 +213,7 @@
       </AuModal>
     </li>
     <li class="au-w-grid__item">
-      <AuModal @title="Museum - Beleving" @id="beleving" @check="true">
+      <AuModal @title="Museum - Beleving" @id="beleving" @check="true" @theme="{{@theme}}">
         <p class="au-w-info">
           Je kan genieten van volgende voorzieningen.
         </p>
@@ -351,7 +351,7 @@
       </AuModal>
     </li>
     <li class="au-w-grid__item">
-      <AuModal @title="Wisselende expo" @id="tijdelijk" @check="true">
+      <AuModal @title="Wisselende expo" @id="tijdelijk" @check="true" @theme="{{@theme}}">
         <ul class="au-w-criterium-section-list">
           <AuCriteriaSection @sectionTitle="Dag Jan - Het kleine rijk van Jan Van Eyck (uitgesteld)" @check="true">
             <ul class="au-w-criterium-list">
@@ -363,7 +363,7 @@
       </AuModal>
     </li>
     <li class="au-w-grid__item">
-      <AuModal @title="Rolstoelvriendelijke eet- en drinkgelegenheid" @id="etenendrinken" @check="true">
+      <AuModal @title="Rolstoelvriendelijke eet- en drinkgelegenheid" @id="etenendrinken" @check="true" @theme="{{@theme}}">
         <ul class="au-criterium-list">
           <AuCriteriaItem @criterium="Bereikbaar" @check="true">
           </AuCriteriaItem>
@@ -383,7 +383,7 @@
       </AuModal>
     </li>
     <li class="au-w-grid__item">
-      <AuModal @title="Rolstoelvriendelijke museumshop" @id="shop" @check="true">
+      <AuModal @title="Rolstoelvriendelijke museumshop" @id="shop" @check="true" @theme="{{@theme}}">
         <ul class="au-criterium-list">
           <AuCriteriaItem @criterium="Rolstoelvriendelijke circulatie" @check="true">
           </AuCriteriaItem>
@@ -394,7 +394,7 @@
     </li>
   </ul>
   <div class="au-u-margin-top">
-    <AuLightbox @title="Bekijk foto's" @id="fotos">
+    <AuLightbox @title="Bekijk foto's" @id="fotos" @theme="{{@theme}}">
       {{#carousel-container transitionInterval=400 as |ui controls|}}
         <div class="au-w-carousel">
           {{#ui.item}}

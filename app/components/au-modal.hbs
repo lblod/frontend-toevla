@@ -13,6 +13,7 @@
   </span>
 </button>
 
+{{#if this.modalOpen}}
 <EmberWormhole @to={{this.destinationElementId}}>
 <div class="au-w-modal-background {{if this.modalOpen "is-visible"}}" role="presentation"></div>
 <div id="{{@id}}" class="au-w-modal {{if this.modalOpen "is-visible"}} {{@theme}}" role="dialog" aria-describedby="au-w-modal-title-{{@id}}" tabindex="-1" {{focus-trap isActive=this.modalOpen focusTrapOptions=(hash onDeactivate=(fn this.closeModal) initialFocus=".au-w-modal__title" clickOutsideDeactivates=true)}}>
@@ -45,3 +46,4 @@
   </div>
 </div>
 </EmberWormhole>
+{{/if}}

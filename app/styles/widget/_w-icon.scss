@@ -30,6 +30,11 @@
     fill: $au-primary;
     stroke: $au-primary;
   }
+
+  .au-w-theme-kina & {
+    fill: $au-success;
+    stroke: $au-success;
+  }
 }
 
 .au-w-icon--faded {

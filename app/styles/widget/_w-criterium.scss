@@ -26,6 +26,7 @@
   @include mq(small) {
     @include au-font-size($au-h5);
   }
+
 }
 
 .au-w-criterium-list {
@@ -46,6 +47,10 @@
   font-weight: $au-medium;
   display: flex;
   align-items: center;
+
+  .au-w-theme-kina & {
+    font-weight: 600;
+  }
 }
 
 .au-w-criterium-list__content {
@@ -90,6 +95,36 @@
     .is-active > & {
       color: $au-primary-lighter;
       text-decoration: none;
+    }
+  }
+
+  .au-w-theme-kina & {
+    a:not(.au-c-button) {
+      transition: color $au-transition, text-decoration $au-transition;
+      font-weight: $au-regular;
+      text-decoration-thickness: 1px;
+
+      &,
+      &:visited {
+        color: $au-neutral-darkest;
+        text-decoration-color: $au-neutral;
+      }
+
+      &:hover,
+      &:focus {
+        color: $au-neutral-darker;
+        text-decoration-color: $au-neutral;
+      }
+
+      &:focus {
+        outline: $au-outline;
+        outline-offset: $au-unit-tiny/2;
+      }
+
+      .is-active > & {
+        color: $au-neutral-lighter;
+        text-decoration: none;
+      }
     }
   }
 }

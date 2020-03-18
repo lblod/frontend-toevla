@@ -15,7 +15,7 @@
   * double scroll bars.
   * (browser window + dialog if long enough content)
   */
-body.au-w-modal-open {
+html.au-w-modal-open {
   overflow: hidden;
 }
 
@@ -101,6 +101,10 @@ body.au-w-modal-open {
   background-color: $au-white;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
+
+  &:focus {
+    outline: 0;
+  }
 }
 
 .au-w-modal__cta {
@@ -125,6 +129,7 @@ body.au-w-modal-open {
   .au-w-theme-kina & {
     @include au-font-size(2.5rem);
     font-weight: 900;
+    font-family: "Lato", sans-serif;
   }
 
   &:focus {

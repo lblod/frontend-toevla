@@ -63,6 +63,7 @@ $au-button-link-underline-hover   : $au-primary-lighter !default;
     color: $au-neutral-darkest;
     font-weight: 400;
     text-decoration-color: $au-neutral-light;
+    font-family: "Lato", sans-serif;
 
     &:hover,
     &:focus {
@@ -71,12 +72,6 @@ $au-button-link-underline-hover   : $au-primary-lighter !default;
       text-decoration: underline;
       text-decoration-color: $au-neutral-lighter;
     }
-
-    .au-w-icon {
-      bottom: -.5ex;
-      display: block;
-    }
-
 
     &:focus {
       outline: $au-outline;

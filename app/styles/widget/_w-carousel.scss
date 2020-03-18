@@ -8,7 +8,7 @@
   /* For Carousel Component */
   .carousel-item {
     position: relative;
-    // transition: all $au-transition;
+    transition: all $au-transition;
   }
 
   .carousel-item.left, .carousel-item.right {
