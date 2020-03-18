@@ -1,0 +1,108 @@
+/* ==================================
+   #BUTTON LINK
+   Button styled as a link
+   ================================== */
+
+/* Variables
+   ========================================================================== */
+
+$au-button-link-color             : $au-primary !default;
+$au-button-link-hover-color       : $au-primary-light !default;
+$au-button-link-active-color      : $au-primary-light !default;
+$au-button-link-visited-color     : $au-primary-dark !default;
+$au-button-link-active-color      : $au-primary-dark !default;
+$au-button-link-underline         : $au-primary-light !default;
+$au-button-link-underline-hover   : $au-primary-lighter !default;
+
+
+/* Component
+   ========================================================================== */
+
+.au-w-button-link {
+  @include au-font-size($au-base,1.5);
+  font-family: $au-font;
+  font-weight: $au-regular;
+  padding: 0;
+  border: 0;
+  appearance: none;
+  -webkit-appearance: none; // doesn't work without prefix on Safari iOS11
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  text-align: left;
+  text-underline-offset: .3ex;
+  text-decoration: underline;
+  text-decoration-color: $au-button-link-underline;
+  color: $au-button-link-color;
+  background-color: transparent;
+  transition: color $au-transition;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $au-button-link-hover-color;
+    background-color: transparent;
+    text-decoration: underline;
+    text-decoration-color: $au-button-link-underline-hover;
+  }
+
+  &:focus {
+    outline: $au-outline;
+  }
+
+  &:active {
+    background-color: transparent;
+  }
+
+  &:visited {
+    background-color: transparent;
+  }
+
+  .au-w-theme-kina & {
+    color: $au-neutral-darkest;
+    font-weight: 400;
+    text-decoration-color: $au-neutral-light;
+
+    &:hover,
+    &:focus {
+      color: $au-neutral;
+      background-color: transparent;
+      text-decoration: underline;
+      text-decoration-color: $au-neutral-lighter;
+    }
+
+    .au-w-icon {
+      bottom: -.5ex;
+      display: block;
+    }
+
+
+    &:focus {
+      outline: $au-outline;
+    }
+  }
+}
+
+  .au-w-button-link__text {
+    width: 100%;
+  }
+
+
+/* Modifiers
+  ========================================================================== */
+
+.au-w-button-link--neutral {
+  color: $au-neutral-darker;
+  text-decoration-color: $au-neutral-light;
+
+  &:hover,
+  &:focus {
+    color: $au-neutral-dark;
+    text-decoration-color: $au-neutral-light;
+  }
+}
+
+.au-w-button-link--block {
+  white-space: nowrap;
+}

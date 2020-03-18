@@ -1,0 +1,12 @@
+/* ==================================
+   #WIDGET FOOTER
+   ================================== */
+
+.au-w-footer {
+  @include au-font-size(1.4rem);
+  color: $au-neutral;
+  padding-top: $au-unit-small;
+  padding-bottom: 0;
+  margin-top: $au-unit;
+  border-top: 1px solid $au-neutral-lighter;
+}

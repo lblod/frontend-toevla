@@ -43,6 +43,7 @@ body.au-w-modal-open {
   background: $au-white;
   margin: auto;
   height: calc(100% - #{$au-unit});
+  width: calc(100% - #{$au-unit});
   max-width: 760px;
   opacity: 1;
   overflow: auto;
@@ -57,7 +58,6 @@ body.au-w-modal-open {
   transform: translateY(0%);
   visibility: visible;
   border-radius: $au-radius;
-  width: 100%;
   z-index: 10; /* this should be more than enough... */
   box-shadow: 0 1px 3px rgba($au-neutral-darkest, .1), 0 4px 20px rgba($au-neutral-darkest, .035), 0 1px 1px rgba($au-neutral-darkest, .025);
 
@@ -67,45 +67,69 @@ body.au-w-modal-open {
     transform: translateY(-50%);
     transition: opacity $au-transition, transform $au-transition;
   }
+
+  &:focus {
+    outline: 0;
+  }
 }
 
-  .au-w-modal__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: $au-unit-small $au-unit;
-    border-bottom: 1px solid $au-neutral-lighter;
+.au-w-modal__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $au-unit-small $au-unit;
+  border-bottom: 1px solid $au-neutral-lighter;
 
-    @include mq(medium) {
-      padding: $au-unit $au-unit;
+  @include mq(medium) {
+    padding: $au-unit - $au-unit-tiny $au-unit;
+  }
+}
+
+.au-w-modal__body {
+  width: 100%;
+  flex-grow: 1;
+  position: relative;
+  height: calc(100% - #{$au-unit-large + $au-unit-small});
+  background-color: $au-white;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.au-w-modal__cta {
+  width: 100%;
+  color: $au-neutral-dark;
+  background-color: $au-neutral-lightest;
+  padding: $au-unit - $au-unit-tiny;
+  text-align: center;
+  border-radius: $au-radius;
+  border-top: 1px solid $au-neutral-lighter;
+}
+
+.au-w-modal__title {
+  @include au-font-size($au-h5);
+  font-weight: $au-bold;
+  color: $au-neutral-darker;
+  margin-bottom: 0;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+
+  .au-w-theme-kina & {
+    @include au-font-size(2.5rem);
+    font-weight: 900;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  @include mq(medium) {
+    @include au-font-size($au-h3);
+
+    .au-w-theme-kina & {
+      @include au-font-size(2.5rem);
+      font-weight: 900;
     }
   }
-
-  .au-w-modal__body {
-    flex-grow: 1;
-    position: relative;
-    height: calc(100% - #{$au-unit-large + $au-unit-small});
-    background-color: $au-white;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-
-/**
-  * To allow for CSS animations, hidden modal dialogs are
-  * not set to display: none, but rather the following rule
-  * set, in combination with the dialog's default
-  * position: fixed, will keep dialogs hidden from
-  * all users until opened.
-  *
-  * This also solves an issue with iOS VO + Safari not allowing
-  * modal dialogs to be focused, if the dialog is initially
-  * set to "display: none".
-  */
-.au-w-modal.is-hidden {
-  display: block;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(15vh);
-  visibility: hidden;
 }

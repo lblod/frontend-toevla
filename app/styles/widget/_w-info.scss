@@ -1,0 +1,16 @@
+.au-w-info {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  background-color: $au-neutral-lightest;
+  padding: $au-unit-small;
+  margin-bottom: $au-unit;
+  @include au-font-size($au-base,1.3);
+  font-weight: $au-light;
+  color: $au-neutral-darker;
+  border: 1px solid $au-neutral-lighter;
+
+  .au-w-theme-kina & {
+    @include au-font-size(1.5rem,1.3);
+  }
+}

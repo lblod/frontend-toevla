@@ -5,12 +5,13 @@
 .au-w-link {
   transition: color $au-transition, text-decoration $au-transition;
   font-weight: $au-regular;
-  text-decoration-color: $au-primary-lighter;
   text-decoration: underline;
+  text-decoration-thickness: 1px;
 
   &,
   &:visited {
     color: $au-primary;
+    text-decoration-color: $au-primary-light;
   }
 
   &:hover,

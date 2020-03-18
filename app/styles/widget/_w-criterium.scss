@@ -1,0 +1,91 @@
+/* ==================================
+   #CRITERIA
+   ================================== */
+
+.au-w-criterium-section-list {
+  margin: 0;
+}
+
+.au-w-criterium-section-list__item {
+  & + & {
+    margin-top: $au-unit;
+    padding-top: $au-unit;
+  }
+}
+
+.au-w-criterium-title {
+  @include au-font-size($au-h5);
+  color: $au-neutral-darker;
+  font-weight: $au-bold;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $au-neutral-lighter;
+  margin-bottom: $au-unit-small;
+  padding-bottom: $au-unit-small;
+}
+
+.au-w-criterium-list {
+  margin: 0;
+}
+
+.au-w-criterium-list__item {
+  & + & {
+    margin-top: $au-unit-small;
+    padding-top: $au-unit-small;
+    border-top: 1px dotted $au-neutral-light;
+  }
+}
+
+.au-w-criterium-list__title {
+  @include au-font-size($au-base);
+  color: $au-neutral-darker;
+  font-weight: $au-medium;
+  display: flex;
+  align-items: center;
+}
+
+.au-w-criterium-list__content {
+  color: $au-neutral-darker;
+  margin-left: 2rem;
+
+  > * {
+    margin-top: $au-unit-tiny;
+  }
+
+  > * + * {
+    margin-top: $au-unit-tiny;
+  }
+
+  ul {
+    list-style: disc;
+    margin-left: $au-unit-small + $au-unit-tiny;
+  }
+
+  a:not(.au-c-button) {
+    transition: color $au-transition, text-decoration $au-transition;
+    font-weight: $au-regular;
+    text-decoration-thickness: 1px;
+
+    &,
+    &:visited {
+      color: $au-primary;
+      text-decoration-color: $au-primary-light;
+    }
+
+    &:hover,
+    &:focus {
+      color: $au-primary-light;
+      text-decoration-color: $au-primary-lighter;
+    }
+
+    &:focus {
+      outline: $au-outline;
+      outline-offset: $au-unit-tiny/2;
+    }
+
+    .is-active > & {
+      color: $au-primary-lighter;
+      text-decoration: none;
+    }
+  }
+}

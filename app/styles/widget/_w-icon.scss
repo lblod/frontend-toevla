@@ -9,12 +9,25 @@
   position: relative;
   vertical-align: baseline;
   stroke-width: 0;
-  bottom: -.1ex;
   stroke: currentColor;
   fill: currentColor;
   margin-right: $au-unit-tiny;
+  transition: $au-transition;
 
-  .au-w-theme-kina & {
-    bottom: 0;
+  .au-w-button-link:hover &,
+  .au-w-button-link:focus & {
+    opacity: .8;
   }
+}
+
+.au-w-icon--active {
+  .au-w-modal & {
+    fill: $au-primary;
+    stroke: $au-primary;
+  }
+}
+
+.au-w-icon--faded {
+  fill: $au-neutral;
+  stroke: $au-neutral;
 }
