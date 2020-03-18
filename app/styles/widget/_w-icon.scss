@@ -20,6 +20,11 @@
   }
 }
 
+.au-w-icon--large {
+  width: 1.75em;
+  height: 1.75em;
+}
+
 .au-w-icon--active {
   .au-w-modal & {
     fill: $au-primary;

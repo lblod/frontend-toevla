@@ -42,7 +42,8 @@ body.au-w-modal-open {
   -webkit-overflow-scrolling: touch;
   background: $au-white;
   margin: auto;
-  height: calc(100% - #{$au-unit});
+  height: auto;
+  max-height: calc(100% - #{$au-unit});
   width: calc(100% - #{$au-unit});
   max-width: 760px;
   opacity: 1;
@@ -54,23 +55,29 @@ body.au-w-modal-open {
   right: $au-unit-small;
   top: $au-unit-small;
   left: $au-unit-small;
-  bottom: $au-unit-small;
-  transform: translateY(0%);
+  bottom: auto;
+  top: 50%;
+  transform: translateY(-50%);
   visibility: visible;
   border-radius: $au-radius;
   z-index: 10; /* this should be more than enough... */
   box-shadow: 0 1px 3px rgba($au-neutral-darkest, .1), 0 4px 20px rgba($au-neutral-darkest, .035), 0 1px 1px rgba($au-neutral-darkest, .025);
-
-  @media screen and ( min-height: 440px ) and ( min-width: 500px ) {
-    bottom: auto;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: opacity $au-transition, transform $au-transition;
-  }
+  transition: $au-transition;
+  display: none;
 
   &:focus {
     outline: 0;
   }
+
+  &.is-visible {
+    display: flex;
+  }
+}
+
+.au-w-modal--lightbox {
+  bottom: auto;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .au-w-modal__header {
@@ -78,7 +85,7 @@ body.au-w-modal-open {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: $au-unit-small $au-unit;
+  padding: $au-unit-small $au-unit-small;
   border-bottom: 1px solid $au-neutral-lighter;
 
   @include mq(medium) {
@@ -131,5 +138,13 @@ body.au-w-modal-open {
       @include au-font-size(2.5rem);
       font-weight: 900;
     }
+  }
+}
+
+.au-w-modal__content {
+  padding: $au-unit-small;
+
+  @include mq(medium) {
+    padding: $au-unit;
   }
 }

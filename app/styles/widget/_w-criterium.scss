@@ -14,7 +14,7 @@
 }
 
 .au-w-criterium-title {
-  @include au-font-size($au-h5);
+  @include au-font-size($au-h6);
   color: $au-neutral-darker;
   font-weight: $au-bold;
   display: flex;
@@ -22,6 +22,10 @@
   border-bottom: 1px solid $au-neutral-lighter;
   margin-bottom: $au-unit-small;
   padding-bottom: $au-unit-small;
+
+  @include mq(small) {
+    @include au-font-size($au-h5);
+  }
 }
 
 .au-w-criterium-list {

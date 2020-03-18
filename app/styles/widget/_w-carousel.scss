@@ -1,0 +1,152 @@
+/* ==================================
+   #WIDGET CAROUSEL
+   ================================== */
+
+.au-w-carousel {
+  position: relative;
+
+  /* For Carousel Component */
+  .carousel-item {
+    position: relative;
+    // transition: all $au-transition;
+  }
+
+  .carousel-item.left, .carousel-item.right {
+    display: block;
+  }
+
+  .carousel-item.left, .carousel-item.right {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .carousel-item.left {
+    left: 100%;
+  }
+
+  .carousel-item.right {
+    left: -100%;
+  }
+
+
+  .carousel-item.active.left.slide-out {
+    left: -100%;
+  }
+
+  .carousel-item.active.right.slide-out {
+    left: 100%;
+  }
+
+
+  .carousel-item.left.slide-in, .carousel-item.right.slide-in {
+    left: 0;
+  }
+
+  .carousel-item.active {
+    position: relative;
+    left: 0;
+  }
+}
+
+.au-w-carousel__figure {
+  display: block;
+  width: 100%;
+  position: relative;
+  background-color: $au-neutral-darkest;
+  overflow: hidden;
+  height: 400px;
+  max-height: calc(100vh - #{$au-unit-huge});
+
+  @include mq(small) {
+    height: 600px;
+  }
+}
+
+.au-w-carousel__image {
+  display: block;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @supports (object-fit: contain) {
+    object-fit: contain;
+  }
+}
+
+.au-w-carousel__caption {
+  @include au-font-size($au-base);
+  color: $au-neutral-dark;
+  display: block;
+  padding: $au-unit-tiny/2 $au-unit-tiny;
+  background-color: $au-white;
+  position: absolute;
+  bottom: $au-unit-small;
+  left: $au-unit-small;
+  width: calc(100% - #{$au-unit});
+  border-radius: $au-radius;
+
+  @include mq(medium) {
+    padding: $au-unit-tiny $au-unit-small;
+  }
+}
+
+.au-w-carousel__button {
+  @include au-font-size($au-h6);
+  appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $au-unit-small;
+  color: $au-white;
+  cursor: pointer;
+  width: $au-unit-large + $au-unit-small;
+  height: $au-unit-large + $au-unit-small;
+  background-color: rgba($au-neutral-darkest,.3);
+  transition: color $au-transition, background-color $au-transition;
+
+  &:hover,
+  &:focus {
+    background-color: rgba($au-neutral-darkest,.5);
+  }
+
+  &:focus {
+    outline-offset: -.2rem;
+  }
+
+  &:active {
+    color: $au-neutral-light;
+  }
+
+  .au-w-icon {
+    margin-right: 0;
+  }
+}
+
+.au-w-carousel__button--next {
+  right: 0;
+  border-top-left-radius: $au-unit-large;
+  border-bottom-left-radius: $au-unit-large;
+}
+
+.au-w-carousel__button--previous {
+  left: 0;
+  border-top-right-radius: $au-unit-large;
+  border-bottom-right-radius: $au-unit-large;
+}
+
+.au-w-carousel__pagination {
+  @include au-font-size(1.3rem,1);
+  position: relative;
+  bottom: .15ex;
+  font-weight: $au-bold;
+  text-transform: uppercase;
+  margin-right: $au-unit-tiny/2;
+  padding-right: $au-unit-tiny;
+  border-right: 1px solid $au-neutral-light;
+}
