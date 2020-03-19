@@ -65,7 +65,7 @@
     margin-top: $au-unit-tiny;
   }
 
-  ul {
+  ul:not(.au-w-list-image) {
     list-style: disc;
     margin-left: $au-unit-small + $au-unit-tiny;
   }
@@ -106,14 +106,14 @@
 
       &,
       &:visited {
-        color: $au-neutral-darkest;
-        text-decoration-color: $au-neutral;
+        color: $au-neutral-darker;
+        text-decoration-color: $au-neutral-light;
       }
 
       &:hover,
       &:focus {
-        color: $au-neutral-darker;
-        text-decoration-color: $au-neutral;
+        color: $au-neutral-dark;
+        text-decoration-color: $au-neutral-light;
       }
 
       &:focus {
@@ -127,4 +127,21 @@
       }
     }
   }
+}
+
+.au-w-criterium-list__label {
+  @include au-font-size(1.3rem,1);
+  position: relative;
+  font-weight: $au-bold;
+  text-transform: uppercase;
+  margin-right: $au-unit-tiny;
+  padding-right: $au-unit-tiny;
+  border-right: 1px solid $au-neutral-light;
+}
+
+.au-w-criterium-subtitle {
+  @include au-font-size(1.4rem);
+  font-weight: $au-medium;
+  margin-top: $au-unit-tiny;
+  color: $au-neutral-darker;
 }

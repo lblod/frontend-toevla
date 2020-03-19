@@ -7,6 +7,11 @@
   color: $au-neutral;
   padding-top: $au-unit-small;
   padding-bottom: 0;
-  margin-top: $au-unit;
+  margin-top: $au-unit-small;
   border-top: 1px solid $au-neutral-lighter;
+
+  .au-w-theme-kina & {
+    margin-top: $au-unit-tiny;
+    padding-top: $au-unit-tiny;
+  }
 }

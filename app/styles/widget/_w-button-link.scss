@@ -27,7 +27,7 @@ $au-button-link-underline-hover   : $au-primary-lighter !default;
   appearance: none;
   -webkit-appearance: none; // doesn't work without prefix on Safari iOS11
   position: relative;
-  display: flex;
+  display: inline-flex;
   flex-wrap: nowrap;
   align-items: center;
   text-align: left;
@@ -38,6 +38,7 @@ $au-button-link-underline-hover   : $au-primary-lighter !default;
   background-color: transparent;
   transition: color $au-transition;
   cursor: pointer;
+  padding: $au-unit-tiny 0;
 
   &:hover,
   &:focus {
@@ -67,10 +68,10 @@ $au-button-link-underline-hover   : $au-primary-lighter !default;
 
     &:hover,
     &:focus {
-      color: $au-neutral;
+      color: $au-neutral-dark;
       background-color: transparent;
       text-decoration: underline;
-      text-decoration-color: $au-neutral-lighter;
+      text-decoration-color: $au-neutral-light;
     }
 
     &:focus {
@@ -99,5 +100,9 @@ $au-button-link-underline-hover   : $au-primary-lighter !default;
 }
 
 .au-w-button-link--block {
+  width: 100%;
+}
+
+.au-w-button-link--nowrap {
   white-space: nowrap;
 }

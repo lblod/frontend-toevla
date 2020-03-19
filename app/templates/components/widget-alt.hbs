@@ -6,9 +6,11 @@
       </svg>
       {{@title}}
     </h1>
+    {{#if @category}}
     <p class="au-w-header__info">
-      <span class="au-w-header__rating">{{@category}}</span> <span class="au-w-header__rating au-w-header__rating--base">{{@rating}}</span>
+      <span class="au-w-header__rating">{{@category}}</span> {{#if @rating}}<span class="au-w-header__rating au-w-header__rating--base">{{@rating}}</span>{{/if}}
     </p>
+    {{/if}}
   </div>
   <ul class="au-w-grid au-w-grid--divider au-u-margin-bottom-small">
     <li class="au-w-grid__item">
@@ -16,7 +18,7 @@
         <p class="au-w-info">
           Deze locatie is bereikbaar met het openbaar vervoer.
         </p>
-        <ul class="au-criterium-list">
+        <ul class="au-w-criterium-list">
           <AuCriteriaItem @criterium="Halte aanwezig binnen 500 m" @check="true">
             <ul>
               <li>Station Gent-Sint-Pieters op 1,3 km</li>
@@ -26,6 +28,7 @@
             <p><a href="https://www.delijn.be/nl/routeplanner/">De Lijn routeplanner</a></p>
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Toegankelijke halte">
+            <p class="au-w-info-text">Geen extra info beschikbaar.</p>
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Rolstoelvriendelijk pad naar inkom">
             <p>Obstakels op de openbare weg:</p>
@@ -38,8 +41,6 @@
           </AuCriteriaItem>
         </ul>
       </AuModal>
-    </li>
-    <li class="au-w-grid__item">
       <AuModal @title="Voorbehouden parkeerplaats" @id="parkeerplaats" @check="true" @theme="{{@theme}}">
         <p class="au-w-info">
           Er is minstens één voorbehouden parkeerplaats met rolstoelvriendelijke ondergrond bij het uitstappen.
@@ -49,6 +50,19 @@
             <ul>
               <li>Op publiek domein.</li>
               <li>Er zijn 2 aangepaste parkeerplaatsen dicht bij de alternatieve inkom ; onder het Sint-Pietersplein (op 50 m) is een ruime ondergrondse parkeergelegenheid met aangepaste parkeerplaatsen.</li>
+            </ul>
+            <h3 class="au-w-criterium-subtitle au-u-hidden-visually">Foto's:</h3>
+            <ul class="au-w-list-image">
+              <li class="au-w-list-image__item">
+                <Vl-image>
+                  <img src="/assets/img/kinaP1.jpg" alt="">
+                </Vl-image>
+              </li>
+              <li class="au-w-list-image__item">
+                <Vl-image>
+                  <img src="/assets/img/kinaP2.jpg" alt="">
+                </Vl-image>
+              </li>
             </ul>
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Rolstoelvriendelijke ondergrond" @check="true">
@@ -69,8 +83,6 @@
           </AuCriteriaItem>
         </ul>
       </AuModal>
-    </li>
-    <li class="au-w-grid__item">
       <AuModal @title="Fietsenstalling" @id="fietstenstalling" @check="true" @theme="{{@theme}}">
         <ul class="au-criterium-list">
           <AuCriteriaItem @criterium="Fietsenstalling" @check="true">
@@ -80,43 +92,41 @@
       </AuModal>
     </li>
     <li class="au-w-grid__item">
-      <AuModal @title="Museum - Bezoekersinfo" @id="bezoekersinfo" @theme="{{@theme}}">
+      <AuModal @title="Museum - Bezoekersinfo" @id="bezoekersinfo" @theme="{{@theme}}" @info="true">
         <p class="au-w-info">
           Algemene Info & Tegemoetkomingen.
         </p>
         <ul class="au-criterium-list">
-          <AuCriteriaItem @criterium="Begeleiding van aan het openbaar vervoer mogelijk">
+          <AuCriteriaItem @criterium="Begeleiding van aan het openbaar vervoer mogelijk" @info="true">
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Tegemoetkoming toegangsprijs" @check="true">
+          <AuCriteriaItem @criterium="Tegemoetkoming toegangsprijs" @info="true">
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Begeleider gratis" @check="true">
+          <AuCriteriaItem @criterium="Begeleider gratis" @info="true">
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Museumpas" @check="true">
+          <AuCriteriaItem @criterium="Museumpas" @info="true">
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Uitpas (punten scannen)" @check="true">
+          <AuCriteriaItem @criterium="Uitpas (punten scannen)" @info="true">
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="City Pas Gent" @check="true">
+          <AuCriteriaItem @criterium="City Pas Gent" @info="true">
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="EDC (European Disability Card) toegestaan" @check="true">
+          <AuCriteriaItem @criterium="EDC (European Disability Card) toegestaan" @info="true">
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Rolstoel ter beschikking" @check="true">
+          <AuCriteriaItem @criterium="Rolstoel ter beschikking" @info="true">
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Wifi beschikbaar" @check="true">
+          <AuCriteriaItem @criterium="Wifi beschikbaar" @info="true">
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="De te volgen route is logisch en eenvoudig opgebouwd">
+          <AuCriteriaItem @criterium="De te volgen route is logisch en eenvoudig opgebouwd" @info="true">
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Duidelijke signalisatie in het gebouw" @check="true">
+          <AuCriteriaItem @criterium="Duidelijke signalisatie in het gebouw" @info="true">
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Rustige momenten" @check="true">
+          <AuCriteriaItem @criterium="Rustige momenten" @info="true">
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Voorzieningen voor assistentiehonden" @check="true">
+          <AuCriteriaItem @criterium="Voorzieningen voor assistentiehonden" @info="true">
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Elektronische betaalmogelijkheid verplaatsbaar" @check="true">
+          <AuCriteriaItem @criterium="Elektronische betaalmogelijkheid verplaatsbaar" @info="true">
           </AuCriteriaItem>
         </ul>
       </AuModal>
-    </li>
-    <li class="au-w-grid__item">
       <AuModal @title="Rolstoelvriendelijke Inkom" @id="inkom" @check="true" @theme="{{@theme}}">
         <p class="au-w-info">
           De inkombreedte is minstens 85 cm met max 1 trede van 10 cm.
@@ -126,6 +136,19 @@
             <ul>
               <li>Drempelloos</li>
               <li>Op de hoek met de Kantienberg. Bel met parlofoon. Er komt steeds iemand om deze deur te openen en U te begeleiden naar de balie in de inkomhal.</li>
+            </ul>
+            <h3 class="au-w-criterium-subtitle au-u-hidden-visually">Foto's:</h3>
+            <ul class="au-w-list-image">
+              <li class="au-w-list-image__item">
+                <Vl-image>
+                  <img src="/assets/img/kinaI1.jpg" alt="">
+                </Vl-image>
+              </li>
+              <li class="au-w-list-image__item">
+                <Vl-image>
+                  <img src="/assets/img/kinaI2.jpg" alt="">
+                </Vl-image>
+              </li>
             </ul>
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Deurbreedte >90 cm" @check="true">
@@ -149,11 +172,10 @@
           <AuCriteriaItem @criterium="Bemande balie" @check="true">
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Ringleiding aan de balie">
+            <p class="au-w-info-text">Geen extra info beschikbaar.</p>
           </AuCriteriaItem>
         </ul>
       </AuModal>
-    </li>
-    <li class="au-w-grid__item">
       <AuModal @title="Rolstoelvriendelijk Toilet" @id="toilet" @check="true" @theme="{{@theme}}">
         <p class="au-w-info">
           Je kan met de rolstoel binnen nl. max drempel van 5cm, deurbreedte van min 85 cm, draairuimte (diameter) minstens 120 cm.
@@ -173,14 +195,39 @@
             <p>Makkelijke klikdeur,  zonder trek- of duwkracht.</p>
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Onvoldoende of geen draairuimte aan de deur">
+            <p>Helling: Hoogteverschil van 15 cm via korte steile helling.</p>
+            <h3 class="au-w-criterium-subtitle au-u-hidden-visually">Foto's:</h3>
+            <ul class="au-w-list-image">
+              <li class="au-w-list-image__item">
+                <Vl-image>
+                  <img src="/assets/img/kinaT1.jpg" alt="">
+                </Vl-image>
+              </li>
+            </ul>
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Ruimte voor toiletpot 80 cm" @check="true">
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Ruimte naast toiletpot 90 cm" @check="true">
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Draairuimte in het toilet 150cm" @check="true">
+            <h3 class="au-w-criterium-subtitle au-u-hidden-visually">Foto's:</h3>
+            <ul class="au-w-list-image">
+              <li class="au-w-list-image__item">
+                <Vl-image>
+                  <img src="/assets/img/kinaT2.jpg" alt="">
+                </Vl-image>
+              </li>
+            </ul>
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Steunbeugels, 2" @check="true">
+            <h3 class="au-w-criterium-subtitle au-u-hidden-visually">Foto's:</h3>
+            <ul class="au-w-list-image">
+              <li class="au-w-list-image__item">
+                <Vl-image>
+                  <img src="/assets/img/kinaT3.jpg" alt="">
+                </Vl-image>
+              </li>
+            </ul>
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Beperkt onderrijdbare wastafel" @check="true">
           </AuCriteriaItem>
@@ -188,8 +235,6 @@
           </AuCriteriaItem>
         </ul>
       </AuModal>
-    </li>
-    <li class="au-w-grid__item">
       <AuModal @title="Museum - Rondgang & Infrastructuur" @id="museumRondgang" @check="true" @theme="{{@theme}}">
         <p class="au-w-info">
           Je kan het merendeel van de bedoelde activiteiten uitvoeren, met jouw beperking.
@@ -198,8 +243,17 @@
           <AuCriteriaItem @criterium="Rolstoelvriendelijke circulatie" @check="true">
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Alles op gelijkvloers">
+            <p class="au-w-info-text">Geen extra info beschikbaar.</p>
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Rolstoelvriendelijke lift, 148 x 112 cm" @check="true">
+            <h3 class="au-w-criterium-subtitle au-u-hidden-visually">Foto's:</h3>
+            <ul class="au-w-list-image">
+              <li class="au-w-list-image__item">
+                <Vl-image>
+                  <img src="/assets/img/kinaC1.jpg" alt="">
+                </Vl-image>
+              </li>
+            </ul>
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Alles Bereikbaar" @check="true">
             <p>Obstakels op de route:</p>
@@ -207,6 +261,19 @@
               <li>Meerdere hellende vlakken, 5</li>
               <li>Meerdere plateauliften, 2</li>
               <li>Afmeting plateaulift, y cm x z cm</li>
+            </ul>
+            <h3 class="au-w-criterium-subtitle au-u-hidden-visually">Foto's:</h3>
+            <ul class="au-w-list-image">
+              <li class="au-w-list-image__item">
+                <Vl-image>
+                  <img src="/assets/img/kinaC2.jpg" alt="">
+                </Vl-image>
+              </li>
+              <li class="au-w-list-image__item">
+                <Vl-image>
+                  <img src="/assets/img/kinaC3.jpg" alt="">
+                </Vl-image>
+              </li>
             </ul>
           </AuCriteriaItem>
         </ul>
@@ -243,6 +310,14 @@
               <AuCriteriaItem @criterium="Duidelijke signalisatie van de expo" @check="true">
               </AuCriteriaItem>
               <AuCriteriaItem @criterium="Rust- zitmogelijkheden" @check="true">
+                <h3 class="au-w-criterium-subtitle au-u-hidden-visually">Foto's:</h3>
+                <ul class="au-w-list-image">
+                  <li class="au-w-list-image__item">
+                    <Vl-image>
+                      <img src="/assets/img/kinaZ.jpg" alt="">
+                    </Vl-image>
+                  </li>
+                </ul>
               </AuCriteriaItem>
               <AuCriteriaItem @criterium="Kindvriendelijk" @check="true">
               </AuCriteriaItem>
@@ -253,6 +328,14 @@
           <AuCriteriaSection @sectionTitle="Vitrinetafels, computerschermen" @check="true">
             <ul class="au-w-criterium-list">
               <AuCriteriaItem @criterium="(deels) Onderrijdbaar" @check="true">
+                <h3 class="au-w-criterium-subtitle au-u-hidden-visually">Foto's:</h3>
+                <ul class="au-w-list-image">
+                  <li class="au-w-list-image__item">
+                    <Vl-image>
+                      <img src="/assets/img/kinaSh.jpg" alt="">
+                    </Vl-image>
+                  </li>
+                </ul>
               </AuCriteriaItem>
               <AuCriteriaItem @criterium="Staand/zittend gebruik" @check="true">
               </AuCriteriaItem>
@@ -302,6 +385,14 @@
               <AuCriteriaItem @criterium="Geen reflectie" @check="true">
               </AuCriteriaItem>
               <AuCriteriaItem @criterium="Braille" @check="true">
+                <h3 class="au-w-criterium-subtitle au-u-hidden-visually">Foto's:</h3>
+                <ul class="au-w-list-image">
+                  <li class="au-w-list-image__item">
+                    <Vl-image>
+                      <img src="/assets/img/kinaB.jpg" alt="">
+                    </Vl-image>
+                  </li>
+                </ul>
               </AuCriteriaItem>
               <AuCriteriaItem @criterium="Grootletterschrift" @check="true">
               </AuCriteriaItem>
@@ -336,6 +427,14 @@
               <AuCriteriaItem @criterium="Geur-elementen" @check="true">
               </AuCriteriaItem>
               <AuCriteriaItem @criterium="Doe-elementen" @check="true">
+                <h3 class="au-w-criterium-subtitle au-u-hidden-visually">Foto's:</h3>
+                <ul class="au-w-list-image">
+                  <li class="au-w-list-image__item">
+                    <Vl-image>
+                      <img src="/assets/img/kinaD.jpg" alt="">
+                    </Vl-image>
+                  </li>
+                </ul>
               </AuCriteriaItem>
               <AuCriteriaItem @criterium="Luister-elementen" @check="true">
               </AuCriteriaItem>
@@ -349,8 +448,6 @@
           </AuCriteriaSection>
         </ul>
       </AuModal>
-    </li>
-    <li class="au-w-grid__item">
       <AuModal @title="Wisselende expo" @id="tijdelijk" @check="true" @theme="{{@theme}}">
         <ul class="au-w-criterium-section-list">
           <AuCriteriaSection @sectionTitle="Dag Jan - Het kleine rijk van Jan Van Eyck (uitgesteld)" @check="true">
@@ -361,8 +458,6 @@
           </AuCriteriaSection>
         </ul>
       </AuModal>
-    </li>
-    <li class="au-w-grid__item">
       <AuModal @title="Rolstoelvriendelijke eet- en drinkgelegenheid" @id="etenendrinken" @check="true" @theme="{{@theme}}">
         <ul class="au-criterium-list">
           <AuCriteriaItem @criterium="Bereikbaar" @check="true">
@@ -381,8 +476,6 @@
           </AuCriteriaItem>
         </ul>
       </AuModal>
-    </li>
-    <li class="au-w-grid__item">
       <AuModal @title="Rolstoelvriendelijke museumshop" @id="shop" @check="true" @theme="{{@theme}}">
         <ul class="au-criterium-list">
           <AuCriteriaItem @criterium="Rolstoelvriendelijke circulatie" @check="true">

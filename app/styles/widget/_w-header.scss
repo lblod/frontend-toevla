@@ -4,18 +4,22 @@
 
 .au-w-header {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   padding-bottom: $au-unit-tiny;
-  margin-bottom: $au-unit - $au-unit-tiny/2;
+  margin-bottom: $au-unit-small;
   border-bottom: 1px solid $au-neutral-lighter;
+
+  .au-w-theme-kina & {
+    margin-bottom: $au-unit-tiny;
+  }
 }
 
 .au-w-header__title {
   @include au-font-size($au-h5);
   font-family: $au-font;
   font-weight: $au-bold;
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-right: $au-unit-small;
   padding-bottom: 0;
@@ -30,12 +34,12 @@
 .au-w-header__info {
   @include au-font-size($au-base);
   font-family: $au-font;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   padding-bottom: 0;
-  margin-top: $au-unit-tiny;
-  margin-bottom: $au-unit-tiny;
-
+  margin-top: $au-unit-tiny/2;
+  margin-bottom: $au-unit-tiny/2;
+  flex-wrap: wrap;
   .au-w-theme-kina & {
     font-family: "Lato", sans-serif;
   }
@@ -49,11 +53,9 @@
   background-color: $au-neutral-lightest;
   border-radius: $au-radius;
   padding: $au-unit-tiny/2 $au-unit-tiny $au-unit-tiny/2 + .1rem;
-
-
-  & + & {
-    margin-left: $au-unit-tiny;
-  }
+  margin-right: $au-unit-tiny;
+  margin-top: $au-unit-tiny/2;
+  margin-bottom: $au-unit-tiny/2;
 }
 
 .au-w-header__rating--base {

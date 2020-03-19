@@ -32,14 +32,14 @@
 
   .au-w-theme-kina &,
   .au-w-theme-kina &:hover {
-    color: $au-neutral-darkest;
-    text-decoration-color: $au-neutral;
+    color: $au-neutral-darker;
+    text-decoration-color: $au-neutral-light;
   }
 
   .au-w-theme-kina &:hover,
   .au-w-theme-kina &:focus{
-    color: $au-neutral-darker;
-    text-decoration-color: $au-neutral;
+    color: $au-neutral-dark;
+    text-decoration-color: $au-neutral-light;
   }
 }
 

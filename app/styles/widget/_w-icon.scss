@@ -3,7 +3,7 @@
    ================================== */
 
 .au-w-icon {
-  display: inline-block;
+  display: inline-flex;
   width: 1em;
   height: 1em;
   position: relative;
@@ -12,7 +12,7 @@
   stroke: currentColor;
   fill: currentColor;
   margin-right: $au-unit-tiny;
-  transition: $au-transition;
+  transition: fill $au-transition, stroke $au-transition;
 
   .au-w-button-link:hover &,
   .au-w-button-link:focus & {
@@ -40,4 +40,9 @@
 .au-w-icon--faded {
   fill: $au-neutral;
   stroke: $au-neutral;
+}
+
+.au-w-icon--alert {
+  fill: $au-neutral-darkest;
+  stroke: $au-neutral-darkest;
 }

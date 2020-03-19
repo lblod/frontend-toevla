@@ -2,6 +2,18 @@
    #WIDGET IMAGES
    ================================== */
 
+.au-w-list-image {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: -$au-unit-tiny/2;
+  margin-top: $au-unit-small;
+}
+
+  .au-w-list-image__item {
+    margin: $au-unit-tiny/2;
+  }
+
 .au-w-image {
   display: block;
   position: relative;
@@ -35,10 +47,6 @@
   &:hover,
   &:focus {
     border-color: $au-neutral-light;
-
-    img {
-      opacity: .8;
-    }
   }
 
   &:focus {
