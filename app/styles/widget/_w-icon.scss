@@ -35,6 +35,10 @@
     fill: $au-success;
     stroke: $au-success;
   }
+
+  // .au-w-theme-minimal & {
+  //   display: none !important;
+  // }
 }
 
 .au-w-icon--faded {
@@ -45,4 +49,9 @@
 .au-w-icon--alert {
   fill: $au-neutral-darkest;
   stroke: $au-neutral-darkest;
+
+  .au-w-theme-minimal & {
+    fill: $au-error;
+    stroke: $au-error;
+  }
 }

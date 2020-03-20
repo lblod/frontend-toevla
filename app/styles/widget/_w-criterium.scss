@@ -27,6 +27,9 @@
     @include au-font-size($au-h5);
   }
 
+  .au-w-theme-minimal & .au-w-icon--active {
+    display: none !important;
+  }
 }
 
 .au-w-criterium-list {
@@ -51,11 +54,19 @@
   .au-w-theme-kina & {
     font-weight: 600;
   }
+
+  .au-w-theme-minimal & .au-w-icon--active {
+    display: none !important;
+  }
 }
 
 .au-w-criterium-list__content {
   color: $au-neutral-darker;
   margin-left: 2rem;
+
+  .au-w-theme-minimal & {
+    margin-left: 0;
+  }
 
   > * {
     margin-top: $au-unit-tiny;
@@ -137,6 +148,10 @@
   margin-right: $au-unit-tiny;
   padding-right: $au-unit-tiny;
   border-right: 1px solid $au-neutral-light;
+
+  .au-w-theme-minimal & {
+    color: $au-error;
+  }
 }
 
 .au-w-criterium-subtitle {

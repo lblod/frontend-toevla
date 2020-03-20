@@ -14,4 +14,8 @@
     margin-top: $au-unit-tiny;
     padding-top: $au-unit-tiny;
   }
+
+  .au-w-theme-minimal & {
+    margin-top: $au-unit-small + $au-unit-tiny;
+  }
 }
