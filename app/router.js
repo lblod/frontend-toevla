@@ -12,4 +12,5 @@ Router.map(function() {
   this.route('widget-desktop-alt');
   this.route('widget-mobile-alt');
   this.route('widget-kina');
+  this.route('widget-stam');
 });

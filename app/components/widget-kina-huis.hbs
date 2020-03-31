@@ -14,7 +14,7 @@
   </div>
   <ul class="au-w-grid au-w-grid--divider au-u-margin-bottom-small">
     <li class="au-w-grid__item">
-      <AuModal @title="Openbaar vervoer" @id="openbaar-vervoer" @check="true" @theme="{{@theme}}">
+      <AuModal @title="Openbaar vervoer" @id="{{@id}}openbaar-vervoer" @check="true" @theme="{{@theme}}">
         <p class="au-w-info">
           Deze locatie is bereikbaar met het openbaar vervoer.
         </p>
@@ -41,7 +41,7 @@
           </AuCriteriaItem>
         </ul>
       </AuModal>
-      <AuModal @title="Voorbehouden parkeerplaats" @id="parkeerplaats" @check="true" @theme="{{@theme}}">
+      <AuModal @title="Voorbehouden parkeerplaats" @id="{{@id}}parkeerplaats" @check="true" @theme="{{@theme}}">
         <p class="au-w-info">
           Er is minstens één voorbehouden parkeerplaats met rolstoelvriendelijke ondergrond bij het uitstappen.
         </p>
@@ -54,14 +54,14 @@
             <h3 class="au-w-criterium-subtitle au-u-hidden-visually">Foto's:</h3>
             <ul class="au-w-list-image">
               <li class="au-w-list-image__item">
-                <Vl-image>
+                <AuImage>
                   <img src="/assets/img/kinaP1.jpg" alt="">
-                </Vl-image>
+                </AuImage>
               </li>
               <li class="au-w-list-image__item">
-                <Vl-image>
+                <AuImage>
                   <img src="/assets/img/kinaP2.jpg" alt="">
-                </Vl-image>
+                </AuImage>
               </li>
             </ul>
           </AuCriteriaItem>
@@ -83,7 +83,7 @@
           </AuCriteriaItem>
         </ul>
       </AuModal>
-      <AuModal @title="Fietsenstalling" @id="fietstenstalling" @check="true" @theme="{{@theme}}">
+      <AuModal @title="Fietsenstalling" @id="{{@id}}fietstenstalling" @check="true" @theme="{{@theme}}">
         <ul class="au-criterium-list">
           <AuCriteriaItem @criterium="Fietsenstalling" @check="true">
             <p>Op de binnenkoer.</p>
@@ -92,7 +92,7 @@
       </AuModal>
     </li>
     <li class="au-w-grid__item">
-      <AuModal @title="Museum - Bezoekersinfo" @id="bezoekersinfo" @theme="{{@theme}}" @info="true">
+      <AuModal @title="Museum - Bezoekersinfo" @id="{{@id}}bezoekersinfo" @theme="{{@theme}}" @info="true">
         <p class="au-w-info">
           Algemene Info & Tegemoetkomingen.
         </p>
@@ -127,7 +127,7 @@
           </AuCriteriaItem>
         </ul>
       </AuModal>
-      <AuModal @title="Rolstoelvriendelijke Inkom" @id="inkom" @check="true" @theme="{{@theme}}">
+      <AuModal @title="Rolstoelvriendelijke Inkom" @id="{{@id}}inkom" @check="true" @theme="{{@theme}}">
         <p class="au-w-info">
           De inkombreedte is minstens 85 cm met max 1 trede van 10 cm.
         </p>
@@ -140,14 +140,14 @@
             <h3 class="au-w-criterium-subtitle au-u-hidden-visually">Foto's:</h3>
             <ul class="au-w-list-image">
               <li class="au-w-list-image__item">
-                <Vl-image>
+                <AuImage>
                   <img src="/assets/img/kinaI1.jpg" alt="">
-                </Vl-image>
+                </AuImage>
               </li>
               <li class="au-w-list-image__item">
-                <Vl-image>
+                <AuImage>
                   <img src="/assets/img/kinaI2.jpg" alt="">
-                </Vl-image>
+                </AuImage>
               </li>
             </ul>
           </AuCriteriaItem>
@@ -176,7 +176,7 @@
           </AuCriteriaItem>
         </ul>
       </AuModal>
-      <AuModal @title="Rolstoelvriendelijk Toilet" @id="toilet" @check="true" @theme="{{@theme}}">
+      <AuModal @title="Rolstoelvriendelijk Toilet" @id="{{@id}}toilet" @check="true" @theme="{{@theme}}">
         <p class="au-w-info">
           Je kan met de rolstoel binnen nl. max drempel van 5cm, deurbreedte van min 85 cm, draairuimte (diameter) minstens 120 cm.
         </p>
@@ -199,9 +199,9 @@
             <h3 class="au-w-criterium-subtitle au-u-hidden-visually">Foto's:</h3>
             <ul class="au-w-list-image">
               <li class="au-w-list-image__item">
-                <Vl-image>
+                <AuImage>
                   <img src="/assets/img/kinaT1.jpg" alt="">
-                </Vl-image>
+                </AuImage>
               </li>
             </ul>
           </AuCriteriaItem>
@@ -213,9 +213,9 @@
             <h3 class="au-w-criterium-subtitle au-u-hidden-visually">Foto's:</h3>
             <ul class="au-w-list-image">
               <li class="au-w-list-image__item">
-                <Vl-image>
+                <AuImage>
                   <img src="/assets/img/kinaT2.jpg" alt="">
-                </Vl-image>
+                </AuImage>
               </li>
             </ul>
           </AuCriteriaItem>
@@ -223,9 +223,9 @@
             <h3 class="au-w-criterium-subtitle au-u-hidden-visually">Foto's:</h3>
             <ul class="au-w-list-image">
               <li class="au-w-list-image__item">
-                <Vl-image>
+                <AuImage>
                   <img src="/assets/img/kinaT3.jpg" alt="">
-                </Vl-image>
+                </AuImage>
               </li>
             </ul>
           </AuCriteriaItem>
@@ -235,7 +235,7 @@
           </AuCriteriaItem>
         </ul>
       </AuModal>
-      <AuModal @title="Museum - Rondgang & Infrastructuur" @id="museumRondgang" @check="true" @theme="{{@theme}}">
+      <AuModal @title="Museum - Rondgang & Infrastructuur" @id="{{@id}}museumRondgang" @check="true" @theme="{{@theme}}">
         <p class="au-w-info">
           Je kan het merendeel van de bedoelde activiteiten uitvoeren, met jouw beperking.
         </p>
@@ -249,9 +249,9 @@
             <h3 class="au-w-criterium-subtitle au-u-hidden-visually">Foto's:</h3>
             <ul class="au-w-list-image">
               <li class="au-w-list-image__item">
-                <Vl-image>
+                <AuImage>
                   <img src="/assets/img/kinaC1.jpg" alt="">
-                </Vl-image>
+                </AuImage>
               </li>
             </ul>
           </AuCriteriaItem>
@@ -265,14 +265,14 @@
             <h3 class="au-w-criterium-subtitle au-u-hidden-visually">Foto's:</h3>
             <ul class="au-w-list-image">
               <li class="au-w-list-image__item">
-                <Vl-image>
+                <AuImage>
                   <img src="/assets/img/kinaC2.jpg" alt="">
-                </Vl-image>
+                </AuImage>
               </li>
               <li class="au-w-list-image__item">
-                <Vl-image>
+                <AuImage>
                   <img src="/assets/img/kinaC3.jpg" alt="">
-                </Vl-image>
+                </AuImage>
               </li>
             </ul>
           </AuCriteriaItem>
@@ -280,7 +280,7 @@
       </AuModal>
     </li>
     <li class="au-w-grid__item">
-      <AuModal @title="Museum - Beleving" @id="beleving" @check="true" @theme="{{@theme}}">
+      <AuModal @title="Museum - Beleving" @id="{{@id}}beleving" @check="true" @theme="{{@theme}}">
         <p class="au-w-info">
           Je kan genieten van volgende voorzieningen.
         </p>
@@ -313,9 +313,9 @@
                 <h3 class="au-w-criterium-subtitle au-u-hidden-visually">Foto's:</h3>
                 <ul class="au-w-list-image">
                   <li class="au-w-list-image__item">
-                    <Vl-image>
+                    <AuImage>
                       <img src="/assets/img/kinaZ.jpg" alt="">
-                    </Vl-image>
+                    </AuImage>
                   </li>
                 </ul>
               </AuCriteriaItem>
@@ -331,9 +331,9 @@
                 <h3 class="au-w-criterium-subtitle au-u-hidden-visually">Foto's:</h3>
                 <ul class="au-w-list-image">
                   <li class="au-w-list-image__item">
-                    <Vl-image>
+                    <AuImage>
                       <img src="/assets/img/kinaSh.jpg" alt="">
-                    </Vl-image>
+                    </AuImage>
                   </li>
                 </ul>
               </AuCriteriaItem>
@@ -388,9 +388,9 @@
                 <h3 class="au-w-criterium-subtitle au-u-hidden-visually">Foto's:</h3>
                 <ul class="au-w-list-image">
                   <li class="au-w-list-image__item">
-                    <Vl-image>
+                    <AuImage>
                       <img src="/assets/img/kinaB.jpg" alt="">
-                    </Vl-image>
+                    </AuImage>
                   </li>
                 </ul>
               </AuCriteriaItem>
@@ -430,9 +430,9 @@
                 <h3 class="au-w-criterium-subtitle au-u-hidden-visually">Foto's:</h3>
                 <ul class="au-w-list-image">
                   <li class="au-w-list-image__item">
-                    <Vl-image>
+                    <AuImage>
                       <img src="/assets/img/kinaD.jpg" alt="">
-                    </Vl-image>
+                    </AuImage>
                   </li>
                 </ul>
               </AuCriteriaItem>
@@ -448,7 +448,7 @@
           </AuCriteriaSection>
         </ul>
       </AuModal>
-      <AuModal @title="Wisselende expo" @id="tijdelijk" @check="true" @theme="{{@theme}}">
+      <AuModal @title="Wisselende expo" @id="{{@id}}tijdelijk" @check="true" @theme="{{@theme}}">
         <ul class="au-w-criterium-section-list">
           <AuCriteriaSection @sectionTitle="Dag Jan - Het kleine rijk van Jan Van Eyck (uitgesteld)" @check="true">
             <ul class="au-w-criterium-list">
@@ -458,7 +458,7 @@
           </AuCriteriaSection>
         </ul>
       </AuModal>
-      <AuModal @title="Rolstoelvriendelijke eet- en drinkgelegenheid" @id="etenendrinken" @check="true" @theme="{{@theme}}">
+      <AuModal @title="Rolstoelvriendelijke eet- en drinkgelegenheid" @id="{{@id}}etenendrinken" @check="true" @theme="{{@theme}}">
         <ul class="au-criterium-list">
           <AuCriteriaItem @criterium="Bereikbaar" @check="true">
           </AuCriteriaItem>
@@ -476,7 +476,7 @@
           </AuCriteriaItem>
         </ul>
       </AuModal>
-      <AuModal @title="Rolstoelvriendelijke museumshop" @id="shop" @check="true" @theme="{{@theme}}">
+      <AuModal @title="Rolstoelvriendelijke museumshop" @id="{{@id}}shop" @check="true" @theme="{{@theme}}">
         <ul class="au-criterium-list">
           <AuCriteriaItem @criterium="Rolstoelvriendelijke circulatie" @check="true">
           </AuCriteriaItem>
@@ -486,8 +486,10 @@
       </AuModal>
     </li>
   </ul>
+  {{# if @minimal}}
+  {{else}}
   <div class="au-u-margin-top">
-    <AuLightbox @title="Bekijk foto's" @id="fotos" @theme="{{@theme}}">
+    <AuLightbox @title="Bekijk foto's" @id="{{@id}}fotos" @theme="{{@theme}}">
       {{#carousel-container transitionInterval=400 as |ui controls|}}
         <div class="au-w-carousel">
           {{#ui.item}}
@@ -633,5 +635,6 @@
       {{/carousel-container}}
     </AuLightbox>
   </div>
+  {{/if}}
   <p class="au-w-footer">Deze informatie is aangeleverd door Toevla. <a href="https://toevla.vlaanderen.be/publiek/nl/register/detail/3147" class="au-w-link au-w-link--neutral">Meer info</a></p>
 </section>

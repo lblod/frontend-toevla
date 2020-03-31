@@ -3,22 +3,22 @@ import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import { hbs } from 'ember-cli-htmlbars';
 
-module('Integration | Component | au-image', function(hooks) {
+module('Integration | Component | widget-stam', function(hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function(assert) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`<VlImage />`);
+    await render(hbs`<WidgetStam />`);
 
     assert.equal(this.element.textContent.trim(), '');
 
     // Template block usage:
     await render(hbs`
-      <VlImage>
+      <WidgetStam>
         template block text
-      </VlImage>
+      </WidgetStam>
     `);
 
     assert.equal(this.element.textContent.trim(), 'template block text');
