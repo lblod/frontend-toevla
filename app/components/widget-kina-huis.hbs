@@ -95,6 +95,10 @@
               </AuCriteriaSubitem>
             </ul>
           </AuCriteriaItem>
+          <AuCriteriaItem @criterium="Voorrijdmogelijkheid" @check="true">
+          </AuCriteriaItem>
+          <AuCriteriaItem @criterium="Goede verlichting op de route" @check="true">
+          </AuCriteriaItem>
         </ul>
       </AuModal>
       <AuModal @title="Fietsenstalling" @id="{{@id}}fietstenstalling" @check="true" @theme="{{@theme}}">
@@ -104,7 +108,7 @@
           <AuCriteriaItem @criterium="Aangepast">
             <p>Op de binnenkoer </p>
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Rolstoelvriendelijk pad naar inkom" @check="false">
+          <AuCriteriaItem @criterium="Rolstoelvriendelijk pad naar inkom">
             <p>Naar alternatieve ingang</p>
           </AuCriteriaItem>
         </ul>
@@ -231,9 +235,6 @@
                 Hoogteverschil van 15 cm via korte steile helling, vlak vóór toiletdeur.
               </AuCriteriaSubitem>
             </ul>
-          </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Deurbreedte 88cm" @check="true">
-            <p>Makkelijke klikdeur, zonder trek- of duwkracht.</p>
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Deurbreedte 88cm" @check="true">
             <p>Makkelijke klikdeur,  zonder trek- of duwkracht.</p>
@@ -564,7 +565,7 @@
               <AuCriteriaSubitem @criterium="Balie voor afrekenen" @check="true"></AuCriteriaSubitem>
             </ul>
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Elektronische betaalmogelijkheid verplaatsbaare" @check="true">
+          <AuCriteriaItem @criterium="Elektronische betaalmogelijkheid verplaatsbaar" @check="true">
           </AuCriteriaItem>
         </ul>
       </AuModal>
