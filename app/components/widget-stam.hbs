@@ -15,22 +15,32 @@
   <ul class="au-w-grid au-w-grid--divider au-u-margin-bottom-small">
     <li class="au-w-grid__item">
       <h2 class="au-u-hidden-visually">Om er te geraken</h2>
-      <AuModal @title="Openbaar vervoer" @id="{{@id}}openbaar-vervoer" @check="true" @theme="{{@theme}}">
+      <AuModal @title="Openbaar vervoer" @id="{{@id}}openbaar-vervoer" @theme="{{@theme}}">
         <p class="au-w-info">
           Deze locatie is bereikbaar met het openbaar vervoer.
         </p>
         <ul class="au-w-criterium-list">
           <AuCriteriaItem @criterium="Halte aanwezig binnen 500 m" @check="true">
             <ul>
-              <li>Tramhalte Spaarstraat, op 400m</li>
-              <li>Bushalte Tolhuislaan, op 150m</li>
+              <li>Bus: De Lijn, nr 6, tpv Bijlokehof op 350 m</li>
+              <li>ram: 2 en 4, afstand 400 m</li>
             </ul>
+          </AuCriteriaItem>
+          <AuCriteriaItem @criterium="Toegankelijke halte" @info="true">
             <p><a href="https://www.delijn.be/nl/routeplanner/">De Lijn routeplanner</a></p>
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Toegankelijke halte" @check="true">
-            <p class="au-w-info-text">Bushalte Tolhuislaan toegankelijk voor motorische beperking, niet voor visuele beperking</p>
-          </AuCriteriaItem>
           <AuCriteriaItem @criterium="Rolstoelvriendelijk pad naar inkom">
+            <ul class="au-w-criterium-list">
+              <AuCriteriaSubitem @criterium="Slechte ondergrond">
+                <p>Kasseien aan bushalte</p>
+              </AuCriteriaSubitem>
+              <AuCriteriaSubitem @criterium="Smalste punt op de route: 70 cm">
+                <p>Fietsenstallingen versmallen de route</p>
+              </AuCriteriaSubitem>
+              <AuCriteriaSubitem @criterium="Drempel van meer dan 2 cm, nml 3 cm">
+                Er zijn 2 drempels (boordstenen) van 2 cm
+              </AuCriteriaSubitem>
+            </ul>
           </AuCriteriaItem>
         </ul>
       </AuModal>
@@ -39,47 +49,37 @@
           Er is minstens één voorbehouden parkeerplaats met rolstoelvriendelijke ondergrond bij het uitstappen.
         </p>
         <ul class="au-w-criterium-list">
-          <AuCriteriaItem @criterium="1 voorbehouden plaats" @check="true">
+          <AuCriteriaItem @criterium="1 voorbehouden parkeerplaats" @check="true">
             <ul class="au-w-criterium-list">
-              <AuCriteriaSubitem @criterium="Ter hoogte van Tolhuislaan nr 107" @check="true"></AuCriteriaSubitem>
+              <AuCriteriaSubitem @criterium="Geen eigen parkeerterrein"></AuCriteriaSubitem>
               <AuCriteriaSubitem @criterium="Op publiek domein" @check="true"></AuCriteriaSubitem>
             </ul>
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Rolstoelvriendelijke ondergrond" @check="true">
+            <p>Klinkers</p>
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Achter elkaar parkeren: 400 cm">
+          <AuCriteriaItem @criterium="Achter elkaar parkeren: 600 cm lengte" @check="true">
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Rolstoelvriendelijk pad naar de inkom" @check="true">
+          <AuCriteriaItem @criterium="Rolstoelvriendelijk pad naar de inkom">
+            <ul class="au-w-criterium-list">
+              <AuCriteriaSubitem @criterium="Rolstoelvriendelijke ondergrond" @check="true">
+                <p>Beton</p>
+              </AuCriteriaSubitem>
+              <AuCriteriaSubitem @criterium="Smalste punt op de route: 120 cm" @check="true">
+              </AuCriteriaSubitem>
+              <AuCriteriaSubitem @criterium="Lang hellend vlak 29 m (percentage 3,3 %)">
+              </AuCriteriaSubitem>
+            </ul>
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Voorrijdmogelijkheid" @check="true">
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Goede verlichting op de route" @check="true">
+          <AuCriteriaItem @criterium="Goede verlichting op de route">
+            <p class="au-w-info-text">Geen extra info beschikbaar.</p>
           </AuCriteriaItem>
         </ul>
       </AuModal>
       <AuModal @title="Fietsenstalling" @id="{{@id}}fietstenstalling" @check="true" @theme="{{@theme}}">
-        <ul class="au-w-criterium-list">
-          <AuCriteriaItem @criterium="Niet overdekt">
-            <h4 class="au-w-criterium-subtitle">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" class="au-w-icon au-w-icon--faded" aria-hidden="true">
-                <path d="M27.5,3.66666667 L30.855,7.33333333 L36.6666667,7.33333333 C38.6925,7.33333333 40.3333333,8.97416667 40.3333333,11 L40.3333333,11 L40.3333333,33 C40.3333333,35.0258333 38.6925,36.6666667 36.6666667,36.6666667 L36.6666667,36.6666667 L7.33333333,36.6666667 C5.3075,36.6666667 3.66666667,35.0258333 3.66666667,33 L3.66666667,33 L3.66666667,11 C3.66666667,8.97416667 5.3075,7.33333333 7.33333333,7.33333333 L7.33333333,7.33333333 L13.375,7.33333333 L16.5,3.66666667 L27.5,3.66666667 Z M22,12.8333333 C16.94,12.8333333 12.8333333,16.94 12.8333333,22 C12.8333333,27.06 16.94,31.1666667 22,31.1666667 C27.06,31.1666667 31.1666667,27.06 31.1666667,22 C31.1666667,16.94 27.06,12.8333333 22,12.8333333 Z M22,16.1333333 C25.2400705,16.1333333 27.8666667,18.7599295 27.8666667,22 C27.8666667,25.2400705 25.2400705,27.8666667 22,27.8666667 C18.7599295,27.8666667 16.1333333,25.2400705 16.1333333,22 C16.1333333,18.7599295 18.7599295,16.1333333 22,16.1333333 Z"/>
-              </svg>
-              Foto's:
-            </h4>
-            <ul class="au-w-list-image">
-              <li class="au-w-list-image__item">
-                <AuImage>
-                  <img src="/assets/img/tuin/Fietsenstalling_Terras.jpg" alt="">
-                </AuImage>
-              </li>
-            </ul>
-          </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Aangepast">
-            <p class="au-w-info-text">Geen extra info beschikbaar.</p>
-          </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Rolstoelvriendelijk pad naar inkom" @check="true">
-          </AuCriteriaItem>
-        </ul>
+        <p class="au-w-info-text">Geen extra info beschikbaar.</p>
       </AuModal>
     </li>
     <li class="au-w-grid__item">
@@ -102,147 +102,77 @@
               </AuCriteriaSubitem>
               <AuCriteriaSubitem @criterium="City Pas Gent" @check="true">
               </AuCriteriaSubitem>
-              <AuCriteriaSubitem @criterium="EDC (European Disability Card) toegestaan" @check="true">
-              </AuCriteriaSubitem>
             </ul>
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Rolstoel ter beschikking">
-            <p class="au-w-info-text">Geen extra info beschikbaar.</p>
+          <AuCriteriaItem @criterium="Rolstoel ter beschikking" @check="true">
+            <p>Ja, 2 reserveren via <a href="mailto:info@stamgent.be">info@stamgent.be</a></p>
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Wifi beschikbaar" @check="true">
+          <AuCriteriaItem @criterium="Wifi niet beschikbaar">
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Assistentiehonden : er zijn geen voorzieningen aanwezig">
+          <AuCriteriaItem @criterium="Geen voorzieningen voor assistentiehonden">
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Elektronische betaalmogelijkheid verplaatsbaar">
-            <p class="au-w-info-text">Geen extra info beschikbaar.</p>
+          <AuCriteriaItem @criterium="Elektronische betaalmogelijkheid niet verplaatsbaar">
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Website" @check="true">
             <ul class="au-w-criterium-list">
-              <AuCriteriaSubitem @criterium="WAI-WCAG 2.0 norm behaald" @check="true">
-              </AuCriteriaSubitem>
               <AuCriteriaSubitem @criterium="Tekstvergroting mogelijk" @check="true">
               </AuCriteriaSubitem>
               <AuCriteriaSubitem @criterium="Contrasten" @check="true">
               </AuCriteriaSubitem>
-              <AuCriteriaSubitem @criterium="Voorleesfunctie">
-                <p class="au-w-info-text">Geen extra info beschikbaar.</p>
-              </AuCriteriaSubitem>
-              <AuCriteriaSubitem @criterium="Gebarentaal">
-                <p class="au-w-info-text">Geen extra info beschikbaar.</p>
-              </AuCriteriaSubitem>
             </ul>
           </AuCriteriaItem>
         </ul>
       </AuModal>
-      <AuModal @title="Rolstoelvriendelijke Inkom" @id="{{@id}}inkom" @check="true" @theme="{{@theme}}">
+      <AuModal @title="Rolstoelvriendelijke inkom" @id="{{@id}}inkom" @check="true" @theme="{{@theme}}">
         <p class="au-w-info">
           De inkombreedte is minstens 85 cm met max 1 trede van 10 cm.
         </p>
         <ul class="au-w-criterium-list">
-          <AuCriteriaItem @criterium="Hoofdingang" @check="true">
-            <ul class="au-w-criterium-list">
-              <AuCriteriaSubitem @criterium="Drempel van 4cm">
-              </AuCriteriaSubitem>
-            </ul>
-            <h4 class="au-w-criterium-subtitle">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" class="au-w-icon au-w-icon--faded" aria-hidden="true">
-                <path d="M27.5,3.66666667 L30.855,7.33333333 L36.6666667,7.33333333 C38.6925,7.33333333 40.3333333,8.97416667 40.3333333,11 L40.3333333,11 L40.3333333,33 C40.3333333,35.0258333 38.6925,36.6666667 36.6666667,36.6666667 L36.6666667,36.6666667 L7.33333333,36.6666667 C5.3075,36.6666667 3.66666667,35.0258333 3.66666667,33 L3.66666667,33 L3.66666667,11 C3.66666667,8.97416667 5.3075,7.33333333 7.33333333,7.33333333 L7.33333333,7.33333333 L13.375,7.33333333 L16.5,3.66666667 L27.5,3.66666667 Z M22,12.8333333 C16.94,12.8333333 12.8333333,16.94 12.8333333,22 C12.8333333,27.06 16.94,31.1666667 22,31.1666667 C27.06,31.1666667 31.1666667,27.06 31.1666667,22 C31.1666667,16.94 27.06,12.8333333 22,12.8333333 Z M22,16.1333333 C25.2400705,16.1333333 27.8666667,18.7599295 27.8666667,22 C27.8666667,25.2400705 25.2400705,27.8666667 22,27.8666667 C18.7599295,27.8666667 16.1333333,25.2400705 16.1333333,22 C16.1333333,18.7599295 18.7599295,16.1333333 22,16.1333333 Z"/>
-              </svg>
-              Foto's:
-            </h4>
-            <ul class="au-w-list-image">
-              <li class="au-w-list-image__item">
-                <AuImage>
-                  <img src="/assets/img/tuin/Inkom2.JPG" alt="">
-                </AuImage>
-              </li>
-              <li class="au-w-list-image__item">
-                <AuImage>
-                  <img src="/assets/img/tuin/Inkom_drempel.JPG" alt="">
-                </AuImage>
-              </li>
-            </ul>
+          <AuCriteriaItem @criterium="Bereikbaar" @check="true">
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Deurbreedte >90 cm" @check="true">
+          <AuCriteriaItem @criterium="Geen drempel" @check="true">
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Toegangscontrole" @check="true">
+          <AuCriteriaItem @criterium="Deurbreedte 155 cm" @check="true">
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Geen tourniquetdeur" @check="true">
+          <AuCriteriaItem @criterium="Draairuimte aan deur 150 cm" @check="true">
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Draairuimte aan deur" @check="true">
-          </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Kracht van de deur" @check="true">
-          </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Verlaagde balie" @check="true">
-            <h4 class="au-w-criterium-subtitle">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" class="au-w-icon au-w-icon--faded" aria-hidden="true">
-                <path d="M27.5,3.66666667 L30.855,7.33333333 L36.6666667,7.33333333 C38.6925,7.33333333 40.3333333,8.97416667 40.3333333,11 L40.3333333,11 L40.3333333,33 C40.3333333,35.0258333 38.6925,36.6666667 36.6666667,36.6666667 L36.6666667,36.6666667 L7.33333333,36.6666667 C5.3075,36.6666667 3.66666667,35.0258333 3.66666667,33 L3.66666667,33 L3.66666667,11 C3.66666667,8.97416667 5.3075,7.33333333 7.33333333,7.33333333 L7.33333333,7.33333333 L13.375,7.33333333 L16.5,3.66666667 L27.5,3.66666667 Z M22,12.8333333 C16.94,12.8333333 12.8333333,16.94 12.8333333,22 C12.8333333,27.06 16.94,31.1666667 22,31.1666667 C27.06,31.1666667 31.1666667,27.06 31.1666667,22 C31.1666667,16.94 27.06,12.8333333 22,12.8333333 Z M22,16.1333333 C25.2400705,16.1333333 27.8666667,18.7599295 27.8666667,22 C27.8666667,25.2400705 25.2400705,27.8666667 22,27.8666667 C18.7599295,27.8666667 16.1333333,25.2400705 16.1333333,22 C16.1333333,18.7599295 18.7599295,16.1333333 22,16.1333333 Z"/>
-              </svg>
-              Foto's:
-            </h4>
-            <ul class="au-w-list-image">
-              <li class="au-w-list-image__item">
-                <AuImage>
-                  <img src="/assets/img/tuin/OnderrijdbareBalie.JPG" alt="">
-                </AuImage>
-              </li>
-            </ul>
+          <AuCriteriaItem @criterium="Balie: laag deel aanwezig" @check="true">
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Toegang duidelijk herkenbaar" @check="true">
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Gids- en/of geleidelijnen">
-            <p class="au-w-info-text">Geen extra info beschikbaar.</p>
+            <p>Aanwezig maar bedekt door de voetmat.</p>
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Extra aandacht voor akoestiek" @check="true">
+          <AuCriteriaItem @criterium="Geen duidelijke markering op glazen deuren">
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Bemande balie" @check="true">
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Ringleiding aan de balie">
-            <p class="au-w-info-text">Geen extra info beschikbaar.</p>
-          </AuCriteriaItem>
         </ul>
       </AuModal>
-      <AuModal @title="Rolstoelvriendelijk Toilet" @id="{{@id}}toilet" @theme="{{@theme}}">
+      <AuModal @title="Rolstoelvriendelijk toilet" @id="{{@id}}toilet" @check="true" @theme="{{@theme}}">
         <ul class="au-w-criterium-list">
+          <AuCriteriaItem @criterium="Aanwezig" @check="true">
+            <p>Er zijn 2 toiletten, dit is het toilet vlakbij cafe en aan de algemene inkom.</p>
+          </AuCriteriaItem>
           <AuCriteriaItem @criterium="Bereikbaar" @check="true">
-          </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Deurbreedte 80cm" @check="true">
-            <h4 class="au-w-criterium-subtitle">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" class="au-w-icon au-w-icon--faded" aria-hidden="true">
-                <path d="M27.5,3.66666667 L30.855,7.33333333 L36.6666667,7.33333333 C38.6925,7.33333333 40.3333333,8.97416667 40.3333333,11 L40.3333333,11 L40.3333333,33 C40.3333333,35.0258333 38.6925,36.6666667 36.6666667,36.6666667 L36.6666667,36.6666667 L7.33333333,36.6666667 C5.3075,36.6666667 3.66666667,35.0258333 3.66666667,33 L3.66666667,33 L3.66666667,11 C3.66666667,8.97416667 5.3075,7.33333333 7.33333333,7.33333333 L7.33333333,7.33333333 L13.375,7.33333333 L16.5,3.66666667 L27.5,3.66666667 Z M22,12.8333333 C16.94,12.8333333 12.8333333,16.94 12.8333333,22 C12.8333333,27.06 16.94,31.1666667 22,31.1666667 C27.06,31.1666667 31.1666667,27.06 31.1666667,22 C31.1666667,16.94 27.06,12.8333333 22,12.8333333 Z M22,16.1333333 C25.2400705,16.1333333 27.8666667,18.7599295 27.8666667,22 C27.8666667,25.2400705 25.2400705,27.8666667 22,27.8666667 C18.7599295,27.8666667 16.1333333,25.2400705 16.1333333,22 C16.1333333,18.7599295 18.7599295,16.1333333 22,16.1333333 Z"/>
-              </svg>
-              Foto's:
-            </h4>
-            <ul class="au-w-list-image">
-              <li class="au-w-list-image__item">
-                <AuImage>
-                  <img src="/assets/img/tuin/Toilet_Niet-Aangepast.JPG" alt="">
-                </AuImage>
-              </li>
+            <ul class="au-w-criterium-list">
+              <AuCriteriaSubitem @criterium="Alles op gelijkvloers" @check="true"></AuCriteriaSubitem>
+              <AuCriteriaSubitem @criterium="Geen drempel" @check="true"></AuCriteriaSubitem>
             </ul>
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Onvoldoende of geen draairuimte aan de deur">
+          <AuCriteriaItem @criterium="Deurbreedte 86 cm" @check="true">
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Ruimte voor toiletpot 50 cm">
+          <AuCriteriaItem @criterium="Draairuimte aan deur 150 cm" @check="true">
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Ruimte naast toiletpot 00 cm">
+          <AuCriteriaItem @criterium="Ruimte voor toiletpot 120 cm" @check="true">
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Draairuimte in het toilet 00cm">
+          <AuCriteriaItem @criterium="Ruimte naast toiletpot 90 cm" @check="true">
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Geen steunbeugels">
-            <h4 class="au-w-criterium-subtitle">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" class="au-w-icon au-w-icon--faded" aria-hidden="true">
-                <path d="M27.5,3.66666667 L30.855,7.33333333 L36.6666667,7.33333333 C38.6925,7.33333333 40.3333333,8.97416667 40.3333333,11 L40.3333333,11 L40.3333333,33 C40.3333333,35.0258333 38.6925,36.6666667 36.6666667,36.6666667 L36.6666667,36.6666667 L7.33333333,36.6666667 C5.3075,36.6666667 3.66666667,35.0258333 3.66666667,33 L3.66666667,33 L3.66666667,11 C3.66666667,8.97416667 5.3075,7.33333333 7.33333333,7.33333333 L7.33333333,7.33333333 L13.375,7.33333333 L16.5,3.66666667 L27.5,3.66666667 Z M22,12.8333333 C16.94,12.8333333 12.8333333,16.94 12.8333333,22 C12.8333333,27.06 16.94,31.1666667 22,31.1666667 C27.06,31.1666667 31.1666667,27.06 31.1666667,22 C31.1666667,16.94 27.06,12.8333333 22,12.8333333 Z M22,16.1333333 C25.2400705,16.1333333 27.8666667,18.7599295 27.8666667,22 C27.8666667,25.2400705 25.2400705,27.8666667 22,27.8666667 C18.7599295,27.8666667 16.1333333,25.2400705 16.1333333,22 C16.1333333,18.7599295 18.7599295,16.1333333 22,16.1333333 Z"/>
-              </svg>
-              Foto's:
-            </h4>
-            <ul class="au-w-list-image">
-              <li class="au-w-list-image__item">
-                <AuImage>
-                  <img src="/assets/img/tuin/Toilet_Niet-Aangepast_Geen_Beugels.JPG" alt="">
-                </AuImage>
-              </li>
-            </ul>
+          <AuCriteriaItem @criterium="Draairuimte in het toilet 150 cm" @check="true">
+          </AuCriteriaItem>
+          <AuCriteriaItem @criterium="2 steunbeugels" @check="true">
+          </AuCriteriaItem>
+          <AuCriteriaItem @criterium="Onderrijdbare wastafel " @check="true">
           </AuCriteriaItem>
         </ul>
       </AuModal>
@@ -251,39 +181,43 @@
           Je kan het merendeel van de bedoelde activiteiten uitvoeren, met jouw beperking.
         </p>
         <ul class="au-w-criterium-list">
-          <AuCriteriaItem @criterium="Rolstoelvriendelijke circulatie" @check="true">
-            <h4 class="au-w-criterium-subtitle">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" class="au-w-icon au-w-icon--faded" aria-hidden="true">
-                <path d="M27.5,3.66666667 L30.855,7.33333333 L36.6666667,7.33333333 C38.6925,7.33333333 40.3333333,8.97416667 40.3333333,11 L40.3333333,11 L40.3333333,33 C40.3333333,35.0258333 38.6925,36.6666667 36.6666667,36.6666667 L36.6666667,36.6666667 L7.33333333,36.6666667 C5.3075,36.6666667 3.66666667,35.0258333 3.66666667,33 L3.66666667,33 L3.66666667,11 C3.66666667,8.97416667 5.3075,7.33333333 7.33333333,7.33333333 L7.33333333,7.33333333 L13.375,7.33333333 L16.5,3.66666667 L27.5,3.66666667 Z M22,12.8333333 C16.94,12.8333333 12.8333333,16.94 12.8333333,22 C12.8333333,27.06 16.94,31.1666667 22,31.1666667 C27.06,31.1666667 31.1666667,27.06 31.1666667,22 C31.1666667,16.94 27.06,12.8333333 22,12.8333333 Z M22,16.1333333 C25.2400705,16.1333333 27.8666667,18.7599295 27.8666667,22 C27.8666667,25.2400705 25.2400705,27.8666667 22,27.8666667 C18.7599295,27.8666667 16.1333333,25.2400705 16.1333333,22 C16.1333333,18.7599295 18.7599295,16.1333333 22,16.1333333 Z"/>
-              </svg>
-              Foto's:
-            </h4>
-            <ul class="au-w-list-image">
-              <li class="au-w-list-image__item">
-                <AuImage>
-                  <img src="/assets/img/tuin/Circulatie.JPG" alt="">
-                </AuImage>
-              </li>
-              <li class="au-w-list-image__item">
-                <AuImage>
-                  <img src="/assets/img/tuin/Circulatie_tredes.JPG" alt="">
-                </AuImage>
-              </li>
-              <li class="au-w-list-image__item">
-                <AuImage>
-                  <img src="/assets/img/tuin/Circulatie_Terras_drempel.JPG" alt="">
-                </AuImage>
-              </li>
-              <li class="au-w-list-image__item">
-                <AuImage>
-                  <img src="/assets/img/tuin/Circulatie_Cafetaria.JPG" alt="">
-                </AuImage>
-              </li>
+          <AuCriteriaItem @criterium="Bereikbaar" @check="true">
+          </AuCriteriaItem>
+          <AuCriteriaItem @criterium="Rolstoelvriendelijke lift" @check="true">
+            <ul class="au-w-criterium-list">
+              <AuCriteriaSubitem @criterium="Afmeting lift, , breedte 130 cm x diepte 190 cm" @check="true">
+                <p>Route is lusvormig, kleinste lift ingeven, vermelding 130 cm x 190 cm (B x D), de kleinste lift nemen vermits de route hier lusvormig is.</p>
+              </AuCriteriaSubitem>
             </ul>
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Alles op gelijkvloers" @check="true">
+          <AuCriteriaItem @criterium="Spraaksynthese in de lift">
+            <p class="au-w-info-text">Geen extra info beschikbaar.</p>
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Alles Bereikbaar" @check="true">
+          <AuCriteriaItem @criterium="Smalste punt op de route: 87 cm" @check="true">
+          </AuCriteriaItem>
+          <AuCriteriaItem @criterium="Hellend vlak" @check="true">
+            <p>Meerdere hellende vlakken, 4.</p>
+          </AuCriteriaItem>
+          <AuCriteriaItem @criterium="De te volgen route is logisch en eenvoudig opgebouwd" @check="true">
+            <p>Duidelijk parcours met rode pijlen en nummering en tekstbordjes bij elke stopplaats.</p>
+          </AuCriteriaItem>
+          <AuCriteriaItem @criterium="Duidelijke signalisatie in het gebouw" @check="true">
+          </AuCriteriaItem>
+        </ul>
+      </AuModal>
+      <AuModal @title="Wisselende expo - Circulatie in het gebouw" @id="{{@id}}museumRondgang" @check="true" @theme="{{@theme}}">
+        <p class="au-w-info">
+          Je kan het merendeel van de bedoelde activiteiten uitvoeren, met jouw beperking.
+        </p>
+        <ul class="au-w-criterium-list">
+          <AuCriteriaItem @criterium="Bereikbaar" @check="true">
+            <ul class="au-w-criterium-list">
+              <AuCriteriaSubitem @criterium="Alles op gelijkvloers" @check="true"></AuCriteriaSubitem>
+              <AuCriteriaSubitem @criterium="Smalste punt op de route: 87 cm" @check="true"></AuCriteriaSubitem>
+              <AuCriteriaSubitem @criterium="Hellend vlak" @check="true"></AuCriteriaSubitem>
+              <AuCriteriaSubitem @criterium="Plateaulift" @check="true"></AuCriteriaSubitem>
+              <AuCriteriaSubitem @criterium="Afmeting plateaulift, 116 cm (B) x 142 cm (D)" @check="true"></AuCriteriaSubitem>
+            </ul>
           </AuCriteriaItem>
         </ul>
       </AuModal>
@@ -299,29 +233,8 @@
             <AuCriteriaItem @criterium="Rondleidingen" @check="true">
               <ul class="au-w-criterium-list">
                 <AuCriteriaSubitem @criterium="Voor personen met een visuele beperking" @check="true">
-                  <p>Op aanvraag</p>
                 </AuCriteriaSubitem>
-                <AuCriteriaSubitem @criterium="Voor personen met een auditieve beperking" @check="true">
-                  <p>Op aanvraag</p>
-                </AuCriteriaSubitem>
-                <AuCriteriaSubitem @criterium="Voor personen met een mentale beperking" @check="true">
-                  <p>Op aanvraag</p>
-                </AuCriteriaSubitem>
-                <AuCriteriaSubitem @criterium="Dementievriendelijk" @check="true"></AuCriteriaSubitem>
-                <AuCriteriaSubitem @criterium="Autisme-vriendeljk" @check="true"></AuCriteriaSubitem>
-                <AuCriteriaSubitem @criterium="Leeftijdaangepast: ouderen" @check="true">
-                </AuCriteriaSubitem>
-                <AuCriteriaSubitem @criterium="Leeftijdaangepast: kindvriendelijk" @check="true">
-                </AuCriteriaSubitem>
-                <AuCriteriaSubitem @criterium="Met beeldentolk">
-                  <p class="au-w-info-text">Geen extra info beschikbaar.</p>
-                </AuCriteriaSubitem>
-                <AuCriteriaSubitem @criterium="Met Tolk Vlaamse Gebarentaal (VGT)">
-                  <p class="au-w-info-text">Geen extra info beschikbaar.</p>
-                </AuCriteriaSubitem>
-                <AuCriteriaSubitem @criterium="Op rustige momenten" @check="true">
-                </AuCriteriaSubitem>
-                <AuCriteriaSubitem @criterium="Bezoek op maat mogelijk" @check="true">
+                <AuCriteriaSubitem @criterium="Kindvriendelijk" @check="true">
                 </AuCriteriaSubitem>
               </ul>
             </AuCriteriaItem>
@@ -329,245 +242,89 @@
               <ul class="au-w-criterium-list">
                 <AuCriteriaSubitem @criterium="Duidelijke bewegwijzering op de route" @check="true">
                 </AuCriteriaSubitem>
-                <AuCriteriaSubitem @criterium="Zalenplan/Museumplan/schema">
-                  <p class="au-w-info-text">Speurboek voor kinderen (met Plan van de Tuin)</p>
-                </AuCriteriaSubitem>
-                <AuCriteriaSubitem @criterium="Aanbevolen traject">
-                  <p class="au-w-info-text">Geen extra info beschikbaar.</p>
-                </AuCriteriaSubitem>
-                <AuCriteriaSubitem @criterium="Alternatief voor niet toegankelijke ruimten" @check="true">
-                  <p>Filmzaal</p>
-                </AuCriteriaSubitem>
-                <AuCriteriaSubitem @criterium="Meerdere rust- en zitmogelijkheden" @check="true">
-                  <h4 class="au-w-criterium-subtitle">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" class="au-w-icon au-w-icon--faded" aria-hidden="true">
-                      <path d="M27.5,3.66666667 L30.855,7.33333333 L36.6666667,7.33333333 C38.6925,7.33333333 40.3333333,8.97416667 40.3333333,11 L40.3333333,11 L40.3333333,33 C40.3333333,35.0258333 38.6925,36.6666667 36.6666667,36.6666667 L36.6666667,36.6666667 L7.33333333,36.6666667 C5.3075,36.6666667 3.66666667,35.0258333 3.66666667,33 L3.66666667,33 L3.66666667,11 C3.66666667,8.97416667 5.3075,7.33333333 7.33333333,7.33333333 L7.33333333,7.33333333 L13.375,7.33333333 L16.5,3.66666667 L27.5,3.66666667 Z M22,12.8333333 C16.94,12.8333333 12.8333333,16.94 12.8333333,22 C12.8333333,27.06 16.94,31.1666667 22,31.1666667 C27.06,31.1666667 31.1666667,27.06 31.1666667,22 C31.1666667,16.94 27.06,12.8333333 22,12.8333333 Z M22,16.1333333 C25.2400705,16.1333333 27.8666667,18.7599295 27.8666667,22 C27.8666667,25.2400705 25.2400705,27.8666667 22,27.8666667 C18.7599295,27.8666667 16.1333333,25.2400705 16.1333333,22 C16.1333333,18.7599295 18.7599295,16.1333333 22,16.1333333 Z"/>
-                    </svg>
-                    Foto's:
-                  </h4>
-                  <ul class="au-w-list-image">
-                    <li class="au-w-list-image__item">
-                      <AuImage>
-                        <img src="/assets/img/tuin/Rustpunt.JPG" alt="">
-                      </AuImage>
-                    </li>
-                  </ul>
-                </AuCriteriaSubitem>
-                <AuCriteriaSubitem @criterium="Extra aandacht voor akoestiek" @check="true">
+                <AuCriteriaSubitem @criterium="Meerdere rust- en zitmogelijkheden">
+                  <p>Enkel bij zaal 0 "Gent vandaag".</p>
                 </AuCriteriaSubitem>
               </ul>
             </AuCriteriaItem>
             <AuCriteriaItem @criterium="Vitrinetafels, computerschermen" @check="true">
               <ul class="au-w-criterium-list">
-                <AuCriteriaSubitem @criterium="Meerdere onderrijdbare elementen" @check="true">
-                </AuCriteriaSubitem>
-                <AuCriteriaSubitem @criterium="Goede verlichting" @check="true">
-                </AuCriteriaSubitem>
-                <AuCriteriaSubitem @criterium="Vergrootglas" @check="true">
-                </AuCriteriaSubitem>
-              </ul>
-            </AuCriteriaItem>
-            <AuCriteriaItem @criterium="Auditorium/filmzaal" @check="true">
-              <ul class="au-w-criterium-list">
-                <AuCriteriaSubitem @criterium="Zitplaatsen bereikbaar" @check="true">
-                </AuCriteriaSubitem>
-                <AuCriteriaSubitem @criterium="Extra aandacht voor akoestiek" @check="true">
-                </AuCriteriaSubitem>
-                <AuCriteriaSubitem @criterium="Ringleiding in de museumzalen">
+                <AuCriteriaSubitem @criterium="Meerdere onderrijdbare elementen">
                   <p class="au-w-info-text">Geen extra info beschikbaar.</p>
                 </AuCriteriaSubitem>
               </ul>
             </AuCriteriaItem>
-            <AuCriteriaItem @criterium="Teksten/borden/panelen" @check="true">
+            <AuCriteriaItem @criterium="Audiogids, virtuele technologie">
               <ul class="au-w-criterium-list">
-                <AuCriteriaSubitem @criterium="Contrast" @check="true">
-                </AuCriteriaSubitem>
-                <AuCriteriaSubitem @criterium="Geen reflexie" @check="true">
-                </AuCriteriaSubitem>
-                <AuCriteriaSubitem @criterium="Braille">
-                  <p class="au-w-info-text">Geen extra info beschikbaar.</p>
-                </AuCriteriaSubitem>
-                <AuCriteriaSubitem @criterium="Grootletterschrift" @check="true">
-                </AuCriteriaSubitem>
-                <AuCriteriaSubitem @criterium="In meerdere talen">
-                  <p class="au-w-info-text">Geen extra info beschikbaar.</p>
-                </AuCriteriaSubitem>
-              </ul>
-            </AuCriteriaItem>
-            <AuCriteriaItem @criterium="Audiogids">
-              <ul class="au-w-criterium-list">
-                <AuCriteriaSubitem @criterium="In meerdere talen">
-                  <p class="au-w-info-text">Geen extra info beschikbaar.</p>
+                <AuCriteriaSubitem @criterium="Virtuele technologie">
                 </AuCriteriaSubitem>
               </ul>
             </AuCriteriaItem>
             <AuCriteriaItem @criterium="Multisensorieel - zintuigen" @check="true">
               <ul class="au-w-criterium-list">
-                <AuCriteriaSubitem @criterium="Voel-elementen" @check="true">
-                  <p class="au-w-info-text">vb. aardschok-simulator</p>
-                  <h4 class="au-w-criterium-subtitle">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" class="au-w-icon au-w-icon--faded" aria-hidden="true">
-                      <path d="M27.5,3.66666667 L30.855,7.33333333 L36.6666667,7.33333333 C38.6925,7.33333333 40.3333333,8.97416667 40.3333333,11 L40.3333333,11 L40.3333333,33 C40.3333333,35.0258333 38.6925,36.6666667 36.6666667,36.6666667 L36.6666667,36.6666667 L7.33333333,36.6666667 C5.3075,36.6666667 3.66666667,35.0258333 3.66666667,33 L3.66666667,33 L3.66666667,11 C3.66666667,8.97416667 5.3075,7.33333333 7.33333333,7.33333333 L7.33333333,7.33333333 L13.375,7.33333333 L16.5,3.66666667 L27.5,3.66666667 Z M22,12.8333333 C16.94,12.8333333 12.8333333,16.94 12.8333333,22 C12.8333333,27.06 16.94,31.1666667 22,31.1666667 C27.06,31.1666667 31.1666667,27.06 31.1666667,22 C31.1666667,16.94 27.06,12.8333333 22,12.8333333 Z M22,16.1333333 C25.2400705,16.1333333 27.8666667,18.7599295 27.8666667,22 C27.8666667,25.2400705 25.2400705,27.8666667 22,27.8666667 C18.7599295,27.8666667 16.1333333,25.2400705 16.1333333,22 C16.1333333,18.7599295 18.7599295,16.1333333 22,16.1333333 Z"/>
-                    </svg>
-                    Foto's:
-                  </h4>
-                  <ul class="au-w-list-image">
-                    <li class="au-w-list-image__item">
-                      <AuImage>
-                        <img src="/assets/img/tuin/voel-elementen.JPG" alt="">
-                      </AuImage>
-                    </li>
-                  </ul>
-                </AuCriteriaSubitem>
-                <AuCriteriaSubitem @criterium="Geur-elementen" @check="true">
-                  <h4 class="au-w-criterium-subtitle">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" class="au-w-icon au-w-icon--faded" aria-hidden="true">
-                      <path d="M27.5,3.66666667 L30.855,7.33333333 L36.6666667,7.33333333 C38.6925,7.33333333 40.3333333,8.97416667 40.3333333,11 L40.3333333,11 L40.3333333,33 C40.3333333,35.0258333 38.6925,36.6666667 36.6666667,36.6666667 L36.6666667,36.6666667 L7.33333333,36.6666667 C5.3075,36.6666667 3.66666667,35.0258333 3.66666667,33 L3.66666667,33 L3.66666667,11 C3.66666667,8.97416667 5.3075,7.33333333 7.33333333,7.33333333 L7.33333333,7.33333333 L13.375,7.33333333 L16.5,3.66666667 L27.5,3.66666667 Z M22,12.8333333 C16.94,12.8333333 12.8333333,16.94 12.8333333,22 C12.8333333,27.06 16.94,31.1666667 22,31.1666667 C27.06,31.1666667 31.1666667,27.06 31.1666667,22 C31.1666667,16.94 27.06,12.8333333 22,12.8333333 Z M22,16.1333333 C25.2400705,16.1333333 27.8666667,18.7599295 27.8666667,22 C27.8666667,25.2400705 25.2400705,27.8666667 22,27.8666667 C18.7599295,27.8666667 16.1333333,25.2400705 16.1333333,22 C16.1333333,18.7599295 18.7599295,16.1333333 22,16.1333333 Z"/>
-                    </svg>
-                    Foto's:
-                  </h4>
-                  <ul class="au-w-list-image">
-                    <li class="au-w-list-image__item">
-                      <AuImage>
-                        <img src="/assets/img/tuin/Geur-elementen.JPG" alt="">
-                      </AuImage>
-                    </li>
-                  </ul>
-                </AuCriteriaSubitem>
-                <AuCriteriaSubitem @criterium="Doe-elementen" @check="true">
-                  <h4 class="au-w-criterium-subtitle">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" class="au-w-icon au-w-icon--faded" aria-hidden="true">
-                      <path d="M27.5,3.66666667 L30.855,7.33333333 L36.6666667,7.33333333 C38.6925,7.33333333 40.3333333,8.97416667 40.3333333,11 L40.3333333,11 L40.3333333,33 C40.3333333,35.0258333 38.6925,36.6666667 36.6666667,36.6666667 L36.6666667,36.6666667 L7.33333333,36.6666667 C5.3075,36.6666667 3.66666667,35.0258333 3.66666667,33 L3.66666667,33 L3.66666667,11 C3.66666667,8.97416667 5.3075,7.33333333 7.33333333,7.33333333 L7.33333333,7.33333333 L13.375,7.33333333 L16.5,3.66666667 L27.5,3.66666667 Z M22,12.8333333 C16.94,12.8333333 12.8333333,16.94 12.8333333,22 C12.8333333,27.06 16.94,31.1666667 22,31.1666667 C27.06,31.1666667 31.1666667,27.06 31.1666667,22 C31.1666667,16.94 27.06,12.8333333 22,12.8333333 Z M22,16.1333333 C25.2400705,16.1333333 27.8666667,18.7599295 27.8666667,22 C27.8666667,25.2400705 25.2400705,27.8666667 22,27.8666667 C18.7599295,27.8666667 16.1333333,25.2400705 16.1333333,22 C16.1333333,18.7599295 18.7599295,16.1333333 22,16.1333333 Z"/>
-                    </svg>
-                    Foto's:
-                  </h4>
-                  <ul class="au-w-list-image">
-                    <li class="au-w-list-image__item">
-                      <AuImage>
-                        <img src="/assets/img/tuin/Doe-elementen2.JPG" alt="">
-                      </AuImage>
-                    </li>
-                  </ul>
-                </AuCriteriaSubitem>
                 <AuCriteriaSubitem @criterium="Luister-elementen" @check="true">
                 </AuCriteriaSubitem>
-              </ul>
-            </AuCriteriaItem>
-            <AuCriteriaItem @criterium="Andere belevingselementen" @check="true">
-              <ul>
-                <li>vb. natuurlijke muziekinstrumenten in de tuin</li>
-                <li>speurboek voor kinderen (met Plan van de Tuin)</li>
               </ul>
             </AuCriteriaItem>
           </ul>
         </ul>
       </AuModal>
-      <AuModal @title="Wisselende expo" @id="{{@id}}tijdelijk" @check="true" @theme="{{@theme}}">
-        <ul class="au-w-criterium-list">
-          <AuCriteriaSection @sectionTitle="Altijd een Zomertentoonstelling …" @check="true">
-            <ul class="au-w-criterium-list">
-              <AuCriteriaItem @criterium="Rolstoelvriendelijke circulatie" @check="true">
-              </AuCriteriaItem>
-            </ul>
-          </AuCriteriaSection>
-        </ul>
-      </AuModal>
-      <AuModal @title="Rolstoelvriendelijke eet- en drinkgelegenheid" @id="{{@id}}etenendrinken" @theme="{{@theme}}">
+      <AuModal @title="Verbruiksruimte STAM-café" @check="true" @id="{{@id}}etenendrinken" @theme="{{@theme}}">
         <ul class="au-w-criterium-list">
           <AuCriteriaItem @criterium="Bereikbaar" @check="true">
+            <ul class="au-w-criterium-list">
+              <AuCriteriaSubitem @criterium="Alles op gelijkvloers" @check="true"></AuCriteriaSubitem>
+              <AuCriteriaSubitem @criterium="Smalste punt op de route: 120 cm" @check="true"></AuCriteriaSubitem>
+              <AuCriteriaSubitem @criterium="Drempel van max 2 cm, nml 1 cm" @check="true"></AuCriteriaSubitem>
+            </ul>
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Alles op gelijkvloers" @check="true">
-          </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Smalste punt op de route: 80 cm" @check="true">
+          <AuCriteriaItem @criterium="Bereikbaarheid beste tafel" @check="true">
+            <ul class="au-w-criterium-list">
+              <AuCriteriaSubitem @criterium="Smalste punt op de route 120 cm"></AuCriteriaSubitem>
+              <AuCriteriaSubitem @criterium="Geen drempel" @check="true"></AuCriteriaSubitem>
+            </ul>
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Alle tafels gelijk" @check="true">
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Tafel(s): onderrijdbaar" @check="true">
-            <ul class="au-w-criterium-list">
-              <AuCriteriaSubitem @criterium="Vrije hoogte onder tafel: 67 cm"></AuCriteriaSubitem>
-              <AuCriteriaSubitem @criterium="Vrije diepte onder tafel: 60 cm" @check="true"></AuCriteriaSubitem>
-              <AuCriteriaSubitem @criterium="Vrije breedte onder tafel: 80cm" @check="true"></AuCriteriaSubitem>
-            </ul>
-          </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Elektronische betaalmogelijkheid verplaatsbaar">
-            <p class="au-w-info-text">Geen extra info beschikbaar.</p>
-          </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Geschikt voor grote groepen (met mobiele beperking)" @check="true">
-            <h4 class="au-w-criterium-subtitle">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" class="au-w-icon au-w-icon--faded" aria-hidden="true">
-                <path d="M27.5,3.66666667 L30.855,7.33333333 L36.6666667,7.33333333 C38.6925,7.33333333 40.3333333,8.97416667 40.3333333,11 L40.3333333,11 L40.3333333,33 C40.3333333,35.0258333 38.6925,36.6666667 36.6666667,36.6666667 L36.6666667,36.6666667 L7.33333333,36.6666667 C5.3075,36.6666667 3.66666667,35.0258333 3.66666667,33 L3.66666667,33 L3.66666667,11 C3.66666667,8.97416667 5.3075,7.33333333 7.33333333,7.33333333 L7.33333333,7.33333333 L13.375,7.33333333 L16.5,3.66666667 L27.5,3.66666667 Z M22,12.8333333 C16.94,12.8333333 12.8333333,16.94 12.8333333,22 C12.8333333,27.06 16.94,31.1666667 22,31.1666667 C27.06,31.1666667 31.1666667,27.06 31.1666667,22 C31.1666667,16.94 27.06,12.8333333 22,12.8333333 Z M22,16.1333333 C25.2400705,16.1333333 27.8666667,18.7599295 27.8666667,22 C27.8666667,25.2400705 25.2400705,27.8666667 22,27.8666667 C18.7599295,27.8666667 16.1333333,25.2400705 16.1333333,22 C16.1333333,18.7599295 18.7599295,16.1333333 22,16.1333333 Z"/>
-              </svg>
-              Foto's:
-            </h4>
-            <ul class="au-w-list-image">
-              <li class="au-w-list-image__item">
-                <AuImage>
-                  <img src="/assets/img/tuin/Zaal_voorGroteGroepen.JPG" alt="">
-                </AuImage>
-              </li>
-            </ul>
-          </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Extra aandacht voor akoestiek" @check="true">
+          <AuCriteriaItem @criterium="Tafel: onderrijdbaar" @check="true">
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Goed verlichte zones" @check="true">
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Menukaart " @check="true">
+          <AuCriteriaItem @criterium="Menukaart" @check="true">
             <ul class="au-w-criterium-list">
-              <AuCriteriaSubitem @criterium="Duidelijk leesbaar (contrast, lettertype)" @check="true"></AuCriteriaSubitem>
-              <AuCriteriaSubitem @criterium="In grotere letter beschikbaar (punt 14)" @check="true"></AuCriteriaSubitem>
-            </ul>
-            <h4 class="au-w-criterium-subtitle">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" class="au-w-icon au-w-icon--faded" aria-hidden="true">
-                <path d="M27.5,3.66666667 L30.855,7.33333333 L36.6666667,7.33333333 C38.6925,7.33333333 40.3333333,8.97416667 40.3333333,11 L40.3333333,11 L40.3333333,33 C40.3333333,35.0258333 38.6925,36.6666667 36.6666667,36.6666667 L36.6666667,36.6666667 L7.33333333,36.6666667 C5.3075,36.6666667 3.66666667,35.0258333 3.66666667,33 L3.66666667,33 L3.66666667,11 C3.66666667,8.97416667 5.3075,7.33333333 7.33333333,7.33333333 L7.33333333,7.33333333 L13.375,7.33333333 L16.5,3.66666667 L27.5,3.66666667 Z M22,12.8333333 C16.94,12.8333333 12.8333333,16.94 12.8333333,22 C12.8333333,27.06 16.94,31.1666667 22,31.1666667 C27.06,31.1666667 31.1666667,27.06 31.1666667,22 C31.1666667,16.94 27.06,12.8333333 22,12.8333333 Z M22,16.1333333 C25.2400705,16.1333333 27.8666667,18.7599295 27.8666667,22 C27.8666667,25.2400705 25.2400705,27.8666667 22,27.8666667 C18.7599295,27.8666667 16.1333333,25.2400705 16.1333333,22 C16.1333333,18.7599295 18.7599295,16.1333333 22,16.1333333 Z"/>
-              </svg>
-              Foto's:
-            </h4>
-            <ul class="au-w-list-image">
-              <li class="au-w-list-image__item">
-                <AuImage>
-                  <img src="/assets/img/tuin/Menukaart_2.JPG" alt="">
-                </AuImage>
-              </li>
+              <AuCriteriaSubitem @criterium="Duidelijk leesbaar (contrast, lettertype)"></AuCriteriaSubitem>
+              <AuCriteriaSubitem @criterium="Digitaal beschikbaar l" @check="true"></AuCriteriaSubitem>
             </ul>
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Extra's voor kinderen aanwezig" @check="true">
+          <AuCriteriaItem @criterium="Aangepaste maaltijden beschikbaar" @check="true">
             <ul class="au-w-criterium-list">
-              <AuCriteriaSubitem @criterium="Kinderstoel beschikbaar" @check="true"></AuCriteriaSubitem>
-              <AuCriteriaSubitem @criterium="Gebruik van microgolfoven mogelijk" @check="true">
-                <p class="au-w-info-text">Geen extra info beschikbaar.</p>
-              </AuCriteriaSubitem>
+              <AuCriteriaSubitem @criterium="Informatie over ingrediënten en allergenen beschikbaar op vraag"></AuCriteriaSubitem>
+
             </ul>
           </AuCriteriaItem>
         </ul>
       </AuModal>
-      <AuModal @title="Terras bij Verbruiksruimte" @check="true" @id="{{@id}}terras" @theme="{{@theme}}">
+      <AuModal @title="Terras bij verbruiksruimte" @id="{{@id}}terras" @theme="{{@theme}}">
         <ul class="au-w-criterium-list">
-          <AuCriteriaSubitem @criterium="Stilteplek, 'Laad me met Rust'" @check="true"></AuCriteriaSubitem>
+          <AuCriteriaItem @criterium="Bereikbaar">
+            <ul class="au-w-criterium-list">
+              <AuCriteriaSubitem @criterium="Smalste punt op de route: 120 cm" @check="true"></AuCriteriaSubitem>
+              <AuCriteriaSubitem @criterium=" Drempel van meer dan 2 cm, nml 3 cm"></AuCriteriaSubitem>
+            </ul>
+          </AuCriteriaItem>
+          <AuCriteriaItem @criterium="Bereikbaarheid beste tafel" @check="true"></AuCriteriaItem>
+          <AuCriteriaItem @criterium="Alle tafels gelijk" @check="true"></AuCriteriaItem>
+          <AuCriteriaItem @criterium="Tafel: onderrijdbaar" @check="true"></AuCriteriaItem>
         </ul>
       </AuModal>
       <AuModal @title="Rolstoelvriendelijke museumshop" @id="{{@id}}shop" @check="true" @theme="{{@theme}}">
         <ul class="au-w-criterium-list">
           <AuCriteriaItem @criterium="Rolstoelvriendelijke circulatie" @check="true">
-            <h4 class="au-w-criterium-subtitle">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44 44" class="au-w-icon au-w-icon--faded" aria-hidden="true">
-                <path d="M27.5,3.66666667 L30.855,7.33333333 L36.6666667,7.33333333 C38.6925,7.33333333 40.3333333,8.97416667 40.3333333,11 L40.3333333,11 L40.3333333,33 C40.3333333,35.0258333 38.6925,36.6666667 36.6666667,36.6666667 L36.6666667,36.6666667 L7.33333333,36.6666667 C5.3075,36.6666667 3.66666667,35.0258333 3.66666667,33 L3.66666667,33 L3.66666667,11 C3.66666667,8.97416667 5.3075,7.33333333 7.33333333,7.33333333 L7.33333333,7.33333333 L13.375,7.33333333 L16.5,3.66666667 L27.5,3.66666667 Z M22,12.8333333 C16.94,12.8333333 12.8333333,16.94 12.8333333,22 C12.8333333,27.06 16.94,31.1666667 22,31.1666667 C27.06,31.1666667 31.1666667,27.06 31.1666667,22 C31.1666667,16.94 27.06,12.8333333 22,12.8333333 Z M22,16.1333333 C25.2400705,16.1333333 27.8666667,18.7599295 27.8666667,22 C27.8666667,25.2400705 25.2400705,27.8666667 22,27.8666667 C18.7599295,27.8666667 16.1333333,25.2400705 16.1333333,22 C16.1333333,18.7599295 18.7599295,16.1333333 22,16.1333333 Z"/>
-              </svg>
-              Foto's:
-            </h4>
-            <ul class="au-w-list-image">
-              <li class="au-w-list-image__item">
-                <AuImage>
-                  <img src="/assets/img/tuin/Museum-shop_Balie.JPG" alt="">
-                </AuImage>
-              </li>
+            <ul class="au-w-criterium-list">
+              <AuCriteriaSubitem @criterium="Ruimte tussen rekken = smalste punt" @check="true"></AuCriteriaSubitem>
             </ul>
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Ruimte tussen rekken" @check="true">
-            <p>Smalste punt, 80 cm</p>
-          </AuCriteriaItem>
           <AuCriteriaItem @criterium="Balie voor afrekenen" @check="true">
-          </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Elektronische betaalmogelijkheid verplaatsbaar" @check="true">
           </AuCriteriaItem>
         </ul>
       </AuModal>

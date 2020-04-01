@@ -113,8 +113,7 @@
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Assistentiehonden : er zijn geen voorzieningen aanwezig">
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Elektronische betaalmogelijkheid verplaatsbaar">
-            <p class="au-w-info-text">Geen extra info beschikbaar.</p>
+          <AuCriteriaItem @criterium="Elektronische betaalmogelijkheid niet verplaatsbaar">
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Website" @check="true">
             <ul class="au-w-criterium-list">
@@ -134,7 +133,7 @@
           </AuCriteriaItem>
         </ul>
       </AuModal>
-      <AuModal @title="Rolstoelvriendelijke Inkom" @id="{{@id}}inkom" @check="true" @theme="{{@theme}}">
+      <AuModal @title="Rolstoelvriendelijke inkom" @id="{{@id}}inkom" @check="true" @theme="{{@theme}}">
         <p class="au-w-info">
           De inkombreedte is minstens 85 cm met max 1 trede van 10 cm.
         </p>
@@ -202,7 +201,7 @@
           </AuCriteriaItem>
         </ul>
       </AuModal>
-      <AuModal @title="Rolstoelvriendelijk Toilet" @id="{{@id}}toilet" @theme="{{@theme}}">
+      <AuModal @title="Rolstoelvriendelijk toilet" @id="{{@id}}toilet" @theme="{{@theme}}">
         <ul class="au-w-criterium-list">
           <AuCriteriaItem @criterium="Bereikbaar" @check="true">
           </AuCriteriaItem>
@@ -489,8 +488,7 @@
               <AuCriteriaSubitem @criterium="Vrije breedte onder tafel: 80cm" @check="true"></AuCriteriaSubitem>
             </ul>
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Elektronische betaalmogelijkheid verplaatsbaar">
-            <p class="au-w-info-text">Geen extra info beschikbaar.</p>
+          <AuCriteriaItem @criterium="Elektronische betaalmogelijkheid niet verplaatsbaar">
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Geschikt voor grote groepen (met mobiele beperking)" @check="true">
             <h4 class="au-w-criterium-subtitle">
@@ -540,9 +538,9 @@
           </AuCriteriaItem>
         </ul>
       </AuModal>
-      <AuModal @title="Terras bij Verbruiksruimte" @check="true" @id="{{@id}}terras" @theme="{{@theme}}">
+      <AuModal @title="Terras bij verbruiksruimte" @check="true" @id="{{@id}}terras" @theme="{{@theme}}">
         <ul class="au-w-criterium-list">
-          <AuCriteriaSubitem @criterium="Stilteplek, 'Laad me met Rust'" @check="true"></AuCriteriaSubitem>
+          <AuCriteriaItem @criterium="Stilteplek, 'Laad me met Rust'" @check="true"></AuCriteriaItem>
         </ul>
       </AuModal>
       <AuModal @title="Rolstoelvriendelijke museumshop" @id="{{@id}}shop" @check="true" @theme="{{@theme}}">
