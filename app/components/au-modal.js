@@ -2,7 +2,7 @@ import Component from "@glimmer/component";
 import { action } from "@ember/object";
 import { tracked } from "@glimmer/tracking";
 
-export default class modal extends Component {
+export default class AuModal extends Component {
   // Variables
   destinationElementId =  null
 
