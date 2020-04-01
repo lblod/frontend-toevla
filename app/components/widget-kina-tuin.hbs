@@ -27,8 +27,8 @@
             </ul>
             <p><a href="https://www.delijn.be/nl/routeplanner/">De Lijn routeplanner</a></p>
           </AuCriteriaItem>
-          <AuCriteriaItem @criterium="Toegankelijke halte">
-            <p class="au-w-info-text">Geen extra info beschikbaar.</p>
+          <AuCriteriaItem @criterium="Toegankelijke halte" @check="true">
+            <p class="au-w-info-text">Enkel tramhalte Veergrep.</p>
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Rolstoelvriendelijk pad naar inkom">
             <p>Obstakels op de openbare weg:</p>
@@ -45,7 +45,7 @@
         <p class="au-w-info">
           Er is minstens één voorbehouden parkeerplaats met rolstoelvriendelijke ondergrond bij het uitstappen.
         </p>
-        <ul class="au-criterium-list">
+        <ul class="au-w-criterium-list">
           <AuCriteriaItem @criterium="2 voorbehouden plaatsen" @check="true">
             <ul>
               <li>Op publiek domein.</li>
@@ -84,7 +84,7 @@
         </ul>
       </AuModal>
       <AuModal @title="Fietsenstalling" @id="{{@id}}fietstenstalling" @check="true" @theme="{{@theme}}">
-        <ul class="au-criterium-list">
+        <ul class="au-w-criterium-list">
           <AuCriteriaItem @criterium="Fietsenstalling" @check="true">
             <p>Op de binnenkoer.</p>
           </AuCriteriaItem>
@@ -96,7 +96,7 @@
         <p class="au-w-info">
           Algemene Info & Tegemoetkomingen.
         </p>
-        <ul class="au-criterium-list">
+        <ul class="au-w-criterium-list">
           <AuCriteriaItem @criterium="Begeleiding van aan het openbaar vervoer mogelijk" @info="true">
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Tegemoetkoming toegangsprijs" @info="true">
@@ -131,7 +131,7 @@
         <p class="au-w-info">
           De inkombreedte is minstens 85 cm met max 1 trede van 10 cm.
         </p>
-        <ul class="au-criterium-list">
+        <ul class="au-w-criterium-list">
           <AuCriteriaItem @criterium="Via Alternatieve toegang, deurbreedte 90+90cm" @check="true">
             <ul>
               <li>Drempelloos</li>
@@ -180,7 +180,7 @@
         <p class="au-w-info">
           Je kan met de rolstoel binnen nl. max drempel van 5cm, deurbreedte van min 85 cm, draairuimte (diameter) minstens 120 cm.
         </p>
-        <ul class="au-criterium-list">
+        <ul class="au-w-criterium-list">
           <AuCriteriaItem @criterium="Aanwezig" @check="true">
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Bereikbaar" @check="true">
@@ -239,7 +239,7 @@
         <p class="au-w-info">
           Je kan het merendeel van de bedoelde activiteiten uitvoeren, met jouw beperking.
         </p>
-        <ul class="au-criterium-list">
+        <ul class="au-w-criterium-list">
           <AuCriteriaItem @criterium="Rolstoelvriendelijke circulatie" @check="true">
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Alles op gelijkvloers">
@@ -459,7 +459,7 @@
         </ul>
       </AuModal>
       <AuModal @title="Rolstoelvriendelijke eet- en drinkgelegenheid" @id="{{@id}}etenendrinken"  @theme="{{@theme}}">
-        <ul class="au-criterium-list">
+        <ul class="au-w-criterium-list">
           <AuCriteriaItem @criterium="Bereikbaar" @check="true">
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Tafel(s): onderrijdbaar" @check="true">
@@ -477,7 +477,7 @@
         </ul>
       </AuModal>
       <AuModal @title="Rolstoelvriendelijke museumshop" @id="{{@id}}shop" @theme="{{@theme}}">
-        <ul class="au-criterium-list">
+        <ul class="au-w-criterium-list">
           <AuCriteriaItem @criterium="Rolstoelvriendelijke circulatie" @check="true">
           </AuCriteriaItem>
           <AuCriteriaItem @criterium="Elektronische betaalmogelijkheid verplaatsbaare" @check="true">

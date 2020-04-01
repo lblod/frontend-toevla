@@ -11,6 +11,12 @@
     margin-top: $au-unit;
     padding-top: $au-unit;
   }
+
+  .au-w-criterium-list__item + & {
+    margin-top: $au-unit-small;
+    padding-top: $au-unit-small;
+    border-top: 1px dotted $au-neutral-light;
+  }
 }
 
 .au-w-criterium-title {
@@ -19,7 +25,7 @@
   font-weight: $au-bold;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid $au-neutral-lighter;
+  border-bottom: 1px dotted $au-neutral-light;
   margin-bottom: $au-unit-small;
   padding-bottom: $au-unit-small;
 
@@ -42,6 +48,12 @@
     padding-top: $au-unit-small;
     border-top: 1px dotted $au-neutral-light;
   }
+
+  .au-w-criterium-section-list__item + & {
+    margin-top: $au-unit-small;
+    padding-top: $au-unit-small;
+    border-top: 1px dotted $au-neutral-light;
+  }
 }
 
 .au-w-criterium-list__title {
@@ -49,10 +61,27 @@
   color: $au-neutral-darker;
   font-weight: $au-medium;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 
   .au-w-theme-kina & {
     font-weight: 600;
+  }
+
+  .au-w-theme-minimal & .au-w-icon--active {
+    display: none !important;
+  }
+}
+
+.au-w-criterium-list__subtitle {
+  @include au-font-size($au-base);
+  color: $au-neutral-darker;
+  font-weight: $au-light;
+  display: flex;
+  align-items: center;
+
+  .au-w-theme-kina & {
+    font-weight: 500;
   }
 
   .au-w-theme-minimal & .au-w-icon--active {
@@ -76,9 +105,22 @@
     margin-top: $au-unit-tiny;
   }
 
-  ul:not(.au-w-list-image) {
+  ul {
     list-style: disc;
     margin-left: $au-unit-small + $au-unit-tiny;
+  }
+
+  // Reset other types of lists
+  ul.au-w-criterium-list {
+    list-style: none;
+    margin-left: 0;
+    margin-top: $au-unit-small;
+  }
+
+  ul.au-w-list-image {
+    list-style: none;
+    margin-left: 0;
+    margin-top: $au-unit-tiny;
   }
 
   a:not(.au-c-button) {
@@ -140,6 +182,11 @@
   }
 }
 
+.au-w-criterium-list__content--small {
+  @include au-font-size(1.4rem);
+  margin-top: $au-unit-tiny;
+}
+
 .au-w-criterium-list__label {
   @include au-font-size(1.3rem,1);
   position: relative;
@@ -156,7 +203,11 @@
 
 .au-w-criterium-subtitle {
   @include au-font-size(1.4rem);
+  display: flex;
+  align-items: center;
   font-weight: $au-medium;
-  margin-top: $au-unit-tiny;
+  margin-top: $au-unit-small;
+  padding-top: $au-unit-small;
+  border-top: 1px dotted $au-neutral-light;
   color: $au-neutral-darker;
 }

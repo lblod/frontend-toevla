@@ -19,13 +19,6 @@
   margin-top: $au-unit-tiny;
 }
 
-.au-w-list--images {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  margin: -$au-unit-tiny;
-}
-
   .au-w-list__item {
     color: $au-neutral-dark;
 
@@ -41,15 +34,6 @@
 
     .au-w-list--details > & + & {
       margin-top: 0;
-      border-top: 0;
-    }
-
-    .au-w-list--images & {
-      margin: $au-unit-tiny;
-    }
-
-    .au-w-list--images > & + & {
-      padding-top: 0;
       border-top: 0;
     }
 
