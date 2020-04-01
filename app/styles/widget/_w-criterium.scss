@@ -67,10 +67,6 @@
   .au-w-theme-kina & {
     font-weight: 600;
   }
-
-  .au-w-theme-minimal & .au-w-icon--active {
-    display: none !important;
-  }
 }
 
 .au-w-criterium-list__subtitle {
@@ -83,10 +79,6 @@
   .au-w-theme-kina & {
     font-weight: 500;
   }
-
-  .au-w-theme-minimal & .au-w-icon--active {
-    display: none !important;
-  }
 }
 
 .au-w-criterium-list__content {
@@ -94,7 +86,7 @@
   margin-left: 2rem;
 
   .au-w-theme-minimal & {
-    margin-left: 0;
+    margin-left: $au-unit - $au-unit-tiny/2;
   }
 
   > * {
