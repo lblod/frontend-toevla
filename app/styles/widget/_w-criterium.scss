@@ -219,7 +219,13 @@
   border-right: 1px solid $au-neutral-light;
 
   .au-w-theme-minimal & {
-    color: $au-error;
+    color: $au-white;
+    background-color: $au-neutral-darker;
+    border-radius: $au-radius;
+    background-repeat: 0;
+    padding: $au-unit-tiny/2  $au-unit-tiny/1.5  $au-unit-tiny/2;
+    border: 0;
+    font-weight: $au-medium;
   }
 }
 
