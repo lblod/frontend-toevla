@@ -37,9 +37,26 @@
   }
 
   .au-w-theme-kina &:hover,
-  .au-w-theme-kina &:focus{
+  .au-w-theme-kina &:focus {
     color: $au-neutral-dark;
     text-decoration-color: $au-neutral-light;
+  }
+
+  .au-w-theme-stam &,
+  .au-w-theme-stam &:hover {
+    font-family: Georgia;
+    color: #e63228;
+    text-decoration-color: #e63228;
+  }
+
+  .au-w-theme-stam &:hover,
+  .au-w-theme-stam &:focus {
+    color: #333;
+    text-decoration: none;
+  }
+
+  .au-w-theme-stam &:focus {
+    outline: 2px dashed #e63228;
   }
 }
 
@@ -64,6 +81,23 @@
   .is-active > & {
     color: $au-primary-light;
     text-decoration: none;
+  }
+
+  .au-w-theme-stam &,
+  .au-w-theme-stam &:hover {
+    font-family: Georgia;
+    color: #e63228;
+    text-decoration-color: #e63228;
+  }
+
+  .au-w-theme-stam &:hover,
+  .au-w-theme-stam &:focus {
+    color: #333;
+    text-decoration: none;
+  }
+
+  .au-w-theme-stam &:focus {
+    outline: 2px dashed #e63228;
   }
 }
 

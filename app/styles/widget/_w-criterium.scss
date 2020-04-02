@@ -172,6 +172,36 @@
       }
     }
   }
+
+  .au-w-theme-stam & {
+    a:not(.au-c-button) {
+      transition: color $au-transition, text-decoration $au-transition;
+      font-weight: $au-regular;
+      text-decoration-thickness: 1px;
+
+      &,
+      &:visited {
+        color: #e63228;
+        text-decoration-color: #e63228;
+      }
+
+      &:hover,
+      &:focus {
+        color: #333;
+        text-decoration: none;
+      }
+
+      &:focus {
+        outline: 2px dashed #e63228;
+        outline-offset: $au-unit-tiny/2;
+      }
+
+      .is-active > & {
+        color: $au-neutral-lighter;
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 .au-w-criterium-list__content--small {

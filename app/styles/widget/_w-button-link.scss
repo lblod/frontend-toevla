@@ -79,9 +79,23 @@ $au-button-link-underline-hover   : $au-primary-lighter !default;
     }
   }
 
-  // .au-w-theme-minimal & .au-w-icon--active {
-  //   display: none !important;
-  // }
+  .au-w-theme-stam & {
+    color: #e63228;
+    font-weight: 400;
+    text-decoration-color: #e63228;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    &:hover,
+    &:focus {
+      color: #333;
+      background-color: transparent;
+      text-decoration: none
+    }
+
+    &:focus {
+      outline: 2px solid #e63228;
+    }
+  }
 }
 
   .au-w-button-link__text {

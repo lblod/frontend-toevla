@@ -36,9 +36,11 @@
     stroke: $au-success;
   }
 
-  // .au-w-theme-minimal & {
-  //   display: none !important;
-  // }
+  .au-w-theme-stam & {
+    fill: #e63228;
+    stroke: #e63228;
+  }
+
 }
 
 .au-w-icon--faded {

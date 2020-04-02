@@ -479,3 +479,210 @@
     }
   }
 }
+
+.au-d-editor--stam {
+  > * {
+    margin-bottom: 0;
+  }
+
+  > * + * {
+    margin-top: $au-unit-small;
+  }
+
+  > h1 + *,
+  > h2 + *,
+  > h3 + *,
+  > h4 + *,
+  > h5 + *,
+  > h6 + * {
+    margin-top: $au-unit-tiny;
+  }
+
+  > h2 + * {
+    margin-top: $au-unit-small;
+  }
+
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6 {
+    font-family: nimbus-sans,"Helvetica","Arial",sans-serif;
+    color: #e63228;
+    font-weight: 400;
+  }
+
+  > h1 {
+    @include au-font-size(2.5rem);
+  }
+
+  > h2 {
+    @include au-font-size(4rem);
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+
+  > h3 {
+    @include au-font-size(1.5rem);
+    font-weight: 700;
+  }
+
+  > ul h3 {
+    @include au-font-size(1.5rem);
+    font-weight: 700;
+  }
+
+  > h4,
+  > h5,
+  > h6 {
+    @include au-font-size(1.8rem);
+    margin-bottom: 1.5rem;
+  }
+
+  > p {
+    @include au-font-size(1.8rem,1.5);
+    font-family: Georgia,Times,"Times New Roman",serif;
+    color: #333;
+  }
+
+  > p > img {
+    vertical-align: middle;
+  }
+
+  hr {
+    margin: 0;
+    margin-top: $au-unit;
+    margin-bottom: $au-unit;
+    border: 0;
+    border-bottom: 3px solid $au-neutral-lighter;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  > a:not(.au-c-button),
+  > ul a:not(.au-c-button),
+  > ol a:not(.au-c-button),
+  > p a:not(.au-c-button) {
+    transition: color $au-transition, text-decoration $au-transition;
+    font-weight: $au-regular;
+
+
+    &,
+    &:visited {
+      color: #e63228;
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {
+      color: #333;
+    }
+
+    &:focus {
+      outline: #e63228;
+      outline-offset: $au-unit-tiny/2;
+    }
+  }
+
+  .body--buttons {
+    @include au-font-size(1.8rem,1.5);
+    display: flex;
+    flex-wrap: wrap;
+
+    a {
+      display: block;
+      font-family: nimbus-sans,"Helvetica","Arial",sans-serif;
+      transition: color $au-transition, text-decoration $au-transition;
+      padding: 6px 15px 7px;
+      margin: -2px -2px 0 0;
+      border: 2px solid #e63228;
+      font-weight: 700 !important;
+
+      &,
+      &:visited {
+        color: #e63228;
+        text-decoration: none;
+      }
+
+      &:hover,
+      &:focus {
+        color: #fff !important;
+        background-color: #e63228;
+      }
+
+      &:focus {
+        outline: #e63228;
+        outline-offset: $au-unit-tiny/2;
+      }
+    }
+  }
+
+  @include mq(small) {
+    > * + * {
+      margin-top: $au-unit;
+    }
+
+    > h1 + *,
+    > h2 + *,
+    > h3 + *,
+    > h4 + *,
+    > h5 + *,
+    > h6 + * {
+      margin-top: $au-unit-tiny;
+    }
+
+    > h2 + * {
+      margin-top: $au-unit-small;
+    }
+
+    > h1 {
+      @include au-font-size(4rem);
+    }
+
+    > h2 {
+      @include au-font-size(4rem);
+      font-weight: 400;
+    }
+
+    > h3 {
+      @include au-font-size(1.5rem);
+    }
+
+    > h4,
+    > h5,
+    > h6 {
+      @include au-font-size(1.8rem);
+    }
+
+    > p {
+      @include au-font-size(1.8rem);
+    }
+  }
+
+  @include mq(medium) {
+    > h1 + *,
+    > h2 + *,
+    > h3 + *,
+    > h4 + *,
+    > h5 + *,
+    > h6 + * {
+      margin-top: 0;
+    }
+
+    > h2 + * {
+      margin-top: $au-unit-small;
+    }
+
+    > h1,
+    > h2 {
+      @include au-font-size(4rem);
+    }
+
+    > p {
+      @include au-font-size(1.8rem,1.5);
+    }
+  }
+}

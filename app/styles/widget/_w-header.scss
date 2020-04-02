@@ -9,7 +9,8 @@
   margin-bottom: $au-unit-small;
   border-bottom: 1px solid $au-neutral-lighter;
 
-  .au-w-theme-kina & {
+  .au-w-theme-kina &,
+  .au-w-theme-stam & {
     margin-bottom: $au-unit-tiny;
   }
 }
@@ -29,6 +30,13 @@
     font-family: "Lato", sans-serif;
     @include au-font-size(1.6rem);
   }
+
+  .au-w-theme-stam & {
+    font-family: nimbus-sans,"Helvetica","Arial",sans-serif;
+    @include au-font-size(1.8rem);
+    font-weight: 500;
+    color: #e63228;
+  }
 }
 
 .au-w-header__info {
@@ -40,8 +48,13 @@
   margin-top: $au-unit-tiny/2;
   margin-bottom: $au-unit-tiny/2;
   flex-wrap: wrap;
+
   .au-w-theme-kina & {
     font-family: "Lato", sans-serif;
+  }
+
+  .au-w-theme-kina & {
+    font-family: nimbus-sans,"Helvetica","Arial",sans-serif;
   }
 }
 
