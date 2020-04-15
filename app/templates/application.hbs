@@ -1,10 +1,8 @@
 <div id="ember-vo-appuniversum-wormhole"></div>
 
+{{#if this.isIndex}}
 <header class="au-o-region-large au-d-theme-neutral-lightest au-u-padding-bottom">
   <div class="au-o-layout">
-    {{#unless this.isIndex}}
-    <p><a href="/" class="au-d-link au-d-link--neutral">&leftarrow; Terug naar overzicht</a></p>
-    {{/unless}}
     <div class="au-d-editor">
       <h1 class="">Toegankelijkheid Widget</h1>
       <hr>
@@ -13,7 +11,6 @@
 </header>
 
 <main class="au-o-region au-d-theme-neutral-lightest">
-  {{#if this.isIndex}}
   <div class="au-o-layout au-d-editor">
     <h2 class="au-u-h5">Widget (standalone)</h2>
     <ul>
@@ -46,10 +43,7 @@
     </ul>
 
   </div>
-  {{else}}
-  <div class="au-o-layout au-d-editor">
-    {{outlet}}
-
-  </div>
-  {{/if}}
 </main>
+{{else}}
+  {{outlet}}
+{{/if}}
