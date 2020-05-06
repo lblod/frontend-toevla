@@ -1,0 +1,32 @@
+/* ==================================
+   #WIDGET COLLAPSABLE SECTION
+   ================================== */
+
+.w-collapsable-section {
+
+}
+
+.w-collapsable-section__title {
+  margin: 0;
+}
+
+.w-collapsable-section__button {
+  all: inherit;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5em 0;
+}
+
+.w-collapsable-section__icon {
+  height: 1em;
+  margin-left: 0.5em;
+}
+
+[aria-expanded="true"] .w-collapsable-section__icon .vert {
+  display: none;
+}
+
+[aria-expanded] .w-collapsable-section__icon rect {
+  fill: currentColor;
+}
