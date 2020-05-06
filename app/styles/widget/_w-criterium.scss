@@ -44,28 +44,26 @@
 
 .au-w-criterium-list__item {
   & + & {
-    margin-top: $au-unit-small;
-    padding-top: $au-unit-small;
-    border-top: 1px dotted $au-neutral-light;
-  }
-
-  .au-w-criterium-section-list__item + & {
-    margin-top: $au-unit-small;
-    padding-top: $au-unit-small;
-    border-top: 1px dotted $au-neutral-light;
+    margin-top: $au-unit-tiny/2;
+    padding-top: $au-unit-tiny/2;
   }
 }
 
 .au-w-criterium-list__title {
   @include au-font-size($au-base);
   color: $au-neutral-darker;
-  font-weight: $au-medium;
+  font-weight: $au-light;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 
   .au-w-theme-kina & {
     font-weight: 600;
+  }
+
+  .au-w-icon {
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
 
@@ -82,19 +80,20 @@
 }
 
 .au-w-criterium-list__content {
+  font-weight: $au-light;
   color: $au-neutral-darker;
-  margin-left: 2rem;
+  margin-left: 2.1rem;
 
   .au-w-theme-minimal & {
     margin-left: $au-unit - $au-unit-tiny/2;
   }
 
-  > * {
+  > * + * {
     margin-top: $au-unit-tiny;
   }
 
-  > * + * {
-    margin-top: $au-unit-tiny;
+  strong {
+    font-weight: $au-medium;
   }
 
   ul {

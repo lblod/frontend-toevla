@@ -4,8 +4,8 @@
 
 .au-w-icon {
   display: inline-flex;
-  width: 1em;
-  height: 1em;
+  width: 1.2em;
+  height: 1.2em;
   position: relative;
   vertical-align: baseline;
   stroke-width: 0;
@@ -26,10 +26,8 @@
 }
 
 .au-w-icon--active {
-  .au-w-modal & {
-    fill: $au-primary;
-    stroke: $au-primary;
-  }
+  fill: $au-primary;
+  stroke: $au-primary;
 
   .au-w-theme-kina & {
     fill: $au-success;
@@ -40,7 +38,6 @@
     fill: #e63228;
     stroke: #e63228;
   }
-
 }
 
 .au-w-icon--faded {
@@ -49,6 +46,11 @@
 }
 
 .au-w-icon--alert {
-  fill: $au-neutral-darkest;
-  stroke: $au-neutral-darkest;
+  fill: $au-primary;
+  stroke: $au-primary;
+}
+
+.au-w-icon--error {
+  fill: $au-error;
+  stroke: $au-error;
 }

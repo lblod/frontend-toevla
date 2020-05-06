@@ -1,0 +1,13 @@
+/* ==================================
+   #WIDGET SECTION
+   ================================== */
+
+.au-w-section-list {
+
+}
+
+.au-w-section-list__item {
+  & + & {
+    margin-top: $au-unit-tiny/2;
+  }
+}

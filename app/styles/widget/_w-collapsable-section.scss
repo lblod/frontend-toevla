@@ -2,31 +2,64 @@
    #WIDGET COLLAPSABLE SECTION
    ================================== */
 
-.w-collapsable-section {
-
-}
-
-.w-collapsable-section__title {
+.w-collapsable-section-title {
+  @include au-font-size($au-small,1.3);
   margin: 0;
 }
 
-.w-collapsable-section__button {
+.w-collapsable-section-title-group {
+  display: inline-flex;
+  align-items: center;
+}
+
+.w-collapsable-section-button {
   all: inherit;
+  cursor: default;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 0.5em 0;
+  padding: $au-unit-tiny $au-unit-tiny;
+  background-color: $au-neutral-lightest;
+  border: 1px solid $au-neutral-lightest;
+  border-radius: $au-radius;
+  color: $au-neutral-darker;
+  text-decoration: underline;
+  text-decoration-color: $au-neutral-light;
+
+  &:hover {
+    color: $au-neutral-darkest;
+    // background-color: transparent;
+    text-decoration: none;
+  }
+
+  &[aria-expanded="true"] {
+    font-weight: $au-medium;
+    border: 1px solid $au-neutral-lighter;
+    border-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    // background-color: transparent;
+    text-decoration: none;
+  }
 }
 
-.w-collapsable-section__icon {
-  height: 1em;
-  margin-left: 0.5em;
+.w-collapsable-section-icon {
+  height: 1.3rem;
+  margin-left: $au-unit-small;
 }
 
-[aria-expanded="true"] .w-collapsable-section__icon .vert {
+.w-collapsable-section-button[aria-expanded="true"] .w-collapsable-section-icon .w-vert {
   display: none;
 }
 
-[aria-expanded] .w-collapsable-section__icon rect {
-  fill: currentColor;
+.w-collapsable-section-button[aria-expanded] .w-collapsable-section-icon rect {
+  fill: $au-neutral;
+}
+
+.w-collapsable-section-content {
+  border: 1px solid $au-neutral-lighter;
+  border-bottom-left-radius: $au-radius;
+  border-bottom-right-radius: $au-radius;
+  padding: .9rem;
 }

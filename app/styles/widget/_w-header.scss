@@ -3,16 +3,7 @@
    ================================== */
 
 .au-w-header {
-  display: flex;
-  flex-wrap: wrap;
-  padding-bottom: $au-unit-tiny;
-  margin-bottom: $au-unit-small;
-  border-bottom: 1px solid $au-neutral-lighter;
 
-  .au-w-theme-kina &,
-  .au-w-theme-stam & {
-    margin-bottom: $au-unit-tiny;
-  }
 }
 
 .au-w-header__title {
@@ -23,12 +14,14 @@
   flex-wrap: wrap;
   align-items: center;
   margin-right: $au-unit-small;
-  padding-bottom: 0;
-  margin-bottom: 0;
+  padding-bottom: $au-unit-small;
+  margin-bottom: $au-unit-small;
+  border-bottom: 1px solid $au-neutral-lighter;
 
   .au-w-theme-kina & {
-    font-family: "Lato", sans-serif;
     @include au-font-size(1.6rem);
+    font-family: "Lato", sans-serif;
+    margin-bottom: $au-unit-tiny;
   }
 
   .au-w-theme-stam & {
