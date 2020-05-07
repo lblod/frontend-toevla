@@ -14,9 +14,13 @@
   margin-right: $au-unit-tiny;
   transition: fill $au-transition, stroke $au-transition;
 
+  .au-w-button-link & {
+    bottom: -.1ex;
+  }
+
   .au-w-button-link:hover &,
   .au-w-button-link:focus & {
-    opacity: .8;
+    opacity: .9;
   }
 }
 

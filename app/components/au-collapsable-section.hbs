@@ -27,6 +27,10 @@
     </svg>
   </button>
 </h3>
-<div class="w-collapsable-section-content" hidden="{{if this.sectionOpen "" "false"}}">
+{{#if this.sectionOpen}}
+{{#auto-focus '.w-collapsable-section-content'}}
+<div class="w-collapsable-section-content" tabindex="0">
   {{yield}}
 </div>
+{{/auto-focus}}
+{{/if}}

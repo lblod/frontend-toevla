@@ -17,7 +17,7 @@
   &:hover,
   &:focus {
     color: $au-primary-light;
-    text-decoration-color: $au-primary-lighter;
+    text-decoration-color: $au-primary-light;
   }
 
   &:focus {
@@ -63,14 +63,14 @@
 .au-w-link--neutral {
   &,
   &:visited {
-    color: $au-neutral-dark;
+    color: $au-neutral-darker;
     text-decoration-color: $au-neutral-light;
   }
 
   &:hover,
   &:focus {
-    color: $au-neutral;
-    text-decoration-color: $au-neutral-lighter;
+    color: $au-neutral-darkest;
+    text-decoration-color: $au-neutral-light;
   }
 
   &:focus {

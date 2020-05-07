@@ -12,7 +12,7 @@ $au-button-link-active-color      : $au-primary-light !default;
 $au-button-link-visited-color     : $au-primary-dark !default;
 $au-button-link-active-color      : $au-primary-dark !default;
 $au-button-link-underline         : $au-primary-light !default;
-$au-button-link-underline-hover   : $au-primary-lighter !default;
+$au-button-link-underline-hover   : $au-primary-light !default;
 
 
 /* Component
@@ -31,7 +31,6 @@ $au-button-link-underline-hover   : $au-primary-lighter !default;
   flex-wrap: nowrap;
   align-items: center;
   text-align: left;
-  text-underline-offset: .3ex;
   text-decoration: underline;
   text-decoration-color: $au-button-link-underline;
   color: $au-button-link-color;
@@ -112,7 +111,7 @@ $au-button-link-underline-hover   : $au-primary-lighter !default;
 
   &:hover,
   &:focus {
-    color: $au-neutral-dark;
+    color: $au-neutral-darkest;
     text-decoration-color: $au-neutral-light;
   }
 }

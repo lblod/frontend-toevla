@@ -54,7 +54,6 @@
   color: $au-neutral-darker;
   font-weight: $au-light;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
 
   .au-w-theme-kina & {
@@ -64,6 +63,7 @@
   .au-w-icon {
     width: 1.5rem;
     height: 1.5rem;
+    bottom: -.2ex;
   }
 }
 
@@ -128,7 +128,7 @@
     &:hover,
     &:focus {
       color: $au-primary-light;
-      text-decoration-color: $au-primary-lighter;
+      text-decoration-color: $au-primary-light;
     }
 
     &:focus {

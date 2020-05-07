@@ -27,19 +27,23 @@
   text-decoration: underline;
   text-decoration-color: $au-neutral-light;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $au-neutral-darkest;
-    // background-color: transparent;
     text-decoration: none;
   }
 
+  &:focus {
+    outline: $au-outline;
+    outline-offset: -.2rem;
+  }
+
   &[aria-expanded="true"] {
-    font-weight: $au-medium;
+    color: $au-neutral-darkest;
     border: 1px solid $au-neutral-lighter;
     border-bottom: 0;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    // background-color: transparent;
     text-decoration: none;
   }
 }
@@ -62,4 +66,8 @@
   border-bottom-left-radius: $au-radius;
   border-bottom-right-radius: $au-radius;
   padding: .9rem;
+
+  &:focus {
+    outline: none;
+  }
 }

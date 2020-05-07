@@ -4,8 +4,8 @@
 
 .au-w-section {
   & + & {
-    border-top: 1px dotted $au-neutral-lighter;
-    padding-top: $au-unit-small;
+    // border-top: 1px dotted $au-neutral-lighter;
+    // padding-top: $au-unit-tiny;
     margin-top: $au-unit-small;
   }
 }
@@ -15,12 +15,23 @@
   flex-wrap: wrap;
 
   > *:first-child {
-    flex-basis: 20rem;
+    flex-basis: 16rem;
+    flex-grow: 1;
   }
 
   > *:last-child {
-    flex-basis: 30rem;
-    flex-grow: 1;
+    position: relative;
+    flex-basis: 40rem;
+    flex-grow: 100;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -$au-unit-tiny;
+      width: $au-unit-tiny;
+      background-color: $au-white;
+      height: 100%;
+    }
   }
 
 }
@@ -28,6 +39,8 @@
 .au-w-section__title {
   @include au-font-size($au-small,1.3);
   font-weight: $au-medium;
-  margin-bottom: $au-unit-small;
+  margin-bottom: $au-unit-tiny;
+  padding-top: $au-unit-tiny;
   color: $au-neutral-darker;
+  border-top: 1px dotted $au-neutral-lighter;
 }
