@@ -4,17 +4,16 @@
 
 .au-w-footer {
   @include au-font-size(1.4rem);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   color: $au-neutral;
-  padding-top: $au-unit-small;
-  padding-bottom: 0;
-  margin-top: $au-unit-small;
-  border-top: 1px solid $au-neutral-lighter;
+  margin-top: $au-unit;
+  padding-bottom: $au-unit-small;
 
-  // .au-w-theme-kina &,
-  // .au-w-theme-stam & {
-  //   margin-top: $au-unit-tiny;
-  //   padding-top: $au-unit-tiny;
-  // }
+  p:first-child {
+    margin-right: $au-unit-small;
+  }
 
   .au-w-theme-stam & {
     color: #333;

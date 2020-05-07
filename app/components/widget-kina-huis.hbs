@@ -7,162 +7,9 @@
       {{@title}}
     </h1>
     <AuRating>
-      <strong>Stap 1</strong> naar een <a href="https://toevla.vlaanderen.be/publiek/nl/Information/TOE" target="_blank" rel="noopener noreferrer" class="au-w-link">toegankelijke locatie</a> is behaald.
+      <strong>Stap 1</strong> naar een <a href="https://toevla.vlaanderen.be/publiek/nl/Information/TOE" target="_blank" rel="noopener noreferrer" class="au-w-link au-w-link--neutral">toegankelijke locatie</a> is behaald
     </AuRating>
-    {{!-- {{#if @category}}
-    <p class="au-w-header__info">
-      <span class="au-w-header__rating">{{@category}}</span> {{#if @rating}}<span class="au-w-header__rating au-w-header__rating--base">{{@rating}}</span>{{/if}}
-    </p>
-    {{/if}} --}}
   </header>
-  <section class="au-w-section">
-    <h2 class="au-w-section__title au-u-hidden-visually">Foto's</h2>
-    <AuLightbox @title="Bekijk meer foto's" @id="{{@id}}fotos" @theme="{{@theme}}">
-      {{#carousel-container transitionInterval=400 as |ui controls|}}
-        <div class="au-w-carousel">
-          {{#ui.item}}
-            <figure class="au-w-carousel__figure">
-              <img src="/assets/img/kinaP1.jpg" alt="" class="au-w-carousel__image">
-              <figcaption class="au-w-carousel__caption">
-                <span class="au-w-carousel__pagination">Foto 1/14</span>
-                Er zijn 2 aangepaste parkeerplaatsen dicht bij de alternatieve inkom.
-              </figcaption>
-            </figure>
-          {{/ui.item}}
-          {{#ui.item}}
-            <figure class="au-w-carousel__figure">
-              <img src="/assets/img/kinaP2.jpg" alt="" class="au-w-carousel__image">
-              <figcaption class="au-w-carousel__caption">
-                <span class="au-w-carousel__pagination">Foto 2/14</span>
-                Onder het Sint-Pietersplein is een ruime ondergrondse parkeergelegenheid met aangepaste parkeerplaatsen.
-              </figcaption>
-            </figure>
-          {{/ui.item}}
-          {{#ui.item}}
-            <figure class="au-w-carousel__figure">
-              <img src="/assets/img/kinaI1.jpg" alt="" class="au-w-carousel__image">
-              <figcaption class="au-w-carousel__caption">
-                <span class="au-w-carousel__pagination">Foto 3/14</span>
-                Op de hoek met de Kantienberg. Bel met parlofoon. Er komt steeds iemand om deze deur te openen en U te begeleiden naar de balie in de inkomhal.
-              </figcaption>
-            </figure>
-          {{/ui.item}}
-          {{#ui.item}}
-            <figure class="au-w-carousel__figure">
-              <img src="/assets/img/kinaI2.jpg" alt="" class="au-w-carousel__image">
-              <figcaption class="au-w-carousel__caption">
-                <span class="au-w-carousel__pagination">Foto 4/14</span>
-                Op de hoek met de Kantienberg. Bel met parlofoon. Er komt steeds iemand om deze deur te openen en U te begeleiden naar de balie in de inkomhal.
-              </figcaption>
-            </figure>
-          {{/ui.item}}
-          {{#ui.item}}
-            <figure class="au-w-carousel__figure">
-              <img src="assets/img/kinaC1.jpg" alt="" class="au-w-carousel__image">
-              <figcaption class="au-w-carousel__caption">
-                <span class="au-w-carousel__pagination">Foto 5/14</span>
-                Rolstoelvriendelijke lift (148 x 112 cm)
-              </figcaption>
-            </figure>
-          {{/ui.item}}
-          {{#ui.item}}
-            <figure class="au-w-carousel__figure">
-              <img src="assets/img/kinaC2.jpg" alt="" class="au-w-carousel__image">
-              <figcaption class="au-w-carousel__caption">
-                <span class="au-w-carousel__pagination">Foto 6/14</span>
-                Hellingen: Steil, hulp nodig
-              </figcaption>
-            </figure>
-          {{/ui.item}}
-          {{#ui.item}}
-            <figure class="au-w-carousel__figure">
-              <img src="assets/img/kinaC3.jpg" alt="" class="au-w-carousel__image">
-              <figcaption class="au-w-carousel__caption">
-                <span class="au-w-carousel__pagination">Foto 7/14</span>
-                Hellingen: Steil, hulp nodig
-              </figcaption>
-            </figure>
-          {{/ui.item}}
-          {{#ui.item}}
-            <figure class="au-w-carousel__figure">
-              <img src="assets/img/kinaZ.jpg" alt="" class="au-w-carousel__image">
-              <figcaption class="au-w-carousel__caption">
-                <span class="au-w-carousel__pagination">Foto 8/14</span>
-                Rust- zit-mogelijkheden
-              </figcaption>
-            </figure>
-          {{/ui.item}}
-          {{#ui.item}}
-            <figure class="au-w-carousel__figure">
-              <img src="assets/img/kinaB.jpg" alt="" class="au-w-carousel__image">
-              <figcaption class="au-w-carousel__caption">
-                <span class="au-w-carousel__pagination">Foto 9/14</span>
-                Braille
-              </figcaption>
-            </figure>
-          {{/ui.item}}
-          {{#ui.item}}
-            <figure class="au-w-carousel__figure">
-              <img src="assets/img/kinaD.jpg" alt="" class="au-w-carousel__image">
-              <figcaption class="au-w-carousel__caption">
-                <span class="au-w-carousel__pagination">Foto 10/14</span>
-                Doe-elementen
-              </figcaption>
-            </figure>
-          {{/ui.item}}
-          {{#ui.item}}
-            <figure class="au-w-carousel__figure">
-              <img src="assets/img/kinaT1.jpg" alt="" class="au-w-carousel__image">
-              <figcaption class="au-w-carousel__caption">
-                <span class="au-w-carousel__pagination">Foto 11/14</span>
-                Helling: Hoogteverschil van 15 cm via korte steile helling.
-              </figcaption>
-            </figure>
-          {{/ui.item}}
-          {{#ui.item}}
-            <figure class="au-w-carousel__figure">
-              <img src="assets/img/kinaT2.jpg" alt="" class="au-w-carousel__image">
-              <figcaption class="au-w-carousel__caption">
-                <span class="au-w-carousel__pagination">Foto 12/14</span>
-                Draairuimte in het toilet 150 cm
-              </figcaption>
-            </figure>
-          {{/ui.item}}
-          {{#ui.item}}
-            <figure class="au-w-carousel__figure">
-              <img src="assets/img/kinaT3.jpg" alt="" class="au-w-carousel__image">
-              <figcaption class="au-w-carousel__caption">
-                <span class="au-w-carousel__pagination">Foto 13/14</span>
-                2 beugels
-              </figcaption>
-            </figure>
-          {{/ui.item}}
-          {{#ui.item}}
-            <figure class="au-w-carousel__figure">
-              <img src="assets/img/kinaSh.jpg" alt="" class="au-w-carousel__image">
-              <figcaption class="au-w-carousel__caption">
-                <span class="au-w-carousel__pagination">Foto 14/14</span>
-                Enkele (onderrijdbare) tafels
-              </figcaption>
-            </figure>
-          {{/ui.item}}
-        </div>
-
-        <button onclick={{controls.previous}} class="au-w-carousel__button au-w-carousel__button--next">
-          <svg xmlns="http://www.w3.org/2000/svg" class="au-w-icon au-w-icon--large" viewBox="0 0 44 44" aria-hidden="true">
-            <polygon points="15.15 1.26 10.312 6.095 25.989 21.76 10.312 37.426 15.15 42.26 35.665 21.76"/>
-          </svg>
-          <span class="au-u-hidden-visually">Volgende foto</span>
-        </button>
-        <button onclick={{controls.next}} class="au-w-carousel__button au-w-carousel__button--previous">
-          <svg xmlns="http://www.w3.org/2000/svg" class="au-w-icon au-w-icon--large" viewBox="0 0 44 44" aria-hidden="true">
-            <polygon points="33.762 38.426 18.057 22.76 33.762 7.095 28.915 2.26 8.362 22.76 28.915 43.26"/>
-          </svg>
-          <span class="au-u-hidden-visually">Vorige foto</span>
-        </button>
-      {{/carousel-container}}
-    </AuLightbox>
-  </section>
   <section class="au-w-section au-w-section--column">
     <h2 class="au-w-section__title">Algemeen</h2>
     <ul class="au-w-section-list">
@@ -465,7 +312,192 @@
       </li>
     </ul>
   </section>
+  <section class="au-w-section">
+    <h2 class="au-w-section__title au-u-hidden-visually">Foto's</h2>
+    <ul class="au-w-lightbox">
+      <li class="au-w-lightbox__item">
+        <figure class="au-w-lightbox__image">
+          <img src="/assets/img/kinaP1.jpg" alt="Er zijn 2 aangepaste parkeerplaatsen dicht bij de alternatieve inkom.">
+        </figure>
+      </li>
+      <li class="au-w-lightbox__item">
+        <figure class="au-w-lightbox__image">
+          <img src="/assets/img/kinaP2.jpg" alt="Onder het Sint-Pietersplein is een ruime ondergrondse parkeergelegenheid met aangepaste parkeerplaatsen.">
+        </figure>
+      </li>
+      <li class="au-w-lightbox__item">
+        <figure class="au-w-lightbox__image">
+          <img src="/assets/img/kinaC1.jpg" alt="Rolstoelvriendelijke lift (148 x 112 cm)">
+        </figure>
+      </li>
+      <li class="au-w-lightbox__item">
+        <figure class="au-w-lightbox__image">
+          <img src="/assets/img/kinaC3.jpg" alt="Hellingen: Steil, hulp nodig">
+          <figcaption class="au-w-carousel__caption au-u-hidden-visually">
+            <span class="au-w-carousel__pagination">Foto 1/14</span>
+            Er zijn 2 aangepaste parkeerplaatsen dicht bij de alternatieve inkom.
+          </figcaption>
+        </figure>
+      </li>
+      <li class="au-w-lightbox__item">
+        <figure class="au-w-lightbox__image">
+          <img src="/assets/img/kinaZ.jpg" alt="Rust- zit-mogelijkheden">
+          <figcaption class="au-w-carousel__caption au-u-hidden-visually">
+            <span class="au-w-carousel__pagination">Foto 1/14</span>
+            Er zijn 2 aangepaste parkeerplaatsen dicht bij de alternatieve inkom.
+          </figcaption>
+        </figure>
+      </li>
+      <li class="au-w-lightbox__item au-w-lightbox__item--border">
+        <AuLightbox @buttonTitle="Bekijk alle foto's" @title="De wereld van Kina - Het Huis" @id="{{@id}}fotos" @theme="{{@theme}}">
+          {{#carousel-container transitionInterval=400 as |ui controls|}}
+            <div class="au-w-carousel">
+              {{#ui.item}}
+                <figure class="au-w-carousel__figure">
+                  <img src="/assets/img/kinaP1.jpg" alt="" class="au-w-carousel__image">
+                  <figcaption class="au-w-carousel__caption">
+                    <span class="au-w-carousel__pagination">Foto 1/14</span>
+                    Er zijn 2 aangepaste parkeerplaatsen dicht bij de alternatieve inkom.
+                  </figcaption>
+                </figure>
+              {{/ui.item}}
+              {{#ui.item}}
+                <figure class="au-w-carousel__figure">
+                  <img src="/assets/img/kinaP2.jpg" alt="" class="au-w-carousel__image">
+                  <figcaption class="au-w-carousel__caption">
+                    <span class="au-w-carousel__pagination">Foto 2/14</span>
+                    Onder het Sint-Pietersplein is een ruime ondergrondse parkeergelegenheid met aangepaste parkeerplaatsen.
+                  </figcaption>
+                </figure>
+              {{/ui.item}}
+              {{#ui.item}}
+                <figure class="au-w-carousel__figure">
+                  <img src="/assets/img/kinaI1.jpg" alt="" class="au-w-carousel__image">
+                  <figcaption class="au-w-carousel__caption">
+                    <span class="au-w-carousel__pagination">Foto 3/14</span>
+                    Op de hoek met de Kantienberg. Bel met parlofoon. Er komt steeds iemand om deze deur te openen en U te begeleiden naar de balie in de inkomhal.
+                  </figcaption>
+                </figure>
+              {{/ui.item}}
+              {{#ui.item}}
+                <figure class="au-w-carousel__figure">
+                  <img src="/assets/img/kinaI2.jpg" alt="" class="au-w-carousel__image">
+                  <figcaption class="au-w-carousel__caption">
+                    <span class="au-w-carousel__pagination">Foto 4/14</span>
+                    Op de hoek met de Kantienberg. Bel met parlofoon. Er komt steeds iemand om deze deur te openen en U te begeleiden naar de balie in de inkomhal.
+                  </figcaption>
+                </figure>
+              {{/ui.item}}
+              {{#ui.item}}
+                <figure class="au-w-carousel__figure">
+                  <img src="assets/img/kinaC1.jpg" alt="" class="au-w-carousel__image">
+                  <figcaption class="au-w-carousel__caption">
+                    <span class="au-w-carousel__pagination">Foto 5/14</span>
+                    Rolstoelvriendelijke lift (148 x 112 cm)
+                  </figcaption>
+                </figure>
+              {{/ui.item}}
+              {{#ui.item}}
+                <figure class="au-w-carousel__figure">
+                  <img src="assets/img/kinaC2.jpg" alt="" class="au-w-carousel__image">
+                  <figcaption class="au-w-carousel__caption">
+                    <span class="au-w-carousel__pagination">Foto 6/14</span>
+                    Hellingen: Steil, hulp nodig
+                  </figcaption>
+                </figure>
+              {{/ui.item}}
+              {{#ui.item}}
+                <figure class="au-w-carousel__figure">
+                  <img src="assets/img/kinaC3.jpg" alt="" class="au-w-carousel__image">
+                  <figcaption class="au-w-carousel__caption">
+                    <span class="au-w-carousel__pagination">Foto 7/14</span>
+                    Hellingen: Steil, hulp nodig
+                  </figcaption>
+                </figure>
+              {{/ui.item}}
+              {{#ui.item}}
+                <figure class="au-w-carousel__figure">
+                  <img src="assets/img/kinaZ.jpg" alt="" class="au-w-carousel__image">
+                  <figcaption class="au-w-carousel__caption">
+                    <span class="au-w-carousel__pagination">Foto 8/14</span>
+                    Rust- zit-mogelijkheden
+                  </figcaption>
+                </figure>
+              {{/ui.item}}
+              {{#ui.item}}
+                <figure class="au-w-carousel__figure">
+                  <img src="assets/img/kinaB.jpg" alt="" class="au-w-carousel__image">
+                  <figcaption class="au-w-carousel__caption">
+                    <span class="au-w-carousel__pagination">Foto 9/14</span>
+                    Braille
+                  </figcaption>
+                </figure>
+              {{/ui.item}}
+              {{#ui.item}}
+                <figure class="au-w-carousel__figure">
+                  <img src="assets/img/kinaD.jpg" alt="" class="au-w-carousel__image">
+                  <figcaption class="au-w-carousel__caption">
+                    <span class="au-w-carousel__pagination">Foto 10/14</span>
+                    Doe-elementen
+                  </figcaption>
+                </figure>
+              {{/ui.item}}
+              {{#ui.item}}
+                <figure class="au-w-carousel__figure">
+                  <img src="assets/img/kinaT1.jpg" alt="" class="au-w-carousel__image">
+                  <figcaption class="au-w-carousel__caption">
+                    <span class="au-w-carousel__pagination">Foto 11/14</span>
+                    Helling: Hoogteverschil van 15 cm via korte steile helling.
+                  </figcaption>
+                </figure>
+              {{/ui.item}}
+              {{#ui.item}}
+                <figure class="au-w-carousel__figure">
+                  <img src="assets/img/kinaT2.jpg" alt="" class="au-w-carousel__image">
+                  <figcaption class="au-w-carousel__caption">
+                    <span class="au-w-carousel__pagination">Foto 12/14</span>
+                    Draairuimte in het toilet 150 cm
+                  </figcaption>
+                </figure>
+              {{/ui.item}}
+              {{#ui.item}}
+                <figure class="au-w-carousel__figure">
+                  <img src="assets/img/kinaT3.jpg" alt="" class="au-w-carousel__image">
+                  <figcaption class="au-w-carousel__caption">
+                    <span class="au-w-carousel__pagination">Foto 13/14</span>
+                    2 beugels
+                  </figcaption>
+                </figure>
+              {{/ui.item}}
+              {{#ui.item}}
+                <figure class="au-w-carousel__figure">
+                  <img src="assets/img/kinaSh.jpg" alt="" class="au-w-carousel__image">
+                  <figcaption class="au-w-carousel__caption">
+                    <span class="au-w-carousel__pagination">Foto 14/14</span>
+                    Enkele (onderrijdbare) tafels
+                  </figcaption>
+                </figure>
+              {{/ui.item}}
+            </div>
+            <button onclick={{controls.previous}} class="au-w-carousel__button au-w-carousel__button--next">
+              <svg xmlns="http://www.w3.org/2000/svg" class="au-w-icon au-w-icon--large" viewBox="0 0 44 44" aria-hidden="true">
+                <polygon points="15.15 1.26 10.312 6.095 25.989 21.76 10.312 37.426 15.15 42.26 35.665 21.76"/>
+              </svg>
+              <span class="au-u-hidden-visually">Volgende foto</span>
+            </button>
+            <button onclick={{controls.next}} class="au-w-carousel__button au-w-carousel__button--previous">
+              <svg xmlns="http://www.w3.org/2000/svg" class="au-w-icon au-w-icon--large" viewBox="0 0 44 44" aria-hidden="true">
+                <polygon points="33.762 38.426 18.057 22.76 33.762 7.095 28.915 2.26 8.362 22.76 28.915 43.26"/>
+              </svg>
+              <span class="au-u-hidden-visually">Vorige foto</span>
+            </button>
+          {{/carousel-container}}
+        </AuLightbox>
+      </li>
+    </ul>
+  </section>
   <footer class="au-w-footer">
-    <p>Deze informatie is aangeleverd door Toevla. <a href="https://toevla.vlaanderen.be/publiek/nl/Startpagina/Reactie" class="au-w-link au-w-link--neutral" target="_blank" rel="noopener noreferrer">Ontbreekt er informatie?</a></p>
+    <p>Deze informatie is aangeleverd door <a href="https://toevla.vlaanderen.be" class="au-w-link au-w-link--neutral" target="_blank" rel="noopener noreferrer">Toevla</a>. </p>
+    <p>Ontbreekt er informatie? <a href="https://toevla.vlaanderen.be/publiek/nl/Startpagina/Reactie" class="au-w-link au-w-link--neutral" target="_blank" rel="noopener noreferrer">Contacteer ons</a>.</p>
   </footer>
 </article>

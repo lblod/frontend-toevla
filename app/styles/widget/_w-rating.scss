@@ -3,62 +3,17 @@
    ================================== */
 
 .au-w-rating {
-  display: flex;
-  align-items: center;
-  margin-bottom: $au-unit;
-}
-
-.au-w-rating__stars {
-  display: flex;
-  align-items: center;
-}
-
-.au-w-rating__star {
-  @include au-font-size($au-h5);
-  display: flex;
-  align-items: center;
-  color: $au-neutral-light;
-  margin-left: -$au-unit-tiny/2;
-
-  & + & {
-    margin-left: -$au-unit-tiny;
-  }
-}
-
-
-.au-w-rating__star--check {
-  color: $au-primary;
-
-  .au-w-theme-kina & {
-    color: $au-success;
-  }
-}
-
-.au-w-rating__info {
   @include au-font-size($au-small,1.3);
-  color: $au-neutral-darker;
+  color: $au-neutral;
   position: relative;
-  background-color: $au-neutral-lightest;
-  border: .1rem solid $au-neutral-lightest;
+  display: flex;
+  align-items: center;
   border-radius: $au-radius;
-  padding: $au-unit-tiny;
-  margin-left: $au-unit-tiny;
+  margin-top: $au-unit-small;
+  margin-bottom: $au-unit-small;
 
-  &:after {
-    right: 100%;
-    top: 50%;
-    border: solid transparent;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-  }
-
-  &:after {
-    border-color: rgba($au-neutral-lighter, 0);
-    border-right-color: $au-neutral-lightest;
-    border-width: .8rem;
-    margin-top: -.8rem;
+  .au-w-icon {
+    width: 2.2rem;
+    height: 2.2rem;
   }
 }

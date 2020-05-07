@@ -48,11 +48,11 @@
 .au-w-criterium-list__title {
   @include au-font-size($au-base);
   color: $au-neutral-darker;
-  font-weight: $au-light;
+  font-weight: $au-regular;
   display: flex;
 
   .au-w-theme-kina & {
-    font-weight: 600;
+    // font-weight: 600;
   }
 
   .au-w-icon {
@@ -70,7 +70,7 @@
   align-items: center;
 
   .au-w-theme-kina & {
-    font-weight: 500;
+    // font-weight: 500;
   }
 }
 
