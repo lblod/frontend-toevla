@@ -32,10 +32,6 @@
   @include mq(small) {
     @include au-font-size($au-h5);
   }
-
-  .au-w-theme-minimal & .au-w-icon--active {
-    display: none !important;
-  }
 }
 
 .au-w-criterium-list {
@@ -54,7 +50,6 @@
   color: $au-neutral-darker;
   font-weight: $au-light;
   display: flex;
-  align-items: center;
 
   .au-w-theme-kina & {
     font-weight: 600;
@@ -63,7 +58,7 @@
   .au-w-icon {
     width: 1.5rem;
     height: 1.5rem;
-    bottom: -.2ex;
+    bottom: -.25ex;
   }
 }
 
@@ -150,14 +145,14 @@
 
       &,
       &:visited {
-        color: $au-neutral-darker;
-        text-decoration-color: $au-neutral-light;
+        color: $au-neutral-darkest;
+        text-decoration-color: $au-neutral;
       }
 
       &:hover,
       &:focus {
-        color: $au-neutral-dark;
-        text-decoration-color: $au-neutral-light;
+        color: $au-neutral-darker;
+        text-decoration-color: $au-neutral;
       }
 
       &:focus {

@@ -6,11 +6,14 @@
       </svg>
       {{@title}}
     </h1>
-    {{#if @category}}
+    <AuRating>
+      <strong>Stap 1</strong> naar een <a href="https://toevla.vlaanderen.be/publiek/nl/Information/TOE" target="_blank" rel="noopener noreferrer" class="au-w-link">toegankelijke locatie</a> is behaald.
+    </AuRating>
+    {{!-- {{#if @category}}
     <p class="au-w-header__info">
       <span class="au-w-header__rating">{{@category}}</span> {{#if @rating}}<span class="au-w-header__rating au-w-header__rating--base">{{@rating}}</span>{{/if}}
     </p>
-    {{/if}}
+    {{/if}} --}}
   </header>
   <section class="au-w-section">
     <h2 class="au-w-section__title au-u-hidden-visually">Foto's</h2>
@@ -463,6 +466,6 @@
     </ul>
   </section>
   <footer class="au-w-footer">
-    <p>Deze informatie is aangeleverd door Toevla. <a href="https://toevla.vlaanderen.be/publiek/nl/register/detail/3147" class="au-w-link au-w-link--neutral">Meer info</a></p>
+    <p>Deze informatie is aangeleverd door Toevla. <a href="https://toevla.vlaanderen.be/publiek/nl/Startpagina/Reactie" class="au-w-link au-w-link--neutral" target="_blank" rel="noopener noreferrer">Ontbreekt er informatie?</a></p>
   </footer>
 </article>

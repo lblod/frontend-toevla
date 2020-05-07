@@ -52,6 +52,16 @@
 .au-w-icon--alert {
   fill: $au-primary;
   stroke: $au-primary;
+
+  .au-w-theme-kina & {
+    fill: $au-success;
+    stroke: $au-success;
+  }
+
+  .au-w-theme-stam & {
+    fill: #e63228;
+    stroke: #e63228;
+  }
 }
 
 .au-w-icon--error {
