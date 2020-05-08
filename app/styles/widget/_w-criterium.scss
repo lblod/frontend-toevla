@@ -2,38 +2,6 @@
    #CRITERIA
    ================================== */
 
-.au-w-criterium-section-list {
-  margin: 0;
-}
-
-.au-w-criterium-section-list__item {
-  & + & {
-    margin-top: $au-unit;
-    padding-top: $au-unit;
-  }
-
-  .au-w-criterium-list__item + & {
-    margin-top: $au-unit-small;
-    padding-top: $au-unit-small;
-    border-top: 1px dotted $au-neutral-light;
-  }
-}
-
-.au-w-criterium-title {
-  @include au-font-size($au-h6);
-  color: $au-neutral-darker;
-  font-weight: $au-bold;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px dotted $au-neutral-light;
-  margin-bottom: $au-unit-small;
-  padding-bottom: $au-unit-small;
-
-  @include mq(small) {
-    @include au-font-size($au-h5);
-  }
-}
-
 .au-w-criterium-list {
   margin: 0;
 }
@@ -48,12 +16,8 @@
 .au-w-criterium-list__title {
   @include au-font-size($au-base);
   color: $au-neutral-darker;
-  font-weight: $au-regular;
+  font-weight: $au-light;
   display: flex;
-
-  .au-w-theme-kina & {
-    // font-weight: 600;
-  }
 
   .au-w-icon {
     width: 1.5rem;
@@ -62,26 +26,10 @@
   }
 }
 
-.au-w-criterium-list__subtitle {
-  @include au-font-size($au-base);
-  color: $au-neutral-darker;
-  font-weight: $au-light;
-  display: flex;
-  align-items: center;
-
-  .au-w-theme-kina & {
-    // font-weight: 500;
-  }
-}
-
 .au-w-criterium-list__content {
   font-weight: $au-light;
   color: $au-neutral-darker;
   margin-left: 2.1rem;
-
-  .au-w-theme-minimal & {
-    margin-left: $au-unit - $au-unit-tiny/2;
-  }
 
   > * + * {
     margin-top: $au-unit-tiny;
@@ -101,12 +49,6 @@
     list-style: none;
     margin-left: 0;
     margin-top: $au-unit-small;
-  }
-
-  ul.au-w-list-image {
-    list-style: none;
-    margin-left: 0;
-    margin-top: $au-unit-tiny;
   }
 
   a:not(.au-c-button) {
@@ -198,11 +140,6 @@
   }
 }
 
-.au-w-criterium-list__content--small {
-  @include au-font-size(1.4rem);
-  margin-top: $au-unit-tiny;
-}
-
 .au-w-criterium-list__label {
   @include au-font-size(1.3rem,1);
   position: relative;
@@ -211,25 +148,4 @@
   margin-right: $au-unit-tiny;
   padding-right: $au-unit-tiny;
   border-right: 1px solid $au-neutral-light;
-
-  .au-w-theme-minimal & {
-    color: $au-white;
-    background-color: $au-neutral-darker;
-    border-radius: $au-radius;
-    background-repeat: 0;
-    padding: $au-unit-tiny/2  $au-unit-tiny/1.5  $au-unit-tiny/2;
-    border: 0;
-    font-weight: $au-medium;
-  }
-}
-
-.au-w-criterium-subtitle {
-  @include au-font-size(1.4rem);
-  display: flex;
-  align-items: center;
-  font-weight: $au-medium;
-  margin-top: $au-unit-small;
-  padding-top: $au-unit-small;
-  border-top: 1px dotted $au-neutral-light;
-  color: $au-neutral-darker;
 }

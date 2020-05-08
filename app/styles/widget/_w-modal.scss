@@ -95,7 +95,7 @@ html.au-w-modal-open {
   }
 
   @include mq(medium) {
-    padding: $au-unit - $au-unit-tiny $au-unit;
+    // padding: $au-unit - $au-unit-tiny $au-unit;
   }
 }
 
@@ -129,7 +129,7 @@ html.au-w-modal-open {
 
 .au-w-modal__title {
   @include au-font-size($au-h5);
-  font-weight: $au-bold;
+  font-weight: $au-regular;
   color: $au-neutral-darker;
   margin-bottom: 0;
   width: 100%;
@@ -175,8 +175,7 @@ html.au-w-modal-open {
   flex-wrap: nowrap;
   align-items: center;
   text-align: left;
-  text-decoration: underline;
-  text-decoration-color: $au-neutral;
+  text-decoration: none;
   color: $au-neutral-darker;
   background-color: transparent;
   transition: color $au-transition;
@@ -188,8 +187,6 @@ html.au-w-modal-open {
   &:focus {
     color: $au-neutral-darkest;
     background-color: transparent;
-    text-decoration: underline;
-    text-decoration-color: $au-neutral;
   }
 
   &:focus {
@@ -202,6 +199,13 @@ html.au-w-modal-open {
 
   &:visited {
     background-color: transparent;
+  }
+
+  .au-w-icon {
+    bottom: -.15rem;
+    margin-left: $au-unit-tiny;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
   .au-w-theme-kina & {

@@ -1,6 +1,6 @@
-<h3 class="w-collapsable-section-title">
-  <button {{on "click" this.openSection}} aria-expanded="{{if this.sectionOpen "true" "false"}}" class="w-collapsable-section-button">
-    <span class="w-collapsable-section-title-group">
+<h3 class="au-w-collapsable-section-title">
+  <button {{on "click" this.openSection}} aria-expanded="{{if this.sectionOpen "true" "false"}}" class="au-w-collapsable-section-button">
+    <span class="au-w-collapsable-section-title-group">
       {{#if @check}}
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="au-w-icon au-w-icon--active" aria-hidden="true">
         <path d="M12,2 C17.514,2 22,6.486 22,12 C22,17.515 17.514,22 12,22 C6.486,22 2,17.515 2,12 C2,6.487 6.486,2 12,2 Z M17.1017,6.5 L10.2203,14.2234 L6.42374,11.1809 L5,13.0532 L10.6949,17.5 L19,7.90426 L17.1017,6.5 Z"/>
@@ -21,15 +21,15 @@
       {{/if}}
       {{@buttonTitle}}
     </span>
-    <svg aria-hidden="true" focusable="false" viewBox="0 0 10 10"  class="w-collapsable-section-icon">
+    <svg aria-hidden="true" focusable="false" viewBox="0 0 10 10"  class="au-w-collapsable-section-icon">
       <rect class="w-vert" height="7" width="1" y="1" x="4"/>
       <rect height="1" width="7" y="4" x="1"/>
     </svg>
   </button>
 </h3>
 {{#if this.sectionOpen}}
-{{#auto-focus '.w-collapsable-section-content'}}
-<div class="w-collapsable-section-content" tabindex="0">
+{{#auto-focus '.au-w-collapsable-section-content'}}
+<div class="au-w-collapsable-section-content" tabindex="0">
   {{yield}}
 </div>
 {{/auto-focus}}
