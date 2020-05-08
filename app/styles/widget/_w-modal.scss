@@ -137,8 +137,8 @@ html.au-w-modal-open {
   align-items: center;
 
   .au-w-theme-kina & {
-    @include au-font-size(2.5rem);
-    font-weight: 900;
+    @include au-font-size(2.4rem,1.5);
+    font-weight: 600;
     font-family: "Lato", sans-serif;
   }
 
@@ -156,8 +156,7 @@ html.au-w-modal-open {
     @include au-font-size($au-h3);
 
     .au-w-theme-kina & {
-      @include au-font-size(2.5rem);
-      font-weight: 900;
+      @include au-font-size(2.4rem,1.5);
     }
   }
 }
@@ -218,12 +217,14 @@ html.au-w-modal-open {
     &:focus {
       color: $au-neutral-dark;
       background-color: transparent;
-      text-decoration: underline;
-      text-decoration-color: $au-neutral-light;
     }
 
     &:focus {
       outline: $au-outline;
+    }
+
+    .au-w-icon {
+      bottom: -.05rem;
     }
   }
 

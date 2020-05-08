@@ -375,6 +375,7 @@
 
   > p {
     @include au-font-size(1.5rem,1.5);
+    max-width: 100ch;
   }
 
   hr {
