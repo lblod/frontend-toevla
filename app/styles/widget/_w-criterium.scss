@@ -130,36 +130,39 @@
 
 .au-c-criteria-list-item {
   position: relative;
-  list-style: none;
   margin-left: 2rem;
+  list-style-type: disc;
 
-  &:before {
-    content: "•";
-    font-size: 2.4rem;
-    line-height: 0;
-    text-align: center;
-    display: inline-block;
-    position: relative;
-    bottom: -.3ex;
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-right: 0;
-    margin-left: -2rem;
+  .au-w-criterium-list__content ul ul & {
+    list-style-type: circle;
   }
 
-  .au-w-criterium-list__content ul ul &:before {
-    font-size: 1.5rem;
-    content: "○";
-    bottom: .1ex;
-  }
+  .au-w-criterium-list__content ul ul ul & {
+    list-style-type: none;
+    margin-left: 0;
 
-  .au-w-criterium-list__content ul ul ul &:before {
-    content: "-";
+    &:before {
+      content: "-";
+      display: inline-block;
+      width: 1.5rem;
+      text-align: center;
+      margin-right: .1rem;
+    }
   }
 }
 
 .au-c-criteria-list-item--error {
-  &:before {
+  &,
+  .au-w-criterium-list__content ul ul &,
+  .au-w-criterium-list__content ul ul ul & {
+    list-style: none;
+  }
+
+  .au-w-criterium-list__content ul ul ul & {
+    margin-left: 2rem;
+  }
+
+  .au-w-criterium-list__content ul ul ul &:before {
     display: none;
   }
 
@@ -167,7 +170,7 @@
     width: 1.5rem;
     height: 1.5rem;
     bottom: -.25ex;
-    margin-left: -2rem;
+    margin-left: -1.25em;
     margin-right: 0;
   }
 }
