@@ -210,13 +210,13 @@
                 <AuCriteriaListItem>
                   Voorbehouden plaatsen op publiek domein: <strong>2, bij alternatieve inkom</strong>
                 </AuCriteriaListItem>
-                <AuCriteriaListItem>
+                <AuCriteriaListItem @error="true">
                   Rolstoelvriendelijke ondergrond: <strong>slechte ondergrond, kasseien</strong>
                 </AuCriteriaListItem>
                 <AuCriteriaListItem>
                   Naast elkaar parkeren: <strong>breedte 400 cm</strong>
                 </AuCriteriaListItem>
-                <AuCriteriaListItem>
+                <AuCriteriaListItem @error="true">
                   Rolstoelvriendelijk pad naar de inkom: <strong>slechte ondergrond, kasseien</strong>
                 </AuCriteriaListItem>
               </ul>
@@ -272,7 +272,7 @@
                 </AuCriteriaListItem>
                 <AuCriteriaListItem>Rolstoelvriendelijke circulatie
                   <ul>
-                    <AuCriteriaListItem @error="true">
+                    <AuCriteriaListItem>
                       Smalste punt op de route: <strong>90 cm</strong>
                     </AuCriteriaListItem>
                     <AuCriteriaListItem>
