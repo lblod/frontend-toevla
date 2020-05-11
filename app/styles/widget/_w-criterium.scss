@@ -155,7 +155,8 @@
   &,
   .au-w-criterium-list__content ul ul &,
   .au-w-criterium-list__content ul ul ul & {
-    list-style: none;
+    list-style: none !important;
+    list-style-type: none !important;
   }
 
   .au-w-criterium-list__content ul ul ul & {
