@@ -40,6 +40,16 @@
   }
 }
 
+.au-w-icon--primary {
+  fill: $au-primary;
+  stroke: $au-primary;
+
+  .au-w-theme-kina & {
+    fill: $au-success;
+    stroke: $au-success;
+  }
+}
+
 .au-w-icon--faded {
   fill: $au-neutral;
   stroke: $au-neutral;

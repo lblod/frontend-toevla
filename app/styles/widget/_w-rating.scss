@@ -17,3 +17,16 @@
     height: 2.2rem;
   }
 }
+
+.au-w-rating__group {
+  display: flex;
+  align-items: center;
+
+  .au-w-icon + .au-w-icon {
+    margin-left: -.8rem;
+  }
+
+  .au-w-icon--faded {
+    fill: $au-neutral-light;
+  }
+}
