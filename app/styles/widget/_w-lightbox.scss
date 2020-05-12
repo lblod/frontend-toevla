@@ -73,8 +73,7 @@
   &:focus {
     color: $au-primary-light;
     background-color: transparent;
-    text-decoration: underline;
-    text-decoration-color: $au-primary-light;
+    text-decoration: none;
   }
 
   &:focus {
@@ -90,17 +89,15 @@
   }
 
   .au-w-theme-kina & {
-    color: $au-neutral-darkest;
+    color: $au-neutral-darker;
     font-weight: 400;
-    text-decoration-color: $au-neutral-light;
+    text-decoration-color: $au-neutral;
     font-family: "Lato", sans-serif;
 
     &:hover,
     &:focus {
-      color: $au-neutral-dark;
+      color: $au-neutral-darkest;
       background-color: transparent;
-      text-decoration: underline;
-      text-decoration-color: $au-neutral-light;
     }
 
     &:focus {

@@ -17,7 +17,7 @@
   &:hover,
   &:focus {
     color: $au-primary-light;
-    text-decoration-color: $au-primary-light;
+    text-decoration: none;
   }
 
   &:focus {
@@ -30,20 +30,16 @@
     text-decoration: none;
   }
 
-  .au-w-theme-kina &,
-  .au-w-theme-kina &:hover {
+  .au-w-theme-kina & {
     color: $au-neutral-darker;
-    text-decoration-color: $au-neutral;
   }
 
   .au-w-theme-kina &:hover,
   .au-w-theme-kina &:focus {
     color: $au-neutral-darkest;
-    text-decoration-color: $au-neutral;
   }
 
-  .au-w-theme-stam &,
-  .au-w-theme-stam &:hover {
+  .au-w-theme-stam & {
     font-family: Georgia;
     color: #e63228;
     text-decoration-color: #e63228;
@@ -70,7 +66,7 @@
   &:hover,
   &:focus {
     color: $au-neutral-darkest;
-    text-decoration-color: $au-neutral;
+    text-decoration: none;
   }
 
   &:focus {

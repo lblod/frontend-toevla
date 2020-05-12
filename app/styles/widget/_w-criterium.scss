@@ -53,7 +53,7 @@
     &:hover,
     &:focus {
       color: $au-primary-light;
-      text-decoration-color: $au-primary-light;
+      text-decoration: none;
     }
 
     &:focus {
@@ -75,14 +75,14 @@
 
       &,
       &:visited {
-        color: $au-neutral-darkest;
+        color: $au-neutral-darker;
         text-decoration-color: $au-neutral;
       }
 
       &:hover,
       &:focus {
-        color: $au-neutral-darker;
-        text-decoration-color: $au-neutral;
+        color: $au-neutral-darkest;
+        text-decoration: none;
       }
 
       &:focus {

@@ -19,3 +19,9 @@
     color: #333;
   }
 }
+
+.au-w-footer--border {
+  padding-top: $au-unit-small;
+  margin-top: $au-unit-small;
+  border-top: 2px solid $au-neutral-lighter;
+}
