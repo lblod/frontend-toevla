@@ -25,6 +25,30 @@ module.exports = function(deployTarget) {
     }
   };
 
+
+  if (deployTarget === 'embed-experiment') {
+    ENV = {
+      build: {
+        environment: 'production'
+      },
+      'ssh-index': { // copy and deploy index.html
+        username: 'root',
+        host: 'toevla-dev.s.redpencil.io',
+        port: 22,
+        remoteDir: '/data/app-toevla-embed-experiment/toevla-app',
+        allowOverwrite: true,
+        agent: process.env.SSH_AUTH_SOCK
+      },
+      'rsync': { // copy assets
+        host: 'root@toevla-dev.s.redpencil.io',
+        port: 22,
+        dest: '/data/app-toevla-embed-experiment/toevla-app',
+        delete: false,
+        arg:['--verbose']
+      }
+    };
+  }
+
   if (deployTarget === 'development') {
     // TODO
   }
