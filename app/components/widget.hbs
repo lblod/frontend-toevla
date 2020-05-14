@@ -18,9 +18,7 @@
         <h2 class="au-u-hidden-visually">{{cGroup.title}}</h2>
         {{#each cGroup.criteria as |criteria|}}
           <AuModal @title="{{criteria.title}}" @id="{{criteria.id}}" @check="{{criteria.status}}" @theme="{{criteria.theme}}">
-            <p class="au-w-info">
-              {{criteria.description}}
-            </p>
+            {{{criteria.description}}}
             <ul class="au-w-criterium-list">
               {{#each criteria.criteriaItems as |cItem|}}
                 <AuCriteriaItem @criterium="{{cItem.title}}" @check="{{cItem.status}}">
@@ -31,7 +29,7 @@
                   {{/if}}
                   <ul class="au-w-criterium-list">
                     {{#each cItem.criteriaSubItems as |cSItems|}}
-                      <AuCriteriaSubitem @criterium="{{cSItems.title}}" @status="{{cSItems.status}}">
+                      <AuCriteriaSubitem @criterium="{{cSItems.title}}" @check="{{cSItems.status}}">
                       </AuCriteriaSubitem>
                     {{/each}}
                   </ul>

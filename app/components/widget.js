@@ -5,36 +5,7 @@ import { tracked } from '@glimmer/tracking';
 import config from 'frontend-toevla/config/environment';
 
 export default class WidgetComponent extends Component {
-  //model
-  // {
-  //   //client/building
-  //   "id": "",
-  //   "title": "",
-  //   "category": "",
-  //   "rating": "",
-  //   "theme": "",
-  //   "criteriaGroups":[{
-  //     "id": "",
-  //     "title":"",
-  //     "criteria": [{
-  //       "title":"",
-  //       "id":"",
-  //       "description":"",
-  //       "status":"",
-  //       "criteriaItems":[{
-  //         "title":"",
-  //         "id":"",
-  //         "status": "",
-  //         "contents":``,
-  //         "criteriaSubItems":[{
-  //           "title": "",
-  //           "id": "",
-  //           "status": ""
-  //         }]
-  //       }]
-  //     }]
-  //   }]
-  // }
+
   constructor(...args){
     super(...args);
     var myHeaders = new Headers();
