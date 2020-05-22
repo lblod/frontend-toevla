@@ -103,7 +103,7 @@
   justify-content: center;
   align-items: center;
   padding: $au-unit-small;
-  color: $au-white;
+  color: $au-neutral-lighter;
   cursor: pointer;
   width: $au-unit-large + $au-unit-small;
   height: $au-unit-large + $au-unit-small;
@@ -112,6 +112,7 @@
 
   &:hover,
   &:focus {
+    color: $au-white;
     background-color: rgba($au-neutral-darkest,.5);
   }
 

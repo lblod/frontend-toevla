@@ -1,11 +1,11 @@
-<h3 class="au-w-collapsable-section-title">
+<h4 class="au-w-collapsable-section-title" role="text">
   <button {{on "click" this.openSection}} aria-expanded="{{if this.sectionOpen "true" "false"}}" class="au-w-collapsable-section-button">
     <span class="au-w-collapsable-section-title-group">
       {{#if @check}}
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="au-w-icon au-w-icon--active" aria-hidden="true">
         <path d="M12,2 C17.514,2 22,6.486 22,12 C22,17.515 17.514,22 12,22 C6.486,22 2,17.515 2,12 C2,6.487 6.486,2 12,2 Z M17.1017,6.5 L10.2203,14.2234 L6.42374,11.1809 L5,13.0532 L10.6949,17.5 L19,7.90426 L17.1017,6.5 Z"/>
       </svg>
-      <span class="au-u-hidden-visually">Voldaan:</span>
+      <span class="au-u-hidden-visually">In orde:</span>
       {{else}}
         {{#if @info}}
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="au-w-icon au-w-icon--faded" aria-hidden="true" >
@@ -16,7 +16,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="au-w-icon au-w-icon--alert" aria-hidden="true">
             <path d="M12,2 C17.514,2 22,6.486 22,12 C22,17.515 17.514,22 12,22 C6.486,22 2,17.515 2,12 C2,6.487 6.486,2 12,2 Z M12,4 C7.589,4 4,7.589 4,12 C4,16.411 7.589,20 12,20 C16.411,20 20,16.411 20,12 C20,7.589 16.411,4 12,4 Z M16.4519734,7.5926708 L18.3502734,8.9969308 L11.3446266,17.1531808 L5.64972656,12.7063808 L7.07346656,10.8340808 L10.8700266,13.8765808 L16.4519734,7.5926708 Z"/>
           </svg>
-          <span class="au-u-hidden-visually">Niet voldaan:</span>
+          <span class="au-u-hidden-visually">Gedeeltelijk in orde:</span>
         {{/if}}
       {{/if}}
       {{@buttonTitle}}
@@ -26,7 +26,7 @@
       <rect height="1" width="7" y="4" x="1"/>
     </svg>
   </button>
-</h3>
+</h4>
 {{#if this.sectionOpen}}
 {{#auto-focus '.au-w-collapsable-section-content'}}
 <div class="au-w-collapsable-section-content" tabindex="0">
