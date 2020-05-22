@@ -10,6 +10,12 @@
 .au-w-collapsable-section-title-group {
   display: inline-flex;
   align-items: center;
+  text-decoration: underline;
+
+  .au-w-collapsable-section-button:hover &,
+  .au-w-collapsable-section-button[aria-expanded="true"] & {
+    text-decoration: none;
+  }
 }
 
 .au-w-collapsable-section-button {
@@ -24,13 +30,11 @@
   border: 1px solid $au-neutral-lightest;
   border-radius: $au-radius;
   color: $au-neutral-darker;
-  text-decoration: underline;
   text-decoration-color: $au-neutral;
 
   &:hover,
   &:focus {
     color: $au-neutral-darkest;
-    text-decoration: none;
   }
 
   &:focus {
@@ -41,31 +45,53 @@
   &[aria-expanded="true"] {
     color: $au-neutral-darkest;
     border: 1px solid $au-neutral-lighter;
-    border-bottom: 0;
-    border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     text-decoration: none;
   }
 }
 
-.au-w-collapsable-section-icon {
-  height: 1.3rem;
-  margin-left: $au-unit-small;
+.au-w-collapsable-section-toggle {
+  @include au-font-size(1.3rem,1);
+  display: block;
+  color: $au-neutral;
+
+  .au-w-collapsable-section-button:hover & {
+    color: $au-neutral-dark;
+  }
 }
 
-.au-w-collapsable-section-button[aria-expanded="true"] .au-w-collapsable-section-icon .au-w-vert {
+.au-w-collapsable-section-button[aria-expanded] .au-w-collapsable-section-toggle .au-w-collapsable-section-toggle__false {
   display: none;
 }
 
-.au-w-collapsable-section-button[aria-expanded] .au-w-collapsable-section-icon rect {
-  fill: $au-neutral-dark;
+.au-w-collapsable-section-button[aria-expanded="true"] .au-w-collapsable-section-toggle .au-w-collapsable-section-toggle__true {
+  display: none;
 }
+
+.au-w-collapsable-section-button[aria-expanded="true"] .au-w-collapsable-section-toggle .au-w-collapsable-section-toggle__false {
+  display: block;
+}
+
+// .au-w-collapsable-section-icon {
+//   height: 1.3rem;
+//   margin-left: $au-unit-small;
+// }
+
+// .au-w-collapsable-section-button[aria-expanded="true"] .au-w-collapsable-section-icon .au-w-vert {
+//   display: none;
+// }
+
+// .au-w-collapsable-section-button[aria-expanded] .au-w-collapsable-section-icon rect {
+//   fill: $au-neutral-dark;
+// }
 
 .au-w-collapsable-section-content {
   border: 1px solid $au-neutral-lighter;
   border-bottom-left-radius: $au-radius;
   border-bottom-right-radius: $au-radius;
+  border-top: 0;
   padding: .9rem;
+  margin-left: $au-unit-small;
 
   &:focus {
     outline: none;

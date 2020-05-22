@@ -21,10 +21,14 @@
       {{/if}}
       {{@buttonTitle}}
     </span>
-    <svg aria-hidden="true" focusable="false" viewBox="0 0 10 10"  class="au-w-collapsable-section-icon">
-      <rect class="au-w-vert" height="7" width="1" y="1" x="4"/>
-      <rect height="1" width="7" y="4" x="1"/>
-    </svg>
+    <span class="au-w-collapsable-section-toggle" aria-hidden="true" focusable="false" >
+      <span class="au-w-collapsable-section-toggle__true">
+        Toon
+      </span>
+      <span class="au-w-collapsable-section-toggle__false">
+        Verberg
+      </span>
+    </span>
   </button>
 </h4>
 {{#if this.sectionOpen}}
