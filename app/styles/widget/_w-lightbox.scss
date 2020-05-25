@@ -59,8 +59,9 @@
   transition: color $au-transition;
   cursor: pointer;
   padding: $au-unit-tiny;
-  width: 100%;
   margin-top: $au-unit-tiny;
+  margin-left: auto;
+  margin-right: auto;
 
   &:hover,
   &:focus {
