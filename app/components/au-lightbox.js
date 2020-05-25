@@ -29,7 +29,7 @@ export default class AuLightbox extends Component {
     document.getElementsByTagName('html')[0].classList.add("au-w-modal-open");
 
     // Add inert
-    const el = document.querySelectorAll("#ember172 *");
+    const el = document.querySelectorAll("body > .ember-view *");
 
     el.forEach((e) => {
       e.inert = true;
@@ -46,14 +46,14 @@ export default class AuLightbox extends Component {
 
       // Remove html class when modal is disabled
       document.getElementsByTagName('html')[0].classList.remove("au-w-modal-open");
-
-      // Remove inert
-      const el = document.querySelectorAll("#ember172 *");
-
-      el.forEach((e) => {
-        e.inert = false;
-      });
     }
+
+    // Remove inert
+    const el = document.querySelectorAll("body > .ember-view *");
+
+    el.forEach((e) => {
+      e.inert = false;
+    });
 
     // Focus button after close
     document.querySelectorAll('.au-w-lightbox__button')[0].focus();
