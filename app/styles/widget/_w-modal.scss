@@ -115,12 +115,11 @@ html.au-w-modal-open {
   padding: 0;
   border: 0;
   appearance: none;
-  -webkit-appearance: none; // doesn't work without prefix on Safari iOS11
   position: absolute;
   top: 0;
   right: 0;
   z-index: 999;
-  display: inline-flex;
+  display: flex;
   flex-wrap: nowrap;
   align-items: center;
   text-decoration: none;
@@ -132,6 +131,7 @@ html.au-w-modal-open {
   white-space: nowrap;
   background-color: $au-neutral-darkest;
   border-bottom-left-radius: .4rem;
+  margin: 0;
 
   &:hover,
   &:focus {
