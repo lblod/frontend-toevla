@@ -76,5 +76,8 @@
     "last 1 Safari version",
     "last 1 iOS version",
     "last 1 Edge version"
-  ]
+  ],
+  "dependencies": {
+    "wicg-inert": "^3.0.3"
+  }
 }
