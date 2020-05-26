@@ -2,6 +2,11 @@
    #WIDGET LIGHTBOX
    ================================== */
 
+// Temporary holder
+.au-w-lightbox-holder {
+  position: relative;
+}
+
 .au-w-lightbox {
   display: flex;
   flex-wrap: wrap;
@@ -62,6 +67,16 @@
   margin-top: $au-unit-tiny;
   margin-left: auto;
   margin-right: auto;
+
+  // Temporary hack for image lightbox
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
   &:hover,
   &:focus {

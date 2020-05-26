@@ -12,154 +12,156 @@
   </header>
   <section class="au-w-section">
     <h3 class="au-w-section__title au-u-hidden-visually">Foto's</h3>
-    <ul class="au-w-lightbox">
-      <li class="au-w-lightbox__item">
-        <figure class="au-w-lightbox__image">
-          <img src="/assets/img/kinaP1.jpg" alt="Er zijn 2 aangepaste parkeerplaatsen dicht bij de alternatieve inkom.">
-        </figure>
-      </li>
-      <li class="au-w-lightbox__item">
-        <figure class="au-w-lightbox__image">
-          <img src="/assets/img/kinaP2.jpg" alt="Parkeren: er zijn 2 aangepaste parkeerplaatsen dicht bij de alternatieve inkom.">
-        </figure>
-      </li>
-      <li class="au-w-lightbox__item">
-        <figure class="au-w-lightbox__image">
-          <img src="/assets/img/kinaC1.jpg" alt="Circuleren - vaste tentoonstelling: rolstoelvriendelijke lift (148 cm x 112 cm).">
-        </figure>
-      </li>
-      <li class="au-w-lightbox__item">
-        <figure class="au-w-lightbox__image">
-          <img src="/assets/img/kinaC3.jpg" alt="Circuleren - vaste tentoonstelling: helling op de route.">
-        </figure>
-      </li>
-    </ul>
-    <AuLightbox @buttonTitle="Bekijk alle foto's" @title="Fotorondleiding: De wereld van Kina - Het Huis" @id="{{@id}}fotos" @theme="{{@theme}}">
-      {{#carousel-container transitionInterval=400 as |ui controls|}}
-        <div class="au-w-carousel">
-          {{#ui.item}}
-            <figure class="au-w-carousel__figure">
-              <img src="/assets/img/kinaP1.jpg" alt="" class="au-w-carousel__image">
-              <figcaption class="au-w-carousel__caption">
-                <span class="au-w-carousel__pagination">Foto 1/12</span>
-                Parkeren: er zijn 2 aangepaste parkeerplaatsen dicht bij de alternatieve inkom.
-              </figcaption>
-            </figure>
-          {{/ui.item}}
-          {{#ui.item}}
-            <figure class="au-w-carousel__figure">
-              <img src="/assets/img/kinaP2.jpg" alt="" class="au-w-carousel__image">
-              <figcaption class="au-w-carousel__caption">
-                <span class="au-w-carousel__pagination">Foto 2/12</span>
-                Parkeren: onder het Sint-Pietersplein is een ruime ondergrondse parkeergelegenheid met aangepaste parkeerplaatsen.
-              </figcaption>
-            </figure>
-          {{/ui.item}}
-          {{#ui.item}}
-            <figure class="au-w-carousel__figure">
-              <img src="/assets/img/kinaI1.jpg" alt="" class="au-w-carousel__image">
-              <figcaption class="au-w-carousel__caption">
-                <span class="au-w-carousel__pagination">Foto 3/12</span>
-                Route naar inkom: alternatieve inkom.
-              </figcaption>
-            </figure>
-          {{/ui.item}}
-          {{#ui.item}}
-            <figure class="au-w-carousel__figure">
-              <img src="/assets/img/kinaI2.jpg" alt="" class="au-w-carousel__image">
-              <figcaption class="au-w-carousel__caption">
-                <span class="au-w-carousel__pagination">Foto 4/12</span>
-                Alternatieve inkom: Bel met parlofoon. Er komt steeds iemand om deze deur te openen en u te begeleiden naar de balie in de inkomhal.
-              </figcaption>
-            </figure>
-          {{/ui.item}}
-          {{#ui.item}}
-            <figure class="au-w-carousel__figure">
-              <img src="assets/img/kinaC1.jpg" alt="" class="au-w-carousel__image">
-              <figcaption class="au-w-carousel__caption">
-                <span class="au-w-carousel__pagination">Foto 5/12</span>
-                Circuleren - vaste tentoonstelling: rolstoelvriendelijke lift (148 cm x 112 cm).
-              </figcaption>
-            </figure>
-          {{/ui.item}}
-          {{#ui.item}}
-            <figure class="au-w-carousel__figure">
-              <img src="assets/img/kinaC2.jpg" alt="" class="au-w-carousel__image">
-              <figcaption class="au-w-carousel__caption">
-                <span class="au-w-carousel__pagination">Foto 6/12</span>
-                Circuleren - vaste tentoonstelling: helling op de route.
-              </figcaption>
-            </figure>
-          {{/ui.item}}
-          {{#ui.item}}
-            <figure class="au-w-carousel__figure">
-              <img src="assets/img/kinaC3.jpg" alt="" class="au-w-carousel__image">
-              <figcaption class="au-w-carousel__caption">
-                <span class="au-w-carousel__pagination">Foto 7/12</span>
-                Circuleren - vaste tentoonstelling: helling op de route.
-              </figcaption>
-            </figure>
-          {{/ui.item}}
-          {{#ui.item}}
-            <figure class="au-w-carousel__figure">
-              <img src="assets/img/kinaZ.jpg" alt="" class="au-w-carousel__image">
-              <figcaption class="au-w-carousel__caption">
-                <span class="au-w-carousel__pagination">Foto 8/12</span>
-                Circuleren - vaste tentoonstelling: rust- zit-mogelijkheden.
-              </figcaption>
-            </figure>
-          {{/ui.item}}
-          {{#ui.item}}
-            <figure class="au-w-carousel__figure">
-              <img src="assets/img/kinaD.jpg" alt="" class="au-w-carousel__image">
-              <figcaption class="au-w-carousel__caption">
-                <span class="au-w-carousel__pagination">Foto 9/12</span>
-                Museumbeleving - vaste tentoonstelling: doe-elementen
-              </figcaption>
-            </figure>
-          {{/ui.item}}
-           {{#ui.item}}
-            <figure class="au-w-carousel__figure">
-              <img src="assets/img/kinaSh.jpg" alt="" class="au-w-carousel__image">
-              <figcaption class="au-w-carousel__caption">
-                <span class="au-w-carousel__pagination">Foto 10/12</span>
-                Eet- en drinkgelegenheid: enkele (onderrijdbare) tafels
-              </figcaption>
-            </figure>
-          {{/ui.item}}
-          {{#ui.item}}
-            <figure class="au-w-carousel__figure">
-              <img src="assets/img/kinaT1.jpg" alt="" class="au-w-carousel__image">
-              <figcaption class="au-w-carousel__caption">
-                <span class="au-w-carousel__pagination">Foto 11/12</span>
-                Aangepast toilet: helling tot tegen deur.
-              </figcaption>
-            </figure>
-          {{/ui.item}}
-          {{#ui.item}}
-            <figure class="au-w-carousel__figure">
-              <img src="assets/img/kinaT3.jpg" alt="" class="au-w-carousel__image">
-              <figcaption class="au-w-carousel__caption">
-                <span class="au-w-carousel__pagination">Foto 12/12</span>
-                Aangepast toilet: draairuimte in het toilet 150cm.
-              </figcaption>
-            </figure>
-          {{/ui.item}}
-        </div>
-        <button onclick={{controls.previous}} class="au-w-carousel__button au-w-carousel__button--next">
-          <svg xmlns="http://www.w3.org/2000/svg" class="au-w-icon au-w-icon--large" viewBox="0 0 44 44" aria-hidden="true">
-            <polygon points="15.15 1.26 10.312 6.095 25.989 21.76 10.312 37.426 15.15 42.26 35.665 21.76"/>
-          </svg>
-          <span class="au-u-hidden-visually">Volgende foto</span>
-        </button>
-        <button onclick={{controls.next}} class="au-w-carousel__button au-w-carousel__button--previous">
-          <svg xmlns="http://www.w3.org/2000/svg" class="au-w-icon au-w-icon--large" viewBox="0 0 44 44" aria-hidden="true">
-            <polygon points="33.762 38.426 18.057 22.76 33.762 7.095 28.915 2.26 8.362 22.76 28.915 43.26"/>
-          </svg>
-          <span class="au-u-hidden-visually">Vorige foto</span>
-        </button>
-      {{/carousel-container}}
-    </AuLightbox>
+    <div class="au-w-lightbox-holder">
+      <ul class="au-w-lightbox">
+        <li class="au-w-lightbox__item">
+          <figure class="au-w-lightbox__image">
+            <img src="/assets/img/kinaP1.jpg" alt="Er zijn 2 aangepaste parkeerplaatsen dicht bij de alternatieve inkom.">
+          </figure>
+        </li>
+        <li class="au-w-lightbox__item">
+          <figure class="au-w-lightbox__image">
+            <img src="/assets/img/kinaP2.jpg" alt="Parkeren: er zijn 2 aangepaste parkeerplaatsen dicht bij de alternatieve inkom.">
+          </figure>
+        </li>
+        <li class="au-w-lightbox__item">
+          <figure class="au-w-lightbox__image">
+            <img src="/assets/img/kinaC1.jpg" alt="Circuleren - vaste tentoonstelling: rolstoelvriendelijke lift (148 cm x 112 cm).">
+          </figure>
+        </li>
+        <li class="au-w-lightbox__item">
+          <figure class="au-w-lightbox__image">
+            <img src="/assets/img/kinaC3.jpg" alt="Circuleren - vaste tentoonstelling: helling op de route.">
+          </figure>
+        </li>
+      </ul>
+      <AuLightbox @buttonTitle="Bekijk alle foto's" @title="Fotorondleiding: De wereld van Kina - Het Huis" @id="{{@id}}fotos" @theme="{{@theme}}">
+        {{#carousel-container transitionInterval=400 as |ui controls|}}
+          <div class="au-w-carousel">
+            {{#ui.item}}
+              <figure class="au-w-carousel__figure">
+                <img src="/assets/img/kinaP1.jpg" alt="" class="au-w-carousel__image">
+                <figcaption class="au-w-carousel__caption">
+                  <span class="au-w-carousel__pagination">Foto 1/12</span>
+                  Parkeren: er zijn 2 aangepaste parkeerplaatsen dicht bij de alternatieve inkom.
+                </figcaption>
+              </figure>
+            {{/ui.item}}
+            {{#ui.item}}
+              <figure class="au-w-carousel__figure">
+                <img src="/assets/img/kinaP2.jpg" alt="" class="au-w-carousel__image">
+                <figcaption class="au-w-carousel__caption">
+                  <span class="au-w-carousel__pagination">Foto 2/12</span>
+                  Parkeren: onder het Sint-Pietersplein is een ruime ondergrondse parkeergelegenheid met aangepaste parkeerplaatsen.
+                </figcaption>
+              </figure>
+            {{/ui.item}}
+            {{#ui.item}}
+              <figure class="au-w-carousel__figure">
+                <img src="/assets/img/kinaI1.jpg" alt="" class="au-w-carousel__image">
+                <figcaption class="au-w-carousel__caption">
+                  <span class="au-w-carousel__pagination">Foto 3/12</span>
+                  Route naar inkom: alternatieve inkom.
+                </figcaption>
+              </figure>
+            {{/ui.item}}
+            {{#ui.item}}
+              <figure class="au-w-carousel__figure">
+                <img src="/assets/img/kinaI2.jpg" alt="" class="au-w-carousel__image">
+                <figcaption class="au-w-carousel__caption">
+                  <span class="au-w-carousel__pagination">Foto 4/12</span>
+                  Alternatieve inkom: Bel met parlofoon. Er komt steeds iemand om deze deur te openen en u te begeleiden naar de balie in de inkomhal.
+                </figcaption>
+              </figure>
+            {{/ui.item}}
+            {{#ui.item}}
+              <figure class="au-w-carousel__figure">
+                <img src="assets/img/kinaC1.jpg" alt="" class="au-w-carousel__image">
+                <figcaption class="au-w-carousel__caption">
+                  <span class="au-w-carousel__pagination">Foto 5/12</span>
+                  Circuleren - vaste tentoonstelling: rolstoelvriendelijke lift (148 cm x 112 cm).
+                </figcaption>
+              </figure>
+            {{/ui.item}}
+            {{#ui.item}}
+              <figure class="au-w-carousel__figure">
+                <img src="assets/img/kinaC2.jpg" alt="" class="au-w-carousel__image">
+                <figcaption class="au-w-carousel__caption">
+                  <span class="au-w-carousel__pagination">Foto 6/12</span>
+                  Circuleren - vaste tentoonstelling: helling op de route.
+                </figcaption>
+              </figure>
+            {{/ui.item}}
+            {{#ui.item}}
+              <figure class="au-w-carousel__figure">
+                <img src="assets/img/kinaC3.jpg" alt="" class="au-w-carousel__image">
+                <figcaption class="au-w-carousel__caption">
+                  <span class="au-w-carousel__pagination">Foto 7/12</span>
+                  Circuleren - vaste tentoonstelling: helling op de route.
+                </figcaption>
+              </figure>
+            {{/ui.item}}
+            {{#ui.item}}
+              <figure class="au-w-carousel__figure">
+                <img src="assets/img/kinaZ.jpg" alt="" class="au-w-carousel__image">
+                <figcaption class="au-w-carousel__caption">
+                  <span class="au-w-carousel__pagination">Foto 8/12</span>
+                  Circuleren - vaste tentoonstelling: rust- zit-mogelijkheden.
+                </figcaption>
+              </figure>
+            {{/ui.item}}
+            {{#ui.item}}
+              <figure class="au-w-carousel__figure">
+                <img src="assets/img/kinaD.jpg" alt="" class="au-w-carousel__image">
+                <figcaption class="au-w-carousel__caption">
+                  <span class="au-w-carousel__pagination">Foto 9/12</span>
+                  Museumbeleving - vaste tentoonstelling: doe-elementen
+                </figcaption>
+              </figure>
+            {{/ui.item}}
+            {{#ui.item}}
+              <figure class="au-w-carousel__figure">
+                <img src="assets/img/kinaSh.jpg" alt="" class="au-w-carousel__image">
+                <figcaption class="au-w-carousel__caption">
+                  <span class="au-w-carousel__pagination">Foto 10/12</span>
+                  Eet- en drinkgelegenheid: enkele (onderrijdbare) tafels
+                </figcaption>
+              </figure>
+            {{/ui.item}}
+            {{#ui.item}}
+              <figure class="au-w-carousel__figure">
+                <img src="assets/img/kinaT1.jpg" alt="" class="au-w-carousel__image">
+                <figcaption class="au-w-carousel__caption">
+                  <span class="au-w-carousel__pagination">Foto 11/12</span>
+                  Aangepast toilet: helling tot tegen deur.
+                </figcaption>
+              </figure>
+            {{/ui.item}}
+            {{#ui.item}}
+              <figure class="au-w-carousel__figure">
+                <img src="assets/img/kinaT3.jpg" alt="" class="au-w-carousel__image">
+                <figcaption class="au-w-carousel__caption">
+                  <span class="au-w-carousel__pagination">Foto 12/12</span>
+                  Aangepast toilet: draairuimte in het toilet 150cm.
+                </figcaption>
+              </figure>
+            {{/ui.item}}
+          </div>
+          <button onclick={{controls.previous}} class="au-w-carousel__button au-w-carousel__button--next">
+            <svg xmlns="http://www.w3.org/2000/svg" class="au-w-icon au-w-icon--large" viewBox="0 0 44 44" aria-hidden="true">
+              <polygon points="15.15 1.26 10.312 6.095 25.989 21.76 10.312 37.426 15.15 42.26 35.665 21.76"/>
+            </svg>
+            <span class="au-u-hidden-visually">Volgende foto</span>
+          </button>
+          <button onclick={{controls.next}} class="au-w-carousel__button au-w-carousel__button--previous">
+            <svg xmlns="http://www.w3.org/2000/svg" class="au-w-icon au-w-icon--large" viewBox="0 0 44 44" aria-hidden="true">
+              <polygon points="33.762 38.426 18.057 22.76 33.762 7.095 28.915 2.26 8.362 22.76 28.915 43.26"/>
+            </svg>
+            <span class="au-u-hidden-visually">Vorige foto</span>
+          </button>
+        {{/carousel-container}}
+      </AuLightbox>
+    </div>
   </section>
   <section class="au-w-section au-w-section--column">
     <h3 class="au-w-section__title">Algemeen</h3>
