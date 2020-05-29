@@ -1,0 +1,9 @@
+<li class="au-w-section-list__item">
+  <AuCollapsableSection @buttonTitle={{@node.title}} @info="true">
+    <ul class="au-w-criterium-list">
+      {{#each this.sortedChildren as |child|}}
+        <ChildLevel3 @node={{child}}/>
+      {{/each}}
+    </ul>
+  </AuCollapsableSection>
+</li>

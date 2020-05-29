@@ -1,0 +1,8 @@
+<AuCriteriaListItem>
+  {{@node.title}}
+  <ul>
+    {{#each this.sortedChildren as |child|}}
+      <ChildLevel5 @node={{child}}/>
+    {{/each}}
+  </ul>
+</AuCriteriaListItem>

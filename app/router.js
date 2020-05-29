@@ -11,4 +11,5 @@ Router.map(function() {
   this.route('widget-mobile');
   this.route('widget-kina');
   this.route('widget-stam');
+  this.route('root');
 });
