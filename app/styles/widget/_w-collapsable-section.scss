@@ -20,7 +20,7 @@
 
 .au-w-collapsable-section-button {
   all: inherit;
-  cursor: default;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -46,7 +46,13 @@
     color: $au-neutral-darkest;
     border: 1px solid $au-neutral-lighter;
     border-bottom-right-radius: 0;
-    text-decoration: none;
+    text-decoration: underline;
+    text-decoration-color: $au-neutral;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
   }
 }
 

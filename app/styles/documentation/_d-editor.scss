@@ -353,7 +353,7 @@
   }
 
   > h2 {
-    @include au-font-size(1.5rem);
+    @include au-font-size(1.6rem);
     font-weight: 900;
   }
 
@@ -384,6 +384,26 @@
     margin-bottom: $au-unit;
     border: 0;
     border-bottom: 3px solid $au-neutral-lighter;
+  }
+
+  table {
+    width: 100%;
+    border: 1px solid $au-neutral-lighter;
+
+    td,
+    th {
+      padding: $au-unit-small;
+    }
+
+    thead {
+      border-bottom: 1px solid $au-neutral-lighter;
+      text-align: left;
+    }
+
+    td + td,
+    th + th {
+      border-left: 1px solid $au-neutral-lighter;
+    }
   }
 
   strong {
@@ -442,7 +462,7 @@
     }
 
     > h3 {
-      @include au-font-size(1.5rem);
+      @include au-font-size(1.7rem);
     }
 
     > h4,

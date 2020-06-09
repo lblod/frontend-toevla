@@ -156,38 +156,7 @@ html.au-w-modal-open {
   }
 
   .au-w-theme-kina & {
-    color: $au-neutral-darkest;
-    font-weight: 400;
-    text-decoration-color: $au-neutral-light;
     font-family: "Lato", sans-serif;
-
-    &:hover,
-    &:focus {
-      color: $au-neutral-dark;
-      background-color: transparent;
-    }
-
-    &:focus {
-      outline: $au-outline;
-    }
-  }
-
-  .au-w-theme-stam & {
-    color: #e63228;
-    font-weight: 400;
-    text-decoration-color: #e63228;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-
-    &:hover,
-    &:focus {
-      color: #333;
-      background-color: transparent;
-      text-decoration: none
-    }
-
-    &:focus {
-      outline: 2px solid #e63228;
-    }
   }
 }
 
