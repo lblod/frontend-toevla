@@ -12,4 +12,8 @@ Router.map(function() {
   this.route('widget-kina');
   this.route('widget-stam');
   this.route('root');
+
+  this.route('experience', function() {
+    this.route('show', { path: "/:id" });
+  });
 });
