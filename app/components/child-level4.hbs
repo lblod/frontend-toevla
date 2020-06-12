@@ -1,5 +1,5 @@
 <AuCriteriaListItem>
-  {{@node.title}}{{#if this.hack}}: <b>{{this.hack.score}}</b>{{/if}}
+  {{@node.title}}{{#if this.hack}}: <strong>{{this.hack.score}}</strong>{{/if}}
   <ul>
     {{#each this.sortedChildren as |child|}}
       <ChildLevel5 @node={{child}} @experience={{@experience}}/>
