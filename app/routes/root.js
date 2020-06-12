@@ -5,15 +5,15 @@ export default class RootRoute extends Route {
     super(...args);
   }
 
-  experienceId='5EE2E339321A0C0008000002';
+  //experienceId='5EE2F30BBF5C750008000002';
 
   async model(params){
-    const tree=await this.store.query('tree', {
-      //include: 'top-level-nodes.children.children.children.children'
-    });
 
-    const experience=await this.store.findRecord('experience', this.experienceId);
+    const tree=await this.store.query('tree', {});
 
-    return {tree: tree.firstObject, experience};
+    const experience=await this.store.query('experience', {});
+    //const experience=await this.store.findRecord('experience', this.experienceId);
+
+    return {tree: tree.firstObject, experience: experience.firstObject};
   }
 }
