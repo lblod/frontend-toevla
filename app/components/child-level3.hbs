@@ -1,7 +1,17 @@
-<AuCriteriaItem @criterium={{@node.title}} @check="true">
-  <ul>
-    {{#each this.sortedChildren as |child|}}
-      <ChildLevel4 @node={{child}}/>
-    {{/each}}
-  </ul>
-</AuCriteriaItem>
+{{#if this.hack.score}}
+  <AuCriteriaItem @criterium={{@node.title}}  @check="true">
+    <ul>
+      {{#each this.sortedChildren as |child|}}
+        <ChildLevel4 @node={{child}} @experience={{@experience}}/>
+      {{/each}}
+    </ul>
+  </AuCriteriaItem>
+{{else}}
+  <AuCriteriaItem @criterium={{@node.title}}  @check="">
+    <ul>
+      {{#each this.sortedChildren as |child|}}
+        <ChildLevel4 @node={{child}} @experience={{@experience}}/>
+      {{/each}}
+    </ul>
+  </AuCriteriaItem>
+{{/if}}
