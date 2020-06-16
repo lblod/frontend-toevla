@@ -16,6 +16,14 @@ module.exports = function(defaults) {
       cascade: true,
       sourcemap: true
     },
+    outputPaths: {
+      app: {
+        css: {
+          'app': '/assets/frontend-toevla.css',
+          'demo': '/assets/demo.css'
+        }
+      }
+    },
     fingerprint: {
       enabled: false
     }

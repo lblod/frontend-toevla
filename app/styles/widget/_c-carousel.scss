@@ -75,7 +75,8 @@
 }
 
 .au-w-carousel__caption {
-  @include au-font-size($au-base);
+  font-size: $au-base;
+  line-height: 1.5;
   color: $au-neutral-dark;
   display: block;
   padding: $au-unit-tiny/2 $au-unit-tiny;
@@ -92,7 +93,8 @@
 }
 
 .au-w-carousel__button {
-  @include au-font-size($au-h6);
+  font-size: $au-h6;
+  line-height: 1.5;
   appearance: none;
   -webkit-appearance: none;
   position: absolute;
@@ -117,7 +119,7 @@
   }
 
   &:focus {
-    outline-offset: -.2rem;
+    outline-offset: -2px;
   }
 
   &:active {
@@ -142,7 +144,8 @@
 }
 
 .au-w-carousel__pagination {
-  @include au-font-size(1.3rem,1);
+  font-size: 13px;
+  line-height: 1;
   position: relative;
   bottom: .15ex;
   font-weight: $au-bold;

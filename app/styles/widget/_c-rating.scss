@@ -3,7 +3,8 @@
    ================================== */
 
 .au-w-rating {
-  @include au-font-size($au-small,1.3);
+  font-size: $au-small;
+  line-height: 1.3;
   color: $au-neutral;
   position: relative;
   display: flex;
@@ -13,8 +14,8 @@
   margin-bottom: $au-unit-small;
 
   .au-w-icon {
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 22px;
+    height: 22px;
   }
 }
 
@@ -23,7 +24,7 @@
   align-items: center;
 
   .au-w-icon + .au-w-icon {
-    margin-left: -.8rem;
+    margin-left: -8px;
   }
 
   .au-w-icon--faded {

@@ -1,5 +1,5 @@
 /* ==================================
-   #APPUNIVERSUM
+   #WIDGET STYLES
    ================================== */
 
 /**
@@ -11,11 +11,7 @@
  * ---
  * SETTINGS: Project settings and variables
  * TOOLS: Mixins
- * GENERIC: Reset, global box-sizing and font-styles
- * ELEMENTS: Plain html tag styling
- * OBJECTS: OOCSS unstyled objects (namespace: '.au-o-...')
- * COMPONENTS: Components (namespace: '.au-c-...')
- * UTILITIES: Single function helper classes (namespace: '.au-u-...')
+ * COMPONENTS: Components (namespace: '.au-w-...')
  */
 
 
@@ -25,66 +21,25 @@
 @import "appuniversum/s-utilities";
 
 // PROJECT VARIABLES
-@import "project/s-global";
+@import "project/s-widget";
 
 // MIXINS
-@import "appuniversum/t-font-size";
 @import "appuniversum/t-sass-mq";
 
-
-// GENERIC
-@import "appuniversum/g-reset";
-@import "appuniversum/g-box-sizing";
-@import "appuniversum/g-font";
-
-
-// ELEMENTS
-@import "appuniversum/e-page";
-
-
-// OBJECTS
-@import "appuniversum/o-box";
-@import "appuniversum/o-grid";
-@import "appuniversum/o-layout";
-@import "appuniversum/o-region";
-
-
-// DOCUMENTATION
-@import "documentation/d-component";
-@import "documentation/d-editor";
-@import "documentation/d-theme";
-@import "documentation/d-links";
-@import "documentation/d-icons";
-
-
-// WIDGET SPECIFIC STYLES
-@import "widget/w-container";
-@import "widget/w-header";
-@import "widget/w-footer";
-@import "widget/w-link";
-@import "widget/w-button-link";
-@import "widget/w-icon";
-@import "widget/w-modal";
-@import "widget/w-criterium";
-@import "widget/w-info";
-@import "widget/w-carousel";
-@import "widget/w-section";
-@import "widget/w-section-list";
-@import "widget/w-collapsable-section";
-@import "widget/w-rating";
-@import "widget/w-lightbox";
-
-
-// UTILITIES
-@import "appuniversum/u-headings";
-@import "appuniversum/u-font-weights";
-@import "appuniversum/u-font-family";
-@import "appuniversum/u-widths";
-@import "appuniversum/u-spacings";
-@import "appuniversum/u-responsive-spacings";
-@import "appuniversum/u-print";
-@import "appuniversum/u-hide";
-
-
-// QUICK FIXES AND HACKS
-@import "shame";
+// COMPONENTS
+@import "widget/c-container";
+@import "widget/c-header";
+@import "widget/c-footer";
+@import "widget/c-link";
+@import "widget/c-button-link";
+@import "widget/c-icon";
+@import "widget/c-modal";
+@import "widget/c-criterium";
+@import "widget/c-info";
+@import "widget/c-carousel";
+@import "widget/c-section";
+@import "widget/c-section-list";
+@import "widget/c-collapsable-section";
+@import "widget/c-rating";
+@import "widget/c-lightbox";
+@import "widget/c-hide";

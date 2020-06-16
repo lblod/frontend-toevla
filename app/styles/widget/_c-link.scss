@@ -30,30 +30,30 @@
     text-decoration: none;
   }
 
-  .au-w-theme-kina & {
-    color: $au-neutral-darker;
-  }
+  // .au-w-theme-kina & {
+  //   color: $au-neutral-darker;
+  // }
 
-  .au-w-theme-kina &:hover,
-  .au-w-theme-kina &:focus {
-    color: $au-neutral-darkest;
-  }
+  // .au-w-theme-kina &:hover,
+  // .au-w-theme-kina &:focus {
+  //   color: $au-neutral-darkest;
+  // }
 
-  .au-w-theme-stam & {
-    font-family: Georgia;
-    color: #e63228;
-    text-decoration-color: #e63228;
-  }
+  // .au-w-theme-stam & {
+  //   font-family: Georgia;
+  //   color: #e63228;
+  //   text-decoration-color: #e63228;
+  // }
 
-  .au-w-theme-stam &:hover,
-  .au-w-theme-stam &:focus {
-    color: #333;
-    text-decoration: none;
-  }
+  // .au-w-theme-stam &:hover,
+  // .au-w-theme-stam &:focus {
+  //   color: #333;
+  //   text-decoration: none;
+  // }
 
-  .au-w-theme-stam &:focus {
-    outline: 2px dashed #e63228;
-  }
+  // .au-w-theme-stam &:focus {
+  //   outline: 2px dashed #e63228;
+  // }
 }
 
 .au-w-link--neutral {
@@ -79,22 +79,22 @@
     text-decoration: none;
   }
 
-  .au-w-theme-stam &,
-  .au-w-theme-stam &:hover {
-    font-family: Georgia;
-    color: #e63228;
-    text-decoration-color: #e63228;
-  }
+  // .au-w-theme-stam &,
+  // .au-w-theme-stam &:hover {
+  //   font-family: Georgia;
+  //   color: #e63228;
+  //   text-decoration-color: #e63228;
+  // }
 
-  .au-w-theme-stam &:hover,
-  .au-w-theme-stam &:focus {
-    color: #333;
-    text-decoration: none;
-  }
+  // .au-w-theme-stam &:hover,
+  // .au-w-theme-stam &:focus {
+  //   color: #333;
+  //   text-decoration: none;
+  // }
 
-  .au-w-theme-stam &:focus {
-    outline: 2px dashed #e63228;
-  }
+  // .au-w-theme-stam &:focus {
+  //   outline: 2px dashed #e63228;
+  // }
 }
 
 .au-w-link--title {

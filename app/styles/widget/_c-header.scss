@@ -12,21 +12,10 @@
 }
 
 .au-w-header__title {
-  @include au-font-size($au-h5);
+  font-size: $au-h5;
+  line-height: 1.5;
   font-weight: $au-bold;
   display: flex;
   align-items: center;
   margin-right: $au-unit-small;
-
-  .au-w-theme-kina & {
-    @include au-font-size(1.6rem);
-    font-family: "Lato", sans-serif;
-  }
-
-  .au-w-theme-stam & {
-    font-family: nimbus-sans,"Helvetica","Arial",sans-serif;
-    @include au-font-size(1.8rem);
-    font-weight: 500;
-    color: #e63228;
-  }
 }

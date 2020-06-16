@@ -9,7 +9,7 @@
 <div class="au-w-modal-background {{if this.modalOpen "is-visible"}}" role="presentation"></div>
 <div id="{{@id}}" class="au-w-modal au-w-modal--lightbox  {{if this.modalOpen "is-visible"}} {{@theme}}" role="dialog" aria-describedby="au-w-modal-title-{{@id}}" tabindex="-1" {{focus-trap isActive=this.modalOpen focusTrapOptions=(hash onDeactivate=(fn this.closeModal) initialFocus=".au-w-modal__title" clickOutsideDeactivates=true)}}>
   <div class="au-w-modal__header">
-    <h3 id="au-w-modal-title-{{@id}}" class="au-w-modal__title au-u-hidden-visually" tabindex="0">
+    <h3 id="au-w-modal-title-{{@id}}" class="au-w-modal__title au-w-hidden-visually" tabindex="0">
       <span class="au-w-button-link__text">
         {{@title}}
       </span>

@@ -15,13 +15,13 @@
   flex-wrap: wrap;
 
   > *:first-child {
-    flex-basis: 16rem;
+    flex-basis: 160px;
     flex-grow: 1;
   }
 
   > *:last-child {
     position: relative;
-    flex-basis: 40rem;
+    flex-basis: 400px;
     flex-grow: 100;
 
     &:before {
@@ -36,7 +36,9 @@
 }
 
 .au-w-section__title {
-  @include au-font-size($au-small,1.3);
+  // @include au-font-size($au-small,1.3);
+  font-size: $au-small;
+  line-height: 1.3;
   font-weight: $au-medium;
   margin-bottom: $au-unit-small;
   color: $au-neutral-darker;

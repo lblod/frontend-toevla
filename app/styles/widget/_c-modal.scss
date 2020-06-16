@@ -103,13 +103,14 @@ html.au-w-modal-open {
   border-radius: $au-radius;
   border-top: 1px solid $au-neutral-lighter;
 
-  .au-w-theme-stam & {
-    color: #333;
-  }
+  // .au-w-theme-stam & {
+  //   color: #333;
+  // }
 }
 
 .au-w-modal__close {
-  @include au-font-size($au-base,1.5);
+  font-size: $au-base;
+  line-height: 1.5;
   font-family: $au-font;
   font-weight: $au-regular;
   padding: 0;
@@ -130,7 +131,7 @@ html.au-w-modal-open {
   padding: $au-unit-tiny $au-unit-tiny $au-unit-tiny $au-unit-small;
   white-space: nowrap;
   background-color: $au-neutral-darkest;
-  border-bottom-left-radius: .4rem;
+  border-bottom-left-radius: $au-radius;
   margin: 0;
 
   &:hover,
@@ -141,7 +142,7 @@ html.au-w-modal-open {
 
   &:focus {
     outline: $au-outline;
-    outline-offset: -.2rem;
+    outline-offset: -2px;
   }
 
   &:active,
@@ -151,21 +152,13 @@ html.au-w-modal-open {
 
   .au-w-icon {
     margin-left: $au-unit-tiny;
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-
-  .au-w-theme-kina & {
-    font-family: "Lato", sans-serif;
+    width: 15px;
+    height: 15px;
   }
 }
 
 .au-w-modal__content {
   padding: $au-unit-small;
-
-  .au-w-theme-stam & {
-    color: #333;
-  }
 
   @include mq(medium) {
     padding: $au-unit;

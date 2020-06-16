@@ -7,16 +7,13 @@
   padding: $au-unit-tiny;
   margin-top: $au-unit-tiny/2;
   margin-bottom: $au-unit-tiny/2;
-  @include au-font-size($au-base,1.3);
+  font-size: $au-base;
+  line-height: 1.3;
   font-weight: $au-light;
   color: $au-neutral-darker;
   border: 1px solid $au-neutral-lighter;
   background-color: $au-neutral-lightest;
   border-radius: $au-radius;
-
-  .au-w-theme-kina & {
-    @include au-font-size(1.5rem,1.3);
-  }
 }
 
 .au-w-info--icon {
@@ -25,8 +22,8 @@
   .au-w-icon {
     position: absolute;
     left: $au-unit-tiny;
-    width: 2rem;
-    height: 2rem;
+    width: 20px;
+    height: 20px;
     fill: $au-neutral-darker;
   }
 }

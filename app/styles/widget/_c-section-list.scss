@@ -3,10 +3,13 @@
    ================================== */
 
 .au-w-section-list {
-
+  list-style: none;
+  padding-left: 0;
 }
 
 .au-w-section-list__item {
+  padding: 0;
+
   & + & {
     margin-top: $au-unit-tiny;
   }

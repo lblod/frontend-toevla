@@ -19,7 +19,8 @@ $au-button-link-underline-hover   : $au-primary-light !default;
    ========================================================================== */
 
 .au-w-button-link {
-  @include au-font-size($au-base,1.5);
+  font-size: $au-base;
+  line-height: 1.5;
   font-family: $au-font;
   font-weight: $au-regular;
   padding: 0;
@@ -59,42 +60,42 @@ $au-button-link-underline-hover   : $au-primary-light !default;
     background-color: transparent;
   }
 
-  .au-w-theme-kina & {
-    color: $au-neutral-darkest;
-    font-weight: 400;
-    text-decoration-color: $au-neutral-light;
-    font-family: "Lato", sans-serif;
+  // .au-w-theme-kina & {
+  //   color: $au-neutral-darkest;
+  //   font-weight: 400;
+  //   text-decoration-color: $au-neutral-light;
+  //   font-family: "Lato", sans-serif;
 
-    &:hover,
-    &:focus {
-      color: $au-neutral-dark;
-      background-color: transparent;
-      text-decoration: underline;
-      text-decoration-color: $au-neutral-light;
-    }
+  //   &:hover,
+  //   &:focus {
+  //     color: $au-neutral-dark;
+  //     background-color: transparent;
+  //     text-decoration: underline;
+  //     text-decoration-color: $au-neutral-light;
+  //   }
 
-    &:focus {
-      outline: $au-outline;
-    }
-  }
+  //   &:focus {
+  //     outline: $au-outline;
+  //   }
+  // }
 
-  .au-w-theme-stam & {
-    color: #e63228;
-    font-weight: 400;
-    text-decoration-color: #e63228;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  // .au-w-theme-stam & {
+  //   color: #e63228;
+  //   font-weight: 400;
+  //   text-decoration-color: #e63228;
+  //   font-family: Georgia, 'Times New Roman', Times, serif;
 
-    &:hover,
-    &:focus {
-      color: #333;
-      background-color: transparent;
-      text-decoration: none
-    }
+  //   &:hover,
+  //   &:focus {
+  //     color: #333;
+  //     background-color: transparent;
+  //     text-decoration: none
+  //   }
 
-    &:focus {
-      outline: 2px solid #e63228;
-    }
-  }
+  //   &:focus {
+  //     outline: 2px solid #e63228;
+  //   }
+  // }
 }
 
   .au-w-button-link__text {

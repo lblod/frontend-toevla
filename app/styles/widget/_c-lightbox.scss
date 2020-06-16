@@ -12,10 +12,11 @@
   flex-wrap: wrap;
   position: relative;
   margin: -$au-unit-tiny/2;
+  padding: 0;
 }
 
 .au-w-lightbox__item {
-  flex-basis: 15rem;
+  flex-basis: 150px;
   display: flex;
   flex-grow: 1;
   align-items: center;
@@ -29,11 +30,13 @@
 }
 
 .au-w-lightbox__image {
+  display: block;
   overflow: hidden;
   border-radius: $au-radius;
   padding-bottom: 65%;
   position: relative;
   width: 100%;
+  margin: 0;
 
   img {
     display: block;
@@ -46,7 +49,8 @@
 }
 
 .au-w-lightbox__button {
-  @include au-font-size($au-base,1.5);
+  font-size: $au-base;
+  line-height: 1.5;
   font-family: $au-font;
   font-weight: $au-regular;
   padding: 0;
@@ -97,38 +101,38 @@
     background-color: transparent;
   }
 
-  .au-w-theme-kina & {
-    color: $au-neutral-darker;
-    font-weight: 400;
-    text-decoration-color: $au-neutral;
-    font-family: "Lato", sans-serif;
+  // .au-w-theme-kina & {
+  //   color: $au-neutral-darker;
+  //   font-weight: 400;
+  //   text-decoration-color: $au-neutral;
+  //   font-family: "Lato", sans-serif;
 
-    &:hover,
-    &:focus {
-      color: $au-neutral-darkest;
-      background-color: transparent;
-    }
+  //   &:hover,
+  //   &:focus {
+  //     color: $au-neutral-darkest;
+  //     background-color: transparent;
+  //   }
 
-    &:focus {
-      outline: $au-outline;
-    }
-  }
+  //   &:focus {
+  //     outline: $au-outline;
+  //   }
+  // }
 
-  .au-w-theme-stam & {
-    color: #e63228;
-    font-weight: 400;
-    text-decoration-color: #e63228;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  // .au-w-theme-stam & {
+  //   color: #e63228;
+  //   font-weight: 400;
+  //   text-decoration-color: #e63228;
+  //   font-family: Georgia, 'Times New Roman', Times, serif;
 
-    &:hover,
-    &:focus {
-      color: #333;
-      background-color: transparent;
-      text-decoration: none
-    }
+  //   &:hover,
+  //   &:focus {
+  //     color: #333;
+  //     background-color: transparent;
+  //     text-decoration: none
+  //   }
 
-    &:focus {
-      outline: 2px solid #e63228;
-    }
-  }
+  //   &:focus {
+  //     outline: 2px solid #e63228;
+  //   }
+  // }
 }

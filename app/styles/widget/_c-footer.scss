@@ -3,7 +3,8 @@
    ================================== */
 
 .au-w-footer {
-  @include au-font-size(1.4rem);
+  font-size: 14px;
+  line-height: 1.5;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

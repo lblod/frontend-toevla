@@ -3,5 +3,16 @@
    ================================== */
 
 .au-w-container {
+  font-size: 15px;
+  line-height: 1.5;
   position: relative;
+  font-family: $au-font;
+
+  * {
+    &,
+    &:before,
+    &:after {
+      box-sizing: inherit;
+    }
+  }
 }
