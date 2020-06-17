@@ -12,12 +12,12 @@
   margin-top: $au-unit;
   padding-bottom: $au-unit-small;
 
-  p:first-child {
-    margin-right: $au-unit-small;
+  p {
+    margin: 0;
   }
 
-  .au-w-theme-stam & {
-    color: #333;
+  p:first-child {
+    margin-right: $au-unit-small;
   }
 }
 

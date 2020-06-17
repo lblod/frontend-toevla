@@ -6,13 +6,14 @@
   font-size: 15px;
   line-height: 1.5;
   position: relative;
-  font-family: $au-font;
 
-  * {
-    &,
-    &:before,
-    &:after {
-      box-sizing: inherit;
-    }
+  // Reset box-sizing
+  &,
+  *,
+  *:before,
+  *:after {
+    font-family: $au-font;
+    font-family: var(--au-font);
+    box-sizing: border-box;
   }
 }

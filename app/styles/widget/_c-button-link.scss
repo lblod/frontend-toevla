@@ -3,25 +3,9 @@
    Button styled as a link
    ================================== */
 
-/* Variables
-   ========================================================================== */
-
-$au-button-link-color             : $au-primary !default;
-$au-button-link-hover-color       : $au-primary-light !default;
-$au-button-link-active-color      : $au-primary-light !default;
-$au-button-link-visited-color     : $au-primary-dark !default;
-$au-button-link-active-color      : $au-primary-dark !default;
-$au-button-link-underline         : $au-primary-light !default;
-$au-button-link-underline-hover   : $au-primary-light !default;
-
-
-/* Component
-   ========================================================================== */
-
 .au-w-button-link {
   font-size: $au-base;
   line-height: 1.5;
-  font-family: $au-font;
   font-weight: $au-regular;
   padding: 0;
   border: 0;
@@ -33,8 +17,9 @@ $au-button-link-underline-hover   : $au-primary-light !default;
   align-items: center;
   text-align: left;
   text-decoration: underline;
-  text-decoration-color: $au-button-link-underline;
-  color: $au-button-link-color;
+  text-decoration-color: $au-primary-light;
+  text-decoration-color: var(--au-link-light);
+  color: $au-primary;
   background-color: transparent;
   transition: color $au-transition;
   cursor: pointer;
@@ -42,14 +27,19 @@ $au-button-link-underline-hover   : $au-primary-light !default;
 
   &:hover,
   &:focus {
-    color: $au-button-link-hover-color;
+    color: $au-primary-light;
+    color: var(--au-link-light);
     background-color: transparent;
     text-decoration: underline;
-    text-decoration-color: $au-button-link-underline-hover;
+    text-decoration-color: $au-primary-light;
+    text-decoration-color: var(--au-link-light);
   }
 
   &:focus {
-    outline: $au-outline;
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: $au-outline-color;
+    outline-color: var(--au-outline);
   }
 
   &:active {
@@ -59,48 +49,11 @@ $au-button-link-underline-hover   : $au-primary-light !default;
   &:visited {
     background-color: transparent;
   }
-
-  // .au-w-theme-kina & {
-  //   color: $au-neutral-darkest;
-  //   font-weight: 400;
-  //   text-decoration-color: $au-neutral-light;
-  //   font-family: "Lato", sans-serif;
-
-  //   &:hover,
-  //   &:focus {
-  //     color: $au-neutral-dark;
-  //     background-color: transparent;
-  //     text-decoration: underline;
-  //     text-decoration-color: $au-neutral-light;
-  //   }
-
-  //   &:focus {
-  //     outline: $au-outline;
-  //   }
-  // }
-
-  // .au-w-theme-stam & {
-  //   color: #e63228;
-  //   font-weight: 400;
-  //   text-decoration-color: #e63228;
-  //   font-family: Georgia, 'Times New Roman', Times, serif;
-
-  //   &:hover,
-  //   &:focus {
-  //     color: #333;
-  //     background-color: transparent;
-  //     text-decoration: none
-  //   }
-
-  //   &:focus {
-  //     outline: 2px solid #e63228;
-  //   }
-  // }
 }
 
-  .au-w-button-link__text {
-    width: 100%;
-  }
+.au-w-button-link__text {
+  width: 100%;
+}
 
 
 /* Modifiers

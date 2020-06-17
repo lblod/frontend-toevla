@@ -11,49 +11,31 @@
   &,
   &:visited {
     color: $au-primary;
+    color: var(--au-primary);
     text-decoration-color: $au-primary-light;
+    text-decoration-color: var(--au-primary-light);
   }
 
   &:hover,
   &:focus {
     color: $au-primary-light;
+    color: var(--au-primary-light);
     text-decoration: none;
   }
 
   &:focus {
-    outline: $au-outline;
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: $au-outline-color;
+    outline-color: var(--au-outline);
     outline-offset: $au-unit-tiny/2;
   }
 
   .is-active > & {
     color: $au-primary-light;
+    color: var(--au-primary-light);
     text-decoration: none;
   }
-
-  // .au-w-theme-kina & {
-  //   color: $au-neutral-darker;
-  // }
-
-  // .au-w-theme-kina &:hover,
-  // .au-w-theme-kina &:focus {
-  //   color: $au-neutral-darkest;
-  // }
-
-  // .au-w-theme-stam & {
-  //   font-family: Georgia;
-  //   color: #e63228;
-  //   text-decoration-color: #e63228;
-  // }
-
-  // .au-w-theme-stam &:hover,
-  // .au-w-theme-stam &:focus {
-  //   color: #333;
-  //   text-decoration: none;
-  // }
-
-  // .au-w-theme-stam &:focus {
-  //   outline: 2px dashed #e63228;
-  // }
 }
 
 .au-w-link--neutral {
@@ -70,7 +52,10 @@
   }
 
   &:focus {
-    outline: $au-outline;
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: $au-outline-color;
+    outline-color: var(--au-outline);
     outline-offset: $au-unit-tiny/2;
   }
 
@@ -78,23 +63,6 @@
     color: $au-primary-light;
     text-decoration: none;
   }
-
-  // .au-w-theme-stam &,
-  // .au-w-theme-stam &:hover {
-  //   font-family: Georgia;
-  //   color: #e63228;
-  //   text-decoration-color: #e63228;
-  // }
-
-  // .au-w-theme-stam &:hover,
-  // .au-w-theme-stam &:focus {
-  //   color: #333;
-  //   text-decoration: none;
-  // }
-
-  // .au-w-theme-stam &:focus {
-  //   outline: 2px dashed #e63228;
-  // }
 }
 
 .au-w-link--title {

@@ -62,8 +62,10 @@
   align-items: center;
   text-decoration: underline;
   justify-content: center;
-  text-decoration-color: $au-primary;
   color: $au-primary;
+  color: var(--au-link);
+  text-decoration-color: $au-primary;
+  text-decoration-color: var(--au-link);
   background-color: transparent;
   transition: color $au-transition;
   cursor: pointer;
@@ -85,12 +87,16 @@
   &:hover,
   &:focus {
     color: $au-primary-light;
+    color: var(--au-link-light);
     background-color: transparent;
     text-decoration: none;
   }
 
   &:focus {
-    outline: $au-outline;
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: $au-outline-color;
+    outline-color: var(--au-outline);
   }
 
   &:active {
@@ -100,39 +106,4 @@
   &:visited {
     background-color: transparent;
   }
-
-  // .au-w-theme-kina & {
-  //   color: $au-neutral-darker;
-  //   font-weight: 400;
-  //   text-decoration-color: $au-neutral;
-  //   font-family: "Lato", sans-serif;
-
-  //   &:hover,
-  //   &:focus {
-  //     color: $au-neutral-darkest;
-  //     background-color: transparent;
-  //   }
-
-  //   &:focus {
-  //     outline: $au-outline;
-  //   }
-  // }
-
-  // .au-w-theme-stam & {
-  //   color: #e63228;
-  //   font-weight: 400;
-  //   text-decoration-color: #e63228;
-  //   font-family: Georgia, 'Times New Roman', Times, serif;
-
-  //   &:hover,
-  //   &:focus {
-  //     color: #333;
-  //     background-color: transparent;
-  //     text-decoration: none
-  //   }
-
-  //   &:focus {
-  //     outline: 2px solid #e63228;
-  //   }
-  // }
 }

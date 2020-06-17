@@ -72,6 +72,16 @@ html.au-w-modal-open {
   &.is-visible {
     display: flex;
   }
+
+  // Reset box-sizing
+  &,
+  *,
+  *:before,
+  *:after {
+    font-family: $au-font;
+    font-family: var(--au-font);
+    box-sizing: border-box;
+  }
 }
 
 .au-w-modal--lightbox {
@@ -102,10 +112,6 @@ html.au-w-modal-open {
   text-align: center;
   border-radius: $au-radius;
   border-top: 1px solid $au-neutral-lighter;
-
-  // .au-w-theme-stam & {
-  //   color: #333;
-  // }
 }
 
 .au-w-modal__close {
@@ -141,7 +147,10 @@ html.au-w-modal-open {
   }
 
   &:focus {
-    outline: $au-outline;
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: $au-outline-color;
+    outline-color: var(--au-outline);
     outline-offset: -2px;
   }
 

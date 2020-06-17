@@ -34,15 +34,20 @@
   border: 1px solid $au-neutral-lightest;
   border-radius: $au-radius;
   color: $au-neutral-darker;
+  text-decoration: underline;
   text-decoration-color: $au-neutral;
 
   &:hover,
   &:focus {
     color: $au-neutral-darkest;
+    text-decoration: none;
   }
 
   &:focus {
-    outline: $au-outline;
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: $au-outline-color;
+    outline-color: var(--au-outline);
     outline-offset: -2px;
   }
 
@@ -50,7 +55,6 @@
     color: $au-neutral-darkest;
     border: 1px solid $au-neutral-lighter;
     border-bottom-right-radius: 0;
-    text-decoration: underline;
     text-decoration-color: $au-neutral;
 
     &:hover,

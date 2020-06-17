@@ -28,26 +28,15 @@
 .au-w-icon--active {
   fill: $au-primary;
   stroke: $au-primary;
-
-  // .au-w-theme-kina & {
-  //   fill: $au-success;
-  //   stroke: $au-success;
-  // }
-
-  // .au-w-theme-stam & {
-  //   fill: #e63228;
-  //   stroke: #e63228;
-  // }
+  fill: var(--au-check);
+  stroke: var(--au-check);
 }
 
 .au-w-icon--primary {
   fill: $au-primary;
   stroke: $au-primary;
-
-  .au-w-theme-kina & {
-    fill: $au-success;
-    stroke: $au-success;
-  }
+  fill: var(--au-check);
+  stroke: var(--au-check);
 }
 
 .au-w-icon--faded {
@@ -58,19 +47,13 @@
 .au-w-icon--alert {
   fill: $au-primary;
   stroke: $au-primary;
-
-  // .au-w-theme-kina & {
-  //   fill: $au-success;
-  //   stroke: $au-success;
-  // }
-
-  // .au-w-theme-stam & {
-  //   fill: #e63228;
-  //   stroke: #e63228;
-  // }
+  fill: var(--au-check);
+  stroke: var(--au-check);
 }
 
 .au-w-icon--error {
+  fill: $au-error;
+  stroke: $au-error;
   fill: $au-error;
   stroke: $au-error;
 }

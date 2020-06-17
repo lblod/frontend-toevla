@@ -51,6 +51,7 @@
 
 .au-w-carousel__figure {
   display: block;
+  margin: 0;
   width: 100%;
   position: relative;
   background-color: $au-neutral-darkest;
@@ -119,6 +120,10 @@
   }
 
   &:focus {
+    outline-width: 2px;
+    outline-style: solid;
+    outline-color: $au-outline-color;
+    outline-color: var(--au-outline);
     outline-offset: -2px;
   }
 
