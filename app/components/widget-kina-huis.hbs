@@ -1,4 +1,4 @@
-<article class="au-w-container {{@theme}}">
+<article class="au-w-container">
   <AuVariables />
   <header class="au-w-header">
     <h2 class="au-w-header__title">
@@ -36,7 +36,7 @@
           </figure>
         </li>
       </ul>
-      <AuLightbox @buttonTitle="Bekijk alle foto's" @title="Fotorondleiding: De wereld van Kina - Het Huis" @id="{{@id}}fotos" @theme="{{@theme}}">
+      <AuLightbox @buttonTitle="Bekijk alle foto's" @title="Fotorondleiding: De wereld van Kina - Het Huis" @id="{{@id}}fotos">
         {{#carousel-container transitionInterval=400 as |ui controls|}}
           <div class="au-w-carousel">
             {{#ui.item}}
