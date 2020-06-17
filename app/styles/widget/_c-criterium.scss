@@ -54,6 +54,7 @@
 
   strong {
     font-weight: $au-medium;
+    font-weight: var(--au-medium);
   }
 
   ul {
@@ -64,6 +65,7 @@
   a:not(.au-c-button) {
     transition: color $au-transition, text-decoration $au-transition;
     font-weight: $au-regular;
+    font-weight: var(--au-regular);
     text-decoration-thickness: 1px;
 
     &,
@@ -99,8 +101,8 @@
 
 .au-c-criteria-list-item {
   position: relative;
-  margin-left: px;
   list-style-type: disc;
+  margin-top: $au-unit-tiny/2;
 
   .au-w-criterium-list__content ul ul & {
     list-style-type: circle;

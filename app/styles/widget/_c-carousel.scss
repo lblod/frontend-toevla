@@ -154,6 +154,7 @@
   position: relative;
   bottom: .15ex;
   font-weight: $au-bold;
+  font-weight: var(--au-bold);
   text-transform: uppercase;
   margin-right: $au-unit-tiny/2;
   padding-right: $au-unit-tiny;

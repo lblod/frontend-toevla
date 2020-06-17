@@ -5,6 +5,7 @@
 .au-w-link {
   transition: color $au-transition, text-decoration $au-transition;
   font-weight: $au-regular;
+  font-weight: var(--au-regular);
   text-decoration: underline;
   text-decoration-thickness: 1px;
 

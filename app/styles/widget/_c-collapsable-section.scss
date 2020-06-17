@@ -6,6 +6,7 @@
   font-size: $au-small;
   line-height: 1.3;
   font-weight: $au-regular;
+  font-weight: var(--au-regular);
   margin: 0;
 }
 
@@ -22,7 +23,9 @@
 
 .au-w-collapsable-section-button {
   font-family: $au-font;
+  font-family: var(--au-font);
   font-weight: $au-regular;
+  font-weight: var(--au-regular);
   all: inherit;
   cursor: pointer;
   display: flex;
