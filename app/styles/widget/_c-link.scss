@@ -3,79 +3,79 @@
    ================================== */
 
 .au-w-link {
-  transition: color $au-transition, text-decoration $au-transition;
-  font-weight: $au-regular;
-  font-weight: var(--au-regular);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
+  transition: color $au-transition, text-decoration $au-transition !important;
+  font-weight: $au-regular !important;
+  font-weight: var(--au-regular) !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 1px !important;
 
   &,
   &:visited {
-    color: $au-primary;
-    color: var(--au-primary);
-    text-decoration-color: $au-primary-light;
-    text-decoration-color: var(--au-primary-light);
+    color: $au-primary !important;
+    color: var(--au-primary) !important;
+    text-decoration-color: $au-primary-light !important;
+    text-decoration-color: var(--au-primary-light) !important;
   }
 
   &:hover,
   &:focus {
-    color: $au-primary-light;
-    color: var(--au-primary-light);
-    text-decoration: none;
+    color: $au-primary-light !important;
+    color: var(--au-primary-light) !important;
+    text-decoration: none !important;
   }
 
   &:focus {
-    outline-width: 2px;
-    outline-style: solid;
-    outline-color: $au-outline-color;
-    outline-color: var(--au-outline);
-    outline-offset: $au-unit-tiny/2;
+    outline-width: 2px !important;
+    outline-style: solid !important;
+    outline-color: $au-outline-color !important;
+    outline-color: var(--au-outline) !important;
+    outline-offset: $au-unit-tiny/2 !important;
   }
 
   .is-active > & {
-    color: $au-primary-light;
-    color: var(--au-primary-light);
-    text-decoration: none;
+    color: $au-primary-light !important;
+    color: var(--au-primary-light) !important;
+    text-decoration: none !important;
   }
 }
 
 .au-w-link--neutral {
   &,
   &:visited {
-    color: $au-neutral-darker;
-    text-decoration-color: $au-neutral;
+    color: $au-neutral-darker !important;
+    text-decoration-color: $au-neutral !important;
   }
 
   &:hover,
   &:focus {
-    color: $au-neutral-darkest;
-    text-decoration: none;
+    color: $au-neutral-darkest !important;
+    text-decoration: none !important;
   }
 
   &:focus {
-    outline-width: 2px;
-    outline-style: solid;
-    outline-color: $au-outline-color;
-    outline-color: var(--au-outline);
-    outline-offset: $au-unit-tiny/2;
+    outline-width: 2px !important;
+    outline-style: solid !important;
+    outline-color: $au-outline-color !important;
+    outline-color: var(--au-outline) !important;
+    outline-offset: $au-unit-tiny/2 !important;
   }
 
   .is-active > & {
-    color: $au-primary-light;
-    text-decoration: none;
+    color: $au-primary-light !important;
+    text-decoration: none !important;
   }
 }
 
 .au-w-link--title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
 }
 
 .au-w-link--button {
-  appearance: none;
-  border: 0;
-  padding: 0;
-  font-size: inherit;
-  font-family: inherit;
+  appearance: none !important;
+  border: 0 !important;
+  padding: 0 !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
 }

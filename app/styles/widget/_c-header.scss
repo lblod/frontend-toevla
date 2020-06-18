@@ -2,21 +2,28 @@
    #WIDGET HEADER
    ================================== */
 
+
 .au-w-header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: $au-unit-small;
-  border-bottom: 2px solid $au-neutral-lighter;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-bottom: $au-unit-small !important;
+  border-bottom: 2px solid $au-neutral-lighter !important;
 }
 
 .au-w-header__title {
-  font-size: $au-h5;
-  line-height: 1.5;
-  font-weight: $au-bold;
-  font-weight: var(--au-bold);
-  display: flex;
-  align-items: center;
-  margin: $au-unit-tiny $au-unit-small $au-unit-tiny 0;
+  font-size: $au-h5 !important;
+  line-height: 1.5 !important;
+  font-weight: $au-bold !important;
+  font-weight: var(--au-bold) !important;
+  color: $au-neutral-darkest !important;
+  display: flex !important;
+  align-items: center !important;
+  margin: $au-unit-tiny $au-unit-small $au-unit-tiny 0 !important;
+
+  .au-w-icon {
+    width: 22px !important;
+    height: 22px !important;
+  }
 }

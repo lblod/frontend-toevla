@@ -4,33 +4,33 @@
 
 .au-w-section {
   & + & {
-    padding-top: $au-unit-small;
-    margin-top: $au-unit-small;
-    border-top: 1px dotted $au-neutral-light;
+    padding-top: $au-unit-small !important;
+    margin-top: $au-unit-small !important;
+    border-top: 1px dotted $au-neutral-light !important;
   }
 }
 
 .au-w-section--column {
-  display: flex;
-  flex-wrap: wrap;
+  display: flex !important;
+  flex-wrap: wrap !important;
 
   > *:first-child {
-    flex-basis: 160px;
-    flex-grow: 1;
+    flex-basis: 160px !important;
+    flex-grow: 1 !important;
   }
 
   > *:last-child {
-    position: relative;
-    flex-basis: 400px;
-    flex-grow: 100;
+    position: relative !important;
+    flex-basis: 400px !important;
+    flex-grow: 100 !important;
   }
 }
 
 .au-w-section__title {
-  font-size: $au-small;
-  line-height: 1.3;
-  font-weight: $au-medium;
-  font-weight: var(--au-medium);
-  margin: 0 0 $au-unit-small 0;
-  color: $au-neutral-darker;
+  font-size: $au-small !important;
+  line-height: 1.3 !important;
+  font-weight: $au-medium !important;
+  font-weight: var(--au-medium) !important;
+  margin: 0 0 $au-unit-small 0 !important;
+  color: $au-neutral-darker !important;
 }

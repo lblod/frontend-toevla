@@ -3,26 +3,32 @@
    ================================== */
 
 .au-w-footer {
-  font-size: 14px;
-  line-height: 1.5;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  color: $au-neutral;
-  margin-top: $au-unit;
-  padding-bottom: $au-unit-small;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: space-between !important;
+  color: $au-neutral !important;
+  margin-top: $au-unit !important;
+  padding-bottom: $au-unit-small !important;
 
   p {
-    margin: 0;
+    margin: 0 !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+
+  a {
+    font-size: inherit !important;
   }
 
   p:first-child {
-    margin-right: $au-unit-small;
+    margin-right: $au-unit-small !important;
   }
 }
 
 .au-w-footer--border {
-  padding-top: $au-unit-small;
-  margin-top: $au-unit-small;
-  border-top: 2px solid $au-neutral-lighter;
+  padding-top: $au-unit-small !important;
+  margin-top: $au-unit-small !important;
+  border-top: 2px solid $au-neutral-lighter !important;
 }

@@ -3,36 +3,37 @@
    ================================== */
 
 .au-w-rating {
-  font-size: $au-small;
-  line-height: 1.3;
-  color: $au-neutral;
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: $au-unit-tiny 0;
+  font-size: $au-small !important;
+  line-height: 1.3 !important;
+  color: $au-neutral !important;
+  position: relative !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  margin: $au-unit-tiny 0 !important;
 
   .au-w-icon {
-    width: 22px;
-    height: 22px;
+    width: 22px !important;
+    height: 22px !important;
   }
 }
 
 .au-w-rating__group {
-  display: flex;
-  align-items: center;
+  display: flex !important;
+  align-items: center !important;
 
   .au-w-icon + .au-w-icon {
-    margin-left: -8px;
+    margin-left: -8px !important;
   }
 
   .au-w-icon--faded {
-    fill: $au-neutral-light;
+    fill: $au-neutral-light !important;
   }
 }
 
 .au-w-rating__text {
-  font-size: $au-small;
-  line-height: 1.3;
-  margin: $au-unit-tiny 0;
+  font-size: $au-small !important;
+  line-height: 1.3 !important;
+  margin: $au-unit-tiny 0 !important;
+  color: $au-neutral !important;
 }

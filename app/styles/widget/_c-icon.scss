@@ -3,57 +3,57 @@
    ================================== */
 
 .au-w-icon {
-  display: inline-flex;
-  width: 1.2em;
-  height: 1.2em;
-  position: relative;
-  vertical-align: baseline;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
-  margin-right: $au-unit-tiny;
-  transition: fill $au-transition, stroke $au-transition;
+  display: inline-flex !important;
+  width: 1.2em !important;
+  height: 1.2em !important;
+  position: relative !important;
+  vertical-align: baseline !important;
+  stroke-width: 0 !important;
+  stroke: currentColor !important;
+  fill: currentColor !important;
+  margin-right: $au-unit-tiny !important;
+  transition: fill $au-transition, stroke $au-transition !important;
 
   .au-w-button-link:hover &,
   .au-w-button-link:focus & {
-    opacity: .9;
+    opacity: .9 !important;
   }
 }
 
 .au-w-icon--large {
-  width: 1.75em;
-  height: 1.75em;
+  width: 1.75em !important;
+  height: 1.75em !important;
 }
 
 .au-w-icon--active {
-  fill: $au-primary;
-  stroke: $au-primary;
-  fill: var(--au-check);
-  stroke: var(--au-check);
+  fill: $au-primary !important;
+  stroke: $au-primary !important;
+  fill: var(--au-check) !important;
+  stroke: var(--au-check) !important;
 }
 
 .au-w-icon--primary {
-  fill: $au-primary;
-  stroke: $au-primary;
-  fill: var(--au-check);
-  stroke: var(--au-check);
+  fill: $au-primary !important;
+  stroke: $au-primary !important;
+  fill: var(--au-check) !important;
+  stroke: var(--au-check) !important;
 }
 
 .au-w-icon--faded {
-  fill: $au-neutral;
-  stroke: $au-neutral;
+  fill: $au-neutral !important;
+  stroke: $au-neutral !important;
 }
 
 .au-w-icon--alert {
-  fill: $au-primary;
-  stroke: $au-primary;
-  fill: var(--au-check);
-  stroke: var(--au-check);
+  fill: $au-primary !important;
+  stroke: $au-primary !important;
+  fill: var(--au-check) !important;
+  stroke: var(--au-check) !important;
 }
 
 .au-w-icon--error {
-  fill: $au-error;
-  stroke: $au-error;
-  fill: $au-error;
-  stroke: $au-error;
+  fill: $au-error !important;
+  stroke: $au-error !important;
+  fill: var(--au-error) !important;
+  stroke: var(--au-error) !important;
 }

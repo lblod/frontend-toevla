@@ -3,17 +3,49 @@
    ================================== */
 
 .au-w-container {
-  font-size: 15px;
-  line-height: 1.5;
-  position: relative;
+  position: relative !important;
 
-  // Reset box-sizing
+  // Reset
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ul,
+  p,
+  span,
+  button {
+    text-transform: initial !important;
+  }
+
+  ul {
+    list-style: none !important;
+    padding-left: 0 !important;
+  }
+
+  li {
+    padding-left: 0 !important;
+  }
+
+  li:before,
+  li:after {
+    display: none !important;
+  }
+
+  a:before,
+  a:after {
+    display: none !important;
+  }
+
   &,
   *,
-  *:before,
-  *:after {
-    font-family: $au-font;
-    font-family: var(--au-font);
-    box-sizing: border-box;
+  *:after,
+  *:before {
+    font-size: 15px !important;
+    font-family: $au-font !important;
+    font-family: var(--au-font) !important;
+    line-height: 1.5 !important;
+    box-sizing: border-box !important;
   }
 }

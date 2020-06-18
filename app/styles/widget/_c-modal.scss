@@ -16,22 +16,22 @@
   * (browser window + dialog if long enough content)
   */
 html.au-w-modal-open {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 // Add a modal background
 .au-w-modal-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba($au-neutral-darkest,.4);
-  z-index: 9;
-  display: none;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: rgba($au-neutral-darkest,.4) !important;
+  z-index: 9 !important;
+  display: none !important;
 
   &.is-visible {
-    display: block;
+    display: block !important;
   }
 }
 
@@ -39,38 +39,38 @@ html.au-w-modal-open {
   * Modal Dialog base styling
   */
 .au-w-modal {
-  -webkit-overflow-scrolling: touch;
-  background: $au-white;
-  margin: auto;
-  height: auto;
-  max-height: calc(100% - #{$au-unit});
-  width: calc(100% - #{$au-unit});
-  max-width: 760px;
-  opacity: 1;
-  overflow: auto;
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  right: $au-unit-small;
-  top: $au-unit-small;
-  left: $au-unit-small;
-  bottom: auto;
-  top: 50%;
-  transform: translateY(-50%);
-  visibility: visible;
-  border-radius: $au-radius;
-  z-index: 10; /* this should be more than enough... */
-  box-shadow: 0 1px 3px rgba($au-neutral-darkest, .1), 0 4px 20px rgba($au-neutral-darkest, .035), 0 1px 1px rgba($au-neutral-darkest, .025);
-  transition: $au-transition;
-  display: none;
+  -webkit-overflow-scrolling: touch !important;
+  background: $au-white !important;
+  margin: auto !important;
+  height: auto !important;
+  max-height: calc(100% - #{$au-unit}) !important;
+  width: calc(100% - #{$au-unit}) !important;
+  max-width: 760px !important;
+  opacity: 1 !important;
+  overflow: auto !important;
+  position: fixed !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  right: $au-unit-small !important;
+  top: $au-unit-small !important;
+  left: $au-unit-small !important;
+  bottom: auto !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  visibility: visible !important;
+  border-radius: $au-radius !important;
+  z-index: 10 !important; /* this should be more than enough... */
+  box-shadow: 0 1px 3px rgba($au-neutral-darkest, .1), 0 4px 20px rgba($au-neutral-darkest, .035), 0 1px 1px rgba($au-neutral-darkest, .025) !important;
+  transition: $au-transition !important;
+  display: none !important;
 
   &:focus {
     outline: 0 !important;
   }
 
   &.is-visible {
-    display: flex;
+    display: flex !important;
   }
 
   // Reset box-sizing
@@ -78,100 +78,101 @@ html.au-w-modal-open {
   *,
   *:before,
   *:after {
-    font-family: $au-font;
-    font-family: var(--au-font);
-    box-sizing: border-box;
+    font-family: $au-font !important;
+    font-family: var(--au-font) !important;
+    box-sizing: border-box !important;
   }
 }
 
 .au-w-modal--lightbox {
-  bottom: auto;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: auto !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
 }
 
 .au-w-modal__body {
-  width: 100%;
-  flex-grow: 1;
-  position: relative;
-  height: calc(100% - #{$au-unit-large + $au-unit-small});
-  background-color: $au-white;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
+  width: 100% !important;
+  flex-grow: 1 !important;
+  position: relative !important;
+  height: calc(100% - #{$au-unit-large + $au-unit-small}) !important;
+  background-color: $au-white !important;
+  overflow: auto !important;
+  -webkit-overflow-scrolling: touch !important;
 
   &:focus {
-    outline: 0;
+    outline: 0 !important;
   }
 }
 
 .au-w-modal__cta {
-  width: 100%;
-  color: $au-neutral-dark;
-  background-color: $au-neutral-lightest;
-  padding: $au-unit - $au-unit-tiny;
-  text-align: center;
-  border-radius: $au-radius;
-  border-top: 1px solid $au-neutral-lighter;
+  width: 100% !important;
+  color: $au-neutral-dark !important;
+  background-color: $au-neutral-lightest !important;
+  padding: $au-unit - $au-unit-tiny !important;
+  text-align: center !important;
+  border-radius: $au-radius !important;
+  border-top: 1px solid $au-neutral-lighter !important;
 }
 
 .au-w-modal__close {
-  font-size: $au-base;
-  line-height: 1.5;
-  font-family: $au-font;
-  font-family: var(--au-font);
-  font-weight: $au-regular;
-  font-weight: var(--au-regular);
-  padding: 0;
-  border: 0;
-  appearance: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 999;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  text-decoration: none;
-  color: $au-neutral-lighter;
-  background-color: transparent;
-  transition: color $au-transition;
-  cursor: pointer;
-  padding: $au-unit-tiny $au-unit-tiny $au-unit-tiny $au-unit-small;
-  white-space: nowrap;
-  background-color: $au-neutral-darkest;
-  border-bottom-left-radius: $au-radius;
-  margin: 0;
+  font-size: $au-base !important;
+  line-height: 1.5 !important;
+  font-family: $au-font !important;
+  font-family: var(--au-font) !important;
+  font-weight: $au-regular !important;
+  font-weight: var(--au-regular) !important;
+  text-transform: initial !important;
+  padding: 0 !important;
+  border: 0 !important;
+  appearance: none !important;
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  z-index: 999 !important;
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  color: $au-neutral-lighter !important;
+  background-color: transparent !important;
+  transition: color $au-transition !important;
+  cursor: pointer !important;
+  padding: $au-unit-tiny $au-unit-tiny $au-unit-tiny $au-unit-small !important;
+  white-space: nowrap !important;
+  background-color: $au-neutral-darkest !important;
+  border-bottom-left-radius: $au-radius !important;
+  margin: 0 !important;
 
   &:hover,
   &:focus {
-    color: $au-white;
-    background-color: $au-neutral-darkest;
+    color: $au-white !important;
+    background-color: $au-neutral-darkest !important;
   }
 
   &:focus {
-    outline-width: 2px;
-    outline-style: solid;
-    outline-color: $au-outline-color;
-    outline-color: var(--au-outline);
-    outline-offset: -2px;
+    outline-width: 2px !important;
+    outline-style: solid !important;
+    outline-color: $au-outline-color !important;
+    outline-color: var(--au-outline) !important;
+    outline-offset: -2px !important;
   }
 
   &:active,
   &:visited {
-    background-color: $au-neutral-darkest;
+    background-color: $au-neutral-darkest !important;
   }
 
   .au-w-icon {
-    margin-left: $au-unit-tiny;
-    width: 15px;
-    height: 15px;
+    margin-left: $au-unit-tiny !important;
+    width: 15px !important;
+    height: 15px !important;
   }
 }
 
 .au-w-modal__content {
-  padding: $au-unit-small;
+  padding: $au-unit-small !important;
 
   @include mq(medium) {
-    padding: $au-unit;
+    padding: $au-unit !important;
   }
 }

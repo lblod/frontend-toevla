@@ -4,108 +4,98 @@
 
 // Temporary holder
 .au-w-lightbox-holder {
-  position: relative;
+  position: relative !important;
 }
 
 .au-w-lightbox {
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-  margin: -$au-unit-tiny/2;
-  padding: 0;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  position: relative !important;
+  margin: -$au-unit-tiny/2 !important;
+  padding: 0 !important;
 }
 
 .au-w-lightbox__item {
-  flex-basis: 150px;
-  display: flex;
-  flex-grow: 1;
-  align-items: center;
-  justify-content: center;
-  margin: $au-unit-tiny/2;
+  flex-basis: 150px !important;
+  display: flex !important;
+  flex-grow: 1 !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: $au-unit-tiny/2 !important;
 }
 
 .au-w-lightbox__item--border {
-  border-radius: $au-radius;
-  border: 1px solid $au-neutral-lighter;
+  border-radius: $au-radius !important;
+  border: 1px solid $au-neutral-lighter !important;
 }
 
 .au-w-lightbox__image {
-  display: block;
-  overflow: hidden;
-  border-radius: $au-radius;
-  padding-bottom: 65%;
-  position: relative;
-  width: 100%;
-  margin: 0;
+  display: block !important;
+  overflow: hidden !important;
+  border-radius: $au-radius !important;
+  padding-bottom: 65% !important;
+  position: relative !important;
+  width: 100% !important;
+  margin: 0 !important;
 
   img {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%,-50%);
+    display: block !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 100% !important;
+    transform: translate(-50%,-50%) !important;
   }
 }
 
 .au-w-lightbox__button {
-  font-size: $au-base;
-  line-height: 1.5;
-  font-family: $au-font;
-  font-family: var(--au-font);
-  font-weight: $au-regular;
-  font-weight: var(--au-regular);
-  padding: 0;
-  border: 0;
-  appearance: none;
-  -webkit-appearance: none; // doesn't work without prefix on Safari iOS11
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  text-decoration: underline;
-  justify-content: center;
-  color: $au-primary;
-  color: var(--au-link);
-  text-decoration-color: $au-primary;
+  font-size: $au-base !important;
+  line-height: 1.5 !important;
+  font-family: $au-font !important;
+  font-family: var(--au-font) !important;
+  font-weight: $au-regular !important;
+  font-weight: var(--au-regular) !important;
+  padding: 0 !important;
+  border: 0 !important;
+  appearance: none !important;
+  -webkit-appearance: none !important; // doesn't work without prefix on Safari iOS11
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  text-decoration: underline !important;
+  justify-content: center !important;
+  color: $au-primary !important;
+  color: var(--au-link) !important;
+  text-decoration-color: $au-primary !important;
   text-decoration-color: var(--au-link);
-  background-color: transparent;
-  transition: color $au-transition;
-  cursor: pointer;
-  padding: $au-unit-tiny;
-  margin-top: $au-unit-tiny;
-  margin-left: auto;
-  margin-right: auto;
-
-  // Temporary hack for image lightbox
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+  background-color: transparent !important;
+  transition: color $au-transition !important;
+  cursor: pointer !important;
+  padding: $au-unit-tiny !important;
+  margin-top: $au-unit-tiny !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 
   &:hover,
   &:focus {
-    color: $au-primary-light;
-    color: var(--au-link-light);
-    background-color: transparent;
-    text-decoration: none;
+    color: $au-primary-light !important;
+    color: var(--au-link-light) !important;
+    background-color: transparent !important;
+    text-decoration: none !important;
   }
 
   &:focus {
-    outline-width: 2px;
-    outline-style: solid;
-    outline-color: $au-outline-color;
-    outline-color: var(--au-outline);
+    outline-width: 2px !important;
+    outline-style: solid !important;
+    outline-color: $au-outline-color !important;
+    outline-color: var(--au-outline) !important;
   }
 
   &:active {
-    background-color: transparent;
+    background-color: transparent !important;
   }
 
   &:visited {
-    background-color: transparent;
+    background-color: transparent !important;
   }
 }

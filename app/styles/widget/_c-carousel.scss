@@ -3,160 +3,160 @@
    ================================== */
 
 .au-w-carousel {
-  position: relative;
+  position: relative !important;
 
   /* For Carousel Component */
   .carousel-item {
-    position: relative;
-    transition: all $au-transition;
+    position: relative !important;
+    transition: all $au-transition !important;
   }
 
   .carousel-item.left, .carousel-item.right {
-    display: block;
+    display: block !important;
   }
 
   .carousel-item.left, .carousel-item.right {
-    position: absolute;
-    top: 0;
-    width: 100%;
+    position: absolute !important;
+    top: 0 !important;
+    width: 100% !important;
   }
 
   .carousel-item.left {
-    left: 100%;
+    left: 100% !important;
   }
 
   .carousel-item.right {
-    left: -100%;
+    left: -100% !important;
   }
 
 
   .carousel-item.active.left.slide-out {
-    left: -100%;
+    left: -100% !important;
   }
 
   .carousel-item.active.right.slide-out {
-    left: 100%;
+    left: 100% !important;
   }
 
 
   .carousel-item.left.slide-in, .carousel-item.right.slide-in {
-    left: 0;
+    left: 0 !important;
   }
 
   .carousel-item.active {
-    position: relative;
-    left: 0;
+    position: relative !important;
+    left: 0 !important;
   }
 }
 
 .au-w-carousel__figure {
-  display: block;
-  margin: 0;
-  width: 100%;
-  position: relative;
-  background-color: $au-neutral-darkest;
-  overflow: hidden;
-  height: 400px;
-  max-height: calc(100vh - #{$au-unit-huge});
+  display: block !important;
+  margin: 0 !important;
+  width: 100% !important;
+  position: relative !important;
+  background-color: $au-neutral-darkest !important;
+  overflow: hidden !important;
+  height: 400px !important;
+  max-height: calc(100vh - #{$au-unit-huge}) !important;
 
   @include mq(small) {
-    height: 600px;
+    height: 600px !important;
   }
 }
 
 .au-w-carousel__image {
-  display: block;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  display: block !important;
+  height: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 
   @supports (object-fit: contain) {
-    object-fit: contain;
+    object-fit: contain !important;
   }
 }
 
 .au-w-carousel__caption {
-  font-size: $au-base;
-  line-height: 1.5;
-  color: $au-neutral-dark;
-  display: block;
-  padding: $au-unit-tiny/2 $au-unit-tiny;
-  background-color: $au-white;
-  position: absolute;
-  bottom: $au-unit-small;
-  left: $au-unit-small;
-  width: calc(100% - #{$au-unit});
-  border-radius: $au-radius;
+  font-size: $au-base !important;
+  line-height: 1.5 !important;
+  color: $au-neutral-dark !important;
+  display: block !important;
+  padding: $au-unit-tiny/2 $au-unit-tiny !important;
+  background-color: $au-white !important;
+  position: absolute !important;
+  bottom: $au-unit-small !important;
+  left: $au-unit-small !important;
+  width: calc(100% - #{$au-unit}) !important;
+  border-radius: $au-radius !important;
 
   @include mq(medium) {
-    padding: $au-unit-tiny $au-unit-small;
+    padding: $au-unit-tiny $au-unit-small !important;
   }
 }
 
 .au-w-carousel__button {
-  font-size: $au-h6;
-  line-height: 1.5;
-  appearance: none;
-  -webkit-appearance: none;
-  position: absolute;
+  font-size: $au-h6 !important;
+  line-height: 1.5 !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  position: absolute !important;
   top: 50%;
-  transform: translateY(-50%);
-  border: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: $au-unit-small;
-  color: $au-neutral-lighter;
-  cursor: pointer;
-  width: $au-unit-large + $au-unit-small;
-  height: $au-unit-large + $au-unit-small;
-  background-color: rgba($au-neutral-darkest,.3);
-  transition: color $au-transition, background-color $au-transition;
+  transform: translateY(-50%) !important;
+  border: 0 !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: $au-unit-small !important;
+  color: $au-neutral-lighter !important;
+  cursor: pointer !important;
+  width: $au-unit-large + $au-unit-small !important;
+  height: $au-unit-large + $au-unit-small !important;
+  background-color: rgba($au-neutral-darkest,.3) !important;
+  transition: color $au-transition, background-color $au-transition !important;
 
   &:hover,
   &:focus {
-    color: $au-white;
-    background-color: rgba($au-neutral-darkest,.5);
+    color: $au-white !important;
+    background-color: rgba($au-neutral-darkest,.5) !important;
   }
 
   &:focus {
-    outline-width: 2px;
-    outline-style: solid;
-    outline-color: $au-outline-color;
-    outline-color: var(--au-outline);
-    outline-offset: -2px;
+    outline-width: 2px !important;
+    outline-style: solid !important;
+    outline-color: $au-outline-color !important;
+    outline-color: var(--au-outline) !important;
+    outline-offset: -2px !important;
   }
 
   &:active {
-    color: $au-neutral-light;
+    color: $au-neutral-light !important;
   }
 
   .au-w-icon {
-    margin-right: 0;
+    margin-right: 0 !important;
   }
 }
 
 .au-w-carousel__button--next {
-  right: 0;
-  border-top-left-radius: $au-unit-large;
-  border-bottom-left-radius: $au-unit-large;
+  right: 0 !important;
+  border-top-left-radius: $au-unit-large !important;
+  border-bottom-left-radius: $au-unit-large !important;
 }
 
 .au-w-carousel__button--previous {
-  left: 0;
-  border-top-right-radius: $au-unit-large;
-  border-bottom-right-radius: $au-unit-large;
+  left: 0 !important;
+  border-top-right-radius: $au-unit-large !important;
+  border-bottom-right-radius: $au-unit-large !important;
 }
 
 .au-w-carousel__pagination {
-  font-size: 13px;
-  line-height: 1;
-  position: relative;
-  bottom: .15ex;
-  font-weight: $au-bold;
-  font-weight: var(--au-bold);
-  text-transform: uppercase;
-  margin-right: $au-unit-tiny/2;
-  padding-right: $au-unit-tiny;
-  border-right: 1px solid $au-neutral-light;
+  font-size: 13px !important;
+  line-height: 1 !important;
+  position: relative !important;
+  bottom: .15ex !important;
+  font-weight: $au-bold !important;
+  font-weight: var(--au-bold) !important;
+  text-transform: uppercase !important;
+  margin-right: $au-unit-tiny/2 !important;
+  padding-right: $au-unit-tiny !important;
+  border-right: 1px solid $au-neutral-light !important;
 }
