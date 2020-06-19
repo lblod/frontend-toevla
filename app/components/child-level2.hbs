@@ -2,7 +2,7 @@
   <AuCollapsableSection @buttonTitle={{@node.title}} @info="true">
     <ul class="au-w-criterium-list">
       {{#each this.sortedChildren as |child|}}
-        <ChildLevel3 @node={{child}}/>
+        <ChildLevel3 @node={{child}} @experience={{@experience}}/>
       {{/each}}
     </ul>
   </AuCollapsableSection>
