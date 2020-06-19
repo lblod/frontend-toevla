@@ -76,8 +76,11 @@
 }
 
 .au-w-carousel__caption {
+  font-family: $au-font !important;
+  font-family: var(--au-font) !important;
   font-size: $au-base !important;
   line-height: 1.5 !important;
+  text-align: left !important;
   color: $au-neutral-dark !important;
   display: block !important;
   padding: $au-unit-tiny/2 $au-unit-tiny !important;
