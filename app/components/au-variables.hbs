@@ -1,16 +1,64 @@
 <style>
   :root {
+    {{#if @font}}
+    --au-font: {{@font}};
+    {{else}}
     --au-font: BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    {{/if}}
+    {{#if @bold}}
+    --au-bold: {{@bold}};
+    {{else}}
     --au-bold: 700;
+    {{/if}}
+    {{#if @medium}}
+    --au-medium: {{@medium}};
+    {{else}}
     --au-medium: 600;
+    {{/if}}
+    {{#if @regular}}
+    --au-regular: {{@regular}};
+    {{else}}
     --au-regular: 500;
+    {{/if}}
+    {{#if @light}}
+    --au-light: {{@light}};
+    {{else}}
     --au-light: 400;
+    {{/if}}
+    {{#if @check}}
+    --au-check: {{@check}};
+    {{else}}
     --au-check: #0E5EB8;
+    {{/if}}
+    {{#if @link}}
+    --au-link: {{@link}};
+    {{else}}
     --au-link: #0E5EB8;
+    {{/if}}
+    {{#if @linkDark}}
+    --au-link-dark: {{@linkDark}};
+    {{else}}
     --au-link-dark: #073261;
+    {{/if}}
+    {{#if @linkLight}}
+    --au-link-light: {{@linkLight}};
+    {{else}}
     --au-link-light: #0F6FD7;
+    {{/if}}
+    {{#if @linkLighter}}
+    --au-link-lighter: {{@linkLighter}};
+    {{else}}
     --au-link-lighter: #B8D8FA;
+    {{/if}}
+    {{#if @error}}
+    --au-error: {{@error}};
+    {{else}}
     --au-error: #D92626;
+    {{/if}}
+    {{#if @outline}}
+    --au-outline: {{@outline}};
+    {{else}}
     --au-outline: #FFC515;
+    {{/if}}
   }
 </style>
