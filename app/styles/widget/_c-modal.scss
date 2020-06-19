@@ -27,7 +27,7 @@ html.au-w-modal-open {
   width: 100% !important;
   height: 100% !important;
   background-color: rgba($au-neutral-darkest,.4) !important;
-  z-index: 9 !important;
+  z-index: 9999 !important;
   display: none !important;
 
   &.is-visible {
@@ -60,7 +60,7 @@ html.au-w-modal-open {
   transform: translateY(-50%) !important;
   visibility: visible !important;
   border-radius: $au-radius !important;
-  z-index: 10 !important; /* this should be more than enough... */
+  z-index: 99999 !important;
   box-shadow: 0 1px 3px rgba($au-neutral-darkest, .1), 0 4px 20px rgba($au-neutral-darkest, .035), 0 1px 1px rgba($au-neutral-darkest, .025) !important;
   transition: $au-transition !important;
   display: none !important;
