@@ -20,11 +20,6 @@
     {{else}}
     --au-regular: 500;
     {{/if}}
-    {{#if @light}}
-    --au-light: {{@light}};
-    {{else}}
-    --au-light: 400;
-    {{/if}}
     {{#if @check}}
     --au-check: {{@check}};
     {{else}}
@@ -35,20 +30,10 @@
     {{else}}
     --au-link: #0E5EB8;
     {{/if}}
-    {{#if @linkDark}}
-    --au-link-dark: {{@linkDark}};
+    {{#if @linkHover}}
+    --au-link-hover: {{@linkHover}};
     {{else}}
-    --au-link-dark: #073261;
-    {{/if}}
-    {{#if @linkLight}}
-    --au-link-light: {{@linkLight}};
-    {{else}}
-    --au-link-light: #0F6FD7;
-    {{/if}}
-    {{#if @linkLighter}}
-    --au-link-lighter: {{@linkLighter}};
-    {{else}}
-    --au-link-lighter: #B8D8FA;
+    --au-link-hover: #0F6FD7;
     {{/if}}
     {{#if @error}}
     --au-error: {{@error}};

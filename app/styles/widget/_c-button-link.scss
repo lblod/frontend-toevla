@@ -19,7 +19,7 @@
   text-align: left !important;
   text-decoration: underline !important;
   text-decoration-color: $au-primary-light !important;
-  text-decoration-color: var(--au-link-light) !important;
+  text-decoration-color: var(--au-link-hover) !important;
   color: $au-primary !important;
   background-color: transparent !important;
   transition: color $au-transition !important;
@@ -29,11 +29,11 @@
   &:hover,
   &:focus {
     color: $au-primary-light !important;
-    color: var(--au-link-light) !important;
+    color: var(--au-link-hover) !important;
     background-color: transparent !important;
     text-decoration: underline !important;
     text-decoration-color: $au-primary-light !important;
-    text-decoration-color: var(--au-link-light) !important;
+    text-decoration-color: var(--au-link-hover) !important;
   }
 
   &:focus {
