@@ -73,13 +73,13 @@
       color: $au-primary !important;
       color: var(--au-link) !important;
       text-decoration-color: $au-primary-light !important;
-      text-decoration-color: var(--au-link-light) !important;
+      text-decoration-color: var(--au-link-hover) !important;
     }
 
     &:hover,
     &:focus {
       color: $au-primary-light !important;
-      color: var(--au-link-light) !important;
+      color: var(--au-link-hover) !important;
       text-decoration: none !important;
     }
 
@@ -89,12 +89,6 @@
       outline-color: $au-outline-color !important;
       outline-color: var(--au-outline) !important;
       outline-offset: $au-unit-tiny/2 !important;
-    }
-
-    .is-active > & {
-      color: $au-primary-lighter !important;
-      color: var(--au-link-lighter) !important;
-      text-decoration: none !important;
     }
   }
 }
