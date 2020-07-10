@@ -1,0 +1,14 @@
+<AuCriteriaListItem @error={{if (get @experience @key) false true}}>
+  {{@node.title}}
+  <p class="au-w-info-text">
+    {{#if (get @experience @key)}}
+      {{#if @node.positiveTemplateString}}
+          {{@node.positiveTemplateString}}
+      {{/if}}
+    {{else}}
+      {{#if @node.negativeTemplateString}}
+          {{@node.negativeTemplateString}}
+      {{/if}}
+    {{/if}}
+  </p>
+</AuCriteriaListItem>

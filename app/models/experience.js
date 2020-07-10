@@ -1,11 +1,12 @@
 import Model from '@ember-data/model';
 import { belongsTo, hasMany } from 'ember-data/relationships';
 import attr from 'ember-data/attr';
+import { editMapping, keyToPath} from '../utils/custom-component-mapping';
 
 export default class ExperienceModel extends Model {
   @attr('string') title;
 
-  @belongsTo('point-of-interest') pointsOfInterest;
+  @belongsTo('point-of-interest') pointOfInterest;
   @hasMany('experience-tree-node-score') experienceTreeNodeScores;
 
   async getScoreForTreeNode(treeNode){
@@ -15,6 +16,8 @@ export default class ExperienceModel extends Model {
         'filter[experience][:id:]':this.id
       }
     )
+
     return result.firstObject;
   }
+
 }
