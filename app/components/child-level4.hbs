@@ -1,5 +1,5 @@
 {{#if this.sortedChildren}}
-  <AuCriteriaListItem @error='true'>
+  <AuCriteriaListItem @check={{true}}>
     {{@node.title}}{{#if this.hack}}: <strong>{{this.hack.score}}</strong>{{/if}}
     <ul>
       {{#each this.sortedChildren as |child|}}
@@ -8,5 +8,5 @@
     </ul>
   </AuCriteriaListItem>
 {{else}}
-  <ViewComponents::Generic @node={{@node}} @experience={{@experience}}/>
+  <ViewComponents::Generic @itemComponent='au-criteria-list-item' @node={{@node}} @experience={{@experience}}/>
 {{/if}}

@@ -1,4 +1,4 @@
-<AuCriteriaListItem @error={{if (get @experience @key) false true}}>
+{{#component @itemComponent check=(get @experience @key)}}
   {{@node.title}}
   <p class="au-w-info-text">
     {{#if (get @experience @key)}}
@@ -11,4 +11,4 @@
       {{/if}}
     {{/if}}
   </p>
-</AuCriteriaListItem>
+{{/component}}
