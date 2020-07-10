@@ -1,1 +1,14 @@
-arithmetic component
+{{#if (get @experience @key)}}
+<AuCriteriaListItem>
+  {{@node.title}}
+  <p class="au-w-info-text">
+    {{#if (get @experience @key)}}
+      {{get @experience @key}}
+    {{/if}}
+  </p>
+</AuCriteriaListItem>
+{{else}}
+  <AuCriteriaListItem @error={{true}}>
+    {{@node.title}}
+  </AuCriteriaListItem>
+{{/if}}
