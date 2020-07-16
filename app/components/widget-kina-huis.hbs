@@ -18,7 +18,7 @@
       {{@title}}
     </h2>
     <AuRating>
-      Deze locatie scoort 1 op 4. <a href="https://toevla.vlaanderen.be/publiek/nl/Information/TOE" target="_blank" rel="noopener noreferrer" class="au-w-link au-w-link--neutral">Wat is een toegankelijke locatie?</a>
+      Dit is een <a href="https://toevla.vlaanderen.be/publiek/nl/Information/TOE" target="_blank" rel="noopener noreferrer" class="au-w-link au-w-link--neutral">toegankelijk locatie</a>.
     </AuRating>
   </header>
   <section class="au-w-section au-w-section--column">
@@ -275,6 +275,61 @@
         </AuCollapsableSection>
       </li>
       <li class="au-w-section-list__item">
+        <AuCollapsableSection @buttonTitle="Circuleren - vaste tentoonstelling" @check="true">
+          <ul class="au-w-criterium-list">
+            <AuCriteriaItem @criterium="De te volgen route is logisch en eenvoudig opgebouwd" @check="true">
+            </AuCriteriaItem>
+            <AuCriteriaItem @criterium="Rolstoelvriendelijke circulatie" @check="true">
+              <AuCriteriaAlert>
+                Getoetst op: een minimale vrije breedte van 77 cm, een drempel van max. 2 cm, een hellend vlak en lift van minimaal 90 cm (B) x 120 cm (D)
+              </AuCriteriaAlert>
+              <ul>
+                <AuCriteriaListItem>
+                  Alles op gelijkvloers
+                </AuCriteriaListItem>
+                <AuCriteriaListItem>
+                  Smalste punt op de route: <strong>90 cm</strong>
+                </AuCriteriaListItem>
+                <AuCriteriaListItem>
+                  Drempel: <strong>geen</strong>
+                </AuCriteriaListItem>
+                <AuCriteriaListItem>
+                  Meerdere hellende vlakken: <strong>x</strong>
+                </AuCriteriaListItem>
+                <AuCriteriaListItem>
+                  Plateaulift: <strong>112 cm (B) x 148 cm (D)</strong>
+                </AuCriteriaListItem>
+                <AuCriteriaListItem>
+                  Meerdere plateauliften: <strong>x</strong>
+                </AuCriteriaListItem>
+              </ul>
+            </AuCriteriaItem>
+          </ul>
+        </AuCollapsableSection>
+      </li>
+      <li class="au-w-section-list__item">
+        <AuCollapsableSection @buttonTitle="Circuleren - tijdelijke tentoonstelling" @check="true">
+          <ul class="au-w-criterium-list">
+            <AuCriteriaItem @criterium="Rolstoelvriendelijke circulatie" @check="true">
+              <AuCriteriaAlert>
+                Getoetst op: een minimale vrije breedte van 77 cm, een drempel van max. 2 cm, een hellend vlak en lift van minimaal 90 cm (B) x 120 cm (D)
+              </AuCriteriaAlert>
+              <ul>
+                <AuCriteriaListItem>
+                  Alles op gelijkvloers
+                </AuCriteriaListItem>
+                <AuCriteriaListItem>
+                  Smalste punt op de route: <strong>90 cm</strong>
+                </AuCriteriaListItem>
+                <AuCriteriaListItem>
+                  Drempel: <strong>geen</strong>
+                </AuCriteriaListItem>
+              </ul>
+            </AuCriteriaItem>
+          </ul>
+        </AuCollapsableSection>
+      </li>
+      <li class="au-w-section-list__item">
         <AuCollapsableSection @buttonTitle="Toilet" @check="true">
           <ul class="au-w-criterium-list">
             <AuCriteriaItem @criterium="Babyverzorgingstafel aanwezig" @check="true"></AuCriteriaItem>
@@ -339,61 +394,6 @@
                 </AuCriteriaListItem>
               </ul>
               <p class="au-w-info-text">Extra info: extra aangepast toilet aanwezig bij de wisselende expo</p>
-            </AuCriteriaItem>
-          </ul>
-        </AuCollapsableSection>
-      </li>
-      <li class="au-w-section-list__item">
-        <AuCollapsableSection @buttonTitle="Circuleren - vaste tentoonstelling" @check="true">
-          <ul class="au-w-criterium-list">
-            <AuCriteriaItem @criterium="De te volgen route is logisch en eenvoudig opgebouwd" @check="true">
-            </AuCriteriaItem>
-            <AuCriteriaItem @criterium="Rolstoelvriendelijke circulatie" @check="true">
-              <AuCriteriaAlert>
-                Getoetst op: een minimale vrije breedte van 77 cm, een drempel van max. 2 cm, een hellend vlak en lift van minimaal 90 cm (B) x 120 cm (D)
-              </AuCriteriaAlert>
-              <ul>
-                <AuCriteriaListItem>
-                  Alles op gelijkvloers
-                </AuCriteriaListItem>
-                <AuCriteriaListItem>
-                  Smalste punt op de route: <strong>90 cm</strong>
-                </AuCriteriaListItem>
-                <AuCriteriaListItem>
-                  Drempel: <strong>geen</strong>
-                </AuCriteriaListItem>
-                <AuCriteriaListItem>
-                  Meerdere hellende vlakken: <strong>x</strong>
-                </AuCriteriaListItem>
-                <AuCriteriaListItem>
-                  Plateaulift: <strong>112 cm (B) x 148 cm (D)</strong>
-                </AuCriteriaListItem>
-                <AuCriteriaListItem>
-                  Meerdere plateauliften: <strong>x</strong>
-                </AuCriteriaListItem>
-              </ul>
-            </AuCriteriaItem>
-          </ul>
-        </AuCollapsableSection>
-      </li>
-      <li class="au-w-section-list__item">
-        <AuCollapsableSection @buttonTitle="Circuleren - tijdelijke tentoonstelling" @check="true">
-          <ul class="au-w-criterium-list">
-            <AuCriteriaItem @criterium="Rolstoelvriendelijke circulatie" @check="true">
-              <AuCriteriaAlert>
-                Getoetst op: een minimale vrije breedte van 77 cm, een drempel van max. 2 cm, een hellend vlak en lift van minimaal 90 cm (B) x 120 cm (D)
-              </AuCriteriaAlert>
-              <ul>
-                <AuCriteriaListItem>
-                  Alles op gelijkvloers
-                </AuCriteriaListItem>
-                <AuCriteriaListItem>
-                  Smalste punt op de route: <strong>90 cm</strong>
-                </AuCriteriaListItem>
-                <AuCriteriaListItem>
-                  Drempel: <strong>geen</strong>
-                </AuCriteriaListItem>
-              </ul>
             </AuCriteriaItem>
           </ul>
         </AuCollapsableSection>
