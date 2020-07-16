@@ -18,9 +18,12 @@
       {{@title}}
     </h2>
     <AuRating>
-      Deze locatie scoort 1 op 4. <a href="https://toevla.vlaanderen.be/publiek/nl/Information/TOE" target="_blank" rel="noopener noreferrer" class="au-w-link au-w-link--neutral">Wat is een toegankelijke locatie?</a>
+      Dit is een <a href="https://toevla.vlaanderen.be/publiek/nl/Information/TOE" target="_blank" rel="noopener noreferrer" class="au-w-link au-w-link--neutral">toegankelijk locatie</a>.
     </AuRating>
   </header>
+  {{#each this.sortedChildren as |child|}}
+    <ChildLevel1 @node={{child}} @experience={{@experience}}/>
+  {{/each}}
   <section class="au-w-section">
     <h3 class="au-w-section__title au-w-hidden-visually">Foto's</h3>
     <div class="au-w-lightbox-holder">
@@ -174,9 +177,6 @@
       </AuLightbox>
     </div>
   </section>
-  {{#each this.sortedChildren as |child|}}
-    <ChildLevel1 @node={{child}} @experience={{@experience}}/>
-  {{/each}}
   <footer class="au-w-footer au-w-footer--border">
     <p>Deze informatie is aangeleverd door <a href="https://toevla.vlaanderen.be" class="au-w-link au-w-link--neutral" target="_blank" rel="noopener noreferrer">Toevla</a>. </p>
     <p>Een fout of onvolledigheid opgemerkt? <a href="https://toevla.vlaanderen.be/publiek/nl/Startpagina/Reactie" class="au-w-link au-w-link--neutral" target="_blank" rel="noopener noreferrer">Contacteer Toegankelijk Vlaanderen</a>.</p>

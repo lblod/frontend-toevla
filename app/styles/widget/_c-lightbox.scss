@@ -5,14 +5,18 @@
 // Temporary holder
 .au-w-lightbox-holder {
   position: relative !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  margin: -$au-unit-tiny/2 !important;
 }
 
 .au-w-lightbox {
   display: flex !important;
   flex-wrap: wrap !important;
   position: relative !important;
-  margin: -$au-unit-tiny/2 !important;
   padding: 0 !important;
+  flex-grow: 1 !important;
+  flex-basis: 650px !important;
 }
 
 .au-w-lightbox__item {
@@ -55,8 +59,8 @@
   font-family: var(--au-font) !important;
   font-weight: $au-regular !important;
   font-weight: var(--au-regular) !important;
-  padding: 0 !important;
-  border: 0 !important;
+  border: 1px solid $au-neutral-lighter !important;
+  border-radius: $au-radius !important;
   appearance: none !important;
   -webkit-appearance: none !important; // doesn't work without prefix on Safari iOS11
   display: flex !important;
@@ -71,10 +75,10 @@
   background-color: transparent !important;
   transition: color $au-transition !important;
   cursor: pointer !important;
-  padding: $au-unit-tiny !important;
-  margin-top: $au-unit-tiny !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  padding: $au-unit-small !important;
+  flex-grow: 1 !important;
+  flex-basis: 150px !important;
+  margin: $au-unit-tiny/2 !important;
 
   &:hover,
   &:focus {
@@ -87,6 +91,7 @@
   &:focus {
     outline-width: 2px !important;
     outline-style: solid !important;
+    outline-offset: -2px !important;
     outline-color: $au-outline-color !important;
     outline-color: var(--au-outline) !important;
   }
