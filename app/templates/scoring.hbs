@@ -1,0 +1,40 @@
+<header class="au-o-region-large au-d-theme-neutral-lightest au-u-padding-bottom">
+  <div class="au-o-layout au-o-layout--medium">
+    <p><a href="/" class="au-d-link au-d-link--neutral">&leftarrow; Terug naar overzicht</a></p>
+    <div class="au-d-editor">
+      <h1 class="">Toegankelijkheid Widget</h1>
+      <hr>
+    </div>
+  </div>
+</header>
+
+<main class="au-o-region au-d-theme-neutral-lightest au-d-widget">
+  <div class="au-o-layout au-o-layout--medium au-d-editor">
+    <h2>Scores</h2>
+    <p>Draft rating voorstel. (exacte terminologie moet nog bepaald worden)</p>
+    <div class="au-d-component text-long">
+      <AuVariables />
+      <h3 class="au-w-section__title">Level 0</h3>
+      <p class="au-w-info">Score wordt niet getoond.</p>
+      <AuRating @rating="0" />
+      <hr/>
+      <h3 class="au-w-section__title">Level 1</h3>
+      <AuRating @rating="1" />
+      <hr/>
+      <h3 class="au-w-section__title">Level 2</h3>
+      <AuRating @rating="2">
+      Dit is een <a href="https://toevla.vlaanderen.be/publiek/nl/Information/TOE" target="_blank" rel="noopener noreferrer" class="au-w-link au-w-link--neutral">goed toegankelijke locatie</a>.
+      </AuRating>
+      <hr/>
+      <h3 class="au-w-section__title">Level 3</h3>
+      <AuRating @rating="3">
+      Dit is een <a href="https://toevla.vlaanderen.be/publiek/nl/Information/TOE" target="_blank" rel="noopener noreferrer" class="au-w-link au-w-link--neutral">zeer goed toegankelijke locatie</a>.
+      </AuRating>
+      <hr/>
+      <h3 class="au-w-section__title">Level 4</h3>
+      <AuRating @rating="4">
+      Dit is een <a href="https://toevla.vlaanderen.be/publiek/nl/Information/TOE" target="_blank" rel="noopener noreferrer" class="au-w-link au-w-link--neutral">uitstekend toegankelijke locatie</a>.
+      </AuRating>
+    </div>
+  </div>
+</main>

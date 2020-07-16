@@ -17,9 +17,7 @@
       </svg>
       {{@title}}
     </h2>
-    <AuRating>
-      Dit is een <a href="https://toevla.vlaanderen.be/publiek/nl/Information/TOE" target="_blank" rel="noopener noreferrer" class="au-w-link au-w-link--neutral">toegankelijk locatie</a>.
-    </AuRating>
+    <AuRating @rating="1" />
   </header>
   {{#each this.sortedChildren as |child|}}
     <ChildLevel1 @node={{child}} @experience={{@experience}}/>
