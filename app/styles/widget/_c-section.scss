@@ -35,3 +35,9 @@
   color: $au-neutral-darker !important;
   text-align: left !important;
 }
+
+.au-w-section--flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -14,4 +14,5 @@ Router.map(function() {
   this.route('root');
   this.route('scoring');
   this.route('widget-future');
+  this.route('icons');
 });

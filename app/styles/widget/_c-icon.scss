@@ -57,3 +57,16 @@
   fill: var(--au-error) !important;
   stroke: var(--au-error) !important;
 }
+
+.au-w-icon--full {
+  display: block !important;
+  bottom: 0 !important;
+  width: 2.6em !important;
+  height: 2.6em !important;
+  padding: $au-unit-tiny/2 !important;
+  fill: $au-neutral-darker !important;
+  border-radius: $au-radius !important;
+  // background-color: $au-neutral-lightest !important;
+  border: 1px solid $au-neutral-lighter !important;
+  margin: 0 !important;
+}
