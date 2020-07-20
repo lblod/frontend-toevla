@@ -1,0 +1,54 @@
+.au-w-criterium-list__content .au-w-photo-list {
+  padding-left: 0 !important;
+  margin-bottom: $au-unit-tiny/2 !important;
+  margin-top: $au-unit-tiny !important;
+  margin-left: -$au-unit-tiny/2 !important;
+  margin-right: -$au-unit-tiny/2 !important;
+  padding-top: $au-unit-tiny !important;
+  display: flex !important;
+  border-top: 1px dotted $au-neutral-lighter;
+}
+
+.au-w-photo-list__item {
+  margin: $au-unit-tiny/2 !important;
+}
+
+.au-w-photo-list__button {
+  position: relative !important;
+  border: 1px solid $au-neutral-lighter !important;
+  border-radius: $au-radius !important;
+  overflow: hidden !important;
+  appearance: none !important;
+  -webkit-appearance: none !important; // doesn't work without prefix on Safari iOS11
+  display: block !important;
+  transition: opacity $au-transition !important;
+  cursor: zoom-in !important;
+  padding: 0 0 65% 0 !important;
+  width: 100px !important;
+  background-color: $au-neutral-lightest !important;
+
+  &:hover,
+  &:focus {
+    opacity: .8;
+  }
+
+  &:focus {
+    outline-width: 2px !important;
+    outline-style: solid !important;
+    outline-color: $au-outline-color !important;
+    outline-color: var(--au-outline) !important;
+  }
+
+  &:visited {
+    background-color: $au-neutral-lightest !important;
+  }
+
+  img {
+    display: block !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 100% !important;
+    transform: translate(-50%,-50%) !important;
+  }
+}

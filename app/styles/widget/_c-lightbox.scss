@@ -34,13 +34,35 @@
 }
 
 .au-w-lightbox__image {
-  display: block !important;
-  overflow: hidden !important;
-  border-radius: $au-radius !important;
-  padding-bottom: 65% !important;
   position: relative !important;
+  border: 1px solid $au-neutral-lighter !important;
+  border-radius: $au-radius !important;
+  overflow: hidden !important;
+  appearance: none !important;
+  -webkit-appearance: none !important; // doesn't work without prefix on Safari iOS11
+  display: block !important;
+  transition: opacity $au-transition !important;
+  cursor: zoom-in !important;
+  padding: 0 0 65% 0 !important;
   width: 100% !important;
+  background-color: $au-neutral-lightest !important;
   margin: 0 !important;
+
+  &:hover,
+  &:focus {
+    opacity: .8;
+  }
+
+  &:focus {
+    outline-width: 2px !important;
+    outline-style: solid !important;
+    outline-color: $au-outline-color !important;
+    outline-color: var(--au-outline) !important;
+  }
+
+  &:visited {
+    background-color: $au-neutral-lightest !important;
+  }
 
   img {
     display: block !important;
@@ -48,6 +70,7 @@
     top: 50% !important;
     left: 50% !important;
     width: 100% !important;
+    min-width: 160px !important;
     transform: translate(-50%,-50%) !important;
   }
 }
