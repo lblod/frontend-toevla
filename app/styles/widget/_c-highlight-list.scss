@@ -5,8 +5,58 @@
 
 .au-w-highlight-list__item {
   padding: 0 !important;
+  position: relative !important;
+  border-radius: $au-radius !important;
 
   & + & {
     margin-left: $au-unit-tiny !important;
   }
+
+  &:hover {
+    background-color: $au-neutral-lightest !important;
+  }
+}
+
+.au-w-highlight-list__tooltip {
+  border: 0 !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+
+  .au-w-highlight-list__item:hover & {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    display: block !important;
+    height: auto !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 $au-unit-tiny !important;
+    color: $au-white !important;
+    background-color: $au-neutral-dark !important;
+    z-index: 1 !important;
+    top: calc(100% + #{$au-unit-tiny}) !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    border-radius: $au-radius !important;
+    overflow: visible !important;
+  }
+
+  .au-w-highlight-list__item:hover &:before {
+    bottom: 100% !important;
+    left: 50% !important;
+    border: solid transparent !important;
+    content: " " !important;
+    height: 0 !important;
+    width: 0 !important;
+    position: absolute !important;
+    pointer-events: none !important;
+    border-color: rgba($au-white, 0) !important;
+    border-bottom-color: $au-neutral-dark !important;
+    border-width: 3px !important;
+    margin-left: -3px !important;
+   }
 }
