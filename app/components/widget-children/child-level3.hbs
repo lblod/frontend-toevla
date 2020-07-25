@@ -1,0 +1,11 @@
+{{#if this.sortedChildren}}
+  <AuCriteriaItem @criterium={{@node.title}} @check={{true}}>
+    <ul>
+      {{#each this.sortedChildren as |child|}}
+        <WidgetChildren::ChildLevel4 @node={{child}} @experience={{@experience}}/>
+      {{/each}}
+    </ul>
+  </AuCriteriaItem>
+{{else}}
+  <EditComponents::Generic  @node={{@node}} @experience={{@experience}}/>
+{{/if}}

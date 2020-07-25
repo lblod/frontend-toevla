@@ -24,5 +24,6 @@ export default class PointOfInterestModel extends Model {
 
   @hasMany('experience') experiences;
   @hasMany('entrance') entrances;
-
+  @hasMany('parking') parkings;
+  @hasMany('toilet') toilets;
 }

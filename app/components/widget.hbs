@@ -19,8 +19,19 @@
     </h2>
     <AuRating @rating="1" />
   </header>
+  <section class="au-w-section au-w-section--flex">
+    <div>
+      <h3 class="au-w-address-title">
+        De Wereld van Kina: het Huis
+      </h3>
+      <p class="au-w-address-para">
+        Sint-Pietersplein 14, 9000 Gent
+      </p>
+    </div>
+    <IconHighlight />
+  </section>
   {{#each this.sortedChildren as |child|}}
-    <ChildLevel1 @node={{child}} @experience={{@experience}}/>
+    <WidgetChildren::ChildLevel1 @node={{child}} @experience={{@experience}}/>
   {{/each}}
   <section class="au-w-section">
     <h3 class="au-w-section__title au-w-hidden-visually">Foto's</h3>
@@ -28,22 +39,22 @@
       <ul class="au-w-lightbox">
         <li class="au-w-lightbox__item">
           <button class="au-w-lightbox__image">
-            <img src="https://embed-dev.toevla.org/assets/img/kinaP1.jpg" alt="Er zijn 2 aangepaste parkeerplaatsen dicht bij de alternatieve inkom.">
+            <img src="/assets/img/kinaP1.jpg" alt="Er zijn 2 aangepaste parkeerplaatsen dicht bij de alternatieve inkom.">
           </button>
         </li>
         <li class="au-w-lightbox__item">
           <button class="au-w-lightbox__image">
-            <img src="https://embed-dev.toevla.org/assets/img/kinaP2.jpg" alt="Parkeren: er zijn 2 aangepaste parkeerplaatsen dicht bij de alternatieve inkom.">
+            <img src="/assets/img/kinaP2.jpg" alt="Parkeren: er zijn 2 aangepaste parkeerplaatsen dicht bij de alternatieve inkom.">
           </button>
         </li>
         <li class="au-w-lightbox__item">
           <button class="au-w-lightbox__image">
-            <img src="https://embed-dev.toevla.org/assets/img/kinaC1.jpg" alt="Circuleren - vaste tentoonstelling: rolstoelvriendelijke lift (148 cm x 112 cm).">
+            <img src="/assets/img/kinaC1.jpg" alt="Circuleren - vaste tentoonstelling: rolstoelvriendelijke lift (148 cm x 112 cm).">
           </button>
         </li>
         <li class="au-w-lightbox__item">
           <button class="au-w-lightbox__image">
-            <img src="https://embed-dev.toevla.org/assets/img/kinaC3.jpg" alt="Circuleren - vaste tentoonstelling: helling op de route.">
+            <img src="/assets/img/kinaC3.jpg" alt="Circuleren - vaste tentoonstelling: helling op de route.">
           </button>
         </li>
       </ul>
@@ -52,7 +63,7 @@
           <div class="au-w-carousel">
             {{#ui.item}}
               <figure class="au-w-carousel__figure">
-                <img src="https://embed-dev.toevla.org/assets/img/kinaP1.jpg" alt="" class="au-w-carousel__image">
+                <img src="/assets/img/kinaP1.jpg" alt="" class="au-w-carousel__image">
                 <figcaption class="au-w-carousel__caption">
                   <span class="au-w-carousel__pagination">Foto 1/12</span>
                   Parkeren: er zijn 2 aangepaste parkeerplaatsen dicht bij de alternatieve inkom.
@@ -61,7 +72,7 @@
             {{/ui.item}}
             {{#ui.item}}
               <figure class="au-w-carousel__figure">
-                <img src="https://embed-dev.toevla.org/assets/img/kinaP2.jpg" alt="" class="au-w-carousel__image">
+                <img src="/assets/img/kinaP2.jpg" alt="" class="au-w-carousel__image">
                 <figcaption class="au-w-carousel__caption">
                   <span class="au-w-carousel__pagination">Foto 2/12</span>
                   Parkeren: onder het Sint-Pietersplein is een ruime ondergrondse parkeergelegenheid met aangepaste parkeerplaatsen.
@@ -70,7 +81,7 @@
             {{/ui.item}}
             {{#ui.item}}
               <figure class="au-w-carousel__figure">
-                <img src="https://embed-dev.toevla.org/assets/img/kinaI1.jpg" alt="" class="au-w-carousel__image">
+                <img src="/assets/img/kinaI1.jpg" alt="" class="au-w-carousel__image">
                 <figcaption class="au-w-carousel__caption">
                   <span class="au-w-carousel__pagination">Foto 3/12</span>
                   Route naar inkom: alternatieve inkom.
@@ -79,7 +90,7 @@
             {{/ui.item}}
             {{#ui.item}}
               <figure class="au-w-carousel__figure">
-                <img src="https://embed-dev.toevla.org/assets/img/kinaI2.jpg" alt="" class="au-w-carousel__image">
+                <img src="/assets/img/kinaI2.jpg" alt="" class="au-w-carousel__image">
                 <figcaption class="au-w-carousel__caption">
                   <span class="au-w-carousel__pagination">Foto 4/12</span>
                   Alternatieve inkom: Bel met parlofoon. Er komt steeds iemand om deze deur te openen en u te begeleiden naar de balie in de inkomhal.

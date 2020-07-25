@@ -1,7 +1,7 @@
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 
-export default class ChildLevel1Component extends Component {
+export default class WidgetChildrenChildLevel1Component extends Component {
   get sortedChildren(){
     return this.args.node.children.sortBy("order");
   }

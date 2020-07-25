@@ -1,7 +1,6 @@
-{{#component @itemComponent check=(get @experience @key)}}
-  {{@node.title}}
+<AuCriteriaItem @criterium={{@node.title}} @check={{this.value}}>
   <p class="au-w-info-text">
-    {{#if (get @experience @key)}}
+    {{#if this.value}}
       {{#if @node.positiveTemplateString}}
           {{@node.positiveTemplateString}}
       {{/if}}
@@ -11,4 +10,4 @@
       {{/if}}
     {{/if}}
   </p>
-{{/component}}
+</AuCriteriaItem>
