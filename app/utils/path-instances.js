@@ -11,8 +11,13 @@ export function property(path){
   return name;
 }
 
-export async function getInstance(experience, path){
-  const objectPath = butLast(path);
+export async function getInstance(experience, path, options = {}){
+  let objectPath;
+  if( options.keyIsObject )
+    objectPath = path;
+  else
+    objectPath = butLast(path);
+
   return await ensureExistingInstances(experience, "experience", objectPath.split("."));
 }
 
