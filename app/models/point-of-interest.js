@@ -29,4 +29,8 @@ export default class PointOfInterestModel extends Model {
   @hasMany('entrance') entrances;
   @hasMany('parking') parkings;
   @hasMany('toilet') toilets;
+  @belongsTo('route-description') publicTransportRouteDescription;
+  @hasMany('train-stop') trainStops;
+  @hasMany('bus-stop') busStops;
+  @hasMany('tram-stop') tramStops;
 }

@@ -1,23 +1,18 @@
 import { set } from '@ember/object';
 import { get as emberGet } from '@ember/object';
-import Experience from 'frontend-toevla/models/experience';
 
 export function butLast(path){
   const [, ...rest] = path.split(".").reverse();
   return rest.reverse().join(".");
 }
+
 export function property(path){
   const [name,] = path.split(".").reverse();
   return name;
 }
 
-export async function getInstance(experience, path, options = {}){
-  let objectPath;
-  if( options.keyIsObject )
-    objectPath = path;
-  else
-    objectPath = butLast(path);
-
+export async function getInstance(experience, path){
+  const objectPath = butLast(path);
   return await ensureExistingInstances(experience, "experience", objectPath.split("."));
 }
 
@@ -108,6 +103,69 @@ async function ensureExistingPointOfInterestInstances(poi, [first, ...rest]) {
       poi.save();
     }
     return ensureExistingInstances(toilet, "toilet", rest);
+  } else if (first === "trainStop") {
+    const trainStops = await emberGet(poi, "trainStops");
+    let trainStop;
+    if (trainStops.length > 0) {
+      trainStop = trainStops.firstObject;
+    } else {
+      trainStop =
+        await poi
+          .store
+          .createRecord("train-stop", {
+            pointOfInterest: poi
+          })
+          .save();
+      poi.trainStops.pushObject(trainStop);
+      poi.save();
+    }
+    return ensureExistingInstances(trainStop, "trainStop", rest);
+  } else if (first === "busStop") {
+    const busStops = await emberGet(poi, "busStops");
+    let busStop;
+    if (busStops.length > 0) {
+      busStop = busStops.firstObject;
+    } else {
+      busStop =
+        await poi
+          .store
+          .createRecord("bus-stop", {
+            pointOfInterest: poi
+          })
+          .save();
+      poi.busStops.pushObject(busStop);
+      poi.save();
+    }
+    return ensureExistingInstances(busStop, "busStop", rest);
+  } else if (first === "tramStop") {
+    const tramStops = await emberGet(poi, "tramStops");
+    let tramStop;
+    if (tramStops.length > 0) {
+      tramStop = tramStops.firstObject;
+    } else {
+      tramStop =
+        await poi
+          .store
+          .createRecord("tram-stop", {
+            pointOfInterest: poi
+          })
+          .save();
+      poi.tramStops.pushObject(tramStop);
+      poi.save();
+    }
+    return ensureExistingInstances(tramStop, "tramStop", rest);
+  } else if (first === "publicTransportRouteDescription") {
+    let routeDescription = await emberGet(poi, "publicTransportRouteDescription");
+    if (!routeDescription) {
+      routeDescription =
+        await poi
+          .store
+          .createRecord("route-description")
+          .save();
+      poi.publicTransportRouteDescription = routeDescription;
+      await poi.save();
+    }
+    return ensureExistingInstances(routeDescription, "routeDescription", rest);
   }
 }
 
