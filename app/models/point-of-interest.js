@@ -4,7 +4,6 @@ import attr from 'ember-data/attr';
 
 export default class PointOfInterestModel extends Model {
   @attr('string') label;
-
   @attr('boolean') hasMovableElectronicPaymentSystem;
   @attr('boolean') wifiAlwaysAvailable;
   @attr('boolean') assistanceForGuideDogs;
@@ -21,7 +20,11 @@ export default class PointOfInterestModel extends Model {
   @attr('boolean') hasMarkingsOrContrastsOnGlassDoors;
   @attr('boolean') extraAttentionGivenToAcoustics;
   @attr('boolean') hasAlternativeEntranceForWheelchair;
-
+  @attr('boolean') hasFreeEntranceForGuide;
+  @attr('boolean') acceptsMuseumPass;
+  @attr('boolean') acceptsUitpas;
+  @attr('boolean') acceptsCityPass;
+  @attr('boolean') acceptsEdc;
   @hasMany('experience') experiences;
   @hasMany('entrance') entrances;
   @hasMany('parking') parkings;
