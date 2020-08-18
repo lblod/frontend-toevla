@@ -4,6 +4,10 @@
 
 .au-w-container {
   position: relative !important;
+  background-color: $au-white !important;
+  padding: 0 $au-unit-small !important;
+  border: .1rem solid $au-neutral-lighter !important;
+  border-radius: $au-radius !important;
 
   // Reset
   h1,
