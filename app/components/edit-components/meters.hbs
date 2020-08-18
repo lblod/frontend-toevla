@@ -1,8 +1,8 @@
 
-<AuCriteriaItem @criterium={{@node.title}} @check={{this.value}}>
+<AuCriteriaInline @criterium={{@node.title}} @check={{this.value}}>
   {{#if this.value}}
-    <p class="au-w-info-text">
+    <strong>
       {{this.value}} m.
-    </p>
+    </strong>
   {{/if}}
-</AuCriteriaItem>
+</AuCriteriaInline>

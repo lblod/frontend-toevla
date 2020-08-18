@@ -15,6 +15,61 @@
     margin-top: $au-unit-tiny/2 !important;
     padding-top: $au-unit-tiny/2 !important;
   }
+
+  .au-w-criterium-list--detail & {
+    display: list-item !important;
+    position: relative !important;
+    list-style: initial !important;
+    margin-top: $au-unit-tiny/2 !important;
+  }
+
+  .au-w-criterium-list--detail & .au-w-icon--active,
+  .au-w-criterium-list--detail & .au-w-icon--faded {
+    display: none !important;
+  }
+
+  .au-w-criterium-list--detail &.au-w-criterium-list__item--error,
+  .au-w-criterium-list--detail .au-w-criterium-list--detail &.au-w-criterium-list__item--error {
+    list-style-type: none !important;
+  }
+
+  .au-w-criterium-list--detail &.au-w-criterium-list__item--error .au-w-icon--error {
+    width: 15px !important;
+    height: 15px !important;
+    bottom: -.25ex !important;
+    margin-left: -18px !important;
+    margin-right: 0 !important;
+  }
+
+  .au-w-criterium-list--detail .au-w-criterium-list--detail & {
+    list-style-type: circle !important;
+    margin-left: -$au-unit-small - $au-unit-tiny !important;
+  }
+
+  .au-w-criterium-list--detail .au-w-criterium-list--detail .au-w-criterium-list--detail & {
+    list-style-type: none !important;
+    margin-left: -$au-unit-large + $au-unit-small !important;
+
+    &:before {
+      content: "-" !important;
+      display: inline-block !important;
+      width: 15px !important;
+      text-align: center !important;
+      margin-right: 1px !important;
+    }
+  }
+
+  .au-w-criterium-list--detail .au-w-criterium-list--detail .au-w-criterium-list--detail &.au-w-criterium-list__item--error {
+    margin-left: -$au-unit-small - $au-unit-tiny !important;
+  }
+
+  .au-w-criterium-list--detail .au-w-criterium-list--detail .au-w-criterium-list--detail &.au-w-criterium-list__item--error:before {
+    display: none !important;
+  }
+
+  .au-w-criterium-list--detail & .au-w-criterium-list__title {
+    display: inline !important;
+  }
 }
 
 .au-w-criterium-list__title {
@@ -94,6 +149,8 @@
   }
 }
 
+
+// Demo styles, not used in production
 .au-w-criteria-list-item {
   display: list-item !important;
   position: relative !important;

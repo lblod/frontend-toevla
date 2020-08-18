@@ -1,7 +1,7 @@
-<AuCriteriaItem @criterium={{@node.title}} @check={{this.area.height}}>
+<AuCriteriaInline @criterium={{@node.title}} @check={{this.area.height}}>
   {{#if this.area.height}}
-    <p class="au-w-info-text">
+    <strong>
       {{this.area.width}} cm X {{this.area.height}} cm
-    </p>
+    </strong>
   {{/if}}
-</AuCriteriaItem>
+</AuCriteriaInline>

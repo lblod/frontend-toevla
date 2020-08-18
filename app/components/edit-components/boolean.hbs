@@ -1,16 +1,15 @@
-<AuCriteriaItem @criterium={{@node.title}} @check={{this.value}}>
+<AuCriteriaInline @criterium={{@node.title}} @check={{this.value}}>
   {{#if this.value}}
     {{#if @node.positiveTemplateString}}
-        <p class="au-w-info-text">
+        <strong>
           {{@node.positiveTemplateString}}
-        </p>
+        </strong>
     {{/if}}
   {{else}}
     {{#if @node.negativeTemplateString}}
-        <p class="au-w-info-text">
+        <strong>
           {{@node.negativeTemplateString}}
-        </p>
+        </strong>
     {{/if}}
   {{/if}}
-
-</AuCriteriaItem>
+</AuCriteriaInline>
