@@ -19,7 +19,7 @@
     </h2>
     <AuRating @rating="1" />
   </header>
-  <section class="au-w-section au-w-section--flex">
+  {{!-- <section class="au-w-section au-w-section--flex">
     <div>
       <h3 class="au-w-address-title">
         De Wereld van Kina: het Huis
@@ -31,7 +31,7 @@
     <div>
       <IconHighlight />
     </div>
-  </section>
+  </section> --}}
   {{#each this.sortedChildren as |child|}}
     <WidgetChildren::ChildLevel1 @node={{child}} @experience={{@experience}}/>
   {{/each}}
