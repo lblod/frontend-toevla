@@ -1,5 +1,4 @@
 const mapping = {
-  "http://data.toevla.org/ef9a1497-6e8d-461e-8671-75c5ee450bd0": "tree-components/accessibility",
   "https://data.toevla.org/id/concepts/02ab2a7a-128f-468f-9021-2174181b3e13": "tree-components/circulation"
 };
 
