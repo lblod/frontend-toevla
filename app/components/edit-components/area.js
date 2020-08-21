@@ -1,22 +1,21 @@
 import Component from '@glimmer/component';
-import { getInstance } from '../../utils/path-instances';
+import { getInstance, property } from '../../utils/path-instances';
 import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 
 
 export default class EditComponentsAreaComponent extends Component {
-  @tracked area;
-
-  constructor(){
-    super(...arguments);
-    this.initArea();
+  constructor(...args){
+    super(...args);
+    this.updateValue();
   }
-
   @action
-  async initArea(){
-    this.area = await getInstance(
-      this.args.experience,
-      this.args.key,
-      { keyIsObject: true });
+  updateValue(){
+    getInstance(this.args.experience, this.args.key).then(function(res1){
+      this.value=res1[property(this.args.key)].then(function(res2){
+        this.value=res2;
+      }.bind(this));
+    }.bind(this));
   }
+  @tracked value;
 }

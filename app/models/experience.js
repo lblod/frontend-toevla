@@ -5,7 +5,7 @@ import { editMapping, keyToPath} from '../utils/custom-component-mapping';
 
 export default class ExperienceModel extends Model {
   @attr('string') title;
-
+  @belongsTo('route') circulation
   @belongsTo('point-of-interest') pointOfInterest;
   @hasMany('experience-tree-node-score') experienceTreeNodeScores;
 
