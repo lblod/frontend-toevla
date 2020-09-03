@@ -1,9 +1,6 @@
 import Component from '@glimmer/component';
 
-export default class WidgetChildrenChildLevel4Component extends Component {
-  constructor(...args){
-    super(...args);
-  }
+export default class TreeComponentsExperienceComponent extends Component {
   get sortedChildren(){
     return this.args.node.children.sortBy("order");
   }

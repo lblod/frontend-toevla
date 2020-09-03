@@ -33,4 +33,5 @@ export default class PointOfInterestModel extends Model {
   @hasMany('train-stop') trainStops;
   @hasMany('bus-stop') busStops;
   @hasMany('tram-stop') tramStops;
+  @hasMany('file') files;
 }

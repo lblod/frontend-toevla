@@ -9,6 +9,27 @@ export default class ExperienceModel extends Model {
   @belongsTo('point-of-interest') pointOfInterest;
   @hasMany('experience-tree-node-score') experienceTreeNodeScores;
 
+  @attr('boolean') hasMultipleElementsToDriveUnder;
+  @attr('boolean') hasGoodLighting;
+  @attr('boolean') hasMagnifyingGlass;
+  @attr('boolean') brochureHasAccessibleContrast;
+  @attr('boolean') brochureIsAvailableInBraille;
+  @attr('boolean') brochureIsAvailableInLargePrint;
+  @attr('boolean') signsHaveAccessibleContrast;
+  @attr('boolean') signsHaveNoReflection;
+  @attr('boolean') signsHaveBraille;
+  @attr('boolean') signsInLargePrint;
+  @attr('boolean') audioGuideOnlyInDutch;
+  @attr('boolean') audioGuideAvailableInMultipleLanguages;
+  @attr('boolean') hasMovieGuide;
+  @attr('boolean') hasVirtualTechnology;
+  @attr('boolean') hasTouchElements;
+  @attr('boolean') hasSmellElements;
+  @attr('boolean') hasActionableElements;
+  @attr('boolean') hasListeningElements;
+  @attr('boolean') hasPlacesOfSilence;
+  @attr('string') otherElements;
+
   async getScoreForTreeNode(treeNode){
     const result = await this.store.query('experience-tree-node-score',
       {
