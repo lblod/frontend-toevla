@@ -1,5 +1,5 @@
 <ul class="au-w-lightbox">
-  {{#each (slice this.images 0 @preview) as |image|}}
+  {{#each (slice this.sortedImages 0 @preview) as |image|}}
     {{!-- {{image.id}} --}}
     <li class="au-w-lightbox__item">
       <button class="au-w-lightbox__image">
@@ -10,7 +10,7 @@
 </ul>
 <AuLightbox @buttonTitle="Bekijk alle foto's" @title="Fotorondleiding: De wereld van Kina - Het Huis" @id="{{@id}}fotos">
   {{#carousel-container transitionInterval=400 as |ui controls|}}
-    {{#each this.images as |image index|}}
+    {{#each this.sortedImages as |image index|}}
       <div class="au-w-carousel">
         {{#ui.item}}
           <figure class="au-w-carousel__figure">
