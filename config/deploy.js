@@ -6,20 +6,20 @@ module.exports = function(deployTarget) {
   process.env.GIT_DISCOVERY_ACROSS_FILESYSTEM=1;
   let ENV = {
     build: {
-      environment: 'production'
+      environment: 'development'
     },
     'ssh-index': { // copy and deploy index.html
       username: 'root',
       host: 'toevla-dev.s.redpencil.io',
       port: 22,
-      remoteDir: '/data/app-toevla-dev/toevla-app',
+      remoteDir: '/data/app-toevla-dev/config/frontend-toevla',
       allowOverwrite: true,
       agent: process.env.SSH_AUTH_SOCK
     },
     'rsync': { // copy assets
       host: 'root@toevla-dev.s.redpencil.io',
       port: 22,
-      dest: '/data/app-toevla-dev/toevla-app',
+      dest: '/data/app-toevla-dev/config/frontend-toevla',
       delete: false,
       arg:['--verbose']
     }
