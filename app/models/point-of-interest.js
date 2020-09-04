@@ -34,4 +34,5 @@ export default class PointOfInterestModel extends Model {
   @hasMany('bus-stop') busStops;
   @hasMany('tram-stop') tramStops;
   @hasMany('file') files;
+  @hasMany('file', { inverse: null }) images;
 }
