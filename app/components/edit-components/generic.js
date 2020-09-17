@@ -7,6 +7,7 @@ export default class EditComponentsGenericComponent extends Component {
     super(...args);
   }
   get info(){
+
     return editMapping(this.args.node.uri);
   }
 }

@@ -10,6 +10,7 @@ export default class EditComponentsBooleanComponent extends Component {
 
   constructor(){
     super(...arguments);
+
     this.initValue();
   }
 
