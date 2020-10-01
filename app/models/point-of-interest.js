@@ -3,6 +3,7 @@ import { belongsTo, hasMany } from 'ember-data/relationships';
 import attr from 'ember-data/attr';
 
 export default class PointOfInterestModel extends Model {
+  @attr('string') uri;
   @attr('string') label;
   @attr('boolean') hasMovableElectronicPaymentSystem;
   @attr('boolean') wifiAlwaysAvailable;

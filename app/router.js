@@ -15,4 +15,9 @@ Router.map(function() {
   this.route('scoring');
   this.route('widget-future');
   this.route('icons');
+  this.route('musea', function() {
+    this.route('show', { path: ":museum_id" }, function() {
+      this.route('widget');
+    });
+  });
 });
