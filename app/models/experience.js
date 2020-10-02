@@ -4,11 +4,12 @@ import attr from 'ember-data/attr';
 import { editMapping, keyToPath} from '../utils/custom-component-mapping';
 
 export default class ExperienceModel extends Model {
-  @attr('string') title;
-  @belongsTo('route') circulation
   @belongsTo('point-of-interest') pointOfInterest;
-  @hasMany('experience-tree-node-score') experienceTreeNodeScores;
+  @belongsTo('route') circulation;
+  @belongsTo('guided-tour') guidedTour;
+  @belongsTo('auditorium') auditorium;
 
+  @attr('string') title;
   @attr('boolean') hasMultipleElementsToDriveUnder;
   @attr('boolean') hasGoodLighting;
   @attr('boolean') hasMagnifyingGlass;
