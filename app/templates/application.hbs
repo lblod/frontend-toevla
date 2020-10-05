@@ -1,46 +1,46 @@
 <div id="ember-vo-appuniversum-wormhole"></div>
 
 {{#if this.isIndex}}
-<header class="au-o-region-large au-d-theme-neutral-lightest au-u-padding-bottom">
-  <div class="au-o-layout au-o-layout--medium">
-    <div class="au-d-editor">
-      <h1 class="">Toegankelijkheid Widget</h1>
-      <hr>
+  <header class="au-o-region-large au-d-theme-neutral-lightest au-u-padding-bottom">
+    <div class="au-o-layout au-o-layout--medium">
+      <div class="au-d-editor">
+        <h1 class="">Toegankelijkheid Widget</h1>
+        <hr>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<main class="au-o-region au-d-theme-neutral-lightest">
-  <div class="au-o-layout au-o-layout--medium au-d-editor">
-    <h2 class="au-u-h5">Widget (huidige versie)</h2>
-    <ul>
-      <li>
-        <LinkTo @route="widget-desktop">Desktop</LinkTo>
-      </li>
-      <li>
-        <LinkTo @route="widget-kina">Wereld van Kina demo</LinkTo>
-      </li>
-    </ul>
+  <main class="au-o-region au-d-theme-neutral-lightest">
+    <div class="au-o-layout au-o-layout--medium au-d-editor">
+      <h2 class="au-u-h5">Widget (huidige versie)</h2>
+      <ul>
+        <li>
+          <LinkTo @route="widget-desktop">Desktop</LinkTo>
+        </li>
+        <li>
+          <LinkTo @route="widget-kina">Wereld van Kina demo</LinkTo>
+        </li>
+      </ul>
 
-    <h2 class="au-u-h5">Widget (toekomstige versie)</h2>
-    <ul>
-      <li>
-        <LinkTo @route="widget-future">Desktop</LinkTo>
-      </li>
-    </ul>
+      <h2 class="au-u-h5">Widget (toekomstige versie)</h2>
+      <ul>
+        <li>
+          <LinkTo @route="widget-future">Desktop</LinkTo>
+        </li>
+      </ul>
 
-    <h2 class="au-u-h5">Documentatie</h2>
-    <ul>
-      <li>
-        <LinkTo @route="scoring">Score systeem</LinkTo>
-      </li>
-      <li>
-        <LinkTo @route="icons">Icons</LinkTo>
-      </li>
-    </ul>
+      <h2 class="au-u-h5">Documentatie</h2>
+      <ul>
+        <li>
+          <LinkTo @route="scoring">Score systeem</LinkTo>
+        </li>
+        <li>
+          <LinkTo @route="icons">Icons</LinkTo>
+        </li>
+      </ul>
 
-  </div>
-</main>
+    </div>
+  </main>
 {{else}}
   <div {{auto-focus}}>
     {{outlet}}
