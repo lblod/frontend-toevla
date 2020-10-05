@@ -42,7 +42,7 @@
   </div>
 </main>
 {{else}}
-  {{#auto-focus '.au-d-widget'}}
-  {{outlet}}
-  {{/auto-focus}}
+  <div {{auto-focus}}>
+    {{outlet}}
+  </div>
 {{/if}}

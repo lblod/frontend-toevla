@@ -32,9 +32,7 @@
   </button>
 </h4>
 {{#if this.sectionOpen}}
-{{#auto-focus '.au-w-collapsable-section-content' tagName="" }}
-<div class="au-w-collapsable-section-content" tabindex="0">
-  {{yield}}
-</div>
-{{/auto-focus}}
+  <div {{auto-focus}} class="au-w-collapsable-section-content" tabindex="0">
+    {{yield}}
+  </div>
 {{/if}}
