@@ -10,6 +10,13 @@ export default class TreeNodeModel extends Model {
   @attr('string') positiveTemplateString;
   @attr('string') negativeTemplateString;
 
+  @attr('string') firstLimit;
+  @attr('string') firstLabel;
+  @attr('string') secondLimit;
+  @attr('string') secondLabel;
+  @attr('string') thirdLimit;
+  @attr('string') thirdLabel;
+
   @hasMany('tree-node', { inverse: 'parent' }) children;
   @belongsTo('tree-node', { inverse: 'children' }) parent;
 
