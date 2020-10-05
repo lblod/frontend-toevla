@@ -1,7 +1,10 @@
-<AuCriteriaInline @criterium={{@node.title}} @check={{this.value}}>
-  {{#if this.value}}
-    <strong>
-      {{this.value}}
-    </strong>
+<Criteria::SelectCriterion
+  @value={{this.value}}
+  @treeNode={{@node}}
+  as |label check|>
+  {{#if label}}
+    <AuCriteriaInline @criterium={{@node.title}} @check={{check}}>
+      <strong><Labels::NumericString @label={{label}} @value={{this.value}} /></strong>
+    </AuCriteriaInline>
   {{/if}}
-</AuCriteriaInline>
+</Criteria::SelectCriterion>

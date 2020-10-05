@@ -1,1 +1,3 @@
-{{component this.info.component node=@node experience=@experience key=this.info.key}}
+{{#if this.info.component}}
+  {{component this.info.component node=@node experience=@experience key=this.info.key}}
+{{/if}}

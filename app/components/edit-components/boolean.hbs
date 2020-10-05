@@ -1,15 +1,10 @@
-<AuCriteriaInline @criterium={{@node.title}} @check={{this.value}}>
-  {{#if this.value}}
-    {{#if @node.positiveTemplateString}}
-        <strong>
-          {{@node.positiveTemplateString}}
-        </strong>
-    {{/if}}
-  {{else}}
-    {{#if @node.negativeTemplateString}}
-        <strong>
-          {{@node.negativeTemplateString}}
-        </strong>
-    {{/if}}
+<Criteria::SelectBooleanCriterion
+  @value={{this.value}}
+  @treeNode={{@node}}
+  as |label check|>
+  {{#if label}}
+    <AuCriteriaInline @criterium={{@node.title}} @check={{check}}>
+      <strong>{{label}}</strong>
+    </AuCriteriaInline>
   {{/if}}
-</AuCriteriaInline>
+</Criteria::SelectBooleanCriterion>

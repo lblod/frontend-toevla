@@ -1,5 +1,12 @@
-<AuCriteriaInline @criterium={{@node.title}} @check={{this.value}}>
-  {{#if this.value}}
-    <strong>{{this.value.width}} cm</strong> X <strong>{{this.value.height}} cm</strong>
-  {{/if}}
-</AuCriteriaInline>
+{{#let (array this.value.width this.value.height) as |arrValue|}}
+  <Criteria::SelectAreaCriterion
+    @value={{arrValue}}
+    @treeNode={{@node}}
+    as |label check|>
+    {{#if label}}
+      <AuCriteriaInline @criterium={{@node.title}} @check={{check}}>
+        <strong><Labels::AreaString @label={{label}} @value={{arrValue}} /></strong>
+      </AuCriteriaInline>
+    {{/if}}
+  </Criteria::SelectAreaCriterion>
+{{/let}}

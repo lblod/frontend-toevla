@@ -8,15 +8,18 @@ import { action } from '@ember/object';
 export default class EditComponentsBooleanComponent extends Component {
   @tracked value;
 
-  constructor(){
-    super(...arguments);
-
-    this.initValue();
+  constructor(...args){
+    super(...args);
+    this.updateValue();
   }
 
   @action
-  async initValue(){
-    const instance = await getInstance(this.args.experience, this.args.key);
-    this.value = get(instance, property(this.args.key));
+  async updateValue(){
+    try {
+      const instance = await getInstance(this.args.experience, this.args.key, { create: false });
+      this.value = get( instance, property(this.args.key) );
+    } catch (e) {
+      console.debug(e);
+    }
   }
 }
