@@ -20,4 +20,5 @@ Router.map(function() {
       this.route('widget');
     });
   });
+  this.route('embeddable-widget', { path: "embeddable-widget/:widget_uri" });
 });
