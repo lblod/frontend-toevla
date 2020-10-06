@@ -5,8 +5,7 @@ export default class ApplicationAdapter extends JSONAPIAdapter {
   constructor(...args){
     super(...args);
     if(config.environment=='production'){
-      this.host='https://embed-dev.toevla.org';
+      this.host='https://qa.toegankelijk.vlaanderen.be';
     }
   }
-
 }
