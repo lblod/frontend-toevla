@@ -1,1 +1,5 @@
-{{filledInTemplate}}
+{{#if (has-block)}}
+  {{yield this.filledInTemplate}}
+{{else}}
+  {{this.filledInTemplate}}
+{{/if}}

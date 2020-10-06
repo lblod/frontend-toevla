@@ -3,8 +3,6 @@
   @treeNode={{@node}}
   as |label check|>
   {{#if label}}
-    <AuCriteriaInline @criterium={{@node.title}} @check={{check}}>
-      <strong>{{label}}</strong>
-    </AuCriteriaInline>
+    <AuCriteriaInline @criterium={{label}} @check={{check}} />
   {{/if}}
 </Criteria::SelectBooleanCriterion>

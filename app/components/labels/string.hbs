@@ -1,1 +1,5 @@
-{{this.output}}
+{{#if (has-block)}}
+  {{yield this.output}}
+{{else}}
+  {{this.output}}
+{{/if}}
