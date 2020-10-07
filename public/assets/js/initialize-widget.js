@@ -11,8 +11,10 @@
     element = document.querySelector('div[resource="' + resource + '"]' + '[typeof="http://data.toegankelijk.vlaanderen.be/ns/Widget"]');
 
     //load the ember app
-    var MyApp=require('frontend-toevla/app');
-    var App = MyApp.default.create({ autoboot: false });
-    App.visit('/embeddable-widget/' + encodeURIComponent( resource ), { rootElement: element, location: 'none' });
+    var Widget =
+        require('frontend-toevla/app')
+        .default
+        .create({ autoboot: false, rootElement: element, location: 'none' });
+    Widget.visit('/embeddable-widget/' + encodeURIComponent( resource ), { rootElement: element, location: 'none' });
   }
 })();
