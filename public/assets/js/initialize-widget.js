@@ -1,7 +1,6 @@
 (function() {
   //replace script tag with a div tag
   var elements = document.querySelectorAll('script[typeof="http://data.toegankelijk.vlaanderen.be/ns/Widget"]');
-  // var randId="widget-" + Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
 
   for( var i = 0; i < elements.length ; i++ ){
     var element = elements[i];
