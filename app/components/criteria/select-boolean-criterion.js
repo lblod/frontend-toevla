@@ -22,6 +22,8 @@ export default class CriteriaSelectBooleanCriterionComponent extends Component {
   }
 
   get templateString() {
-    return this.rawTemplateString === "undefined" || "geen weergave" ? null : this.rawTemplateString;
+    return ["undefined","geen weergave"].includes( this.rawTemplateString )
+      ? null
+      : this.rawTemplateString;
   }
 }
