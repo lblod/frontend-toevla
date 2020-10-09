@@ -21,4 +21,8 @@ Router.map(function() {
     });
   });
   this.route('embeddable-widget', { path: "embeddable-widget/:widget_uri" });
+
+  this.route('widgets', function() {
+    this.route('show', { path: ":widget_id" });
+  });
 });

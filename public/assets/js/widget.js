@@ -19,7 +19,7 @@
 
     var head = document.getElementsByTagName('head')[0];
 
-    if(!head.innerHTML.includes('<link integrity="" rel="stylesheet" href="https://qa.toegankelijk.vlaanderen.be/assets/widget/frontend-toevla.css">')){
+    if(!head.innerHTML.includes('<link integrity="" rel="stylesheet" href="https://qa.toegankelijk.vlaanderen.be/assets/widget/frontend-toevla.css">')) {
       // Cope with multiple widgets being on the same page
       head.innerHTML = head.innerHTML + dependencies;
 
