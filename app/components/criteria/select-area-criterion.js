@@ -57,7 +57,7 @@ export default class CriteriaSelectAreaCriterionComponent extends Component {
   }
 
   get templateString() {
-    return ["undefined","geen weergave"].includes( this.rawTemplateString.toLowerCase() )
+    return ["undefined","geen weergave"].includes( this.rawTemplateString && this.rawTemplateString.toLowerCase() )
       ? null
       : this.rawTemplateString;
   }
