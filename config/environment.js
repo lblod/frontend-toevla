@@ -6,7 +6,7 @@ module.exports = function(environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
-    domain: '/',
+    domain: '', // set to the backend domain from where the widget is hosted on widget init
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

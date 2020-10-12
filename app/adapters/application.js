@@ -6,6 +6,7 @@ export default class ApplicationAdapter extends JSONAPIAdapter {
 
   constructor() {
     super(...arguments);
-    this.host = this.env.domain;
+    if( this.env.domain && this.env.domain !== '' )
+      this.host = this.env.domain;
   }
 }
