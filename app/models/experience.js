@@ -32,14 +32,6 @@ export default class ExperienceModel extends Model {
   @attr('string') otherElements;
 
   async getScoreForTreeNode(treeNode){
-    const result = await this.store.query('experience-tree-node-score',
-      {
-        'filter[tree-node][:id:]':treeNode.id,
-        'filter[experience][:id:]':this.id
-      }
-    )
-
-    return result.firstObject;
+    return await this.nodeScoreStateManager.fetch( this, treeNode );
   }
-
 }
