@@ -3,7 +3,7 @@
     {{!-- {{image.id}} --}}
     <li class="au-w-lightbox__item">
       <button class="au-w-lightbox__image">
-        <img src="/images/{{image.id}}?height=300" alt="Er zijn 2 aangepaste parkeerplaatsen dicht bij de alternatieve inkom.">
+        <img src="{{this.env.domain}}/images/{{image.id}}?height=300" alt="Er zijn 2 aangepaste parkeerplaatsen dicht bij de alternatieve inkom.">
       </button>
     </li>
   {{/each}}
@@ -14,7 +14,7 @@
       <div class="au-w-carousel">
         {{#ui.item}}
           <figure class="au-w-carousel__figure">
-            <img src="/images/{{image.id}}?height=600" alt="" class="au-w-carousel__image">
+            <img src="{{this.env.domain}}/images/{{image.id}}?height=600" alt="" class="au-w-carousel__image">
             <figcaption class="au-w-carousel__caption">
               <span class="au-w-carousel__pagination">Foto {{sum 1 index}}/{{this.images.length}}</span>
                 {{image.label}}
