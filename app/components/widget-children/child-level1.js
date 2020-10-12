@@ -1,5 +1,4 @@
 import Component from '@glimmer/component';
-import { tracked } from '@glimmer/tracking';
 
 export default class WidgetChildrenChildLevel1Component extends Component {
   get sortedChildren(){
@@ -11,7 +10,7 @@ export default class WidgetChildrenChildLevel1Component extends Component {
 
   get hack(){
     if(this.temp1){
-      return this.temp1
+      return this.temp1;
     }
     else{
       if(!this.temp2){

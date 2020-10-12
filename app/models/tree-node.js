@@ -19,5 +19,4 @@ export default class TreeNodeModel extends Model {
 
   @hasMany('tree-node', { inverse: 'parent' }) children;
   @belongsTo('tree-node', { inverse: 'children' }) parent;
-
 }

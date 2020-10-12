@@ -21,6 +21,7 @@ export default class CriteriaSelectAreaCriterionComponent extends Component {
         return null;
       }
     }
+    return null;
   }
 
   get matchPositive() {
