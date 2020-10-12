@@ -1,10 +1,10 @@
 <Criteria::SelectCriterion
   @value={{this.value}}
   @treeNode={{@node}}
-  as |label check|>
+  as |label check score|>
   {{#if label}}
     <Labels::NumericString @label={{label}} @value={{this.value}} as |string|>
-      <AuCriteriaInline @criterium={{string}} @check={{check}} />
+      <AuCriteriaInline @criterium={{string}} @score={{score}} />
     </Labels::NumericString>
   {{/if}}
 </Criteria::SelectCriterion>

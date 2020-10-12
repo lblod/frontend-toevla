@@ -2,10 +2,10 @@
   <Criteria::SelectAreaCriterion
     @value={{arrValue}}
     @treeNode={{@node}}
-    as |label check|>
+    as |label check score|>
     {{#if label}}
       <Labels::AreaString @label={{label}} @value={{arrValue}} as |str|>
-        <AuCriteriaInline @criterium={{str}} @check={{check}}/>
+        <AuCriteriaInline @criterium={{str}} @score={{score}}/>
       </Labels::AreaString>
     {{/if}}
   </Criteria::SelectAreaCriterion>

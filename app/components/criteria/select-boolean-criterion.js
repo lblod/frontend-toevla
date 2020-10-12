@@ -21,6 +21,18 @@ export default class CriteriaSelectBooleanCriterionComponent extends Component {
     }
   }
 
+  get matchScore() {
+    const treeNode = this.args.treeNode;
+    switch( this.matchedIndex ) {
+    case 1:
+      return treeNode.firstScore;
+    case 2:
+      return treeNode.secondScore;
+    default:
+      return null;
+    }
+  }
+
   get templateString() {
     return ["undefined","geen weergave"].includes( this.rawTemplateString )
       ? null

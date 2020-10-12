@@ -10,10 +10,13 @@ export default class TreeNodeModel extends Model {
   @attr('string') positiveTemplateString;
   @attr('string') negativeTemplateString;
 
+  @attr('string') firstScore;
   @attr('string') firstLimit;
   @attr('string') firstLabel;
+  @attr('string') secondScore;
   @attr('string') secondLimit;
   @attr('string') secondLabel;
+  @attr('string') thirdScore;
   @attr('string') thirdLimit;
   @attr('string') thirdLabel;
 

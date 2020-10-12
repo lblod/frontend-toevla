@@ -1,8 +1,8 @@
 <Criteria::SelectBooleanCriterion
   @value={{this.value}}
   @treeNode={{@node}}
-  as |label check|>
+  as |label check score|>
   {{#if label}}
-    <AuCriteriaInline @criterium={{label}} @check={{check}} />
+    <AuCriteriaInline @criterium={{label}} @score={{score}} />
   {{/if}}
 </Criteria::SelectBooleanCriterion>
