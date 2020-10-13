@@ -1,4 +1,5 @@
 import Route from '@ember/routing/route';
+import { museaTree } from 'frontend-toevla/utils/uris/concept-schemes';
 
 export default class MuseaShowWidgetRoute extends Route {
   async model() {
@@ -7,7 +8,9 @@ export default class MuseaShowWidgetRoute extends Route {
     if( experiences ) {
       return {
         experience: experiences && experiences.firstObject,
-        tree: (await this.store.query('tree', {})).firstObject
+        tree: (await
+               this.store.query('tree', {"filter[:uri:]": museaTree})
+              ).firstObject
       };
     }
   }
