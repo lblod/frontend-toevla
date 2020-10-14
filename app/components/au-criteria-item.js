@@ -3,9 +3,13 @@ import { action } from "@ember/object";
 import { tracked } from "@glimmer/tracking";
 import { yes, no, info } from 'frontend-toevla/utils/uris/criterion-codelist';
 
-export default class AuCollapsableSection extends Component {
+export default class AuCriteriaItemComponent extends Component {
   // Track section state
   @tracked sectionOpen = false;
+
+  get noUri() {
+    return no;
+  }
 
   // Open section
   @action

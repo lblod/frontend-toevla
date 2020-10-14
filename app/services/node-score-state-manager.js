@@ -1,3 +1,4 @@
+import { get } from '@ember/object';
 import { inject as service } from '@ember/service';
 import Service from '@ember/service';
 
@@ -29,9 +30,9 @@ export default class NodeScoreStateManagerService extends Service {
       .peekAll('experience-tree-node-score');
 
     knownEtnss.forEach( (etns) => {
-      const experienceHash = optimizedHash[etns.experience.id] || {};
-      experienceHash[etns.score.id] = etns;
-      optimizedHash[etns.experience.id] = experienceHash;
+      const experienceHash = optimizedHash[get(etns, "experience.id")] || {};
+      experienceHash[get(etns, "score.id")] = etns;
+      optimizedHash[get(etns, "experience.id")] = experienceHash;
     });
 
     this.optimizedHash = optimizedHash;
@@ -54,8 +55,8 @@ export default class NodeScoreStateManagerService extends Service {
    */
   register( experienceTreeNodeScore ) {
     const etns = experienceTreeNodeScore;
-    this.optimizedHash[etns.experience.id] = this.optimizedHash[etns.experience.id] || {};
-    this.optimizedHash[etns.experience.id][etns.treeNode.id] = etns;
+    this.optimizedHash[get(etns, "experience.id")] = this.optimizedHash[get(etns, "experience.id")] || {};
+    this.optimizedHash[get(etns, "experience.id")][get(etns, "treeNode.id")] = etns;
   }
 
   /**
@@ -67,20 +68,28 @@ export default class NodeScoreStateManagerService extends Service {
   async fetch( experience, treeNode ) {
     if( this.peek( experience, treeNode ) ) {
       return this.peek( experience, treeNode );
+    } else if( !experience || !treeNode || !experience.id || !treeNode.id ) {
+      return null;
     } else {
-      const experienceTreeNodeScore =
-        (await this
-         .store
-         .query('experience-tree-node-score',
-                { filter:
-                  { "experience[:id:]": experience.id,
-                    "tree-node[:id:]": treeNode.id }
-                }))
-        .firstObject;
-      if( experienceTreeNodeScore )
-        this.register( experienceTreeNodeScore );
+      try {
+        const experienceTreeNodeScores =
+              (await this
+               .store
+               .query('experience-tree-node-score',
+                      { "filter[experience][:id:]": experience.id,
+                        "filter[tree-node][:id:]": treeNode.id
+                      }));
 
-      return this.experienceTreeNodeScore;
+        const experienceTreeNodeScore = experienceTreeNodeScores.firstObject;
+        if( experienceTreeNodeScore )
+          this.register( experienceTreeNodeScore );
+
+        return experienceTreeNodeScore;
+      } catch (e) {
+        console.log(`Could not fetch experienceTreeNodeScore`);
+        console.log(e);
+        return null;
+      }
     }
   }
 
