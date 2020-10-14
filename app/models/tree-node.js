@@ -20,6 +20,8 @@ export default class TreeNodeModel extends Model {
   @attr('string') thirdLimit;
   @attr('string') thirdLabel;
 
-  @hasMany('tree-node', { inverse: 'parent' }) children;
-  @belongsTo('tree-node', { inverse: 'children' }) parent;
+  // we don't manipulate these in the app, setting inverse to null for
+  // consistent responses
+  @hasMany('tree-node', { inverse: null }) children;
+  @belongsTo('tree-node', { inverse: null }) parent;
 }
