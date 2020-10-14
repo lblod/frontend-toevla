@@ -1,0 +1,7 @@
+<ul>
+  {{#each this.model as |widget|}}
+    <li>
+      <LinkTo @route="widgets.show" @model={{widget.id}}>{{widget.pointOfInterest.label}}</LinkTo>
+    </li>
+  {{/each}}
+</ul>
