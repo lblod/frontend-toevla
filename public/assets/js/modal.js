@@ -1,4 +1,4 @@
-;(function ( w, doc, undefined ) {
+(function ( w, doc, undefined ) {
   'use strict';
 
   /**
@@ -144,7 +144,8 @@
         self.addEventListener('keydown', ARIAmodal.keyEvents, false);
       }
       else {
-        console.warn('Missing target modal dialog - [data-modal-open="IDREF"]');
+        // eslint-ignare-next-line no-console
+        console && console.warn && console.warn('Missing target modal dialog - [data-modal-open="IDREF"]');
       }
     } // for(widget.length)
   }; // ARIAmodal.setupTrigger()
@@ -159,7 +160,7 @@
     var i;
 
     for ( i = 0; i < modal.length; i++ ) {
-      var self = modal[i];
+      self = modal[i];
       var modalType   = self.getAttribute('data-modal');
       var getClass    = self.getAttribute('data-modal-class') || 'au-w-modal';
       var heading     = self.querySelector('h1, h2, h3, h4, h5, h6');
@@ -282,7 +283,8 @@
           }
         }
         else {
-          console.warn('Dialogs should have their purpose conveyed by a heading element (h1).');
+          // eslint-ignare-next-line no-console
+          console && console.warn && console.warn('Dialogs should have their purpose conveyed by a heading element (h1).');
         }
       }
 
@@ -315,7 +317,7 @@
     var modalClose = self.getAttribute('data-modal-close');
     var modalCloseClass = self.getAttribute('data-modal-close-class');
     var closeIcon = '<span data-modal-x></span>';
-    var btnClass = modalClass;
+    // var btnClass = modalClass;
     var i;
 
     if ( !doNotGenerate ) {
@@ -457,7 +459,8 @@
       }
     }
     else {
-      console.warn('It is not advised to open dialogs from within other dialogs. Instead consider replacing the contents of this dialog with new content. Or providing a stepped, or tabbed interface within this dialog.');
+      // eslint-ignare-next-line no-console
+      console && console.warn && console.warn('It is not advised to open dialogs from within other dialogs. Instead consider replacing the contents of this dialog with new content. Or providing a stepped, or tabbed interface within this dialog.');
     }
 
     activeModal.removeAttribute('hidden');
@@ -685,7 +688,8 @@
       ARIAmodal.openModal( e, autoOpen );
 
       if ( getAuto.length > 1 ) {
-        console.warn('Only the modal indicated by the hash value will load.')
+        // eslint-ignare-next-line no-console
+        console && console.warn && console.warn('Only the modal indicated by the hash value will load.');
       }
     }
     else if ( getAuto.length !== 0 ) {
@@ -695,7 +699,8 @@
         ARIAmodal.openModal( e, autoOpen );
 
         if ( getAuto.length > 1 ) {
-          console.warn('Multiple modal dialogs can not auto load.')
+          // eslint-ignare-next-line no-console
+          console && console.warn && console.warn('Multiple modal dialogs can not auto load.');
         }
       }
       else if ( getAuto[0].getAttribute('role') === 'button' || getAuto[0].tagName === 'BUTTON' ) {

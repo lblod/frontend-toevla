@@ -55,14 +55,21 @@ function valueMatchesAreaString( value, string ) {
         // parse out the constraint and the numbers
         const match = str.match( /\s*([><=]+)\s*(\d+)\s*x\s*(\d+)\s*/ );
         if( match ) {
-          const [ _fullMatch, constraint, yVal, zVal ] = match;
+          const [ /*fullMatch*/, constraint, yVal, zVal ] = match;
 
           return valueMatchesSimpleNumericString( y, `${constraint} ${yVal}` )
             && valueMatchesSimpleNumericString( z, `${constraint} ${zVal}` );
         } else {
-          console.log(`Match was null for ${string}`);
+          // eslint-disable-next-line no-console
+          if( console && console.debug ) {
+            // eslint-disable-next-line no-console
+            console.log(`Match was null for ${string}`);
+          }
+          return null;
         }
       });
+  } else {
+    return null;
   }
 }
 

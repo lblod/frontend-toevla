@@ -13,6 +13,7 @@ export default class CriteriaSelectStringCriterionComponent extends Component {
       if( value === treeNode.thirdLimit )
         return 3;
     }
+    return null;
   }
 
   get matchPositive() {

@@ -12,5 +12,6 @@ export default class LabelsAreaStringComponent extends Component {
         .replace(/{{\s*y\s*}}/, y)
         .replace(/{{\s*z\s*}}/, z);
     }
+    return null;
   }
 }

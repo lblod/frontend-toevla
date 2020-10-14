@@ -18,6 +18,7 @@ export default class CriteriaSelectCriterionComponent extends Component {
         return 3;
       }
     }
+    return null;
   }
 
   get matchPositive() {

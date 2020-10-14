@@ -86,8 +86,13 @@ export default class NodeScoreStateManagerService extends Service {
 
         return experienceTreeNodeScore;
       } catch (e) {
-        console.log(`Could not fetch experienceTreeNodeScore`);
-        console.log(e);
+        // eslint-disable-next-line no-console
+        if( console && console.debug ) {
+          // eslint-disable-next-line no-console
+          console.debug(`Could not fetch experienceTreeNodeScore`);
+          // eslint-disable-next-line no-console
+          console.debug(e);
+        }
         return null;
       }
     }

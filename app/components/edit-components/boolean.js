@@ -19,7 +19,11 @@ export default class EditComponentsBooleanComponent extends Component {
       const instance = await getInstance(this.args.experience, this.args.key, { create: false });
       this.value = get( instance, property(this.args.key) );
     } catch (e) {
-      console.debug(e);
+      // eslint-disable-next-line no-console
+      if( console && console.debug ) {
+        // eslint-disable-next-line no-console
+        console.debug(e);
+      }
     }
   }
 }

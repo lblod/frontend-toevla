@@ -2,9 +2,6 @@ import Component from '@glimmer/component';
 import { valueMatchesAreaString } from '../../utils/criterion-matching';
 
 export default class CriteriaSelectAreaCriterionComponent extends Component {
-  // this.args.treeNode
-  // this.args.value
-
   get matchedIndex() {
     const value = this.args.value;
     const treeNode = this.args.treeNode;
@@ -17,7 +14,11 @@ export default class CriteriaSelectAreaCriterionComponent extends Component {
       } else if( valueMatchesAreaString( value, treeNode.thirdLimit ) ) {
         return 3;
       } else {
-        console.log({ msg: "No value found", value, treeNode });
+        // eslint-disable-next-line no-console
+        if( console && console.warn ) {
+          // eslint-disable-next-line no-console
+          console.warn({ msg: "No value found", value, treeNode });
+        }
         return null;
       }
     }

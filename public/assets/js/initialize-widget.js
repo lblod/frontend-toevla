@@ -13,6 +13,7 @@
 
     //load the ember app
     var Widget =
+        // eslint-ignore-next-line no-undef
         require('frontend-toevla/app')
         .default
         .create({ autoboot: false, rootElement: element, location: 'none', ENV: { domain: domain }});
