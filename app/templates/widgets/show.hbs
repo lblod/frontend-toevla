@@ -1,1 +1,18 @@
-<Widget @tree={{this.model.tree}} @experience={{this.model.experience}} @title="ToegankelijkheidsInfo" />
+<header class="au-o-region-large au-d-theme-neutral-lightest au-u-padding-bottom">
+  <div class="au-o-layout au-o-layout--medium">
+    <p><LinkTo @route="widgets" class="au-d-link au-d-link--neutral">&leftarrow; Terug naar de lijst</LinkTo></p>
+    <div class="au-d-editor">
+      <h1 class="">Toegankelijkheid Widget</h1>
+      <hr>
+    </div>
+  </div>
+</header>
+
+<main class="au-o-region au-d-theme-neutral-lightest au-d-widget">
+  <div class="au-o-layout au-o-layout--medium au-d-editor">
+    <h2 class="au-u-h5">{{this.model.experience}}</h2>
+    <div>
+      <Widget @tree={{this.model.tree}} @experience={{this.model.experience}} @title="ToegankelijkheidsInfo" />
+    </div>
+  </div>
+</main>

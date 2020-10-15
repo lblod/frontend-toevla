@@ -31,3 +31,40 @@ body {
 }
 
 ::-moz-focus-inner {border:0;}
+
+
+.au-w-highlight-list--expanded {
+  display: block !important;
+  list-style: none;
+
+  .au-w-highlight-list__item {
+    display: flex !important;
+  }
+
+  .au-w-highlight-list__tooltip,
+  .au-w-highlight-list__item:hover .au-w-highlight-list__tooltip {
+    text-align: left !important;
+    position: relative !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    display: block !important;
+    height: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    white-space: initial !important;
+    margin: 0 !important;
+    padding: 0 $au-unit-tiny !important;
+    color: $au-neutral-dark !important;
+    background-color: transparent !important;
+    z-index: 1 !important;
+    top: 0 !important;
+    left: 0 !important;
+    transform: translateX(0) !important;
+    border-radius: $au-radius !important;
+    overflow: visible !important;
+  }
+
+  .au-w-highlight-list__item:hover .au-w-highlight-list__tooltip:before {
+    display: none !important;
+  }
+}
