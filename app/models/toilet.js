@@ -20,7 +20,7 @@ export default class ToiletModel extends Model {
   @attr('number') spaceInFrontOfToilet;
   @attr('number') spaceNextToToilet;
   @attr('number') turningRadius;
-  @attr('boolean') hasSupportBraces;
+  @attr('number') amountOfSupportBraces;
   @attr('boolean') hasWashbasin;
   @attr('boolean') canRideUnderWashbasin;
   @attr('number') freeHeightUnderWashbasin;
