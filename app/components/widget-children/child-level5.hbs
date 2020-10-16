@@ -1,13 +1,13 @@
 {{#if this.sortedChildren}}
-  <AuCriteriaItem @criterium={{@node.title}} @score={{etns.score}}>
-    <ScoreFetcher @experience={{@experience}} @node={{@node}} as |etns|>
+  <ScoreFetcher @experience={{@experience}} @node={{@node}} as |etns|>
+    <AuCriteriaItem @criterium={{@node.title}} @score={{etns.score}}>
       <ul class="au-w-criterium-list au-w-criterium-list--detail">
         {{#each this.sortedChildren as |child|}}
           <WidgetChildren::ChildLevel6 @node={{child}} @experience={{@experience}}/>
         {{/each}}
       </ul>
-    </ScoreFetcher>
-  </AuCriteriaItem>
+    </AuCriteriaItem>
+  </ScoreFetcher>
 {{else}}
   <EditComponents::Generic @node={{@node}} @experience={{@experience}}/>
 {{/if}}
