@@ -4,7 +4,7 @@
   as |label check score|>
   {{#if label}}
     <Labels::NumericString @label={{label}} @value={{this.value}} as |string|>
-      <AuCriteriaInline @criterium={{string}} @score={{score}} />
+      <AuCriteriaInline @criterium={{string}} @score={{score}} @comment={{@comment}} />
     </Labels::NumericString>
   {{/if}}
 </Criteria::SelectCriterion>

@@ -2,14 +2,14 @@
   {{component this.handlerComponent node=@node experience=@experience}}
 {{else}}
   <li class="au-w-section-list__item">
-    <AuCollapsableSection @buttonTitle="{{@node.title}}" @score={{etns.score}}>
-      <ScoreFetcher @experience={{@experience}} @node={{@node}} as |etns|>
+    <ScoreFetcher @experience={{@experience}} @node={{@node}} as |etns|>
+      <AuCollapsableSection @buttonTitle="{{@node.title}}" @score={{etns.score}}>
         <ul class="au-w-criterium-list">
           {{#each this.sortedChildren as |child|}}
             <WidgetChildren::ChildLevel3 @node={{child}} @experience={{@experience}}/>
           {{/each}}
         </ul>
-      </ScoreFetcher>
-    </AuCollapsableSection>
+      </AuCollapsableSection>
+    </ScoreFetcher>
   </li>
 {{/if}}

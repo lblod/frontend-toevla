@@ -4,6 +4,7 @@ import attr from 'ember-data/attr';
 
 export default class ExperienceTreeNodeScoreModel extends Model {
   @attr('string') score;
+  @attr('string') comment;
 
   @belongsTo('experience') experience;
   @belongsTo('tree-node') treeNode;

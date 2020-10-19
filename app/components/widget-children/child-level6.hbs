@@ -1,1 +1,3 @@
-<EditComponents::Generic @node={{@node}} @experience={{@experience}}/>
+<ScoreFetcher @experience={{@experience}} @node={{@node}} as |etns|>
+  <EditComponents::Generic @node={{@node}} @experience={{@experience}} @comment={{etns.comment}} />
+</ScoreFetcher>

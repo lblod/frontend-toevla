@@ -8,6 +8,7 @@ import { sort } from '@ember/object/computed';
 export default class ListImagesComponent extends Component {
   @service env;
   @tracked currentIndex = 0;
+  @tracked modalOpen = false;
 
   //using standard ascending sort
   sortKey = ['order'];
@@ -24,7 +25,7 @@ export default class ListImagesComponent extends Component {
   @action
   quickOpenImage(index) {
     this.currentIndex = index;
-    // TODO: Open the carrousel at the right image
+    this.modalOpen = true;
   }
 
   @action
