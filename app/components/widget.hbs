@@ -18,19 +18,19 @@
       {{@title}}
     </h2>
   </header>
-  {{!-- <section class="au-w-section au-w-section--flex">
+  <section class="au-w-section au-w-section--flex">
     <div>
       <h3 class="au-w-address-title">
-        De Wereld van Kina: het Huis
+        {{@experience.pointOfInterest.label}}
       </h3>
       <p class="au-w-address-para">
-        Sint-Pietersplein 14, 9000 Gent
+        {{@experience.pointOfInterest.locationString}}
       </p>
     </div>
     <div>
       <IconHighlight />
     </div>
-  </section> --}}
+  </section>
   {{#each this.sortedChildren as |child|}}
     <WidgetChildren::ChildLevel1 @node={{child}} @experience={{@experience}}/>
   {{/each}}
