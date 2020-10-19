@@ -1,7 +1,9 @@
+import { set } from '@ember/object';
 import Component from "@glimmer/component";
 import { action } from "@ember/object";
 import { tracked } from "@glimmer/tracking";
 import "wicg-inert";
+import exposedState from 'frontend-toevla/decorators/exposed-state';
 
 export default class AuLightbox extends Component {
   // Variables
@@ -16,30 +18,13 @@ export default class AuLightbox extends Component {
     }
   }
 
-  // Modal state used when locally managing the modal open state.  The
-  // alternative is a state managed by supplying @setModalOpen
-  // function and @modalOpen arguments.
-  @tracked localModalOpenState = false;
-
-  get modalOpen() {
-    if( this.args.setModalOpen )
-      return this.args.modalOpen;
-    else
-      return this.localModalOpenState;
-  }
-
-  set modalOpen( state ) {
-    if( this.args.setModalOpen )
-      this.args.setModalOpen( state );
-    else
-      this.localModalOpenState = state;
-  }
+  @exposedState modalOpen;
 
   // Open modal
   @action
   openModal() {
     // Toggle modal view state
-    this.modalOpen = !this.modalOpen;
+    set( this, "modalOpen", !this.modalOpen );
 
     // Add body class
     document.getElementsByTagName('html')[0].classList.add("au-w-modal-open");
@@ -58,7 +43,7 @@ export default class AuLightbox extends Component {
     // Only run this action when a modal is open
     if (this.modalOpen) {
       // Close the modal
-      this.modalOpen = false;
+      set(this, "modalOpen", false);
 
       // Remove html class when modal is disabled
       document.getElementsByTagName('html')[0].classList.remove("au-w-modal-open");
