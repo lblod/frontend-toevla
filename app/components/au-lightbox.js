@@ -1,7 +1,6 @@
 import { set } from '@ember/object';
 import Component from "@glimmer/component";
 import { action } from "@ember/object";
-import { tracked } from "@glimmer/tracking";
 import "wicg-inert";
 import exposedState from 'frontend-toevla/decorators/exposed-state';
 

@@ -24,7 +24,7 @@ import { get, set } from '@ember/object';
  * value is used automatically, the name of this variable is
  * `nameState` and it should not be updated manually.
  */
-export default function( target, name, descriptor ) {
+export default function( _target , name, /* descriptor */ ) {
   const stateName = `${name}State`;
   const upcasedName = `${name.charAt(0).toUpperCase()}${name.slice(1)}`;
   const updateName = `set${upcasedName}`;
@@ -45,4 +45,4 @@ export default function( target, name, descriptor ) {
         set( this, stateName, state );
     }
   };
-};
+}
