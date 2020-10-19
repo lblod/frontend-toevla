@@ -8,7 +8,15 @@
     </li>
   {{/each}}
 </ul>
-<AuLightbox @buttonTitle="Bekijk alle foto's" @title="Fotorondleiding: De wereld van Kina - Het Huis" @id="{{@id}}fotos" type="button">
+<AuLightbox
+  @buttonTitle="Bekijk alle foto's"
+  @title="Fotorondleiding: De wereld van Kina - Het Huis"
+  @id="{{@id}}fotos"
+  type="button"
+  @setModalOpen={{fn (mut this.modalOpen)}}
+  @modalOpen={{this.modalOpen}}
+>
+
   <div class="au-w-carousel">
     <figure class="au-w-carousel__figure">
       <img src="{{this.env.domain}}/images/{{this.selectedImage.id}}?height=600" alt={{this.selectedImage.label}} class="au-w-carousel__image">

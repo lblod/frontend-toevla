@@ -16,8 +16,24 @@ export default class AuLightbox extends Component {
     }
   }
 
-  // Track modal state
-  @tracked modalOpen = false;
+  // Modal state used when locally managing the modal open state.  The
+  // alternative is a state managed by supplying @setModalOpen
+  // function and @modalOpen arguments.
+  @tracked localModalOpenState = false;
+
+  get modalOpen() {
+    if( this.args.setModalOpen )
+      return this.args.modalOpen;
+    else
+      return this.localModalOpenState;
+  }
+
+  set modalOpen( state ) {
+    if( this.args.setModalOpen )
+      this.args.setModalOpen( state );
+    else
+      this.localModalOpenState = state;
+  }
 
   // Open modal
   @action
