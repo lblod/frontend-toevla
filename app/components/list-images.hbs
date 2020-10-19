@@ -1,41 +1,48 @@
-<ul class="au-w-lightbox">
-  {{#each (slice this.sortedImages 0 @preview) as |image idx|}}
-    {{!-- {{image.id}} --}}
-    <li class="au-w-lightbox__item">
-      <button class="au-w-lightbox__image" {{on "click" (fn this.quickOpenImage idx)}} type="button">
-        <img src="{{this.env.domain}}/images/{{image.id}}?height=300" alt="Er zijn 2 aangepaste parkeerplaatsen dicht bij de alternatieve inkom.">
-      </button>
-    </li>
-  {{/each}}
-</ul>
-<AuLightbox
-  @buttonTitle="Bekijk alle foto's"
-  @title="Fotorondleiding: De wereld van Kina - Het Huis"
-  @id="{{@id}}fotos"
-  type="button"
-  @setModalOpen={{fn (mut this.modalOpen)}}
-  @modalOpen={{this.modalOpen}}
->
+{{#if this.images.length}}
+<section class="au-w-section">
+  <h3 class="au-w-section__title au-w-hidden-visually">Foto's</h3>
+  <div class="au-w-lightbox-holder">
+    <ul class="au-w-lightbox">
+      {{#each (slice this.sortedImages 0 @preview) as |image idx|}}
+        {{!-- {{image.id}} --}}
+        <li class="au-w-lightbox__item">
+          <button class="au-w-lightbox__image" {{on "click" (fn this.quickOpenImage idx)}} type="button">
+            <img src="{{this.env.domain}}/images/{{image.id}}?height=300" alt="Er zijn 2 aangepaste parkeerplaatsen dicht bij de alternatieve inkom.">
+          </button>
+        </li>
+      {{/each}}
+    </ul>
+    <AuLightbox
+      @buttonTitle="Bekijk alle foto's"
+      @title="Fotorondleiding: De wereld van Kina - Het Huis"
+      @id="{{@id}}fotos"
+      type="button"
+      @setModalOpen={{fn (mut this.modalOpen)}}
+      @modalOpen={{this.modalOpen}}
+    >
 
-  <div class="au-w-carousel">
-    <figure class="au-w-carousel__figure">
-      <img src="{{this.env.domain}}/images/{{this.selectedImage.id}}?height=600" alt={{this.selectedImage.label}} class="au-w-carousel__image">
-      <figcaption class="au-w-carousel__caption">
-        <span class="au-w-carousel__pagination">Foto {{sum 1 this.currentIndex}}/{{this.images.length}}</span>
-        {{this.selectedImage.label}}
-      </figcaption>
-    </figure>
+      <div class="au-w-carousel">
+        <figure class="au-w-carousel__figure">
+          <img src="{{this.env.domain}}/images/{{this.selectedImage.id}}?height=600" alt={{this.selectedImage.label}} class="au-w-carousel__image">
+          <figcaption class="au-w-carousel__caption">
+            <span class="au-w-carousel__pagination">Foto {{sum 1 this.currentIndex}}/{{this.images.length}}</span>
+            {{this.selectedImage.label}}
+          </figcaption>
+        </figure>
+      </div>
+      <button {{on "click" this.selectNextImage}} class="au-w-carousel__button au-w-carousel__button--next" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" class="au-w-icon au-w-icon--large" viewBox="0 0 44 44" aria-hidden="true">
+          <polygon points="15.15 1.26 10.312 6.095 25.989 21.76 10.312 37.426 15.15 42.26 35.665 21.76"/>
+        </svg>
+        <span class="au-w-hidden-visually">Volgende foto</span>
+      </button>
+      <button {{on "click" this.selectPreviousImage}} class="au-w-carousel__button au-w-carousel__button--previous" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" class="au-w-icon au-w-icon--large" viewBox="0 0 44 44" aria-hidden="true">
+          <polygon points="33.762 38.426 18.057 22.76 33.762 7.095 28.915 2.26 8.362 22.76 28.915 43.26"/>
+        </svg>
+        <span class="au-w-hidden-visually">Vorige foto</span>
+      </button>
+    </AuLightbox>
   </div>
-  <button {{on "click" this.selectNextImage}} class="au-w-carousel__button au-w-carousel__button--next" type="button">
-    <svg xmlns="http://www.w3.org/2000/svg" class="au-w-icon au-w-icon--large" viewBox="0 0 44 44" aria-hidden="true">
-      <polygon points="15.15 1.26 10.312 6.095 25.989 21.76 10.312 37.426 15.15 42.26 35.665 21.76"/>
-    </svg>
-    <span class="au-w-hidden-visually">Volgende foto</span>
-  </button>
-  <button {{on "click" this.selectPreviousImage}} class="au-w-carousel__button au-w-carousel__button--previous" type="button">
-    <svg xmlns="http://www.w3.org/2000/svg" class="au-w-icon au-w-icon--large" viewBox="0 0 44 44" aria-hidden="true">
-      <polygon points="33.762 38.426 18.057 22.76 33.762 7.095 28.915 2.26 8.362 22.76 28.915 43.26"/>
-    </svg>
-    <span class="au-w-hidden-visually">Vorige foto</span>
-  </button>
-</AuLightbox>
+</section>
+{{/if}}
