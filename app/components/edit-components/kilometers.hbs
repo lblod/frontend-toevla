@@ -1,0 +1,10 @@
+<Criteria::SelectCriterion
+  @value={{this.kilometers}}
+  @treeNode={{@node}}
+  as |label check score|>
+  {{#if label}}
+    <Labels::NumericString @label={{label}} @value={{this.kilometers}} as |string|>
+      <AuCriteriaInline @criterium={{string}} @score={{score}} @comment={{@comment}} />
+    </Labels::NumericString>
+  {{/if}}
+</Criteria::SelectCriterion>
