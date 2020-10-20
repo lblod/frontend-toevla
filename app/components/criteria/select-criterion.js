@@ -1,5 +1,5 @@
 import Component from '@glimmer/component';
-import { valueMatchesSimpleNumericString as valueMatchesString } from '../../utils/criterion-matching';
+import { valueMatchesNumericString as valueMatchesString } from '../../utils/criterion-matching';
 
 export default class CriteriaSelectCriterionComponent extends Component {
   // this.args.treeNode

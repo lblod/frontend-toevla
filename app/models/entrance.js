@@ -15,7 +15,7 @@ export default class EntranceModel extends Model {
   @attr('number') hasEntranceCheck;
   @attr('number') turningRadiusAtDoor;
   @attr('number') forceForOpeningDoor;
-  @attr('number') hasLoweredCounter;
+  @attr('number') heightOfLoweredCounter;
 
   @belongsTo('point-of-interest') pointOfInterest;
 }

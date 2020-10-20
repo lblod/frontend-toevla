@@ -11,6 +11,7 @@ export default class PointOfInterestModel extends Model {
   @attr('boolean') hasPaymentWithFixedElectronicPaymentSystem;
   @attr('boolean') wifiAlwaysAvailable;
   @attr('boolean') assistanceForGuideDogs;
+  @attr('boolean') hasVisualVisitPreparationPlan;
   @attr('boolean') websiteHasScreenreader;
   @attr('boolean') websiteSupportsWcag2;
   @attr('boolean') websiteAllowsTextIncrease;
