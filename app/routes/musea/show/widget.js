@@ -9,7 +9,7 @@ export default class MuseaShowWidgetRoute extends Route {
       return {
         experience: experiences && experiences.firstObject,
         tree: (await
-               this.store.query('tree', {"filter[:uri:]": museaTree})
+               this.store.query('concept-scheme', {"filter[:uri:]": museaTree})
               ).firstObject
       };
     }

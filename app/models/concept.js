@@ -2,7 +2,7 @@ import Model from '@ember-data/model';
 import { belongsTo, hasMany } from 'ember-data/relationships';
 import attr from 'ember-data/attr';
 
-export default class TreeNodeModel extends Model {
+export default class ConceptModel extends Model {
   @attr('string') title;
   @attr('number') order;
   @attr('string') htmlContent;
@@ -24,6 +24,6 @@ export default class TreeNodeModel extends Model {
 
   // we don't manipulate these in the app, setting inverse to null for
   // consistent responses
-  @hasMany('tree-node', { inverse: null }) children;
-  @belongsTo('tree-node', { inverse: null }) parent;
+  @hasMany('concept', { inverse: null }) children;
+  @belongsTo('concept', { inverse: null }) parent;
 }

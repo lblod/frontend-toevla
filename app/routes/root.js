@@ -7,7 +7,7 @@ export default class RootRoute extends Route {
   }
 
   async model(){
-    const tree=await this.store.query('tree', {"filter[:uri:]": museaTree});
+    const tree=await this.store.query('concept-scheme', {"filter[:uri:]": museaTree});
     const experience=await this.store.query('experience', {});
 
     return {tree: tree.firstObject, experience: experience.firstObject};

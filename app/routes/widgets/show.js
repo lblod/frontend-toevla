@@ -15,7 +15,7 @@ export default class WidgetsShowRoute extends Route {
     const tree =
           (await this
                   .store
-                  .query("tree",
+                  .query("concept-scheme",
                          {
                            "include": "top-level-nodes",
                            "filter[:uri:]": museaTree
@@ -26,7 +26,7 @@ export default class WidgetsShowRoute extends Route {
 
     window.setTimeout( async () => {
       await this.nodeScoreStateManager.fetchAll( experience );
-      await this.store.query("tree", {
+      await this.store.query("concept-scheme", {
         "include": "top-level-nodes.children.children.children.children.children",
         "filter[:uri:]": museaTree
       });

@@ -7,5 +7,5 @@ export default class ExperienceTreeNodeScoreModel extends Model {
   @attr('string') comment;
 
   @belongsTo('experience') experience;
-  @belongsTo('tree-node') treeNode;
+  @belongsTo('concept') treeNode;
 }
