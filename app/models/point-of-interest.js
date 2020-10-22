@@ -42,4 +42,5 @@ export default class PointOfInterestModel extends Model {
   @hasMany('tram-stop') tramStops;
   @hasMany('file') files;
   @hasMany('file', { inverse: null }) images;
+  @belongsTo('concept') wifiAvailability;
 }
