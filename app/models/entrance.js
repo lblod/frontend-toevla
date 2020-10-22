@@ -3,7 +3,6 @@ import attr from 'ember-data/attr';
 import { belongsTo } from 'ember-data/relationships';
 
 export default class EntranceModel extends Model {
-
   @attr('boolean') hasMannedDesk;
   @attr('boolean') hasTeleloopAtCounter;
   @attr('number') highestThreshold;
@@ -14,8 +13,8 @@ export default class EntranceModel extends Model {
   @attr('number') doorWidth;
   @attr('number') hasEntranceCheck;
   @attr('number') turningRadiusAtDoor;
-  @attr('number') forceForOpeningDoor;
   @attr('number') heightOfLoweredCounter;
 
   @belongsTo('point-of-interest') pointOfInterest;
+  @belongsTo('concept') forceForOpeningDoorCategory;
 }

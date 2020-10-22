@@ -22,7 +22,6 @@ export default class PointOfInterestModel extends Model {
   @attr('boolean') hasClearlyRecognizableBuilding;
   @attr('boolean') hasClearlyRecognizableEntrance;
   @attr('boolean') hasVisibleGuidelines;
-  @attr('boolean') hasMarkingsOrContrastsOnGlassDoors;
   @attr('boolean') extraAttentionGivenToAcoustics;
   @attr('boolean') hasAlternativeEntranceForWheelchair;
   @attr('boolean') hasFreeEntranceForGuide;
@@ -43,4 +42,5 @@ export default class PointOfInterestModel extends Model {
   @hasMany('file') files;
   @hasMany('file', { inverse: null }) images;
   @belongsTo('concept') wifiAvailability;
+  @belongsTo('concept') typeOfGlassDoorDecoration;
 }
