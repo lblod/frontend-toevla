@@ -26,7 +26,7 @@ export default class EmbeddableWidgetRoute extends Route {
     const experience = (
       await this.store.query( 'experience', {
         "filter[is-main-experience]": true,
-        "filter[point-of-interest][:id:]": widget.id
+        "filter[point-of-interest][:id:]": (await widget.pointOfInterest).id
       })
     ).firstObject;
 
