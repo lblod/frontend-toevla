@@ -9,6 +9,7 @@ export default class ExperienceModel extends Model {
   @belongsTo('auditorium') auditorium;
 
   @attr('string') title;
+  @attr('boolean') isMainExperience;
   @attr('boolean') hasMultipleElementsToDriveUnder;
   @attr('boolean') hasGoodLighting;
   @attr('boolean') hasMagnifyingGlass;

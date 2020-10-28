@@ -10,7 +10,9 @@ export default class WidgetsShowRoute extends Route {
     const widgets =
           await this.store.query("widget",
                                  { include: "point-of-interest.experiences",
-                                   "filter[:id:]": widget_id } );
+                                   "filter[:id:]": widget_id,
+                                   "filter[point-of-interest][experiences][is-main-experience]": true
+                                 } );
     const widget = widgets.firstObject;
     const tree =
           (await this
