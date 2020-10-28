@@ -10,8 +10,7 @@ export default class EmbeddableWidgetRoute extends Route {
     const widgets =
           await this.store.query("widget",
                                  { include: "point-of-interest.experiences",
-                                   "filter[:id:]": widget_id,
-                                   "filter[point-of-interest][experiences][is-main-experience]": true
+                                   "filter[:id:]": widget_id
                                  } );
     const widget = widgets.firstObject;
     const tree =
@@ -24,7 +23,12 @@ export default class EmbeddableWidgetRoute extends Route {
                          }))
           .firstObject;
 
-    const experience = await widget.get('pointOfInterest.experiences.firstObject');
+    const experience = (
+      await this.store.query( 'experience', {
+        "filter[is-main-experience]": true,
+        "filter[point-of-interest][:id:]": widget.id
+      })
+    ).firstObject;
 
     window.setTimeout( async () => {
       await this.nodeScoreStateManager.fetchAll( experience );
