@@ -49,4 +49,8 @@
   &:last-child {
     margin-bottom: $au-unit-tiny !important;
   }
+
+  .au-w-criterium-list--detail & {
+    margin-left: 0 !important;
+  }
 }

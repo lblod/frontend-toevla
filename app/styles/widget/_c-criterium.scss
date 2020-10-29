@@ -23,8 +23,7 @@
     margin-top: $au-unit-tiny/2 !important;
   }
 
-  .au-w-criterium-list--detail & .au-w-icon--active,
-  .au-w-criterium-list--detail & .au-w-icon--faded {
+  .au-w-criterium-list--detail & .au-w-icon--active {
     display: none !important;
   }
 
@@ -33,7 +32,8 @@
     list-style-type: none !important;
   }
 
-  .au-w-criterium-list--detail &.au-w-criterium-list__item--error .au-w-icon--error {
+  .au-w-criterium-list--detail &.au-w-criterium-list__item--error .au-w-icon--error,
+  .au-w-criterium-list--detail &.au-w-criterium-list__item--error .au-w-icon--faded {
     width: 15px !important;
     height: 15px !important;
     bottom: -.25ex !important;
