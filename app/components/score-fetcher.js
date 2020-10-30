@@ -28,8 +28,9 @@ import Component from '@glimmer/component';
  *
  * This last approach would mean that the calculation is kicked off
  * again.  We therefore check if the experience or node have changed
- * since the last calculation.  There is a minimal risk of a race
- * condition here which should be tackled still.
+ * since the last calculation.  When we start.  In order to make sure
+ * there is no race condition, we also check this when the new value
+ * pops in.
  */
 export default class ScoreFetcherComponent extends Component {
   @tracked storedExperienceTreeNodeScore
@@ -40,21 +41,23 @@ export default class ScoreFetcherComponent extends Component {
 
   constructor() {
     super( ...arguments );
-    this.getExperienceTreeNodeScore(this.args.experience, this.args.node);
+    this.updateExperienceTreeNodeScore(this.args.experience, this.args.node);
   }
 
   get experienceTreeNodeScore() {
-    this.getExperienceTreeNodeScore( this.args.experience, this.args.node );
+    this.updateExperienceTreeNodeScore( this.args.experience, this.args.node );
     return this.storedExperienceTreeNodeScore;
   }
 
-  async getExperienceTreeNodeScore(experience, node) {
+  async updateExperienceTreeNodeScore(experience, node) {
     if( experience && node
         && ( experience.id != this.lastExperienceId
              || node.id != this.lastNodeId ) ) {
       this.lastExperienceId = experience.id;
       this.lastNodeId = node.id;
-      this.storedExperienceTreeNodeScore = await this.nodeScoreStateManager.fetch( this.args.experience, this.args.node );
+      const storedExperienceTreeNodeScore = await this.nodeScoreStateManager.fetch( this.args.experience, this.args.node );
+      if( this.lastExperienceId == experience.id && this.lastNodeId == node.id )
+        this.storedExperienceTreeNodeScore = storedExperienceTreeNodeScore;
     }
   }
 }
