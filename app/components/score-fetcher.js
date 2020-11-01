@@ -1,63 +1,31 @@
-import { action } from '@ember/object';
 import { inject as service } from '@ember/service';
 import { tracked } from '@glimmer/tracking';
 import Component from '@glimmer/component';
+// import FetchTreeNodeScore from '../helpers/tree-node-score-fetcher';
+import { Resource } from 'ember-could-get-used-to-this';
+import { use } from 'ember-could-get-used-to-this';
+
+class FetchTreeNodeScoreData extends Resource {
+  @tracked value;
+  @service nodeScoreStateManager
+
+  async setup() {
+    const [experience, node] = this.args.positional;
+    if( experience && node ) {
+      this.value = await this.nodeScoreStateManager.fetch( experience, node );
+    }
+  }
+
+  async teardown() { }
+}
 
 /**
  * Fetches the ExperienceTreeNodeScore for a TreeNode and an
  * Experience.
  *
- * The construction here is unconventional.  We want to monitor both
- * the experience as well as the treenode.  If either of both
- * arguments change, we should fetch the corresponding
- * ExperienceTreeNodeScore.  Monitoring these properties would
- * normally be done using render-modifiers.  However, this approach
- * injects a new element in the DOM tree.  Because the ScoreFetcher is
- * nested under a UL element, it should not create a div or other
- * element, but rather be a tagless component.  That makes
- * render-modifiers a no-go.
- *
- * The approach taken kicks off a calculation function in the
- * constructor.  Should everything be available at that time, we're
- * good to go.  We set up a dependency by fetching the experience and
- * the node in the `get experienceTreeNodeScore` function.  This means
- * that this getter will be recalculated whenever either changes.
- * This property also depends on the storedExperienceTreeNodeScore.
- * As such, when getExperienceTreeNodeScore finishes its calculations
- * and sets storedExperienceTreeNodeScore, the getter updates itself.
- *
- * This last approach would mean that the calculation is kicked off
- * again.  We therefore check if the experience or node have changed
- * since the last calculation.  When we start.  In order to make sure
- * there is no race condition, we also check this when the new value
- * pops in.
+ * Uses Resource from ember-could-get-used-to-this, as introduced at
+ * https://www.pzuraq.com/introducing-use/.
  */
 export default class ScoreFetcherComponent extends Component {
-  @tracked storedExperienceTreeNodeScore
-  @service nodeScoreStateManager
-
-  lastExperienceId = null;
-  lastNodeId = null;
-
-  constructor() {
-    super( ...arguments );
-    this.updateExperienceTreeNodeScore(this.args.experience, this.args.node);
-  }
-
-  get experienceTreeNodeScore() {
-    this.updateExperienceTreeNodeScore( this.args.experience, this.args.node );
-    return this.storedExperienceTreeNodeScore;
-  }
-
-  async updateExperienceTreeNodeScore(experience, node) {
-    if( experience && node
-        && ( experience.id != this.lastExperienceId
-             || node.id != this.lastNodeId ) ) {
-      this.lastExperienceId = experience.id;
-      this.lastNodeId = node.id;
-      const storedExperienceTreeNodeScore = await this.nodeScoreStateManager.fetch( this.args.experience, this.args.node );
-      if( this.lastExperienceId == experience.id && this.lastNodeId == node.id )
-        this.storedExperienceTreeNodeScore = storedExperienceTreeNodeScore;
-    }
-  }
+  @use experienceTreeNodeScore = new FetchTreeNodeScoreData( () => [this.args.experience, this.args.node] );
 }
