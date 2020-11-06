@@ -5,6 +5,9 @@ import attr from 'ember-data/attr';
 export default class PointOfInterestModel extends Model {
   @attr('string') uri;
   @attr('string') label;
+  @attr('string') comment;
+  @attr('string') commentOnPublicTransport;
+  @attr('string') commentOnEntrance;
   @attr('string') locationString;
   @attr('boolean') hasCashPayment;
   @attr('boolean') hasPaymentWithMovableElectronicPaymentSystem;

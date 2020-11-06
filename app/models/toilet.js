@@ -3,6 +3,7 @@ import attr from 'ember-data/attr';
 import { belongsTo } from 'ember-data/relationships';
 
 export default class ToiletModel extends Model {
+  @attr('string') comment;
   @attr('boolean') hasSimpleAndLogicalRoute;
   @attr('boolean') hasSyntheticSpeechInElevator;
   @attr('boolean') hasClearSignalizationInBuilding;

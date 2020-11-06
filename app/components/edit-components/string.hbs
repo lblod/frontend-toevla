@@ -3,8 +3,6 @@
   @treeNode={{@node}}
   as |label check score|>
   {{#if label}}
-    <Labels::NumericString @label={{label}} @value={{this.value}} as |string|>
-      <AuCriteiraInline @criterium={{string}} @score={{score}} @comment={{@comment}} />
-    </Labels::NumericString>
+    <AuCriteriaInline @criterium={{@node.title}} @score={{score}} @comment={{label}} />
   {{/if}}
 </Criteria::SelectStringCriterion>

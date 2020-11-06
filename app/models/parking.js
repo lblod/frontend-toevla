@@ -3,6 +3,7 @@ import attr from 'ember-data/attr';
 import { belongsTo } from 'ember-data/relationships';
 
 export default class ParkingModel extends Model {
+  @attr('string') comment;
   @attr('boolean') isPartOfLocation;
   @attr('boolean') hasDriveOnPossibility;
   @attr('boolean') isWellLit;
