@@ -43,14 +43,13 @@
 
 .au-w-info-text--inline {
   margin-top: $au-unit-tiny/4 !important;
-  margin-left: $au-unit - $au-unit-tiny/2 !important;
 
   &,
   &:last-child {
     margin-bottom: $au-unit-tiny !important;
   }
 
-  .au-w-criterium-list--detail & {
-    margin-left: 0 !important;
+  .au-w-criterium-list--detail .au-w-criterium-list--detail & {
+    margin-left: 21px !important;
   }
 }
