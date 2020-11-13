@@ -4,5 +4,8 @@
   as |label check score|>
   {{#if label}}
     <AuCriteriaInline @criterium={{@node.title}} @score={{score}} @etns={{@etns}} />
+    <p class="au-w-info-text au-w-info-text--inline">
+      {{label}}
+    </p>
   {{/if}}
 </Criteria::SelectStringCriterion>
