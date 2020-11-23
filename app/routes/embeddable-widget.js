@@ -10,7 +10,7 @@ export default class EmbeddableWidgetRoute extends Route {
     const widgets =
           await this.store.query("widget",
                                  { include: "point-of-interest.experiences",
-                                   "filter[:id:]": widget_uri
+                                   "filter[:uri:]": widget_uri
                                  } );
     const widget = widgets.firstObject;
     const tree =

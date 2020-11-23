@@ -31,7 +31,7 @@
     // rebind element to the newly created entity, assumes the same widget is shown only once
     element = document.querySelector('div[resource="' + resource + '"]' + '[typeof="http://data.toegankelijk.vlaanderen.be/ns/Widget"]');
 
-    console.log( dataAttributes );
+    console.log( { data: dataAttributes, resource: resource } );
 
     // Boot the widget
     var Widget =
