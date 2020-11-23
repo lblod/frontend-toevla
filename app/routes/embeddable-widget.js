@@ -6,11 +6,11 @@ export default class EmbeddableWidgetRoute extends Route {
   @service store;
   @service nodeScoreStateManager;
 
-  async model({widget_id}) {
+  async model({widget_uri}) {
     const widgets =
           await this.store.query("widget",
                                  { include: "point-of-interest.experiences",
-                                   "filter[:id:]": widget_id
+                                   "filter[:id:]": widget_uri
                                  } );
     const widget = widgets.firstObject;
     const tree =
