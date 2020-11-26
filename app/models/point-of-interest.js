@@ -46,4 +46,5 @@ export default class PointOfInterestModel extends Model {
   @hasMany('file', { inverse: null }) images;
   @belongsTo('concept') wifiAvailability;
   @belongsTo('concept') typeOfGlassDoorDecoration;
+  @hasMany('concept') summaryIcons;
 }
