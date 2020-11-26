@@ -66,7 +66,7 @@ export default class WidgetChildrenWhenChildrenRenderComponent extends Component
         case "edit-components/string":
           return stringCriterion(node, value).templateString;
         case "edit-components/area":
-          return areaCriterion(node, [get(value, "width"), get(value, "height")]).templateString;
+          return value && areaCriterion(node, [get(value, "width"), get(value, "height")]).templateString;
         default:
           console.warn(`Could not find label for node: ${node.id} and experience ${experience.id}; type: ${componentInfo.component}`);
           return false;
