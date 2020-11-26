@@ -1,13 +1,15 @@
 {{#each @experience.pointOfInterest.experiences as |exp|}}
-  <li class="au-w-section-list__item">
-    <ScoreFetcher @experience={{exp}} @node={{@node}} as |etns|>
-      <AuCollapsableSection @buttonTitle="Beleving - {{exp.title}}" @score={{etns.score}}>
-        <ul class="au-w-criterium-list">
-          {{#each this.sortedChildren as |child|}}
-            <WidgetChildren::ChildLevel3 @node={{child}} @experience={{exp}}/>
-          {{/each}}
-        </ul>
-      </AuCollapsableSection>
-    </ScoreFetcher>
-  </li>
+  <WidgetChildren::WhenChildrenRender @node={{@node}} @experience={{exp}}>
+    <li class="au-w-section-list__item">
+      <ScoreFetcher @experience={{exp}} @node={{@node}} as |etns|>
+        <AuCollapsableSection @buttonTitle="Beleving - {{exp.title}}" @score={{etns.score}}>
+          <ul class="au-w-criterium-list">
+            {{#each this.sortedChildren as |child|}}
+              <WidgetChildren::ChildLevel3 @node={{child}} @experience={{exp}}/>
+            {{/each}}
+          </ul>
+        </AuCollapsableSection>
+      </ScoreFetcher>
+    </li>
+  </WidgetChildren::WhenChildrenRender>
 {{/each}}
