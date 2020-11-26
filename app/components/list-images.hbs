@@ -22,7 +22,7 @@
     >
 
       <div class="au-w-carousel">
-        <figure class="au-w-carousel__figure">
+        <figure class="au-w-carousel__figure" aria-live="polite">
           <img src="{{this.env.domain}}/images/{{this.selectedImage.id}}?height=600" alt={{this.selectedImage.label}} class="au-w-carousel__image">
           <figcaption class="au-w-carousel__caption">
             <span class="au-w-carousel__pagination">Foto {{sum 1 this.currentIndex}}/{{this.images.length}}</span>
