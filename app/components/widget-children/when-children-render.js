@@ -46,7 +46,13 @@ export default class WidgetChildrenWhenChildrenRenderComponent extends Component
     } else {
       // does this render a label?
       const componentInfo = editMapping(node.uri);
-      const instance = await getInstance(experience, componentInfo.key, { create: false });
+      let instance;
+      try {
+        instance = await getInstance(experience, componentInfo.key, { create: false });
+      } catch (e) {
+        // Could not find instance, this is normal
+        return false;
+      }
       let value = await get(instance, property(componentInfo.key));
       switch (componentInfo.component) {
         case "edit-components/boolean":
