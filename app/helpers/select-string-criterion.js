@@ -16,6 +16,18 @@ class Matcher extends Criterion {
     }
     return null;
   }
+
+  get rawTemplateString() {
+    if( this.matchedIndex === 1 ) {
+      return this.value;
+    } else {
+      return null;
+    }
+  }
+
+  get templateString() {
+    return this.rawTemplateString;
+  }
 }
 
 function stringCriterion(treeNode, value) {
