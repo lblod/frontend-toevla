@@ -1,3 +1,4 @@
+import { inject as service } from '@ember/service';
 import { get } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 import Component from '@glimmer/component';
@@ -12,6 +13,7 @@ import { areaCriterion } from '../../helpers/select-area-criterion';
 export default class WidgetChildrenWhenNodeShouldRenderComponent extends Component {
   // TODO: update using @use Resource after upgrading
   @tracked doRender;
+  @service nodeScoreStateManager;
 
   constructor() {
     super(...arguments);
@@ -21,8 +23,15 @@ export default class WidgetChildrenWhenNodeShouldRenderComponent extends Compone
   }
 
   async initDoRender() {
-    const render = await this.hasRenderedChildren(this.args.node, this.args.experience);
+    const render =
+      await this.hasVisibleScore()
+      || await this.hasRenderedChildren(this.args.node, this.args.experience);
     this.doRender = render;
+  }
+
+  async hasVisibleScore() {
+    const etns = await this.nodeScoreStateManager.fetch(this.args.experience, this.args.node);
+    return etns && etns.score && true;
   }
 
   /**
