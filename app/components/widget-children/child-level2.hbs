@@ -3,7 +3,7 @@
 {{else}}
   <li class="au-w-section-list__item">
     <ScoreFetcher @experience={{@experience}} @node={{@node}} as |etns|>
-      <WidgetChildren::WhenChildrenRender @node={{@node}} @experience={{@experience}}>
+      <WidgetChildren::WhenNodeShouldRender @node={{@node}} @experience={{@experience}}>
         <AuCollapsableSection @buttonTitle="{{@node.title}}" @score={{etns.score}}>
           <ul class="au-w-criterium-list">
             {{#each this.sortedChildren as |child|}}
@@ -11,7 +11,7 @@
             {{/each}}
           </ul>
         </AuCollapsableSection>
-      </WidgetChildren::WhenChildrenRender>
+      </WidgetChildren::WhenNodeShouldRender>
     </ScoreFetcher>
   </li>
 {{/if}}

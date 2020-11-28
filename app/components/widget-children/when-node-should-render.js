@@ -9,7 +9,7 @@ import { numericCriterion } from '../../helpers/select-numeric-criterion';
 import { stringCriterion } from '../../helpers/select-string-criterion';
 import { areaCriterion } from '../../helpers/select-area-criterion';
 
-export default class WidgetChildrenWhenChildrenRenderComponent extends Component {
+export default class WidgetChildrenWhenNodeShouldRenderComponent extends Component {
   // TODO: update using @use Resource after upgrading
   @tracked doRender;
 
