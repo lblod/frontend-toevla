@@ -59,6 +59,17 @@ export default class NodeScoreStateManagerService extends Service {
     this.optimizedHash[get(etns, "experience.id")][get(etns, "treeNode.id")] = etns;
   }
 
+  registerNotExists( experience, treeNode ) {
+    if( experience && treeNode ) {
+      this.optimizedHash[ experience.id ] = this.optimizedHash[ experience.id ] || {};
+      this.optimizedHash[ experience.id ][ treeNode.id ] = null;
+    }
+  }
+
+  isRegistered( experience, treeNode ) {
+    return this.optimizedHash[ experience.id ] && treeNode.id in this.optimizedHash[ experience.id ];
+  }
+
   /**
    * Fetches a single entity, either from cache or by querying and storing it.
    *
@@ -66,7 +77,7 @@ export default class NodeScoreStateManagerService extends Service {
    * @param treeNode TreeNode the TreeNode which must match.
    */
   async fetch( experience, treeNode ) {
-    if( this.peek( experience, treeNode ) ) {
+    if( this.isRegistered( experience, treeNode ) ) {
       return this.peek( experience, treeNode );
     } else if( !experience || !treeNode || !experience.id || !treeNode.id ) {
       return null;
@@ -83,7 +94,8 @@ export default class NodeScoreStateManagerService extends Service {
         const experienceTreeNodeScore = experienceTreeNodeScores.firstObject;
         if( experienceTreeNodeScore )
           this.register( experienceTreeNodeScore );
-
+        else
+          this.registerNotExists( experience, treeNode );
         return experienceTreeNodeScore;
       } catch (e) {
         // eslint-disable-next-line no-console
