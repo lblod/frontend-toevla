@@ -26,7 +26,6 @@
         '<link integrity="" rel="stylesheet" href="' + domain + '/assets/widget/vendor.css">\n' +
         '<link integrity="" rel="stylesheet" href="' + domain + '/assets/widget/frontend-toevla.css">\n';
 
-    // TODO create HEAD element if it does not exist yet
     var head = document.getElementsByTagName('head')[0];
 
     if (!head.innerHTML.includes('<link integrity="" rel="stylesheet" href="' + domain + '/assets/widget/frontend-toevla.css">')) {
