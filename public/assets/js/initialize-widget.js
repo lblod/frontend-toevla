@@ -1,5 +1,5 @@
 (function() {
-  //replace script tag with a div tag
+  // replace script tag with a div tag
   var elements = document.querySelectorAll('script[typeof="http://data.toegankelijk.vlaanderen.be/ns/Widget"]');
 
   for( var i = 0; i < elements.length ; i++ ){
