@@ -9,7 +9,6 @@ export default class Router extends EmberRouter {
 Router.map(function() {
   this.route('widget-desktop');
   this.route('widget-kina');
-  this.route('root');
   this.route('scoring');
   this.route('widget-future');
   this.route('icons');
