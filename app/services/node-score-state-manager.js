@@ -88,7 +88,8 @@ export default class NodeScoreStateManagerService extends Service {
                .store
                .query('experience-tree-node-score',
                       { "filter[experience][:id:]": experience.id,
-                        "filter[tree-node][:id:]": treeNode.id
+                        "filter[tree-node][:id:]": treeNode.id,
+                        include: "experience,tree-node"
                       }));
 
         const experienceTreeNodeScore = experienceTreeNodeScores.firstObject;
