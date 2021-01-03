@@ -30,14 +30,13 @@ export default class EmbeddableWidgetRoute extends Route {
         include: "images,experiences,toilets,experiences.circulation,public-transport-route-description,shop,restaurant,bus-stops,parkings,entrances,type-of-glass-door-decoration,experiences.guided-tour,tram-stops,experiences.auditorium,train-stops"
       })).firstObject;
 
-    // TODO: re-enable nodeScoreStateManager fetching
-    // window.setTimeout(async () => {
-    //   await this.nodeScoreStateManager.fetchAll(experience);
-    //   // await this.store.query("concept-scheme", {
-    //   //   "include": "top-level-nodes.children.children.children.children.children",
-    //   //   "filter[:uri:]": museaTree
-    //   // });
-    // }, 1250);
+    window.setTimeout(async () => {
+      await this.nodeScoreStateManager.fetchAllForPoi(poi);
+      await this.store.query("concept-scheme", {
+        "include": "top-level-nodes.children.children.children.children.children",
+        "filter[:uri:]": museaTree
+      });
+    }, 1250);
 
     return {
       poi,
