@@ -1,13 +1,13 @@
 {{#if this.handlerComponent}}
-  {{component this.handlerComponent node=@node experience=@experience}}
+  {{component this.handlerComponent node=@node subject=@subject}}
 {{else}}
   <li class="au-w-section-list__item">
-    <ScoreFetcher @experience={{@experience}} @node={{@node}} as |etns|>
-      <WidgetChildren::WhenNodeShouldRender @node={{@node}} @experience={{@experience}}>
+    <ScoreFetcher @subject={{@subject}} @node={{@node}} as |etns|>
+      <WidgetChildren::WhenNodeShouldRender @node={{@node}} @subject={{@subject}}>
         <AuCollapsableSection @buttonTitle="{{@node.title}}" @score={{etns.score}}>
           <ul class="au-w-criterium-list">
             {{#each this.sortedChildren as |child|}}
-              <WidgetChildren::ChildLevel3 @node={{child}} @experience={{@experience}}/>
+              <WidgetChildren::ChildLevel3 @node={{child}} @subject={{@subject}}/>
             {{/each}}
           </ul>
         </AuCollapsableSection>

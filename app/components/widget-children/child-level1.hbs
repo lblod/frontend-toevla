@@ -2,7 +2,7 @@
   <h3 class="au-w-section__title">{{@node.title}}</h3>
   <ul class="au-w-section-list">
     {{#each this.sortedChildren as |child|}}
-      <WidgetChildren::ChildLevel2 @node={{child}} @experience={{@experience}}/>
+      <WidgetChildren::ChildLevel2 @node={{child}} @subject={{@subject}}/>
     {{/each}}
   </ul>
 </section>

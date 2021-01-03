@@ -4,6 +4,7 @@ import { museaTree } from 'frontend-toevla/utils/uris/concept-schemes';
 export default class MuseaShowWidgetRoute extends Route {
   async model() {
     const museum = this.modelFor('musea.show');
+
     const experiences = await museum.experiences;
     if( experiences ) {
       return {

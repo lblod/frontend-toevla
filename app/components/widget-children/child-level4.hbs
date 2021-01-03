@@ -1,18 +1,18 @@
-<ScoreFetcher @experience={{@experience}} @node={{@node}} as |etns|>
+<ScoreFetcher @subject={{@subject}} @node={{@node}} as |etns|>
   {{#if this.sortedChildren}}
-    <WidgetChildren::WhenNodeShouldRender @node={{@node}} @experience={{@experience}}>
+    <WidgetChildren::WhenNodeShouldRender @node={{@node}} @subject={{@subject}}>
       <AuCriteriaItem @criterium={{@node.title}} @score={{etns.score}} as |InfoText|>
         {{#if etns.comment.length}}
           <InfoText>{{etns.comment}}</InfoText>
         {{/if}}
         <ul class="au-w-criterium-list au-w-criterium-list--detail">
           {{#each this.sortedChildren as |child|}}
-            <WidgetChildren::ChildLevel5 @node={{child}} @experience={{@experience}}/>
+            <WidgetChildren::ChildLevel5 @node={{child}} @subject={{@subject}}/>
           {{/each}}
         </ul>
       </AuCriteriaItem>
     </WidgetChildren::WhenNodeShouldRender>
   {{else}}
-    <EditComponents::Generic @node={{@node}} @experience={{@experience}} @etns={{etns}} />
+    <EditComponents::Generic @node={{@node}} @subject={{@subject}} @etns={{etns}} />
   {{/if}}
 </ScoreFetcher>

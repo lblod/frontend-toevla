@@ -15,7 +15,7 @@ export default class ListImagesComponent extends Component {
   @sort('images', 'sortKey') sortedImages;
 
   get images(){
-    return get(this.args.experience, "pointOfInterest.images");
+    return get(this.args.pointOfInterest, "images");
   }
 
   get selectedImage() {

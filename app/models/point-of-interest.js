@@ -1,8 +1,8 @@
-import Model from '@ember-data/model';
+import Scorable from './scorable';
 import { belongsTo, hasMany } from 'ember-data/relationships';
 import attr from 'ember-data/attr';
 
-export default class PointOfInterestModel extends Model {
+export default class PointOfInterestModel extends Scorable {
   @attr('string') uri;
   @attr('string') label;
   @attr('string') comment;

@@ -10,7 +10,7 @@ export default class NodeScoreStateManagerService extends Service {
   @service store;
 
   /**
-   * Hash with [experience_id][tree_node_id].
+   * Hash with [subject_id][tree_node_id].
    */
   optimizedHash = {};
 
@@ -18,7 +18,7 @@ export default class NodeScoreStateManagerService extends Service {
    * Re-indexes all tree-node-score entities currently known by Ember
    * Data.
    *
-   * Assumes the link to TreeNode and Experience have been fetched for
+   * Assumes the link to TreeNode and Subject have been fetched for
    * all scores.
    */
   reindex() {
@@ -30,18 +30,18 @@ export default class NodeScoreStateManagerService extends Service {
       .peekAll('experience-tree-node-score');
 
     knownEtnss.forEach( (etns) => {
-      const experienceHash = optimizedHash[get(etns, "experience.id")] || {};
-      experienceHash[get(etns, "score.id")] = etns;
-      optimizedHash[get(etns, "experience.id")] = experienceHash;
+      const subjectHash = optimizedHash[get(etns, "subject.id")] || {};
+      subjectHash[get(etns, "score.id")] = etns;
+      optimizedHash[get(etns, "subject.id")] = subjectHash;
     });
 
     this.optimizedHash = optimizedHash;
   }
 
-  async fetchAll(experience) {
+  async fetchAll(subject) {
     await this.store.query( 'experience-tree-node-score',
-                         { "filter[experience][:id:]": experience.id,
-                           include: "tree-node,experience",
+                         { "filter[subject][:id:]": subject.id,
+                           include: "tree-node,subject",
                            "page[size]": 1500 });
     this.reindex();
   }
@@ -49,55 +49,55 @@ export default class NodeScoreStateManagerService extends Service {
   /**
    * Registers a new entity.  Use this when you have just fetched a single entity.
    *
-   * Assumes the TreeNode and Experience have been fetched too.
+   * Assumes the TreeNode and Subject have been fetched too.
    *
-   * @param experienceTreeNodeScore TreeNodeScore The score to add to the hash.
+   * @param subjectTreeNodeScore TreeNodeScore The score to add to the hash.
    */
-  register( experienceTreeNodeScore ) {
-    const etns = experienceTreeNodeScore;
-    this.optimizedHash[get(etns, "experience.id")] = this.optimizedHash[get(etns, "experience.id")] || {};
-    this.optimizedHash[get(etns, "experience.id")][get(etns, "treeNode.id")] = etns;
+  register( subjectTreeNodeScore ) {
+    const etns = subjectTreeNodeScore;
+    this.optimizedHash[get(etns, "subject.id")] = this.optimizedHash[get(etns, "subject.id")] || {};
+    this.optimizedHash[get(etns, "subject.id")][get(etns, "treeNode.id")] = etns;
   }
 
-  registerNotExists( experience, treeNode ) {
-    if( experience && treeNode ) {
-      this.optimizedHash[ experience.id ] = this.optimizedHash[ experience.id ] || {};
-      this.optimizedHash[ experience.id ][ treeNode.id ] = null;
+  registerNotExists( subject, treeNode ) {
+    if( subject && treeNode ) {
+      this.optimizedHash[ subject.id ] = this.optimizedHash[ subject.id ] || {};
+      this.optimizedHash[ subject.id ][ treeNode.id ] = null;
     }
   }
 
-  isRegistered( experience, treeNode ) {
-    return this.optimizedHash[ experience.id ] && treeNode.id in this.optimizedHash[ experience.id ];
+  isRegistered( subject, treeNode ) {
+    return this.optimizedHash[ subject.id ] && treeNode.id in this.optimizedHash[ subject.id ];
   }
 
   /**
    * Fetches a single entity, either from cache or by querying and storing it.
    *
-   * @param experience Experience The Experience entity which must match.
+   * @param subject Subject The Subject entity which must match.
    * @param treeNode TreeNode the TreeNode which must match.
    */
-  async fetch( experience, treeNode ) {
-    if( this.isRegistered( experience, treeNode ) ) {
-      return this.peek( experience, treeNode );
-    } else if( !experience || !treeNode || !experience.id || !treeNode.id ) {
+  async fetch( subject, treeNode ) {
+    if( this.isRegistered( subject, treeNode ) ) {
+      return this.peek( subject, treeNode );
+    } else if( !subject || !treeNode || !subject.id || !treeNode.id ) {
       return null;
     } else {
       try {
-        const experienceTreeNodeScores =
+        const subjectTreeNodeScores =
               (await this
                .store
                .query('experience-tree-node-score',
-                      { "filter[experience][:id:]": experience.id,
+                      { "filter[subject][:id:]": subject.id,
                         "filter[tree-node][:id:]": treeNode.id,
-                        include: "experience,tree-node"
+                        include: "subject,tree-node"
                       }));
 
-        const experienceTreeNodeScore = experienceTreeNodeScores.firstObject;
-        if( experienceTreeNodeScore )
-          this.register( experienceTreeNodeScore );
+        const subjectTreeNodeScore = subjectTreeNodeScores.firstObject;
+        if( subjectTreeNodeScore )
+          this.register( subjectTreeNodeScore );
         else
-          this.registerNotExists( experience, treeNode );
-        return experienceTreeNodeScore;
+          this.registerNotExists( subject, treeNode );
+        return subjectTreeNodeScore;
       } catch (e) {
         // eslint-disable-next-line no-console
         if( console && console.debug ) {
@@ -114,10 +114,10 @@ export default class NodeScoreStateManagerService extends Service {
   /**
    * Peeks for a single ExperienceTreeNodeScore and returns it if it exists.
    *
-   * @param experience Experience The Experience entity which must match.
+   * @param subject Subject The Subject entity which must match.
    * @param treeNode TreeNode the TreeNode which must match.
    */
-  peek( experience, treeNode ) {
-    return this.optimizedHash[experience.id] && this.optimizedHash[experience.id][treeNode.id];
+  peek( subject, treeNode ) {
+    return this.optimizedHash[subject.id] && this.optimizedHash[subject.id][treeNode.id];
   }
 }

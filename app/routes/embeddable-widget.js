@@ -8,40 +8,40 @@ export default class EmbeddableWidgetRoute extends Route {
 
   async model({widget_uri}) {
     const widgets =
-          await this.store.query("widget",
-                                 { include: "point-of-interest.experiences",
-                                   "filter[:uri:]": widget_uri
-                                 } );
+      await this.store.query("widget",
+        {
+          include: "point-of-interest.summary-icons",
+          "filter[:uri:]": widget_uri
+        });
     const widget = widgets.firstObject;
     const tree =
-          (await this
-                  .store
-                  .query("concept-scheme",
-                         {
-                           "include": "top-level-nodes",
-                           "filter[:uri:]": museaTree
-                         }))
-          .firstObject;
+      (await this
+        .store
+        .query("concept-scheme",
+          {
+            "include": "top-level-nodes.children.children.children.children.children",
+            "filter[:uri:]": museaTree
+          }))
+        .firstObject;
 
-    const experience = (
-      await this.store.query( 'experience', {
-        "filter[is-main-experience]": true,
-        "filter[point-of-interest][:id:]": (await widget.pointOfInterest).id
-      })
-    ).firstObject;
+    const poi = (await this.store.query('point-of-interest',
+      {
+        "filter[:id:]": (await widget.pointOfInterest).id, // Fetched above
+        include: "images,experiences,toilets,experiences.circulation,public-transport-route-description,shop,restaurant,bus-stops,parkings,entrances,type-of-glass-door-decoration,experiences.guided-tour,tram-stops,experiences.auditorium,train-stops"
+      })).firstObject;
 
-    window.setTimeout( async () => {
-      await this.nodeScoreStateManager.fetchAll( experience );
-      await this.store.query("concept-scheme", {
-        "include": "top-level-nodes.children.children.children.children.children",
-        "filter[:uri:]": museaTree
-      });
-    }, 1250);
+    // TODO: re-enable nodeScoreStateManager fetching
+    // window.setTimeout(async () => {
+    //   await this.nodeScoreStateManager.fetchAll(experience);
+    //   // await this.store.query("concept-scheme", {
+    //   //   "include": "top-level-nodes.children.children.children.children.children",
+    //   //   "filter[:uri:]": museaTree
+    //   // });
+    // }, 1250);
 
     return {
-      poi: widget.pointOfInterest,
+      poi,
       widget,
-      experience,
       tree
     };
   }

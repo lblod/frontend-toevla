@@ -21,20 +21,20 @@
   <section class="au-w-section au-w-section--flex">
     <div>
       <h3 class="au-w-address-title">
-        {{@experience.pointOfInterest.label}}
+        {{@pointOfInterest.label}}
       </h3>
       <p class="au-w-address-para">
-        {{@experience.pointOfInterest.locationString}}
+        {{@pointOfInterest.locationString}}
       </p>
     </div>
     <div>
-      <IconHighlight @pointOfInterest={{@experience.pointOfInterest}} />
+      <IconHighlight @pointOfInterest={{@pointOfInterest}} />
     </div>
   </section>
   {{#each this.sortedChildren as |child|}}
-    <WidgetChildren::ChildLevel1 @node={{child}} @experience={{@experience}}/>
+    <WidgetChildren::ChildLevel1 @node={{child}} @subject={{@pointOfInterest}}/>
   {{/each}}
-  <ListImages @experience={{@experience}} @preview={{4}}/>
+  <ListImages @pointOfInterest={{@pointOfInterest}} @preview={{4}}/>
   <footer class="au-w-footer au-w-footer--border">
     <p>Deze informatie is aangeleverd door <a href="https://toegankelijk.vlaanderen.be" class="au-w-link au-w-link--neutral" target="_blank" rel="noopener noreferrer">Toegankelijk Vlaanderen</a>. </p>
     {{!-- <p>Een fout of onvolledigheid opgemerkt? <a href="mailto:toegankelijk@vlaanderen.be?subject=Een opmerking op de widget" class="au-w-link au-w-link--neutral" target="_blank" rel="noopener noreferrer">toegankelijk@vlaanderen.be</a></p> --}}

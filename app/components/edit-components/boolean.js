@@ -16,7 +16,7 @@ export default class EditComponentsBooleanComponent extends Component {
   @action
   async updateValue(){
     try {
-      const instance = await getInstance(this.args.experience, this.args.key, { create: false });
+      const instance = await getInstance(this.args.subject, this.args.key, { create: false });
       this.value = get( instance, property(this.args.key) );
     } catch (e) {
       // eslint-disable-next-line no-console

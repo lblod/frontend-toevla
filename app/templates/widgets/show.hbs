@@ -10,9 +10,12 @@
 
 <main class="au-o-region au-d-theme-neutral-lightest au-d-widget">
   <div class="au-o-layout au-o-layout--medium au-d-editor">
-    <h2 class="au-u-h5">{{this.model.experience}}</h2>
+    <h2 class="au-u-h5">{{this.model.poi.label}}</h2>
     <div>
-      <Widget @tree={{this.model.tree}} @experience={{this.model.experience}} @title="ToegankelijkheidsInfo" />
+      <Widget
+        @tree={{this.model.tree}}
+        @pointOfInterest={{this.model.poi}}
+        @title="ToegankelijkheidsInfo" />
     </div>
   </div>
 </main>

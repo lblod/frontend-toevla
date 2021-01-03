@@ -25,30 +25,30 @@ export default class WidgetChildrenWhenNodeShouldRenderComponent extends Compone
   async initDoRender() {
     const render =
       await this.hasVisibleScore()
-      || await this.hasRenderedChildren(this.args.node, this.args.experience);
+      || await this.hasRenderedChildren(this.args.node, this.args.subject);
     this.doRender = render;
   }
 
   async hasVisibleScore() {
-    const etns = await this.nodeScoreStateManager.fetch(this.args.experience, this.args.node);
+    const etns = await this.nodeScoreStateManager.fetch(this.args.subject, this.args.node);
     return etns && etns.score && true;
   }
 
   /**
-   * Yields true iff node/experience have rendered children.  Yields
+   * Yields true iff node/subject have rendered children.  Yields
    * false otherwise.
    */
-  async hasRenderedChildren(node, experience) {
+  async hasRenderedChildren(node, subject) {
     const children = await node.children;
     for (const child of children.toArray() || []) {
-      if (await this.hasRenderedLabel(child, experience) || await this.hasRenderedChildren(child, experience)) {
+      if (await this.hasRenderedLabel(child, subject) || await this.hasRenderedChildren(child, subject)) {
         return true;
       }
     }
     return false;
   };
 
-  async hasRenderedLabel(node, experience) {
+  async hasRenderedLabel(node, subject) {
     if ((await node.children).length) {
       // this has children, so no detail
       return false;
@@ -57,7 +57,7 @@ export default class WidgetChildrenWhenNodeShouldRenderComponent extends Compone
       const componentInfo = editMapping(node.uri);
       let instance;
       try {
-        instance = await getInstance(experience, componentInfo.key, { create: false });
+        instance = await getInstance(subject, componentInfo.key, { create: false });
       } catch (e) {
         // Could not find instance, this is normal
         return false;
@@ -83,7 +83,7 @@ export default class WidgetChildrenWhenNodeShouldRenderComponent extends Compone
         case "edit-components/area":
           return value && areaCriterion(node, [get(value, "width"), get(value, "height")]).templateString;
         default:
-          console.warn(`Could not find label for node: ${node.id} and experience ${experience.id}; type: ${componentInfo.component}`);
+          console.warn(`Could not find label for node: ${node.id} and subject ${subject.id}; type: ${componentInfo.component}`);
           return false;
       }
     }

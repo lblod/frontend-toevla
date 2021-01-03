@@ -1,8 +1,8 @@
-import Model from '@ember-data/model';
+import Scorable from './scorable';
 import { belongsTo } from 'ember-data/relationships';
 import attr from 'ember-data/attr';
 
-export default class ExperienceModel extends Model {
+export default class ExperienceModel extends Scorable {
   @belongsTo('point-of-interest') pointOfInterest;
   @belongsTo('route') circulation;
   @belongsTo('guided-tour') guidedTour;
@@ -30,8 +30,4 @@ export default class ExperienceModel extends Model {
   @attr('boolean') hasListeningElements;
   @attr('boolean') hasPlacesOfSilence;
   @attr('string') otherElements;
-
-  async getScoreForTreeNode(treeNode){
-    return await this.nodeScoreStateManager.fetch( this, treeNode );
-  }
 }
