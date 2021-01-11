@@ -1,5 +1,5 @@
 {{#each @experience.pointOfInterest.experiences as |exp|}}
-  <ScoreFetcher @experience={{exp}} @node={{@node}} as |etns|>
+  <ScoreFetcher @subject={{exp}} @node={{@node}} as |etns|>
     <WidgetChildren::WhenNodeShouldRender @node={{@node}} @experience={{exp}}>
       <li class="au-w-section-list__item">
         <AuCollapsableSection @buttonTitle="Circuleren - {{exp.title}}" @score={{etns.score}}>

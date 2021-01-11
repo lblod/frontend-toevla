@@ -33,31 +33,31 @@ import Component from '@glimmer/component';
  * pops in.
  */
 export default class ScoreFetcherComponent extends Component {
-  @tracked storedExperienceTreeNodeScore
+  @tracked storedTreeNodeScore
   @service nodeScoreStateManager
 
-  lastExperienceId = null;
+  lastSubjectId = null;
   lastNodeId = null;
 
   constructor() {
     super( ...arguments );
-    this.updateExperienceTreeNodeScore(this.args.experience, this.args.node);
+    this.updateTreeNodeScore(this.args.subject, this.args.node);
   }
 
-  get experienceTreeNodeScore() {
-    this.updateExperienceTreeNodeScore( this.args.experience, this.args.node );
-    return this.storedExperienceTreeNodeScore;
+  get treeNodeScore() {
+    this.updateTreeNodeScore( this.args.subject, this.args.node );
+    return this.storedTreeNodeScore;
   }
 
-  async updateExperienceTreeNodeScore(experience, node) {
-    if( experience && node
-        && ( experience.id != this.lastExperienceId
+  async updateTreeNodeScore(subject, node) {
+    if( subject && node
+        && ( subject.id != this.lastSubjectId
              || node.id != this.lastNodeId ) ) {
-      this.lastExperienceId = experience.id;
+      this.lastSubjectId = subject.id;
       this.lastNodeId = node.id;
-      const storedExperienceTreeNodeScore = await this.nodeScoreStateManager.fetch( this.args.experience, this.args.node );
-      if( this.lastExperienceId == experience.id && this.lastNodeId == node.id )
-        this.storedExperienceTreeNodeScore = storedExperienceTreeNodeScore;
+      const storedTreeNodeScore = await this.nodeScoreStateManager.fetch( this.args.subject, this.args.node );
+      if( this.lastSubjectId == subject.id && this.lastNodeId == node.id )
+        this.storedTreeNodeScore = storedTreeNodeScore;
     }
   }
 }
