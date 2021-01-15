@@ -10,7 +10,6 @@ export default class ConceptModel extends Model {
   @attr('string') score;
 
   @attr('number') order;
-  @attr('string') htmlContent;
   @attr('string') criterionType;
 
   @attr('string') firstScore;
