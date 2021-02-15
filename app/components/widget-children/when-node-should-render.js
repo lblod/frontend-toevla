@@ -64,23 +64,23 @@ export default class WidgetChildrenWhenNodeShouldRenderComponent extends Compone
       }
       let value = await get(instance, property(componentInfo.key));
       switch (componentInfo.component) {
-        case "edit-components/boolean":
+        case "boolean":
           return booleanCriterion(node, value).templateString;
-        case "edit-components/centimeters":
+        case "centimeters":
           return numericCriterion(node, value).templateString;
-        case "edit-components/choice":
+        case "choice":
           return choiceCriterion(node, value).templateString;
-        case "edit-components/count":
+        case "count":
           return numericCriterion(node, value).templateString;
-        case "edit-components/force":
+        case "force":
           return numericCriterion(node, value).templateString;
-        case "edit-components/kilometers":
+        case "kilometers":
           return numericCriterion(node, value).templateString;
-        case "edit-components/meters":
+        case "meters":
           return numericCriterion(node, value).templateString;
-        case "edit-components/string":
+        case "string":
           return stringCriterion(node, value).templateString;
-        case "edit-components/area":
+        case "area":
           return value && areaCriterion(node, [get(value, "width"), get(value, "height")]).templateString;
         default:
           console.warn(`Could not find label for node: ${node.id} and subject ${subject.id}; type: ${componentInfo.component}`);
