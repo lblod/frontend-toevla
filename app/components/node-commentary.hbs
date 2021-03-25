@@ -1,0 +1,10 @@
+{{#if @node.hasComment}}
+  <div>
+    {{@node.comment}}
+    {{#if @node.commentLinkText}}
+      <a href={{@node.commentLinkUrl}}>{{@node.commentLinkText}}</a>
+    {{else if @node.commentLinkUrl}}
+      <a href={{@node.commentLinkUrl}}>{{@node.commentLinkUrl}}</a>
+    {{/if}}
+  </div>
+{{/if}}
