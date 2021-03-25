@@ -12,15 +12,15 @@
   &,
   &:visited {
     color: $au-primary !important;
-    color: var(--au-primary) !important;
+    color: var(--au-link) !important;
     text-decoration-color: $au-primary-light !important;
-    text-decoration-color: var(--au-primary-light) !important;
+    text-decoration-color: var(--au-link) !important;
   }
 
   &:hover,
   &:focus {
     color: $au-primary-light !important;
-    color: var(--au-primary-light) !important;
+    color: var(--au-link-hover) !important;
     text-decoration: none !important;
   }
 
@@ -34,7 +34,7 @@
 
   .is-active > & {
     color: $au-primary-light !important;
-    color: var(--au-primary-light) !important;
+    color: var(--au-link-hover) !important;
     text-decoration: none !important;
   }
 }
@@ -61,7 +61,7 @@
   }
 
   .is-active > & {
-    color: $au-primary-light !important;
+    color: $au-neutral-light !important;
     text-decoration: none !important;
   }
 }

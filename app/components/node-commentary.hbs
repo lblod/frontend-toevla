@@ -1,10 +1,10 @@
 {{#if @node.hasComment}}
-  <div>
+  <p class="au-w-info-text au-w-info-text--top">
     {{@node.comment}}
     {{#if @node.commentLinkText}}
-      <a href={{@node.commentLinkUrl}}>{{@node.commentLinkText}}</a>
+      <a href={{@node.commentLinkUrl}} target="_blank" rel="noreferrer noopener" class="au-w-link">{{@node.commentLinkText}}</a>
     {{else if @node.commentLinkUrl}}
-      <a href={{@node.commentLinkUrl}}>{{@node.commentLinkUrl}}</a>
+      <a href={{@node.commentLinkUrl}} target="_blank" rel="noreferrer noopener" class="au-w-link">{{@node.commentLinkUrl}}</a>
     {{/if}}
-  </div>
+  </p>
 {{/if}}
