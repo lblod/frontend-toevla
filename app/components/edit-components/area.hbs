@@ -5,7 +5,7 @@
     as |label check score|>
     {{#if label}}
       <Labels::AreaString @label={{label}} @value={{arrValue}} as |str|>
-        <AuCriteriaInline @criterium={{str}} @score={{score}} @etns={{etns}} />
+        <AuCriteriaInline @criterium={{str}} @score={{score}} @etns={{@etns}} />
       </Labels::AreaString>
     {{/if}}
   </Criteria::SelectAreaCriterion>
