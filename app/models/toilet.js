@@ -23,9 +23,6 @@ export default class ToiletModel extends Model {
   @attr('number') turningRadius;
   @attr('number') amountOfSupportBraces;
   @attr('boolean') hasWashbasin;
-  @attr('number') freeHeightUnderWashbasin;
-  @attr('number') freeDepthUnderWashbasin;
-  @attr('number') freeWidthUnderWashbasin;
   @belongsTo('area') sizeOfElevator;
   @belongsTo('area') sizeOfPlateauElevator;
   @belongsTo('area') sizeOfToiletRoom;

@@ -22,6 +22,9 @@ export default class ExperienceModel extends Scorable {
   @attr('boolean') signsInLargePrint;
   @attr('boolean') audioGuideOnlyInDutch;
   @attr('boolean') audioGuideAvailableInMultipleLanguages;
+  @attr('boolean') audioGuideAvailableViaHeadset;
+  @attr('boolean') audioGuideAvailableViaSmartphone;
+  @attr('boolean') audioGuideAvailableViaOtherMeans;
   @attr('boolean') hasMovieGuide;
   @attr('boolean') hasVirtualTechnology;
   @attr('boolean') hasTouchElements;
