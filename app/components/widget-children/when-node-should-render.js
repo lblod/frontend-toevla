@@ -12,8 +12,10 @@ import { areaCriterion } from '../../helpers/select-area-criterion';
 
 export default class WidgetChildrenWhenNodeShouldRenderComponent extends Component {
   // TODO: update using @use Resource after upgrading
-  @tracked doRender;
+  @tracked lastCalculatedDoRender;
   @service nodeScoreStateManager;
+  @service targetAudience;
+
 
   constructor() {
     super(...arguments);
@@ -22,16 +24,45 @@ export default class WidgetChildrenWhenNodeShouldRenderComponent extends Compone
     this.initDoRender();
   }
 
+  /**
+   * This variable indicates the current node should be rendered.  We
+   * assume a node should be rendered if it contains a value and matches
+   * the current target users, or if one of its children should be rendered.
+   */
+  get doRender() {
+    console.log(`There are ${this.targetAudience.selectedArray.length} items selected`);
+    this.initDoRender();
+    return this.lastCalculatedDoRender;
+  }
+
   async initDoRender() {
-    const render =
-      await this.hasVisibleScore()
-      || await this.hasRenderedChildren(this.args.node, this.args.subject);
-    this.doRender = render;
+    const node = this.args.node;
+    const subject = this.args.subject;
+    const selectedArray = this.targetAudience.selectedArray;
+
+    if (node !== this.lastNode
+      || subject !== this.lastSubject
+      || JSON.stringify(selectedArray.map((x) => x.id))
+        !== JSON.stringify(this.lastSelectedArray.map((x) => x.id))) {
+      const render =
+            await this.hasVisibleScore()
+            || await this.hasRenderedChildren(node, subject);
+
+      this.lastNode = node;
+      this.lastSubject = subject;
+      this.lastSelectedArray = selectedArray;
+
+      this.lastCalculatedDoRender = render;
+    }
   }
 
   async hasVisibleScore() {
-    const etns = await this.nodeScoreStateManager.fetch(this.args.subject, this.args.node);
-    return etns && etns.score && true;
+    if( this.targetAudience.shouldRenderScore( this.args.node.targetAudiences ) ) {
+      const etns = await this.nodeScoreStateManager.fetch(this.args.subject, this.args.node);
+      return etns && etns.score && true;
+    } else {
+      return false;
+    }
   }
 
   /**
@@ -41,7 +72,10 @@ export default class WidgetChildrenWhenNodeShouldRenderComponent extends Compone
   async hasRenderedChildren(node, subject) {
     const children = await node.children;
     for (const child of children.toArray() || []) {
-      if (await this.hasRenderedLabel(child, subject) || await this.hasRenderedChildren(child, subject)) {
+      const shouldRenderChild = this.targetAudience.shouldRenderScore( child.targetAudiences );
+      const hasRenderedLabel = await this.hasRenderedLabel(child, subject);
+      if ( (shouldRenderChild && hasRenderedLabel)
+           || await this.hasRenderedChildren(child, subject)) {
         return true;
       }
     }

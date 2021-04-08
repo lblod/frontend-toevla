@@ -22,14 +22,36 @@ export default class TargetAudienceService extends Service {
     this.audiences = await conceptScheme.firstObject.topLevelNodes;
   }
 
-  toggleSelected( audience ) {
-    if( this.isSelected( audience ) )
-      this.selectedAudiences.delete( audience );
+  toggleSelected(audience) {
+    if (this.isSelected(audience))
+      this.selectedAudiences.delete(audience);
     else
-      this.selectedAudiences.add( audience );
+      this.selectedAudiences.add(audience);
   }
 
-  isSelected( audience ) {
-    return this.selectedAudiences.has( audience );
+  isSelected(audience) {
+    return this.selectedAudiences.has(audience);
+  }
+
+  get shouldApply() {
+    return this.selectedAudiences.size > 0;
+  }
+
+  anySelected(audiences) {
+    return !!audiences.any(this.isSelected.bind(this));
+  }
+
+  get selectedArray() {
+    return [...this.selectedAudiences];
+  }
+
+  /**
+   * Indicates the current settings state a score should be rendered
+   * when it has the supplied audiences applied.  Note that this may
+   * yield a positive answer when no target audiences are supplied,
+   * being when no target audiences are selected.
+    */
+  shouldRenderScore(audiences) {
+    return !this.shouldApply || this.anySelected(audiences);
   }
 }
