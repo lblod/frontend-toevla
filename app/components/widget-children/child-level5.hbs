@@ -1,7 +1,7 @@
 <ScoreFetcher @subject={{@subject}} @node={{@node}} as |etns|>
   {{#if this.sortedChildren}}
     <WidgetChildren::WhenNodeShouldRender @node={{@node}} @subject={{@subject}}>
-      <AuCriteriaItem @criterium={{@node.title}} @score={{etns.score}} |InfoText|>
+      <AuCriteriaItem @criterium={{@node.title}} @score={{etns.score}} as |InfoText|>
         <NodeCommentary @node={{etns}} />
         <ul class="au-w-criterium-list au-w-criterium-list--detail">
           {{#each this.sortedChildren as |child|}}
