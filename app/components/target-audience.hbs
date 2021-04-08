@@ -1,0 +1,13 @@
+<ul>
+  {{#each this.targetAudience.audiences as |audience|}}
+    <li>
+      <label>
+        <input
+          type="checkbox"
+          {{on "input" (fn this.toggleSelected audience)}}
+          checked={{audience-is-selected audience}} />
+        {{audience.title}}
+      </label>
+    </li>
+  {{/each}}
+</ul>

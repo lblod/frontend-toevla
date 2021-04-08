@@ -31,6 +31,9 @@
       <IconHighlight @pointOfInterest={{@pointOfInterest}} />
     </div>
   </section>
+  <div>
+    <TargetAudience />
+  </div>
   {{#each this.sortedChildren as |child|}}
     <WidgetChildren::ChildLevel1 @node={{child}} @subject={{@pointOfInterest}}/>
   {{/each}}
