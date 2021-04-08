@@ -22,6 +22,15 @@ export default class ConceptModel extends Model {
   @attr('string') thirdLimit;
   @attr('string') thirdLabel;
 
+  @attr('boolean') isCriteriumForMentallyChallenged;
+  @attr('boolean') isCriteriumForHearingImpaired;
+  @attr('boolean') isCriteriumForDeaf;
+  @attr('boolean') isCriteriumForVisuallyImpaired;
+  @attr('boolean') isCriteriumForBlind;
+  @attr('boolean') isCriteriumForBobilityProblems;
+  @attr('boolean') isCriteriumForWheelchair;
+  @attr('boolean') isCriteriumForAutism;
+
   // we don't manipulate these in the app, setting inverse to null for
   // consistent responses
   @hasMany('concept', { inverse: null }) children;
