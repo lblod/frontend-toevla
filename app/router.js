@@ -7,10 +7,7 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function() {
-  this.route('widget-desktop');
-  this.route('widget-kina');
   this.route('scoring');
-  this.route('widget-future');
   this.route('icons');
   this.route('musea', function() {
     this.route('show', { path: ":museum_id" }, function() {
