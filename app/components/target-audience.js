@@ -32,9 +32,4 @@ export default class TargetAudienceComponent extends Component {
     if (this.dropdownOpen)
       this.dropdownOpen = false;
   }
-
-  @action
-  toggleDropdown() {
-    this.dropdownOpen = ! this.dropdownOpen;
-  }
 }

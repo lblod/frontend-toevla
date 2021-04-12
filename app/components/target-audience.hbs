@@ -19,7 +19,7 @@
     </button>
     {{/if}}
   </div>
-  <div id="{{this.dropdownId}}" class="au-w-dropdown__menu {{if this.dropdownOpen "is-visible" ""}}" role="menu" tabindex="-1" {{focus-trap isActive=this.dropdownOpen shouldSelfFocus=true focusTrapOptions=(hash onDeactivate=this.closeDropdown clickOutsideDeactivates=true)}} {{on "click" this.toggleDropdown}}>
+  <div id="{{this.dropdownId}}" class="au-w-dropdown__menu {{if this.dropdownOpen "is-visible" ""}}" role="menu" tabindex="-1" {{focus-trap isActive=this.dropdownOpen shouldSelfFocus=true focusTrapOptions=(hash onDeactivate=this.closeDropdown clickOutsideDeactivates=true)}} {{on-click-inside this.closeDropdown}}>
     {{#each this.targetAudience.audiences as |audience|}}
     <label role="menuitem" aria-label="{{audience.title}}">
       <input
