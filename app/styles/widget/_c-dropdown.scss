@@ -1,0 +1,222 @@
+/* ==================================
+   #DROPDOWN
+   ================================== */
+
+.au-w-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.au-w-dropdown__toggle {
+  font-weight: $au-regular;
+  color: var(--au-link);
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: $au-unit-tiny;
+  border-radius: $au-radius;
+
+  &:focus-within {
+    outline: $au-outline;
+  }
+
+  &,
+  &:visited {
+    color: var(--au-link);
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    color: var(--au-link-hover);
+    background-color: $au-gray-lightest;
+  }
+
+  &:focus,
+  &:focus-within {
+    outline: $au-outline;
+  }
+
+  .au-w-dropdown--left & {
+    flex-direction: row-reverse;
+  }
+}
+
+.au-w-dropdown__icon {
+  display: inline-flex !important;
+  width: .9em !important;
+  height: .9em !important;
+  position: relative !important;
+  vertical-align: baseline !important;
+  stroke-width: 0 !important;
+  stroke: currentColor !important;
+  fill: currentColor !important;
+  margin-right: $au-unit-tiny !important;
+  transition: fill $au-transition, stroke $au-transition !important;
+
+  .au-w-button-link:hover &,
+  .au-w-button-link:focus & {
+    opacity: .9 !important;
+  }
+}
+
+.au-w-dropdown__name {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: $au-unit-large;
+
+  @include mq(xsmall) {
+    max-width: $au-unit-huge;
+  }
+
+  @include mq(small) {
+    width: auto;
+    max-width: $au-unit-huge*4;
+  }
+}
+
+.au-w-dropdown__button {
+  border: 0;
+  padding: 0;
+  margin-left: $au-unit-tiny;
+  display: inline-flex;
+  align-items: center;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &,
+  &:visited,
+  &:hover,
+  &:focus {
+    color: inherit;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  .au-w-dropdown--left & {
+    margin-left: 0;
+    margin-right: $au-unit-tiny;
+  }
+}
+
+.au-w-dropdown__menu {
+  font-family: $au-font;
+  font-weight: $au-regular;
+  position: absolute;
+  z-index: $au-z-index-beta;
+  background-color: $au-white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 100%;
+  width: auto;
+  top: $au-unit + $au-unit-tiny;
+  box-shadow: 0 0 12px rgba($au-gray-dark,.15), 0 0 2px rgba($au-gray-dark,.1);
+  border-radius: $au-radius;
+  display: none;
+
+  &:before,
+  &:after {
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-width: .4rem;
+    margin-left: -.4rem/2;
+  }
+
+  &:before {
+    border-color: rgba($au-white, 0);
+    border-bottom-color: $au-gray-lighter;
+  }
+
+  &:after {
+    border-color: rgba($au-white, 0);
+    border-bottom-color: $au-white;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &.is-visible {
+    display: flex;
+  }
+
+  // Modify the menu position
+  .au-w-dropdown--left &,
+  .au-w-dropdown--right & {
+    transform: none;
+    text-align: left;
+  }
+
+  .au-w-dropdown--left & {
+    left: 0;
+  }
+
+  .au-w-dropdown--right & {
+    left: auto;
+    right: 0;
+  }
+
+  .au-w-dropdown--left &:before,
+  .au-w-dropdown--left &:after {
+    left: $au-unit-tiny;
+  }
+
+  .au-w-dropdown--right &:before,
+  .au-w-dropdown--right &:after {
+    left: calc(100% - #{$au-unit-small});
+  }
+}
+
+.au-w-dropdown__menu [role="menuitem"] {
+  padding: $au-unit-small;
+  height: auto;
+  overflow: hidden;
+  text-decoration: none;
+
+  &:first-child {
+    border-top-right-radius: $au-radius;
+    border-top-left-radius: $au-radius;
+  }
+
+  &:last-child {
+    border-bottom-right-radius: $au-radius;
+    border-bottom-left-radius: $au-radius;
+  }
+
+  &.active {
+    color: $au-gray;
+    background-color: $au-gray-lighter;
+    font-weight: $au-medium;
+    outline-offset: -.2rem;
+  }
+
+  &:focus,
+  &.active:focus {
+    outline: $au-outline;
+    outline-offset: -.2rem;
+  }
+}
+
+.au-w-dropdown__menu [role="menuitem"] + [role="menuitem"] {
+  border-top: 1px dotted $au-gray-light;
+}
