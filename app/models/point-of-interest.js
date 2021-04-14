@@ -31,6 +31,7 @@ export default class PointOfInterestModel extends Scorable {
   @attr('boolean') hasGlassFloor;
   @attr('boolean') hasDifficultStaircaseForDogs;
   @attr('boolean') hasEscalator;
+  @attr('boolean') hasWheelchairAccessibleToilet;
   @belongsTo('concept') acceptanceOfMuseumPass;
   @belongsTo('concept') acceptanceOfUitpas;
   @belongsTo('concept') acceptanceOfCityPass;

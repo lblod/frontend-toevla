@@ -6,6 +6,7 @@ export default class EntranceModel extends Model {
   @attr('boolean') hasMannedDesk;
   @attr('boolean') hasTeleloopAtCounter;
   @attr('number') highestThreshold;
+  @attr('number') amountOfThresholds;
   @attr('number') amountOfStairs;
   @attr('number') amountOfSlopes;
   @attr('boolean') hasEntranceGutters;
