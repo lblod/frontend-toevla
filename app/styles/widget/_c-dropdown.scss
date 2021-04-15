@@ -9,12 +9,11 @@
 
 .au-w-dropdown__toggle {
   font-weight: normal !important;
-  color: var(--au-link) !important;
   display: flex !important;
+  flex-direction: row-reverse !important;
   align-items: center !important;
   position: relative !important;
-  padding: $au-unit-tiny !important;
-  border-radius: $au-radius !important;
+  padding: $au-unit-tiny $au-unit-tiny $au-unit-tiny 0  !important;
 
   &:focus-within {
     outline: $au-outline !important;
@@ -22,23 +21,20 @@
 
   &,
   &:visited {
-    color: var(--au-link) !important;
+    color: $au-neutral-dark !important;
   }
 
   &:hover,
   &:focus,
-  &:focus-within {
-    color: var(--au-link-hover) !important;
-    background-color: $au-gray-lightest !important;
+  &:focus-within,
+  &.is-active {
+    color: $au-neutral-dark !important;
+    background-color: $au-neutral-lightest !important;
   }
 
   &:focus,
   &:focus-within {
     outline: $au-outline !important;
-  }
-
-  .au-w-dropdown--left & {
-    flex-direction: row-reverse;
   }
 }
 
@@ -51,9 +47,9 @@
   stroke-width: 0 !important;
   stroke: currentColor !important;
   fill: currentColor !important;
-  margin-right: $au-unit-tiny !important;
   transition: fill $au-transition, stroke $au-transition !important;
-  margin-right: -.2rem !important;
+  margin-left: .3rem !important;
+  margin-right: .5rem !important;
 
   .au-w-button-link:hover &,
   .au-w-button-link:focus & {
@@ -78,7 +74,6 @@
 .au-w-dropdown__button {
   border: 0 !important;
   padding: 0 !important;
-  margin-left: $au-unit-tiny !important;
   display: inline-flex !important;
   align-items: center !important;
 
@@ -115,8 +110,7 @@
   min-width: $au-unit-huge*3 !important;
   width: auto !important;
   top: $au-unit + $au-unit-tiny*1.5 !important;
-  left: auto !important;
-  right: 0 !important;
+  left: 0 !important;
   box-shadow: 0 0 12px rgba($au-gray-dark,.15), 0 0 2px rgba($au-gray-dark,.1) !important;
   border-radius: $au-radius !important;
   display: none !important;
@@ -125,7 +119,7 @@
   &:before,
   &:after {
     bottom: 100% !important;
-    left: calc(100% - #{$au-unit-small}) !important;
+    left: .9rem !important;
     border: solid transparent !important;
     content: " " !important;
     height: 0 !important;

@@ -8,6 +8,24 @@
     margin-top: $au-unit-small !important;
     border-top: 1px dotted $au-neutral-light !important;
   }
+
+  & + &.au-w-section--filter {
+    padding-top: 0 !important;
+    border-top: 1px solid $au-neutral-lighter !important;
+  }
+
+  &.au-w-section--filter + & {
+    margin-top: 0 !important;
+    border-top: 1px solid $au-neutral-lighter !important;
+  }
+}
+
+.au-w-section--filter {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  color: $au-neutral-dark !important;
 }
 
 .au-w-section--column {

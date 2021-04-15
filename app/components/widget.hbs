@@ -17,8 +17,9 @@
       </svg>
       {{@title}}
     </h2>
-    <TargetAudience />
+
   </header>
+
   <section class="au-w-section au-w-section--flex">
     <div>
       <h3 class="au-w-address-title">
@@ -32,6 +33,7 @@
       <IconHighlight @pointOfInterest={{@pointOfInterest}} />
     </div>
   </section>
+  <TargetAudience />
   {{#each this.sortedChildren as |child|}}
     <WidgetChildren::ChildLevel1 @node={{child}} @subject={{@pointOfInterest}}/>
   {{/each}}
