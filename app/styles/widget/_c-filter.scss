@@ -1,0 +1,20 @@
+.au-w-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.au-w-filter__title {
+  font-style: italic;
+  margin-right: $au-unit-tiny/2;
+}
+
+.au-w-filter__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.au-w-filter__list-item {
+  display: block;
+  margin-right: $au-unit-tiny;
+}

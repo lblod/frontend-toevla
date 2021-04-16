@@ -10,12 +10,12 @@
   }
 
   & + &.au-w-section--filter {
-    padding-top: 0 !important;
+    padding-top: $au-unit-tiny/2 !important;
     border-top: 1px solid $au-neutral-lighter !important;
   }
 
   &.au-w-section--filter + & {
-    margin-top: 0 !important;
+    margin-top: $au-unit-tiny/2 !important;
     border-top: 1px solid $au-neutral-lighter !important;
   }
 }
