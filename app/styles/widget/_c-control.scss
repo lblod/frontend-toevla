@@ -12,7 +12,7 @@
   align-items: center !important;
   color: $au-gray-dark !important;
   cursor: pointer !important;
-  border: .1rem solid $au-gray-lighter !important;
+  border: .1rem solid $au-gray-light !important;
   background-color: $au-gray-lightest !important;
   padding-right: $au-unit-tiny !important;
   border-radius: $au-radius !important;
@@ -41,7 +41,7 @@
   color: $au-neutral-lightest !important;
   text-align: center !important;
   background-color: $au-white !important;
-  border-right: .1rem solid $au-neutral-lighter !important;
+  border-right: .1rem solid $au-neutral-light !important;
   background-size: $au-unit-small !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
@@ -57,12 +57,14 @@
 .au-w-control__input:checked ~ .au-w-control__indicator {
   color: $au-white !important;
   background-color: $au-primary !important;
+  background-color: var(--au-link) !important;
 }
 
 /* Active */
 .au-w-control__input:active ~ .au-w-control__indicator {
   color: $au-white !important;
   background-color: $au-primary !important;
+  background-color: var(--au-link) !important;
 }
 
 /* Checkbox modifiers */
