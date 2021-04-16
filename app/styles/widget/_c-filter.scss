@@ -5,9 +5,12 @@
 }
 
 .au-w-filter__title {
+  flex: none !important;
+  width: 162px !important;
+  flex-grow: 100 !important;
   font-style: italic !important;
   color: $au-neutral !important;
-  margin-right: $au-unit-tiny !important;
+  padding-right: $au-unit-tiny !important;
 }
 
 .au-w-filter__list {

@@ -2,15 +2,19 @@
   <div class="au-w-filter">
     <h3 class="au-w-filter__title">Filter op beperking:</h3>
     <ul class="au-w-filter__list">
-      {{#each this.targetAudience.audiences as |audience|}}
-      {{!-- <li><label role="menuitem" aria-label="{{audience.title}}">
-        <input
-          type="checkbox"
-          {{on "input" (fn this.toggleSelected audience)}}
-          checked={{audience-is-selected audience}} />
-        {{audience.title}}
-      </label></li> --}}
-      {{/each}}
+      {{!-- {{#each this.targetAudience.audiences as |audience|}}
+      <li class="au-w-filter__list-item">
+        <label role="menuitem" aria-label="{{audience.title}}" class="au-w-control au-w-control--checkbox">
+          <input
+            type="checkbox"
+            class="au-w-control__input"
+            {{on "input" (fn this.toggleSelected audience)}}
+            checked={{audience-is-selected audience}} />
+          <span class="au-w-control__indicator"></span>
+          <span class="au-w-control__text">{{audience.title}}</span>
+        </label>
+      </li>
+      {{/each}} --}}
       <li class="au-w-filter__list-item">
         <label role="menuitem" aria-label="{{audience.title}}" class="au-w-control au-w-control--checkbox">
           <input type="checkbox" checked="" class="au-w-control__input" />
