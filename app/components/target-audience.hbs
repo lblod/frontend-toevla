@@ -18,6 +18,12 @@
     </ul>
   </div>
   <div>
-    <button  role="menuitem" class="au-w-button-link au-w-button-link--neutral">Reset filters</button>
+    {{#if targetAudience.hasSelectedFilters}}
+      <button {{on "click" targetAudience.resetFilters}}
+        role="menuitem"
+        class="au-w-button-link au-w-button-link--neutral"
+      >
+        Reset filters</button>
+    {{/if}}
   </div>
 </section>

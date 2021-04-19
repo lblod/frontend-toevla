@@ -1,3 +1,4 @@
+import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 import { TrackedSet } from 'tracked-maps-and-sets';
 import Service, { inject as service } from '@ember/service';
@@ -35,6 +36,21 @@ export default class TargetAudienceService extends Service {
 
   get shouldApply() {
     return this.selectedAudiences.size > 0;
+  }
+
+  /**
+   * Returns truethy iff some filters are currently being applied.
+   */
+  get hasSelectedFilters() {
+    return this.selectedAudiences.size > 0;
+  }
+
+  /**
+   * Removes currently selected target audiences.
+   */
+  @action
+  resetFilters() {
+    this.selectedAudiences.clear();
   }
 
   anySelected(audiences) {
