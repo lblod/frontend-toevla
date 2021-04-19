@@ -35,14 +35,14 @@
 .au-d-link--neutral {
   &,
   &:visited {
-    color: $au-neutral-dark;
-    text-decoration-color: $au-neutral-light;
+    color: var(--au-neutral-dark);
+    text-decoration-color: var(--au-neutral-light);
   }
 
   &:hover,
   &:focus {
-    color: $au-neutral;
-    text-decoration-color: $au-neutral-lighter;
+    color: var(--au-neutral);
+    text-decoration-color: var(--au-neutral-lighter);
   }
 
   &:focus {
@@ -51,7 +51,7 @@
   }
 
   .is-active > & {
-    color: $au-neutral;
+    color: var(--au-neutral);
     text-decoration: none;
   }
 }

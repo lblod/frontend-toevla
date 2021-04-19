@@ -81,7 +81,7 @@
   font-size: $au-base !important;
   line-height: 1.5 !important;
   text-align: left !important;
-  color: $au-neutral-dark !important;
+  color: var(--au-neutral-dark) !important;
   display: block !important;
   padding: $au-unit-tiny/2 $au-unit-tiny !important;
   background-color: $au-white !important;
@@ -90,6 +90,10 @@
   left: $au-unit-small !important;
   width: calc(100% - #{$au-unit}) !important;
   border-radius: $au-radius !important;
+
+  [data-theme="dark"] & {
+    background-color: $au-neutral-darker !important;
+  }
 
   @include mq(medium) {
     padding: $au-unit-tiny $au-unit-small !important;
@@ -131,7 +135,7 @@
   }
 
   &:active {
-    color: $au-neutral-light !important;
+    color: var(--au-neutral-light) !important;
   }
 
   .au-w-icon {
@@ -161,5 +165,5 @@
   text-transform: uppercase !important;
   margin-right: $au-unit-tiny/2 !important;
   padding-right: $au-unit-tiny !important;
-  border-right: 1px solid $au-neutral-light !important;
+  border-right: 1px solid var(--au-neutral-light) !important;
 }

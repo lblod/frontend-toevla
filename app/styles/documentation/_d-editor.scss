@@ -65,7 +65,7 @@
     margin-top: $au-unit;
     margin-bottom: $au-unit;
     border: 0;
-    border-bottom: 3px solid $au-neutral-lighter;
+    border-bottom: 3px solid var(--au-neutral-lighter);
   }
 
   > * + blockquote {
@@ -79,8 +79,8 @@
   > blockquote {
     padding-top: $au-unit;
     padding-bottom: $au-unit;
-    border-top: 2px solid $au-neutral-lighter;
-    border-bottom: 2px solid $au-neutral-lighter;
+    border-top: 2px solid var(--au-neutral-lighter);
+    border-bottom: 2px solid var(--au-neutral-lighter);
   }
 
   > blockquote p {
@@ -133,7 +133,7 @@
     top: .3ex;
     left: -$au-unit-small;
     font-size: .8em;
-    color: $au-neutral;
+    color: var(--au-neutral);
   }
 
   > ul li + li,
@@ -152,8 +152,8 @@
     top: .3ex;
     left: -$au-unit - $au-unit-tiny/2;
     font-size: .8em;
-    color: $au-neutral;
-    background-color: $au-neutral-lightest;
+    color: var(--au-neutral);
+    background-color: var(--au-neutral-lightest);
     display: block;
     padding: 0 $au-unit-tiny;
     border-radius: $au-radius;
@@ -166,24 +166,24 @@
     padding-bottom: $au-unit-tiny/2;
     padding-left: $au-unit-tiny/2;
     padding-right: $au-unit-tiny/2;
-    background-color: $au-neutral-lightest;
+    background-color: var(--au-neutral-lightest);
     border-radius: $au-radius;
-    border: 1px solid $au-neutral-lighter;
+    border: 1px solid var(--au-neutral-lighter);
 
     &::-moz-selection {
-      background-color: $au-neutral-lighter;
-      color: $au-neutral-dark;
+      background-color: var(--au-neutral-lighter);
+      color: var(--au-neutral-dark);
     }
 
     &::selection {
-      background-color: $au-neutral-lighter;
-      color: $au-neutral-dark;
+      background-color: var(--au-neutral-lighter);
+      color: var(--au-neutral-dark);
     }
   }
 
   > pre {
-    background-color: $au-neutral-dark;
-    color: $au-white;
+    background-color: var(--au-neutral-dark);
+    color: var(--au-white);
     padding: $au-unit-small;
     border-radius: $au-radius;
     margin-bottom: $au-unit;
@@ -383,12 +383,12 @@
     margin-top: $au-unit;
     margin-bottom: $au-unit;
     border: 0;
-    border-bottom: 3px solid $au-neutral-lighter;
+    border-bottom: 3px solid var(--au-neutral-lighter);
   }
 
   table {
     width: 100%;
-    border: 1px solid $au-neutral-lighter;
+    border: 1px solid var(--au-neutral-lighter);
 
     td,
     th {
@@ -396,13 +396,13 @@
     }
 
     thead {
-      border-bottom: 1px solid $au-neutral-lighter;
+      border-bottom: 1px solid var(--au-neutral-lighter);
       text-align: left;
     }
 
     td + td,
     th + th {
-      border-left: 1px solid $au-neutral-lighter;
+      border-left: 1px solid var(--au-neutral-lighter);
     }
   }
 
@@ -416,17 +416,17 @@
   > p a:not(.au-c-button) {
     transition: color $au-transition, text-decoration $au-transition;
     font-weight: $au-regular;
-    text-decoration-color: $au-neutral-darker;
+    text-decoration-color: var(--au-neutral-darker);
 
     &,
     &:visited {
-      color: $au-neutral-darkest;
+      color: var(--au-neutral-darkest);
     }
 
     &:hover,
     &:focus {
-      color: $au-neutral-darker;
-      text-decoration-color: $au-neutral-dark;
+      color: var(--au-neutral-darker);
+      text-decoration-color: var(--au-neutral-dark);
     }
 
     &:focus {
@@ -576,7 +576,7 @@
     margin-top: $au-unit;
     margin-bottom: $au-unit;
     border: 0;
-    border-bottom: 3px solid $au-neutral-lighter;
+    border-bottom: 3px solid var(--au-neutral-lighter);
   }
 
   strong {

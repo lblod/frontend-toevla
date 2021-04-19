@@ -8,7 +8,7 @@
   display: flex !important;
   flex-wrap: wrap !important;
   justify-content: space-between !important;
-  color: $au-neutral !important;
+  color: var(--au-neutral) !important;
   margin-top: $au-unit !important;
   padding-bottom: $au-unit-small !important;
 
@@ -30,5 +30,5 @@
 .au-w-footer--border {
   padding-top: $au-unit-small !important;
   margin-top: $au-unit-small !important;
-  border-top: 2px solid $au-neutral-lighter !important;
+  border-top: 2px solid var(--au-neutral-lighter) !important;
 }

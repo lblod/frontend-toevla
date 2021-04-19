@@ -10,16 +10,16 @@
   position: relative !important;
   display: flex !important;
   align-items: center !important;
-  color: $au-gray-dark !important;
+  color: var(--au-neutral-dark) !important;
   cursor: pointer !important;
-  border: .1rem solid $au-gray-light !important;
-  background-color: $au-gray-lightest !important;
+  border: .1rem solid var(--au-neutral-light) !important;
+  background-color: var(--au-neutral-lightest) !important;
   padding-right: $au-unit-tiny !important;
   border-radius: $au-radius !important;
   overflow: hidden !important;
 
   &:hover {
-    color: $au-gray-darker !important;
+    color: var(--au-neutral-darker) !important;
   }
 
   &:focus-within {
@@ -38,10 +38,10 @@
   display: block !important;
   min-width:  $au-unit-small + $au-unit-tiny*1.5 !important;
   height: $au-unit !important;
-  color: $au-neutral-lightest !important;
+  color: var(--au-neutral-lightest) !important;
   text-align: center !important;
-  background-color: $au-white !important;
-  border-right: .1rem solid $au-neutral-light !important;
+  background-color: var(--au-white) !important;
+  border-right: .1rem solid var(--au-neutral-light) !important;
   background-size: $au-unit-small !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
@@ -51,20 +51,18 @@
 
 /* Checked state */
 .au-w-control__input:hover ~ .au-w-control__indicator {
-  background-color: $au-neutral-light !important;
+  background-color: var(--au-neutral-light) !important;
 }
 
 .au-w-control__input:checked ~ .au-w-control__indicator {
-  color: $au-white !important;
+  color: var(--au-white) !important;
   background-color: $au-primary !important;
-  background-color: var(--au-link) !important;
 }
 
 /* Active */
 .au-w-control__input:active ~ .au-w-control__indicator {
-  color: $au-white !important;
-  background-color: $au-primary !important;
-  background-color: var(--au-link) !important;
+  color: var(--au-white) !important;
+  background-color: $au-primary-dark !important;
 }
 
 /* Checkbox modifiers */
@@ -73,6 +71,8 @@
   border-bottom-left-radius: .25rem !important;
 }
 
-.au-w-control--checkbox .au-w-control__input ~ .au-w-control__indicator {
+.au-w-control--checkbox .au-w-control__input:hover ~ .au-w-control__indicator,
+.au-w-control--checkbox .au-w-control__input:checked ~ .au-w-control__indicator,
+.au-w-control--checkbox .au-w-control__input:active ~ .au-w-control__indicator {
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTYuNCwxTDUuNywxLjdMMi45LDQuNUwyLjEsMy43TDEuNCwzTDAsNC40bDAuNywwLjdsMS41LDEuNWwwLjcsMC43bDAuNy0wLjdsMy41LTMuNWwwLjctMC43TDYuNCwxTDYuNCwxeiINCgkvPg0KPC9zdmc+DQo=) !important;
 }

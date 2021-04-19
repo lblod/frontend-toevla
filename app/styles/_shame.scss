@@ -23,7 +23,7 @@ html {
 
 body {
   min-height: 100%;
-  background-color: $au-neutral-lightest;
+  background-color: var(--au-neutral-lightest);
 }
 
 .au-o-layout--medium {
@@ -54,7 +54,7 @@ body {
     white-space: initial !important;
     margin: 0 !important;
     padding: 0 $au-unit-tiny !important;
-    color: $au-neutral-dark !important;
+    color: var(--au-neutral-dark) !important;
     background-color: transparent !important;
     z-index: 1 !important;
     top: 0 !important;

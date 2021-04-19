@@ -45,5 +45,50 @@
     {{else}}
     --au-outline: #FFC515;
     {{/if}}
+    --au-white: #FFFFFF;
+    --au-black: #202326;
+    --au-neutral : #6D7783;
+    --au-neutral-light: #CBD2DA;
+    --au-neutral-lighter: #E8EBEE;
+    --au-neutral-lightest: #F3F5F6;
+    --au-neutral-dark: #545B63;
+    --au-neutral-darker: #3b4146;
+    --au-neutral-darkest: #202326;
+  }
+
+  :root[data-theme="dark"] {
+    --au-white: #31353a;
+    --au-black: #FFFFFF;
+    --au-neutral : #CBD2DA;
+    --au-neutral-light: #545B63;
+    --au-neutral-lighter: #3b4146;
+    --au-neutral-lightest: #3b4146;
+    --au-neutral-dark: #CBD2DA;
+    --au-neutral-darker: #E8EBEE;
+    --au-neutral-darkest: #F3F5F6;
+
+    --au-primary: #1075E2;
+    --au-primary-light:  #DCECFD;
+
+    {{#if @checkDark}}
+    --au-check: {{@checkDark}};
+    {{else}}
+    --au-check: #AAD0F9;
+    {{/if}}
+    {{#if @linkDark}}
+    --au-link: {{@linkDark}};
+    {{else}}
+    --au-link: #AAD0F9;
+    {{/if}}
+    {{#if @linkDarkHover}}
+    --au-link-hover: {{@linkDarkHover}};
+    {{else}}
+    --au-link-hover: #DCECFD;
+    {{/if}}
+    {{#if @errorDark}}
+    --au-error: {{@errorDark}};
+    {{else}}
+    --au-error: #D92626;
+    {{/if}}
   }
 </style>

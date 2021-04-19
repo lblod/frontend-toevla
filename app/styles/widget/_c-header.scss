@@ -9,7 +9,7 @@
   justify-content: space-between !important;
   align-items: center !important;
   margin-bottom: $au-unit-small !important;
-  border-bottom: 2px solid $au-neutral-lighter !important;
+  border-bottom: 2px solid var(--au-neutral-lighter) !important;
 }
 
 .au-w-header__title {
@@ -17,7 +17,7 @@
   line-height: 1.5 !important;
   font-weight: $au-bold !important;
   font-weight: var(--au-bold) !important;
-  color: $au-neutral-darkest !important;
+  color: var(--au-neutral-darkest) !important;
   display: flex !important;
   align-items: center !important;
   margin: $au-unit-tiny $au-unit-small $au-unit-tiny 0 !important;

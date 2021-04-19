@@ -26,34 +26,26 @@
 }
 
 .au-w-icon--active {
-  fill: $au-primary !important;
-  stroke: $au-primary !important;
   fill: var(--au-check) !important;
   stroke: var(--au-check) !important;
 }
 
 .au-w-icon--primary {
-  fill: $au-primary !important;
-  stroke: $au-primary !important;
   fill: var(--au-check) !important;
   stroke: var(--au-check) !important;
 }
 
 .au-w-icon--faded {
-  fill: $au-neutral !important;
-  stroke: $au-neutral !important;
+  fill: var(--au-neutral) !important;
+  stroke: var(--au-neutral) !important;
 }
 
 .au-w-icon--alert {
-  fill: $au-primary !important;
-  stroke: $au-primary !important;
   fill: var(--au-check) !important;
   stroke: var(--au-check) !important;
 }
 
 .au-w-icon--error {
-  fill: $au-error !important;
-  stroke: $au-error !important;
   fill: var(--au-error) !important;
   stroke: var(--au-error) !important;
 }
@@ -64,9 +56,9 @@
   width: 2.6em !important;
   height: 2.6em !important;
   padding: $au-unit-tiny/2 !important;
-  fill: $au-neutral-darker !important;
+  fill: var(--au-neutral-darker) !important;
   border-radius: $au-radius !important;
-  // background-color: $au-neutral-lightest !important;
-  border: 1px solid $au-neutral-lighter !important;
+  // background-color: var(--au-neutral-lightest) !important;
+  border: 1px solid var(--au-neutral-lighter) !important;
   margin: 0 !important;
 }

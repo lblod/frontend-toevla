@@ -40,7 +40,7 @@ html.au-w-modal-open {
   */
 .au-w-modal {
   -webkit-overflow-scrolling: touch !important;
-  background: $au-white !important;
+  background: var(--au-white) !important;
   margin: auto !important;
   height: auto !important;
   max-height: calc(100% - #{$au-unit}) !important;
@@ -95,7 +95,7 @@ html.au-w-modal-open {
   flex-grow: 1 !important;
   position: relative !important;
   height: calc(100% - #{$au-unit-large + $au-unit-small}) !important;
-  background-color: $au-white !important;
+  background-color: var(--au-white) !important;
   overflow: auto !important;
   -webkit-overflow-scrolling: touch !important;
 
@@ -106,12 +106,12 @@ html.au-w-modal-open {
 
 .au-w-modal__cta {
   width: 100% !important;
-  color: $au-neutral-dark !important;
-  background-color: $au-neutral-lightest !important;
+  color: var(--au-neutral-dark) !important;
+  background-color: var(--au-neutral-lightest) !important;
   padding: $au-unit - $au-unit-tiny !important;
   text-align: center !important;
   border-radius: $au-radius !important;
-  border-top: 1px solid $au-neutral-lighter !important;
+  border-top: 1px solid var(--au-neutral-lighter) !important;
 }
 
 .au-w-modal__close {
@@ -161,6 +161,8 @@ html.au-w-modal-open {
   &:visited {
     background-color: $au-neutral-darkest !important;
   }
+
+
 
   .au-w-icon {
     margin-left: $au-unit-tiny !important;

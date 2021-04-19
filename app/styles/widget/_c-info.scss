@@ -10,9 +10,9 @@
   font-size: $au-base !important;
   line-height: 1.3 !important;
   font-weight: $au-light !important;
-  color: $au-neutral-darker !important;
-  border: 1px solid $au-neutral-lighter !important;
-  background-color: $au-neutral-lightest !important;
+  color: var(--au-neutral-darker) !important;
+  border: 1px solid var(--au-neutral-lighter) !important;
+  background-color: var(--au-neutral-lightest) !important;
   border-radius: $au-radius !important;
 }
 
@@ -25,7 +25,7 @@
     left: $au-unit-tiny !important;
     width: 20px !important;
     height: 20px !important;
-    fill: $au-neutral-darker !important;
+    fill: var(--au-neutral-darker) !important;
   }
 }
 
@@ -33,7 +33,7 @@
   font-size: 15px !important;
   line-height: 1.3 !important;
   font-style: italic !important;
-  color: $au-neutral !important;
+  color: var(--au-neutral) !important;
   margin: $au-unit-tiny 0 !important;
 
   &:last-child {
@@ -58,7 +58,7 @@
   margin-top: $au-unit-tiny/4 !important;
   margin-bottom: $au-unit-tiny !important;
   padding-bottom: $au-unit-tiny !important;
-  border-bottom: 1px dotted $au-neutral-light !important;
+  border-bottom: 1px dotted var(--au-neutral-light) !important;
 
   .au-w-criterium-list--detail .au-w-criterium-list--detail & {
     margin-left: 8px !important;

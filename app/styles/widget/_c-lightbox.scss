@@ -30,12 +30,12 @@
 
 .au-w-lightbox__item--border {
   border-radius: $au-radius !important;
-  border: 1px solid $au-neutral-lighter !important;
+  border: 1px solid var(--au-neutral-lighter) !important;
 }
 
 .au-w-lightbox__image {
   position: relative !important;
-  border: 1px solid $au-neutral-lighter !important;
+  border: 1px solid var(--au-neutral-lighter) !important;
   border-radius: $au-radius !important;
   overflow: hidden !important;
   appearance: none !important;
@@ -45,7 +45,7 @@
   cursor: zoom-in !important;
   padding: 0 0 65% 0 !important;
   width: 100% !important;
-  background-color: $au-neutral-lightest !important;
+  background-color: var(--au-neutral-lightest) !important;
   margin: 0 !important;
 
   &:hover,
@@ -61,7 +61,7 @@
   }
 
   &:visited {
-    background-color: $au-neutral-lightest !important;
+    background-color: var(--au-neutral-lightest) !important;
   }
 
   img {
@@ -82,7 +82,7 @@
   font-family: var(--au-font) !important;
   font-weight: $au-regular !important;
   font-weight: var(--au-regular) !important;
-  border: 1px solid $au-neutral-lighter !important;
+  border: 1px solid var(--au-neutral-lighter) !important;
   border-radius: $au-radius !important;
   appearance: none !important;
   -webkit-appearance: none !important; // doesn't work without prefix on Safari iOS11
@@ -91,9 +91,7 @@
   align-items: center !important;
   text-decoration: underline !important;
   justify-content: center !important;
-  color: $au-primary !important;
   color: var(--au-link) !important;
-  text-decoration-color: $au-primary !important;
   text-decoration-color: var(--au-link);
   background-color: transparent !important;
   transition: color $au-transition !important;
@@ -105,7 +103,6 @@
 
   &:hover,
   &:focus {
-    color: $au-primary-light !important;
     color: var(--au-link-hover) !important;
     background-color: transparent !important;
     text-decoration: none !important;

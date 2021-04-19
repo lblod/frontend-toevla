@@ -53,6 +53,7 @@
     "ember-cli-update": "^0.54.6",
     "ember-click-outside": "^1.3.0",
     "ember-could-get-used-to-this": "^1.0.1",
+    "ember-dark-mode": "0.0.5",
     "ember-data": "~3.25.0",
     "ember-export-application-global": "^2.0.1",
     "ember-fetch": "^8.0.4",

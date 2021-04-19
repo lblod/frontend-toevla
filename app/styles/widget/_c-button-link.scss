@@ -18,9 +18,8 @@
   align-items: center !important;
   text-align: left !important;
   text-decoration: underline !important;
-  text-decoration-color: $au-primary-light !important;
   text-decoration-color: var(--au-link-hover) !important;
-  color: $au-primary !important;
+  color: var(--au-link) !important;
   background-color: transparent !important;
   transition: color $au-transition !important;
   cursor: pointer !important;
@@ -28,12 +27,9 @@
 
   &:hover,
   &:focus {
-    color: $au-primary-light !important;
     color: var(--au-link-hover) !important;
     background-color: transparent !important;
-    text-decoration: underline !important;
-    text-decoration-color: $au-primary-light !important;
-    text-decoration-color: var(--au-link-hover) !important;
+    text-decoration: none !important;
   }
 
   &:focus {
@@ -61,16 +57,20 @@
   ========================================================================== */
 
 .au-w-button-link--neutral {
-  color: $au-neutral-darker !important;
-  text-decoration-color: $au-neutral !important;
+  color: var(--au-neutral-darker) !important;
+  text-decoration-color: var(--au-neutral) !important;
 
   &:hover,
   &:focus {
-    color: $au-neutral-darkest !important;
-    text-decoration-color: $au-neutral !important;
+    color: var(--au-neutral-darkest) !important;
   }
 }
 
 .au-w-button-link--block {
   width: 100% !important;
+}
+
+.au-w-button-link--small {
+  font-size: 14px !important;
+  padding: 0 !important;
 }

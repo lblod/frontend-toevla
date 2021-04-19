@@ -4,11 +4,11 @@
    ================================== */
 
 .au-d-theme-white {
-  color: $au-neutral-darker;
-  background-color: $au-white;
+  color: var(--au-neutral-darker);
+  background-color: var(--au-white);
 }
 
 .au-d-theme-neutral-lightest {
-  color: $au-neutral-darkest;
-  background-color: $au-neutral-lightest;
+  color: var(--au-neutral-darkest);
+  background-color: var(--au-neutral-lightest);
 }

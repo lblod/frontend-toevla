@@ -33,14 +33,14 @@
   justify-content: space-between !important;
   width: 100% !important;
   padding: $au-unit-tiny $au-unit-tiny !important;
-  background-color: $au-neutral-lightest !important;
-  border: 1px solid $au-neutral-lightest !important;
+  background-color: var(--au-neutral-lightest) !important;
+  border: 1px solid var(--au-neutral-lightest) !important;
   border-radius: $au-radius !important;
-  color: $au-neutral-darker !important;
+  color: var(--au-neutral-darker) !important;
 
   &:hover,
   &:focus {
-    color: $au-neutral-darkest !important;
+    color: var(--au-neutral-darkest) !important;
     text-decoration: none !important;
   }
 
@@ -53,10 +53,10 @@
   }
 
   &[aria-expanded="true"] {
-    color: $au-neutral-darkest !important;
-    border: 1px solid $au-neutral-lighter !important;
+    color: var(--au-neutral-darkest) !important;
+    border: 1px solid var(--au-neutral-lighter) !important;
     border-bottom-right-radius: 0 !important;
-    text-decoration-color: $au-neutral !important;
+    text-decoration-color: var(--au-neutral) !important;
 
     &:hover,
     &:focus {
@@ -75,7 +75,7 @@
   font-size: 13px !important;
   line-height: 1.5 !important;
   font-weight: $au-regular;
-  color: $au-neutral-dark !important;
+  color: var(--au-neutral-dark) !important;
   text-decoration: underline !important;
 
   &:hover,
@@ -98,7 +98,7 @@
 }
 
 .au-w-collapsable-section-content {
-  border: 1px solid $au-neutral-lighter !important;
+  border: 1px solid var(--au-neutral-lighter) !important;
   border-bottom-left-radius: $au-radius !important;
   border-bottom-right-radius: $au-radius !important;
   border-top: 0 !important;

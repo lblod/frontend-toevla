@@ -9,10 +9,10 @@
   padding: $au-unit-tiny/2 !important;
   position: relative !important;
   border-radius: $au-radius !important;
-  background-color: $au-white !important;
+  background-color: var(--au-white) !important;
 
   &:hover {
-    background-color: $au-white !important;
+    background-color: var(--au-white) !important;
   }
 }
 
@@ -37,8 +37,8 @@
     white-space: initial !important;
     margin: 0 !important;
     padding: 0 $au-unit-tiny !important;
-    color: $au-white !important;
-    background-color: $au-neutral-dark !important;
+    color: var(--au-white) !important;
+    background-color: var(--au-neutral-dark) !important;
     z-index: 1 !important;
     top: calc(100% + #{$au-unit-tiny}) !important;
     left: 50% !important;
@@ -57,7 +57,7 @@
     position: absolute !important;
     pointer-events: none !important;
     border-color: rgba($au-white, 0) !important;
-    border-bottom-color: $au-neutral-dark !important;
+    border-bottom-color: var(--au-neutral-dark) !important;
     border-width: 3px !important;
     margin-left: -3px !important;
    }

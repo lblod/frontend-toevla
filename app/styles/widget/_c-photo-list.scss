@@ -6,7 +6,7 @@
   margin-right: -$au-unit-tiny/2 !important;
   padding-top: $au-unit-tiny !important;
   display: flex !important;
-  border-top: 1px dotted $au-neutral-lighter;
+  border-top: 1px dotted var(--au-neutral-lighter);
 }
 
 .au-w-photo-list__item {
@@ -15,7 +15,7 @@
 
 .au-w-photo-list__button {
   position: relative !important;
-  border: 1px solid $au-neutral-lighter !important;
+  border: 1px solid var(--au-neutral-lighter) !important;
   border-radius: $au-radius !important;
   overflow: hidden !important;
   appearance: none !important;
@@ -25,7 +25,7 @@
   cursor: zoom-in !important;
   padding: 0 0 65% 0 !important;
   width: 100px !important;
-  background-color: $au-neutral-lightest !important;
+  background-color: var(--au-neutral-lightest) !important;
 
   &:hover,
   &:focus {
@@ -40,7 +40,7 @@
   }
 
   &:visited {
-    background-color: $au-neutral-lightest !important;
+    background-color: var(--au-neutral-lightest) !important;
   }
 
   img {

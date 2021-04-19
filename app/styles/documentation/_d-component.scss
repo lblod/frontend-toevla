@@ -14,7 +14,7 @@
 .au-d-component--full {
   position: relative;
   border: 0;
-  background-color: $au-white;
+  background-color: var(--au-white);
   border-radius: $au-radius;
   padding: $au-unit;
   margin-left: auto;

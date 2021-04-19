@@ -11,15 +11,12 @@
 
   &,
   &:visited {
-    color: $au-primary !important;
     color: var(--au-link) !important;
-    text-decoration-color: $au-primary-light !important;
     text-decoration-color: var(--au-link) !important;
   }
 
   &:hover,
   &:focus {
-    color: $au-primary-light !important;
     color: var(--au-link-hover) !important;
     text-decoration: none !important;
   }
@@ -33,7 +30,6 @@
   }
 
   .is-active > & {
-    color: $au-primary-light !important;
     color: var(--au-link-hover) !important;
     text-decoration: none !important;
   }
@@ -42,13 +38,13 @@
 .au-w-link--neutral {
   &,
   &:visited {
-    color: $au-neutral-darker !important;
-    text-decoration-color: $au-neutral !important;
+    color: var(--au-neutral-darker) !important;
+    text-decoration-color: var(--au-neutral) !important;
   }
 
   &:hover,
   &:focus {
-    color: $au-neutral-darkest !important;
+    color: var(--au-neutral-darkest) !important;
     text-decoration: none !important;
   }
 
@@ -61,7 +57,7 @@
   }
 
   .is-active > & {
-    color: $au-neutral-light !important;
+    color: var(--au-neutral-light) !important;
     text-decoration: none !important;
   }
 }
