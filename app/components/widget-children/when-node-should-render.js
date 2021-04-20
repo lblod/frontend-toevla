@@ -40,13 +40,20 @@ export default class WidgetChildrenWhenNodeShouldRenderComponent extends Compone
     const subject = this.args.subject;
     const selectedArray = this.targetAudience.selectedArray;
 
-    if (node !== this.lastNode
-      || subject !== this.lastSubject
-      || JSON.stringify(selectedArray.map((x) => x.id))
-        !== JSON.stringify(this.lastSelectedArray.map((x) => x.id))) {
+    const lastNodeDiffers = node !== this.lastNode;
+    const subjectDiffers = subject !== this.lastSubject;
+    const audienceDiffers =
+      this.lastSelectedArray
+      && (
+        JSON.stringify(selectedArray.map((x) => x.id))
+        !== JSON.stringify(this.lastSelectedArray.map((x) => x.id))
+      );
+
+    if (lastNodeDiffers || subjectDiffers || audienceDiffers) {
       const render =
-            await this.hasVisibleScore()
-            || await this.hasRenderedChildren(node, subject);
+        await this.hasVisibleScore()
+        || await this.hasRenderedLabel(node, subject)
+        || await this.hasRenderedChildren(node, subject);
 
       this.lastNode = node;
       this.lastSubject = subject;
@@ -57,7 +64,7 @@ export default class WidgetChildrenWhenNodeShouldRenderComponent extends Compone
   }
 
   async hasVisibleScore() {
-    if( this.targetAudience.shouldRenderScore( this.args.node.targetAudiences ) ) {
+    if (this.targetAudience.shouldRenderScore(this.args.node.simplifiedTargetAudiences)) {
       const etns = await this.nodeScoreStateManager.fetch(this.args.subject, this.args.node);
       return etns && etns.score && true;
     } else {
@@ -72,7 +79,7 @@ export default class WidgetChildrenWhenNodeShouldRenderComponent extends Compone
   async hasRenderedChildren(node, subject) {
     const children = await node.children;
     for (const child of children.toArray() || []) {
-      const shouldRenderChild = this.targetAudience.shouldRenderScore( child.targetAudiences );
+      const shouldRenderChild = this.targetAudience.shouldRenderScore(child.simplifiedTargetAudiences);
       const hasRenderedLabel = await this.hasRenderedLabel(child, subject);
       if ( (shouldRenderChild && hasRenderedLabel)
            || await this.hasRenderedChildren(child, subject)) {

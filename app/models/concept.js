@@ -26,5 +26,6 @@ export default class ConceptModel extends Model {
   // consistent responses
   @hasMany('concept', { inverse: null }) children;
   @hasMany('concept', { inverse: null }) targetAudiences;
+  @hasMany('concept', { inverse: null }) simplifiedTargetAudiences;
   @belongsTo('concept', { inverse: null }) parent;
 }

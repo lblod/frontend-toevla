@@ -16,7 +16,7 @@ export default class TargetAudienceService extends Service {
 
   async setupAudiences() {
     const conceptScheme = await this.store.query('concept-scheme', {
-      "filter[:uri:]": "http://data.toevla.org/concept-schemes/targetAudiences",
+      "filter[:uri:]": "http://data.toevla.org/concept-schemes/simplifiedTargetAudiences",
       include: "top-level-nodes"
     });
 
