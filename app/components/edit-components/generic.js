@@ -10,6 +10,6 @@ export default class EditComponentsGenericComponent extends Component {
   }
 
   get matchesTargetAudience() {
-    return this.targetAudience.shouldRenderScore( this.args.node.targetAudiences );
+    return this.targetAudience.shouldRenderScore( this.args.node.simplifiedTargetAudiences );
   }
 }
