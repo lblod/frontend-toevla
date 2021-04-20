@@ -81,8 +81,8 @@ export default class WidgetChildrenWhenNodeShouldRenderComponent extends Compone
     for (const child of children.toArray() || []) {
       const shouldRenderChild = this.targetAudience.shouldRenderScore(child.simplifiedTargetAudiences);
       const hasRenderedLabel = await this.hasRenderedLabel(child, subject);
-      if ( (shouldRenderChild && hasRenderedLabel)
-           || await this.hasRenderedChildren(child, subject)) {
+      if ((shouldRenderChild && hasRenderedLabel)
+        || await this.hasRenderedChildren(child, subject)) {
         return true;
       }
     }
