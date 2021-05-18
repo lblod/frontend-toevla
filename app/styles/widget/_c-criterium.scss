@@ -49,19 +49,19 @@ li.au-w-criterium-list__item {
   }
 
   .au-w-criterium-list--detail & {
-    list-style-type: circle !important;
+    list-style-type: initial !important;
   }
 
   .au-w-criterium-list--detail .au-w-criterium-list--detail & {
-    list-style: none !important;
+    list-style-type: circle !important;
 
-    &:before {
-      content: "-" !important;
-      display: inline-block !important;
-      width: 15px !important;
-      text-align: center !important;
-      margin-right: 1px !important;
-    }
+    // &:before {
+    //   content: "-" !important;
+    //   display: inline-block !important;
+    //   width: 15px !important;
+    //   text-align: center !important;
+    //   margin-right: 1px !important;
+    // }
   }
 
   .au-w-criterium-list--detail .au-w-criterium-list--detail .au-w-criterium-list--detail .au-w-criterium-list--detail & {
