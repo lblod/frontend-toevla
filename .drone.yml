@@ -1,0 +1,81 @@
+---
+kind: pipeline
+type: docker
+name: verify-pr
+steps:
+- name: build-dry-run
+  image: plugins/docker
+  settings:
+    repo: lblod/frontend-toevla
+    dry_run: true
+    purge: true
+trigger:
+  event:
+    - pull
+---
+kind: pipeline
+type: docker
+name: push-latest-build-on-commit-to-master
+steps:
+- name: push-latest-build
+  image: plugins/docker
+  settings:
+    repo: lblod/frontend-toevla
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+trigger:
+  branch:
+    - master
+  event:
+    exclude:
+    - pull_request
+---
+kind: pipeline
+type: docker
+name: push-feature-build-for-feature-branch
+steps:
+- name: push-feature-build
+  image: plugins/docker
+  settings:
+    repo: lblod/frontend-toevla
+    tags: feature-${DRONE_BRANCH##feature/}
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+trigger:
+  branch:
+  - feature/*
+  event:
+    exclude:
+    - pull_request
+---
+kind: pipeline
+type: docker
+name: release-on-tag
+steps:
+- name: build-dry-run
+  image: plugins/docker
+  settings:
+    repo: lblod/frontend-toevla
+    dry_run: true
+- name: push-tagged-build
+  image: plugins/docker
+  settings:
+    repo: lblod/frontend-toevla
+    tags: ${DRONE_TAG##v}
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+    purge: true
+trigger:
+  event:
+    - tag
+---
+kind: signature
+hmac: 869efd5abc0a3c467ae86ff86ecb0874c6dcbc7a6dbea0637f0865596ced4802
+
+...
