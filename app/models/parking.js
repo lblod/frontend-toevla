@@ -11,7 +11,7 @@ export default class ParkingModel extends Model {
   @attr('boolean') detailedRouteDescriptionHasScreenReader;
   @attr('boolean') detailedRouteDescriptionIsAvailableInFlemishSignLanguage;
   @attr('number') numberOfWheelchairFriendlySpots;
-  @attr('boolean') onPublicDomain;
+  @attr('string') descriptionOfParkingOnPublicDomain;
   @attr('boolean') hasWheelchairFriendlyTerrain;
   @attr('number') parkingSpaceLength;
   @attr('number') parkingSpaceWidth;
