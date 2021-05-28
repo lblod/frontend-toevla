@@ -8,10 +8,12 @@ export default class PointOfInterestModel extends Scorable {
   @attr('string') comment;
   @attr('string') commentOnPublicTransport;
   @attr('string') commentOnEntrance;
+  @attr('string') commentOnAlternativeEntranceForWheelchair;
   @attr('string') locationString;
   @attr('boolean') hasCashPayment;
   @attr('boolean') hasPaymentWithMovableElectronicPaymentSystem;
   @attr('boolean') hasPaymentWithFixedElectronicPaymentSystem;
+  @attr('boolean') hasOnlineOrderingAndPaymentOption;
   @attr('boolean') wifiAlwaysAvailable;
   @attr('boolean') assistanceForGuideDogs;
   @attr('boolean') hasVisualVisitPreparationPlan;
@@ -38,6 +40,7 @@ export default class PointOfInterestModel extends Scorable {
   @belongsTo('concept') acceptanceOfEdc;
   @belongsTo('concept') discountForGuide;
   @belongsTo('concept') discountForTranslator;
+  @belongsTo('concept') wheelchairAvailability;
 
   @hasMany('experience') experiences;
   @hasMany('entrance') entrances;
