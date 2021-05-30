@@ -16,6 +16,12 @@ export default class NodeScoreStateManagerService extends Service {
   optimizedHash = {};
 
   /**
+   * Indicator that a poi was fetched fully and doesn't need to be
+   * fetched again.
+   */
+  fullyFetchedIds = new Set();
+
+  /**
    * Re-indexes all tree-node-score entities currently known by Ember
    * Data.
    *
@@ -57,6 +63,10 @@ export default class NodeScoreStateManagerService extends Service {
     }
 
     this.reindex();
+
+    // identify all of these IDs as being fully fetched
+    this.fullyFetchedIds.add( pointOfInterest.id );
+    experiences.toArray().forEach( (experience) => this.fullyFetchedIds.add( experience.id ) );
   }
 
   async fetchAll(subject) {
@@ -92,7 +102,9 @@ export default class NodeScoreStateManagerService extends Service {
   }
 
   isRegistered(subject, treeNode) {
-    return this.optimizedHash[subject.id] && treeNode.id in this.optimizedHash[subject.id];
+    return this.fullyFetchedIds.has(subject.id)
+      || (this.optimizedHash[subject.id]
+          && treeNode.id in this.optimizedHash[subject.id]);
   }
 
   /**
