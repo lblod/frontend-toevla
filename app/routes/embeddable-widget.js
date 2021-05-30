@@ -19,7 +19,7 @@ export default class EmbeddableWidgetRoute extends Route {
         .store
         .query("concept-scheme",
           {
-            "include": "top-level-nodes.children.children.children.children.children",
+            "include": "top-level-nodes.children.simplified-target-audiences,top-level-nodes.children.children.simplified-target-audiences,top-level-nodes.children.children.children.simplified-target-audiences,top-level-nodes.children.children.children.children.simplified-target-audiences,top-level-nodes.children.children.children.children.children.simplified-target-audiences",
             "filter[:uri:]": museaTree
           }))
         .firstObject;
@@ -27,7 +27,7 @@ export default class EmbeddableWidgetRoute extends Route {
     const poi = (await this.store.query('point-of-interest',
       {
         "filter[:id:]": (await widget.pointOfInterest).id, // Fetched above
-        include: "images,experiences,toilets,experiences.circulation,public-transport-route-description,shop,restaurant,bus-stops,parkings,entrances,type-of-glass-door-decoration,experiences.guided-tour,tram-stops,experiences.auditorium,train-stops"
+        include: "images,experiences,toilets.size-of-toilet-room,experiences.circulation,public-transport-route-description,shop,restaurant,bus-stops,parkings,entrances,type-of-glass-door-decoration,discount-for-guide,discount-for-translator,acceptance-of-museum-pass,acceptance-of-uitpas,acceptance-of-edc,acceptance-of-city-pass,wifi-availability,experiences.guided-tour,tram-stops,experiences.auditorium,train-stops"
       })).firstObject;
 
     window.setTimeout(async () => {
