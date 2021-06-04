@@ -9,7 +9,7 @@ export default class ExperienceTreeNodeScoreModel extends Model {
   @attr('string') commentLinkText;
   @attr('string') commentLinkUrl;
 
-  @belongsTo('scorable', { polymorphic: true }) scorable;
+  @belongsTo('scorable', { polymorphic: true }) subject;
   @belongsTo('concept') treeNode;
 
   get hasComment() {

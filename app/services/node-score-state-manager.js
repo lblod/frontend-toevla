@@ -37,9 +37,11 @@ export default class NodeScoreStateManagerService extends Service {
         .peekAll('experience-tree-node-score');
 
     knownEtnss.forEach((etns) => {
-      const subjectHash = optimizedHash[get(etns, "subject.id")] || {};
-      subjectHash[get(etns, "score.id")] = etns;
-      optimizedHash[get(etns, "subject.id")] = subjectHash;
+      const subjectId = get(etns, "subject.id");
+      const treeNodeId = get(etns, "treeNode.id");
+      const subjectHash = optimizedHash[subjectId] || {};
+      subjectHash[treeNodeId] = etns;
+      optimizedHash[subjectId] = subjectHash;
     });
 
     this.optimizedHash = optimizedHash;
