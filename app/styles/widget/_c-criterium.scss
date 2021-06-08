@@ -11,6 +11,10 @@ ul.au-w-criterium-list {
   margin-left: 16px !important;
 }
 
+.au-w-criterium-list--detail > .au-w-criterium-list__item .au-w-icon--info {
+  display: none !important;
+}
+
 .au-w-criterium-list__item,
 li.au-w-criterium-list__item {
   margin: 0 !important;
@@ -54,14 +58,6 @@ li.au-w-criterium-list__item {
 
   .au-w-criterium-list--detail .au-w-criterium-list--detail & {
     list-style-type: circle !important;
-
-    // &:before {
-    //   content: "-" !important;
-    //   display: inline-block !important;
-    //   width: 15px !important;
-    //   text-align: center !important;
-    //   margin-right: 1px !important;
-    // }
   }
 
   .au-w-criterium-list--detail .au-w-criterium-list--detail .au-w-criterium-list--detail .au-w-criterium-list--detail & {
