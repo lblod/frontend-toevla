@@ -30,7 +30,8 @@ li.au-w-criterium-list__item {
     margin-top: $au-unit-tiny/2 !important;
   }
 
-  .au-w-criterium-list--detail & .au-w-icon--active {
+  .au-w-criterium-list--detail & .au-w-icon--active,
+  .au-w-criterium-list--detail & .au-w-icon--info {
     display: none !important;
   }
 
@@ -54,14 +55,6 @@ li.au-w-criterium-list__item {
 
   .au-w-criterium-list--detail .au-w-criterium-list--detail & {
     list-style-type: circle !important;
-
-    // &:before {
-    //   content: "-" !important;
-    //   display: inline-block !important;
-    //   width: 15px !important;
-    //   text-align: center !important;
-    //   margin-right: 1px !important;
-    // }
   }
 
   .au-w-criterium-list--detail .au-w-criterium-list--detail .au-w-criterium-list--detail .au-w-criterium-list--detail & {
