@@ -11,10 +11,6 @@ ul.au-w-criterium-list {
   margin-left: 16px !important;
 }
 
-.au-w-criterium-list--detail > .au-w-criterium-list__item .au-w-icon--info {
-  display: none !important;
-}
-
 .au-w-criterium-list__item,
 li.au-w-criterium-list__item {
   margin: 0 !important;
@@ -34,7 +30,8 @@ li.au-w-criterium-list__item {
     margin-top: $au-unit-tiny/2 !important;
   }
 
-  .au-w-criterium-list--detail & .au-w-icon--active {
+  .au-w-criterium-list--detail & .au-w-icon--active,
+  .au-w-criterium-list--detail & .au-w-icon--info {
     display: none !important;
   }
 
