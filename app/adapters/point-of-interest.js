@@ -1,6 +1,6 @@
-import JSONAPIAdapter from '@ember-data/adapter/json-api';
+import ApplicationAdapter from './application';
 
-export default class PointOfInterestAdapter extends JSONAPIAdapter {
+export default class PointOfInterestAdapter extends ApplicationAdapter {
   findHasMany(store, snapshot, relatedLink, relationship) {
     const additionalQueryParameter = "page[size]=100";
 
