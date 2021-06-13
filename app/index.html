@@ -25,5 +25,9 @@
     <script src="{{rootURL}}assets/frontend-toevla.js"></script>
 
     {{content-for "body-footer"}}
+
+    <script>
+      require('frontend-toevla/app').default.create({ autoboot: true });
+    </script>
   </body>
 </html>

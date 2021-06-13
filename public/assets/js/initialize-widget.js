@@ -38,7 +38,7 @@
         // eslint-ignore-next-line no-undef
         require('frontend-toevla/app')
         .default
-        .create({ autoboot: false, rootElement: element, location: 'none', ENV: { domain: domain, dataAttributes }});
+        .create({ autoboot: false, rootElement: element, locationType: 'none', ENV: { domain: domain, dataAttributes }});
     Widget.visit('/embeddable-widget/' + encodeURIComponent( resource ), { rootElement: element, location: 'none' });
   }
 })();
