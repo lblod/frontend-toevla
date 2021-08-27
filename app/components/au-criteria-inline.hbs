@@ -19,5 +19,7 @@
     {{/if}}
     <span>{{@criterium}}</span>
   </p>
-  <AuCriteriaInline::Comment @etns={{@etns}} />
+  {{#if this.renderComment}}
+    <AuCriteriaInline::Comment @etns={{@etns}} />
+  {{/if}}
 </li>

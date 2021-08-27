@@ -28,4 +28,8 @@ export default class AuCriteriaInlineComponent extends Component {
       return this.args.info;
     }
   }
+
+  get renderComment(){
+    return 'renderComment' in this.args ? this.args.renderComment : true;
+  }
 }

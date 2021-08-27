@@ -3,9 +3,10 @@
   @treeNode={{@node}}
   as |label check score|>
   {{#if label}}
-    <AuCriteriaInline @criterium={{@node.title}} @score={{score}} @etns={{@etns}} />
+    <AuCriteriaInline @criterium={{@node.title}} @score={{score}} @etns={{@etns}} @renderComment={{false}} />
     <p class="au-w-info-text au-w-info-text--inline">
       {{label}}
     </p>
+    <AuCriteriaInline::Comment @etns={{@etns}} />
   {{/if}}
 </Criteria::SelectStringCriterion>
