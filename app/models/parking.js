@@ -17,4 +17,7 @@ export default class ParkingModel extends Model {
   @attr('number') parkingSpaceWidth;
   @attr('number') maxVehicleHeight;
   @belongsTo('path') pathToEntrance;
+
+  // new for resto
+  @attr('boolean') onPublicDomain;
 }
