@@ -5,6 +5,7 @@ import attr from 'ember-data/attr';
 export default class PointOfInterestModel extends Scorable {
   @attr('string') uri;
   @attr('string') label;
+  @attr() updatedAt;
   @attr('string') comment;
   @attr('string') commentOnPublicTransport;
   @attr('string') commentOnEntrance;
