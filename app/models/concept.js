@@ -11,6 +11,7 @@ export default class ConceptModel extends Model {
 
   @attr('number') order;
   @attr('string') criterionType;
+  @attr('boolean') isCompulsory;
 
   @attr('string') firstScore;
   @attr('string') firstLimit;
