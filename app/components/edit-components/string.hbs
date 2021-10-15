@@ -2,7 +2,7 @@
   @value={{this.value}}
   @treeNode={{@node}}
   as |label check score|>
-  {{#if label}}
+  {{#if (or label @etns.hasComment)}}
     <AuCriteriaInline @criterium={{@node.title}} @score={{score}} @etns={{@etns}} @renderComment={{false}} />
     <p class="au-w-info-text au-w-info-text--inline">
       {{label}}

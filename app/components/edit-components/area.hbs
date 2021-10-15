@@ -3,7 +3,7 @@
     @value={{arrValue}}
     @treeNode={{@node}}
     as |label check score|>
-    {{#if label}}
+    {{#if (or label @etns.comment)}}
       <Labels::AreaString @label={{label}} @value={{arrValue}} as |str|>
         <AuCriteriaInline @criterium={{str}} @score={{score}} @etns={{@etns}} />
       </Labels::AreaString>

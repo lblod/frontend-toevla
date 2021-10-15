@@ -2,9 +2,9 @@
   @value={{this.value}}
   @treeNode={{@node}}
   as |label check score|>
-  {{#if label}}
-    <Labels::NumericString @label={{label}} @value={{this.value}} as |string|>
-      <AuCriteriaInline @criterium={{string}} @score={{score}} @etns={{@etns}} />
-    </Labels::NumericString>
-  {{/if}}
+  <Labels::NumericString @label={{label}} @value={{this.value}} as |string|>
+    {{#if (or label @etns.hasComment)}}
+      <AuCriteriaInline @node={{@node}} @criterium={{string}} @score={{score}} @etns={{@etns}} />
+    {{/if}}
+  </Labels::NumericString>
 </Criteria::SelectCriterion>

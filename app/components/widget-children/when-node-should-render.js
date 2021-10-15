@@ -26,8 +26,9 @@ export default class WidgetChildrenWhenNodeShouldRenderComponent extends Compone
 
   /**
    * This variable indicates the current node should be rendered.  We
-   * assume a node should be rendered if it contains a value and matches
-   * the current target users, or if one of its children should be rendered.
+   * assume a node should be rendered if it contains a value or comment
+   * and matches the current target users, or if one of its children
+   * should be rendered.
    */
   get doRender() {
     console.log(`There are ${this.targetAudience.selectedArray.length} items selected`);
@@ -52,6 +53,7 @@ export default class WidgetChildrenWhenNodeShouldRenderComponent extends Compone
     if (lastNodeDiffers || subjectDiffers || audienceDiffers) {
       const render =
         await this.hasVisibleScore()
+        || await this.hasRenderedComment()
         || await this.hasRenderedLabel(node, subject)
         || await this.hasRenderedChildren(node, subject);
 
@@ -60,6 +62,15 @@ export default class WidgetChildrenWhenNodeShouldRenderComponent extends Compone
       this.lastSelectedArray = selectedArray;
 
       this.lastCalculatedDoRender = render;
+    }
+  }
+
+  async hasRenderedComment() {
+    if (this.targetAudience.shouldRenderScore(this.args.node.simplifiedTargetAudiences)) {
+      const etns = await this.nodeScoreStateManager.fetch(this.args.subject, this.args.node);
+      return (etns?.comment || etns?.commentLinkUrl) && true;
+    } else {
+      return false;
     }
   }
 
@@ -80,14 +91,26 @@ export default class WidgetChildrenWhenNodeShouldRenderComponent extends Compone
     const children = await node.children;
     for (const child of children.toArray() || []) {
       const shouldRenderChild = this.targetAudience.shouldRenderScore(child.simplifiedTargetAudiences);
-      const hasRenderedLabel = await this.hasRenderedLabel(child, subject);
-      if ((shouldRenderChild && hasRenderedLabel)
-        || await this.hasRenderedChildren(child, subject)) {
+      const hasRenderedComment = async () => await this.childHasRenderedComment(child, subject);
+      const hasRenderedLabel = async () => await this.hasRenderedLabel(child, subject);
+      const rendersSomething = async () => await hasRenderedComment() || await hasRenderedLabel();
+      const hasRenderedChild = async () => await this.hasRenderedChildren(child, subject);
+
+      if ((shouldRenderChild && await rendersSomething()) || await hasRenderedChild()) {
         return true;
       }
     }
     return false;
   };
+
+  async childHasRenderedComment(node, subject) {
+    if (this.targetAudience.shouldRenderScore(node.simplifiedTargetAudiences)) {
+      const etns = await this.nodeScoreStateManager.fetch(subject, node);
+      return (etns?.comment || etns?.commentLinkUrl) && true;
+    } else {
+      return false;
+    }
+  }
 
   async hasRenderedLabel(node, subject) {
     if ((await node.children).length) {
