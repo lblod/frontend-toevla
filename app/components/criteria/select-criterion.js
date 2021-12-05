@@ -1,5 +1,6 @@
 import Component from '@glimmer/component';
 import { valueMatchesNumericString as valueMatchesString } from '../../utils/criterion-matching';
+import { whenShouldDisplay } from '../../utils/should-display';
 
 export default class CriteriaSelectCriterionComponent extends Component {
   // this.args.treeNode
@@ -54,8 +55,6 @@ export default class CriteriaSelectCriterionComponent extends Component {
   }
 
   get templateString() {
-    return ["undefined","geen weergave"].includes( this.rawTemplateString && this.rawTemplateString.toLowerCase() )
-      ? null
-      : this.rawTemplateString;
+    return whenShouldDisplay( this.rawTemplateString );
   }
 }
