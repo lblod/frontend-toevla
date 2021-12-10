@@ -1,21 +1,4 @@
-/**
- * Returns the canonical form of the template string.
- *
- * If the template says undefined or geen weergave or it doesn't
- * exist, we shouldn't render it.  This function provides such
- * cleanup.
- */
-function canonicalTemplateString(string) {
-  if (string) {
-    const lowercasedString = string.toLowerCase();
-    if (["undefined", "geen weergave"].includes(string.toLowerCase()))
-      return null;
-    else
-      return string;
-  } else {
-    return null;
-  }
-}
+import { whenShouldDisplay } from './should-display';
 
 export default class Criterion {
   constructor(treeNode, value) {
@@ -52,8 +35,6 @@ export default class Criterion {
   }
 
   get templateString() {
-    return canonicalTemplateString(this.rawTemplateString);
+    return whenShouldDisplay(this.rawTemplateString);
   }
 }
-
-export { canonicalTemplateString };
