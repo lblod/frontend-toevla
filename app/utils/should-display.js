@@ -1,6 +1,6 @@
 export default function shouldDisplay(maybeString) {
   return maybeString
-    && ["undefined", "geen weergave"].includes(maybeString.toLowerCase());
+    && !["undefined", "geen weergave"].includes(maybeString.toLowerCase());
 }
 
 /**

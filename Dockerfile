@@ -8,8 +8,6 @@ RUN npm install
 COPY . .
 RUN ember build -prod
 
-FROM semtech/ember-proxy-service:1.4.0
+FROM semtech/static-file-service:0.2.0
 
-ENV STATIC_FOLDERS_REGEX "^/(assets|font|files)/"
-
-COPY --from=builder /app/dist /app
+COPY --from=builder /app/dist /data
