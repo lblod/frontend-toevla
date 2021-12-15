@@ -4,7 +4,7 @@
   as |label check score|>
   <Labels::NumericString @label={{label}} @value={{this.value}} as |string|>
     {{#if (or label @etns.hasComment)}}
-      <AuCriteriaInline @node={{@node}} @criterium={{string}} @score={{score}} @etns={{@etns}} />
+      <AuCriteriaInline @node={{@node}} @criterium={{string}} @score={{score}} @etns={{@etns}} @node={{@node}} />
     {{/if}}
   </Labels::NumericString>
 </Criteria::SelectCriterion>

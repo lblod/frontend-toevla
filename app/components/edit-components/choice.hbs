@@ -3,6 +3,6 @@
   @treeNode={{@node}}
   as |label check score|>
   {{#if (or label @etns.comment)}}
-    <AuCriteriaInline @criterium={{label}} @score={{score}} @etns={{@etns}} />
+    <AuCriteriaInline @criterium={{label}} @score={{score}} @etns={{@etns}} @node={{@node}} />
   {{/if}}
 </Criteria::SelectChoiceCriterion>
