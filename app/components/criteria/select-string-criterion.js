@@ -1,4 +1,5 @@
 import Component from '@glimmer/component';
+import { whenShouldDisplay } from '../../utils/should-display';
 
 export default class CriteriaSelectStringCriterionComponent extends Component {
   get matchedIndex() {
@@ -44,8 +45,6 @@ export default class CriteriaSelectStringCriterionComponent extends Component {
   }
 
   get templateString() {
-    return ["undefined","geen weergave"].includes( this.rawTemplateString && this.rawTemplateString.toLowerCase() )
-      ? null
-      : this.rawTemplateString;
+    return whenShouldDisplay( this.rawTemplateString );
   }
 }

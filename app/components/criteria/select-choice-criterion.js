@@ -4,6 +4,6 @@ import { whenShouldDisplay } from '../../utils/should-display';
 
 export default class CriteriaSelectChoiceCriterionComponent extends Component {
   get templateString() {
-    whenShouldDisplay( get(this, 'args.value.title') );
+    return whenShouldDisplay( get(this, 'args.value.title') );
   }
 }
