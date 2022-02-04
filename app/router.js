@@ -19,4 +19,5 @@ Router.map(function() {
   this.route('widgets', function() {
     this.route('show', { path: ":widget_id" });
   });
+  this.route('direct', { path: "direct/:widget_id" });
 });
