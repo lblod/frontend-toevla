@@ -90,6 +90,10 @@ html.au-w-modal-open {
   transform: translateY(-50%) !important;
 }
 
+.au-w-modal__header {
+  margin-bottom: 0 !important;
+}
+
 .au-w-modal__body {
   width: 100% !important;
   flex-grow: 1 !important;

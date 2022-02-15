@@ -17,6 +17,7 @@
   font-weight: var(--au-regular) !important;
   display: inline-flex !important;
   align-items: center !important;
+  margin-bottom: 0 !important;
 }
 
 .au-w-collapsable-section-button {
@@ -104,6 +105,7 @@
   border-top: 0 !important;
   padding: 9px !important;
   margin-left: $au-unit-small !important;
+  margin-top: 0 !important;
   width: calc(100% - #{$au-unit-small}) !important;
 
   &:focus {

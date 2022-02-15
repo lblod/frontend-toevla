@@ -2,6 +2,7 @@
   display: flex !important;
   flex-wrap: wrap !important;
   align-items: center !important;
+  margin-bottom: 0 !important;
 }
 
 .au-w-filter__title {
@@ -11,11 +12,13 @@
   font-style: italic !important;
   color: var(--au-neutral) !important;
   padding-right: $au-unit-tiny !important;
+  margin-bottom: 0 !important;
 }
 
 .au-w-filter__list {
   display: flex !important;
   flex-wrap: wrap !important;
+  margin: 0 !important;
 }
 
 .au-w-filter__list-item {
