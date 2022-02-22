@@ -13,6 +13,7 @@
   fill: currentColor !important;
   margin-right: $au-unit-tiny !important;
   transition: fill $au-transition, stroke $au-transition !important;
+  margin-bottom: 0 !important;
 
   .au-w-button-link:hover &,
   .au-w-button-link:focus & {
