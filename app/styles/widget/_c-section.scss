@@ -3,6 +3,8 @@
    ================================== */
 
 .au-w-section {
+  margin-bottom: 0 !important;
+
   & + & {
     padding-top: $au-unit-small !important;
     margin-top: $au-unit-small !important;
@@ -63,5 +65,6 @@
 
   > * {
     padding: $au-unit-tiny !important;
+    margin: 0 !important;
   }
 }
