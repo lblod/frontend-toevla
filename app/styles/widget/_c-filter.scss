@@ -21,9 +21,10 @@
   margin: 0 !important;
 }
 
-.au-w-filter__list-item {
+.au-w-filter__list > .au-w-filter__list-item {
   display: block !important;
   margin-right: $au-unit-tiny !important;
   margin-top: $au-unit-tiny/2 !important;
   margin-bottom: $au-unit-tiny/2 !important;
+  padding: 0 !important;
 }
