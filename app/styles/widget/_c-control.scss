@@ -17,6 +17,7 @@
   padding-right: $au-unit-tiny !important;
   border-radius: $au-radius !important;
   overflow: hidden !important;
+  margin-bottom: 0 !important;
 
   &:hover {
     color: var(--au-neutral-darker) !important;
@@ -48,6 +49,7 @@
   user-select: none !important;
   margin-right: $au-unit-tiny !important;
   margin-bottom: 0 !important;
+  margin-left: 0 !important;
 }
 
 /* Checked state */

@@ -20,6 +20,11 @@
     margin-top: $au-unit-tiny/2 !important;
     border-top: 1px solid var(--au-neutral-lighter) !important;
   }
+
+  &::before,
+  &::after {
+    content: none !important;
+  }
 }
 
 .au-w-section--filter {
