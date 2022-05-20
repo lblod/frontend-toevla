@@ -11,7 +11,7 @@ export default class ListImagesComponent extends Component {
   @tracked modalOpen = false;
 
   //using standard ascending sort
-  sortKey = ['order'];
+  sortKey = ['orderAsInt'];
   @sort('images', 'sortKey') sortedImages;
 
   get images(){

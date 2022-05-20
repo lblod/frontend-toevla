@@ -6,4 +6,8 @@ export default class FileModel extends Model {
   @attr('string') description;
   @belongsTo('point-of-interest') pointOfInterest;
   @attr('number') order;
+
+  get orderAsInt() {
+    return parseInt(this.order);
+  }
 }
