@@ -72,4 +72,12 @@
     padding: $au-unit-tiny !important;
     margin: 0 !important;
   }
+
+  @include mq(small) {
+    flex-wrap: nowrap !important;
+
+    > *:first-child {
+      width: 40% !important;
+    }
+  }
 }
